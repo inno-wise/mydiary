@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="My Online Blog App">
+  <meta name="keywords" content="Blogs, Cyber Security, DevOps, CompTIA A+, Network+, Linux+">
+  <meta name="author" content="Innocent Mwea">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="/img/kali.png">
+  <link rel="stylesheet" href="materialize/css/materialize.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+      <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  
+<!--  <base href="https://madeoftech.net/" target="_blank">-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="mstyles.css">
+  <title>madeoftech</title>
+  <style>
+  /*all*/
+  body{
+    font-family: Verdana, sans-serif;
+  font-size: 16px;
+  }
+  footer{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  }
+  
+ .header h1{
+   text-shadow: 5px 8px 8px tomato;
+   text-align: center;
+   font-size: 18vw;
+   font-family: "Sofia", sans-serif;
+ }
+  
+  }
+  /*header*/
+  .header {
+    text-align: center;
+    padding: 20px;
+    background-color: blanchedalmond;
+  }
+  
+  .topnav{
+    background-color: tomato;
+    overflow: hidden;
+  }
+  
+  .topnav a {
+  float: left;
+  display: block;
+  color: lemonchiffon;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font: normal bolder 20px/20px Georgia, serif;
+}
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: tomato;
+  height: 10vw;
+  color: black;
+}
+    /*aside style*/
+aside {
+  width: 30%;
+  background-color: lightgray;
+  font-style: italic;
+  float: right;
+  padding-left: 15px;
+  margin-left: 15px;
+}
+/*section 2*/
+.grid-container{
+  display: grid;
+  justify-content: start;
+  grid-template-columns: 50px, 50px, 50px;
+}
+
+div.gallery {
+border: 3px solid lemonchiffon;
+}
+div.gallery:hover{
+    border: 1px solid #777;
+}
+div.gallery img{
+  width: 100%;
+  height: auto;
+}
+div.desc{
+  padding: 15px;
+  text-align: center;
+}
+.grid-container{
+  box-sizing: border-box;
+}
+.responsive{
+  padding: 0 6px;
+  float: left;
+  width: 24.9999%;
+}
+@media only screen (max-width:700px) {
+  .responsive{
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+@media only screen (max-width:500px) {
+  .responsive{
+    width: 100%;
+  }
+}
+.clearfix:after{
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+/*center */
+.flex-container{
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: lemonchiffon;
+}
+.flex-container > div{
+  width:100%;
+  text-align: center;
+  line-height: 74px;
+  font-size: 30px;
+  background-color: lemonchiffon;
+  padding: 10px;
+}
+.flex{
+  background-image: url(/img/mot.png);
+  background-position: fixed;
+  border: 3px solid tomato;
+  height: 75%;
+  padding: 15px;
+  width: 50%;
+  transition: width 3s;
+}
+.flex .imga{
+  height: 50px;
+  width:50px;
+  border-radius: 25px;
+}
+.flex:hover{
+  width: 100%;
+  height: 80%;
+}
+  </style>
+</head>
+<body>
+  <header>
+<div class="header">
+  <h1 class="title">&mcy;ade&ofr;ftech</h1>
+  <br>
+</div>
+
+<div class="topnav">
+  <a href="index.html">articles</a>
+  <a href="blogs.html">Blogs</a>
+  <a href="about.html">About</a>
+  <a href="#">👽</a>
+</div>
+  </header>
+  <hr>
+  <!--hallo-->
+    <!-- Image cards will go here -->
+    <div class="container">
+        <div class="row">
+            <!-- Image card 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/img/mot.png" class="card-img-top img-fluid" alt="Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Bash script </h5>
+                        <p class="card-text">Bash is a programming language like others. it is used for automation and scripting.learn at your own pace and become a star</p>
+                        <a href="blogs.html" class="btn btn-primary">learn Bash</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Image card 2 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/img/mot.png" class="card-img-top img-fluid" alt="Image 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Website security</h5>
+                        <p class="card-text">Learn how to develop your website with security measures from scratch </p>
+                        <a href="blogs.html" class="btn btn-primary">Learn Website Security</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Image card 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/img/mot.png" class="card-img-top img-fluid" alt="Image 3">
+                    <div class="card-body">
+                        <h5 class="card-title">DATABASE SECURITY</h5>
+                        <p class="card-text">Learn how to prevent your database from attacks like; sql injection, code injection and many more.</p>
+                        <a href="blogs.html" class="btn btn-primary">Hope In</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Image cards will go here -->
+    <div class="container">
+        <div class="row">
+            <!-- Image card 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/img/mot.png" class="card-img-top img-fluid" alt="Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Learn The Complete python programming </h5>
+                        <p class="card-text">Learn how to use this Beautiful Simple syntax language with unlimited power in Tech field</p>
+                        <a href="blogs.html" class="btn btn-primary">Proceed</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Image card 2 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/img/mot.png" class="card-img-top img-fluid" alt="Image 2">
+                    <div class="card-body">
+                        <h5 class="card-title">RUST PROGRAMMING</h5>
+                        <p class="card-text">Programming in Rust is a good choice of all. Rust is Fast compared to C programming language. Rust is Better Than C beacuse of the Amaizing Error handling and Garbage colection</p>
+                        <a href="blogs.html" class="btn btn-primary">Learn Rust</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Image card 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/img/mot.png" class="card-img-top img-fluid" alt="Image 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Computer Networking</h5>
+                        <p class="card-text">Learn how computers communicate, learn the Protocols used, learn the Operating System Interconnection(OSI)models.</p>
+                        <a href="blogs.html" class="btn btn-primary">Hope In</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<center>
+  <div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+  <div>7</div>
+  <div>8</div>
+</div>
+<br>
+<div class="flex">
+  <div>
+    <img class="imga" src="/img/mot.png" alt="madeoftech image">
+  </div>
+</div>
+</center>
+<hr>
+<section class="grid-container">
+  <div>
+    <h2>The Tomorrow's Foundation</h2>
+<h4>basic to advance Fundamentals you need</h4>
+      <div class="desc">Rada ni Clean siku Zote kwa Tech kwanza in Future Hii Knowledge ni Paramount sana Wakenya wenzangu</div>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href=" ">
+      <img src="/img/prof.jpeg" alt="Cinque Terre" width="100%" height="100%">
+    </a>
+  </div>
+
+</div>
+  </div>
+  <div>
+</section>
+
+<footer>
+  <div style="color: tomato;background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;font-size: 17px;">&copy;<a href="madeoftech.net" style="color: mediumorchid;text-decoration: none;"> &hookrightarrow; madeoftech.net </a> | developed by Innocent mwea &trade;</div>
+</footer>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="../../kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="./script.js"></script>
+</body>
+</html>

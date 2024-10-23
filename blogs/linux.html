@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="My Online Blog App">
+  <meta name="keywords" content="Blogs, Cyber Security, DevOps, CompTIA A+, Network+, Linux+">
+  <meta name="author" content="Innocent Mwea">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/img/kali.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <script src="../../kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!--  <base href="https://madeoftech.net/" target="_blank">-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="mstyles.css">
+  <title>madeoftech</title>
+  <style>
+  /*all*/
+  body{
+    font-family: Verdana, sans-serif;
+  font-size: 16px;
+  }
+  footer{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  }
+  
+ .header h1{
+   text-shadow: 5px 8px 8px tomato;
+   text-align: center;
+   font-size: 18vw;
+   font-family: "Sofia", sans-serif;
+ }
+  
+  }
+  /*header*/
+  .header {
+    text-align: center;
+    padding: 20px;
+    background-color: blanchedalmond;
+  }
+  
+  .topnav{
+    background-color: tomato;
+    overflow: hidden;
+  }
+  
+  .topnav a {
+  float: left;
+  display: block;
+  color: lemonchiffon;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font: normal bolder 20px/20px Georgia, serif;
+}
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: tomato;
+  height: 10vw;
+  color: black;
+}
+    /*aside style*/
+aside {
+  width: 30%;
+  background-color: lightgray;
+  font-style: italic;
+  float: right;
+  padding-left: 15px;
+  margin-left: 15px;
+}
+/*section 2*/
+.grid-container{
+  display: grid;
+  justify-content: start;
+  grid-template-columns: 50px, 50px, 50px;
+}
+/*newspp*/
+#newspaper{
+  column-gap: 3;
+  color: orangered;
+}
+/*paggination*/
+.center{
+  align-items: center;
+}
+.pagimation{
+  display: inline-block;
+}
+.pagination a{
+  border: 1px solid tomato;
+  margin: 0 4px;
+  color: black;
+  float: left;
+  padding: 8 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+.pagination a.active{
+  background-color: teal;
+  color: white;
+  border: 1px solid tomato;
+}
+.pagination a:hover:not(.active){
+  background-color: blanchedalmond;
+}
+/*blog*/
+/* Blog Post CSS */
+.blog-post {
+  margin-bottom: 20px;
+}
+
+.interaction-buttons {
+  margin-top: 20px;
+}
+
+.like-btn, .comment-btn, .share-btn {
+  margin-right: 10px;
+}
+
+.rating {
+  margin-top: 10px;
+}
+
+.rating-label {
+  margin-right: 10px;
+}
+
+.fa-star {
+  color: #ccc;
+  cursor: pointer;
+}
+
+.fa-star.active {
+  color: #ffd700;
+}
+
+/* Comment Form CSS */
+.comment-form {
+  margin-top: 20px;
+}
+
+.comment-form h3 {
+  margin-bottom: 10px;
+}
+
+.comment-form form {
+  margin-bottom: 20px;
+}
+
+.comment-form .form-group {
+  margin-bottom: 15px;
+}
+
+.comment-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.comment-form input, .comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+}
+
+.comment-form button[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comment-form button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+/* Review Form CSS */
+.review-form {
+  margin-top: 20px;
+}
+
+.review-form h3 {
+  margin-bottom: 10px;
+}
+
+.review-form form {
+  margin-bottom: 20px;
+}
+
+.review-form .form-group {
+  margin-bottom: 15px;
+}
+
+.review-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.review-form input, .review-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+}
+
+.review-form button[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.review-form button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+/* Share Dialog CSS */
+.share-dialog {
+  margin-top: 20px;
+}
+
+.share-dialog h3 {
+  margin-bottom: 10px;
+}
+
+.share-dialog ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.share-dialog li {
+  margin-bottom: 10px;
+}
+
+.share-dialog a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+.share-dialog a:hover {
+  color: #23527c;
+}
+
+/* Contact Form CSS */
+.contact-form {
+  margin-top: 20px;
+}
+
+.contact-form h3 {
+  margin-bottom: 10px;
+}
+
+.contact-form form {
+  margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+  </style>
+</head>
+<body>
+  <header>
+<div class="header">
+  <h1 class="title">&mcy;ade&ofr;ftech</h1>
+</div>
+
+<div class="topnav">
+  <a href="index.html">articles</a>
+  <a href="blogs.html">Blogs</a>
+  <a href="about.html">About</a>
+</div>
+  </header>
+  <br>
+  <hr>
+  <br>
+  <!--pagination-->
+  <h2>Diary Blogs</h2>
+
+<div class="center">
+  <div class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="/blogs/linux.html" class="active">commands line interface</a>
+  <a href="/blogs/comptia.html">CompTIA ...</a>
+  <a href="/blogs/blackhat.html">python black hat</a>
+  <a href="/blogs/websecurity.html">web Security</a>
+  <a href="/blogs/database.html">Database security</a>
+  <a href="/blogs/pythondevops.html">python for DevOps</a>
+  <a href="/blogs/newspaper.html">newspaper</a>
+  <a href="#">&raquo;</a>
+  </div>
+</div>
+<br> 
+<hr>
+<br>
+<section>
+  <div>
+    <ol>
+      <li><a href="#Shell commands">Shell commands</a></li>
+      <li><a href="#linux">linux Commands</a></li>
+      <li><a href="#powershell">powershell commands</a></li>
+      <li><a href="#cmd">CMD Commands</a></li>
+    </ol>
+  </div>
+  
+  <div class="container">
+  <div class="row row-cols-1 row-cols-md-3">
+    <div class="col">
+      <div class="card">
+        <a href="#Shell commands">
+          <img src="/img/bs.jpeg" class="card-img-top img-fluid" style="height: 200px; object-fit: cover;" alt="...">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">Shell Cheat</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#Shell commands" class="btn btn-primary btn-block">Get Started</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <a href="#linux">
+          <img src="image2.jpg" class="card-img-top img-fluid" style="height: 200px; object-fit: cover;" alt="...">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">Linux +</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#linux" class="btn btn-primary btn-block">Get Started</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <a href="https://www.example.com" target="_blank">
+          <img src="image3.jpg" class="card-img-top img-fluid" style="height: 200px; object-fit: cover;" alt="...">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary btn-block" download>Download</a>
+        </div>
+      </div>
+    </div>
+    <!-- Add more cards here -->
+    
+  </div>
+</div>
+
+</section>
+<br>
+<hr>
+<br>
+<section>
+  <div id="Shell commands">
+    <h1>Bash commands</h1>
+    <span>
+      <pre>
+      <b>Table of Contents</b>
+Licence
+Introduction to Bash scripting 
+Bash Structure 
+Bash Hello World
+Bash Variables 
+Bash User Input 
+Bash Comments 
+Bash Arguments
+<b>Bash Arrays</b>
+Substring in Bash :: Slicing 
+Bash Conditional Expressions
+File expressions 
+String expressions 
+Arithmetic operators 
+Exit status operators 
+Bash Conditionals 
+If statement
+If Else statement
+Switch case statements
+Conclusion 
+Bash Loops
+For loops 
+While loops
+Until Loops 
+Continue and Break
+Bash Functions 
+Debugging, testing and shortcuts 
+Creating custom bash commands 
+Example 
+Making the change persistent
+Listing all of the available aliases
+Conclusion 
+Write your first Bash script
+Planning the script
+Writing the script 
+Adding comments7
+Adding your first variable
+Adding your first function
+Adding more functions challenge
+The sample script
+Conclusion
+Creating an interactive menu in Bash
+Planning the functionality
+Adding some colors
+Adding the menu
+Testing the script
+Conclusion
+Executing BASH scripts on Multiple Remote Servers
+Prerequisites
+The BASH Script
+Running the Script on all Servers
+Conclusion
+Work with JSON in BASH using jq
+Planning the script
+Installing jq
+Parsing JSON with jq
+Getting the first element with jq
+Getting a value only for specific key
+Using jq in a BASH script
+Conclusion
+Working with Cloudflare API with Bash
+Prerequisites
+Challenge - Script requirements
+Example script
+Conclusion
+BASH Script parser to Summarize Your NGINX and Apache Access Logs .
+Script requirements
+Example script
+Running the script
+Understanding the output
+Conclusion
+Sending emails with Bash and SSMTP
+Prerequisites
+Installing SSMTP
+Configuring SSMTP
+Sending emails with SSMTP
+Sending A File with SSMTP (optional) 
+Conclusion
+Password Generator Bash Script
+:warning: Security
+Script summary
+Prerequisites
+Generate a random password 
+The script
+The full script
+Conclusion
+Contributed by
+Redirection in Bash
+Difference between Pipes and Redirections
+Redirection in Bash
+STDIN (Standard Input
+STDOUT (Standard Output)
+STDERR (Standard Error)
+Piping
+HereDocument
+HereString
+Summary
+Automatic Wordpress on LAMP installation with BASH 
+Prerequisites
+Planning the functionality
+The script
+The full script
+Summary
+wrap up
+</pre>
+<div class="intro">
+  <h1>Introduction to Bash scripting</h1>
+
+Welcome to this <b>bash fundamental</b>training guide! In this bash crash course, you will learn
+
+the Bash basics so you could start writing your own <b>bash scripts</b> and automate your
+daily tasks.
+<b>Bash is a Unix shell and command language</b>. It is widely available on various operating
+systems, and it is also the <b>default command interpreter</b> on most Linux systems.
+<strong><u>Bash stands for Bourne-Again SHell</strong></u>. As with other shells, you can use Bash
+interactively directly in your terminal, and also, you can use Bash like any other
+programming language to write scripts. This blog will help you learn the fundamentals of
+Bash scripting including <marked style="background-color: green">Bash Variables, User Input, Comments, Arguments, Arrays,
+Conditional Expressions, Conditionals, Loops, Functions, Debugging, and testing</marked>.
+Bash scripts are great for automating repetitive workloads and can help you save time
+considerably. i.e, imagine working with a group of five developers on a
+project that requires a tedious environment setup. In order for the program to work
+correctly, each developer has to manually set up the environment. That's the same and
+very long task (setting up the environment) repeated five times at least. This is where
+you and Bash scripts come to the rescue! So instead, you create a simple text file
+containing all the necessary instructions and share it with your teammates. And now,
+all they have to do is execute the Bash script and everything will be created for them.
+In order to write Bash scripts, you just need a UNIX terminal and a text editor like
+Sublime Text, VS Code, or a terminal-based editor like vim or nan
+</div>
+    </span>
+  </div>
+  <hr>
+  <br>
+  <div id="linux">
+    <h1>LINUX commands</h1>
+    <div id="pdf-container">
+    <object data="/pdfs/Linux-Tutorial.pdf" type="application/pdf" width="100%" height="500px">
+      </div>
+  <p>Your browser does not support embedded PDFs.</p>
+  
+</object>
+  </div>
+  <br>
+  <hr>
+  <div id="powershell">
+    <h1>Windows PowerShell</h1>
+  </div>
+  <hr>
+  <br>
+  <div id="cmd">
+    <h1>Windows CMD</h1>
+  </div>
+</section>
+<!-- Blog Post HTML Structure -->
+<div class="blog-post">
+  <h2>My Diary Blog</h2>
+  <p>Share your thoughts..</p>
+  <div class="interaction-buttons">
+    <button class="btn btn-sm btn-primary like-btn">Like <span class="like-count">0</span></button>
+    <button class="btn btn-sm btn-secondary comment-btn">Comment <span class="comment-count">0</span></button>
+    <button class="btn btn-sm btn-success share-btn">Share</button>
+    <div class="rating">
+      <span class="rating-label">Rate:</span>
+      <i class="fas fa-star" data-rating="1"></i>
+      <i class="fas fa-star" data-rating="2"></i>
+      <i class="fas fa-star" data-rating="3"></i>
+      <i class="fas fa-star" data-rating="4"></i>
+      <i class="fas fa-star" data-rating="5"></i>
+      <span class="rating-count">0/5</span>
+    </div>
+  </div>
+  <div class="comments">
+    <!-- comments will be displayed here -->
+  </div>
+  <div class="reviews">
+    <!-- reviews will be displayed here -->
+  </div>
+</div>
+
+<!-- Comment Form HTML Structure -->
+<div class="comment-form">
+  <h3>Leave a Comment</h3>
+  <form>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="comment">Comment:</label>
+      <textarea id="comment" name="comment" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<!-- Review Form HTML Structure -->
+<div class="review-form">
+  <h3>Leave a Review</h3>
+  <form>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="review">Review:</label>
+      <textarea id="review" name="review" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="rating">Rating:</label>
+      <select id="rating" name="rating" required>
+        <option value="1">1/5</option>
+        <option value="2">2/5</option>
+        <option value="3">3/5</option>
+        <option value="4">4/5</option>
+        <option value="5">5/5</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<!-- Share Dialog HTML Structure -->
+<div class="share-dialog">
+  <h3>Share This Post</h3>
+  <ul>
+    <li><a href="#" class="facebook-share">Facebook</a></li>
+    <li><a href="#" class="twitter-share">Twitter</a></li>
+    <li><a href="#" class="linkedin-share">LinkedIn</a></li>
+  </ul>
+</div>
+
+<!-- Contact Form HTML Structure -->
+<div class="contact-form">
+  <h3>Contact Me</h3>
+  <form>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send</button>
+  </form>
+</div>
+<footer>
+  <div style="color: tomato;background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;font-size: 17px;">&copy;<a href="madeoftech.net" style="color: mediumorchid;text-decoration: none;"> &hookrightarrow; madeoftech.net </a> | developed by Innocent mwea &trade;</div>
+</footer>
+<script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+<script>
+  if (!window.pdfjsLib) {
+    // Fallback to a local copy of the library
+    document.write('<script src="pdf.js"><\/script>');
+  }
+</script>
+<script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+<script src="https://mozilla.github.io/pdf.js/build/pdf.worker.js"></script>
+<script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+<script>
+  var pdfUrl = 'example.pdf';
+  var pdfContainer = document.getElementById('pdf-container');
+
+  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://mozilla.github.io/pdf.js/build/pdf.worker.js';
+
+  pdfjsLib.getDocument(pdfUrl).promise.then(function(pdf) {
+    var scale = 1.5;
+    var canvas = document.createElement('canvas');
+    canvas.width = pdf.pageCount * pdf.internal.scale * scale;
+    canvas.height = pdf.internal.pageSize.height * scale;
+    pdfContainer.appendChild(canvas);
+
+    for (var i = 0; i < pdf.pageCount; i++) {
+      pdf.getPage(i + 1).render({
+        canvasContext: canvas.getContext('2d'),
+        viewport: pdf.internal.pageSize
+      });
+    }
+  });
+</script>
+</body>
+</html>
