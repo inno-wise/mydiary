@@ -290,6 +290,64 @@ aside {
 .contact-form button[type="submit"]:hover {
   background-color: #3e8e41;
 }
+
+    /*jkbjkk*/
+    
+        .container {
+            width: 80%;
+            margin: 2rem auto;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .code-block {
+            background-color: #2e2e2e;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .code-block h3 {
+            color: #eee;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        .copy-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .copy-btn:hover {
+            background-color: #0056b3;
+        }
   </style>
 </head>
 <body>
@@ -327,6 +385,414 @@ aside {
 <br>
 <div>
   <h1>Website security you must know</h1>
+  <p>This cheat sheet now covers Website Security best practices, including user authentication, password hashing, preventing common vulnerabilities like XSS, CSRF, and SQL injection, as well as advanced security techniques like two-factor authentication (2FA) and Content Security Policies (CSP).</p>
+ <div>
+   <h3>Explanation of Website Security Section:</h3>
+<b>Authentication:</b>
+<ol>
+Example code on how to implement user authentication in Django.
+<li>Password Hashing:</li>
+
+Use bcrypt to securely hash and verify user passwords.
+<li>SQL Injection Prevention:</li>
+
+Use parameterized queries in Django to prevent SQL injection.
+<li>Cross-Site Scripting (XSS):</li>
+
+Django automatically escapes variables in templates to prevent XSS vulnerabilities.
+<li>Cross-Site Request Forgery (CSRF):</li>
+
+Django's built-in protection against CSRF with the {% csrf_token %} template tag.
+<li>Secure Cookies:</li>
+
+Example of how to securely set cookies in your Django application (e.g., using HttpOnly, Secure, and SameSite flags).
+<li>Two-Factor Authentication (2FA):</li>
+
+Example of integrating two-factor authentication into a Django app using the django-otp and django-two-factor-auth packages.
+<li>Content Security Policy (CSP):</li>
+
+Example of setting a basic CSP header to protect your site from XSS and other content-related attacks.
+  </ol>
+ </div>
+  <div class="container">
+    <h1>Python Libraries, DevOps & Website Security Cheat Sheet</h1>
+    
+    <!-- Scikit-learn AI and ML Section -->
+    <div class="section">
+        <h2>1. AI and Machine Learning (scikit-learn)</h2>
+        <p><strong>Scikit-learn</strong> is a machine learning library that provides simple and efficient tools for data mining and data analysis. Below are some common operations:</p>
+        
+        <div class="code-block">
+            <h3>Importing scikit-learn libraries</h3>
+            <pre>
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
+            </pre>
+        </div>
+
+        <div class="code-block">
+            <h3>Basic Machine Learning Example (Random Forest)</h3>
+            <pre>
+# Example: Random Forest Classifier
+
+# Load dataset (e.g., Iris dataset)
+from sklearn.datasets import load_iris
+data = load_iris()
+X = data.data
+y = data.target
+
+# Split dataset into train and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Create and train the Random Forest Classifier
+model = RandomForestClassifier(n_estimators=100)
+model.fit(X_train, y_train)
+
+# Predict and calculate accuracy
+y_pred = model.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Accuracy: {accuracy * 100:.2f}%")
+            </pre>
+        </div>
+        
+        <button class="copy-btn" onclick="copyToClipboard('ai-ml-code')">Copy Code</button>
+    </div>
+
+    <!-- Django Section -->
+    <div class="section">
+        <h2>2. Django Web Framework</h2>
+        <p><strong>Django</strong> is a high-level Python web framework that allows you to build secure and scalable web applications quickly.</p>
+        
+        <div class="code-block">
+            <h3>Basic Django Project Setup</h3>
+            <pre>
+# Install Django
+pip install django
+
+# Create a new project
+django-admin startproject myproject
+
+# Create a new app within the project
+cd myproject
+python manage.py startapp myapp
+
+# Running the development server
+python manage.py runserver
+            </pre>
+        </div>
+
+        <div class="code-block">
+            <h3>Basic Django View</h3>
+            <pre>
+# In views.py
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("Hello, Django!")
+            </pre>
+        </div>
+
+        <div class="code-block">
+            <h3>Adding URL to urls.py</h3>
+            <pre>
+# In urls.py
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home, name='home'),
+]
+            </pre>
+        </div>
+
+        <button class="copy-btn" onclick="copyToClipboard('django-code')">Copy Code</button>
+    </div>
+
+    <!-- NumPy Section -->
+    <div class="section">
+        <h2>3. NumPy (Numerical Computing)</h2>
+        <p><strong>NumPy</strong> is a powerful numerical computing library used for array manipulation, mathematical operations, and scientific computing.</p>
+        
+        <div class="code-block">
+            <h3>Creating and Manipulating Arrays</h3>
+            <pre>
+import numpy as np
+
+# Create an array
+arr = np.array([1, 2, 3, 4, 5])
+
+# Perform basic operations
+print(arr + 5)   # Array addition
+print(arr * 2)   # Array multiplication
+
+# Reshape an array
+arr_reshaped = arr.reshape(1, 5)
+print(arr_reshaped)
+            </pre>
+        </div>
+
+        <div class="code-block">
+            <h3>Matrix Operations</h3>
+            <pre>
+# Create two matrices
+A = np.array([[1, 2], [3, 4]])
+B = np.array([[5, 6], [7, 8]])
+
+# Matrix multiplication (dot product)
+C = np.dot(A, B)
+print(C)
+            </pre>
+        </div>
+
+        <button class="copy-btn" onclick="copyToClipboard('numpy-code')">Copy Code</button>
+    </div>
+
+    <!-- Python DevOps Section -->
+    <div class="section">
+        <h2>4. Python DevOps Cheat Sheet</h2>
+        <p><strong>DevOps</strong> is a combination of development and operations practices aimed at automating and improving the software delivery process. Below are some key tools and practices in Python DevOps:</p>
+        
+        <div class="code-block">
+            <h3>Docker: Creating a Dockerfile for a Python Application</h3>
+            <pre>
+# Dockerfile for a Python application
+
+# Use official Python image
+FROM python:3.9-slim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy requirements file and install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the application files
+COPY . .
+
+# Expose port 8000
+EXPOSE 8000
+
+# Command to run the application
+CMD ["python", "app.py"]
+            </pre>
+        </div>
+
+        <div class="code-block">
+            <h3>Running Docker Containers</h3>
+            <pre>
+# Build the Docker image
+docker build -t my-python-app .
+
+# Run the Docker container
+docker run -p 8000:8000 my-python-app
+            </pre>
+        </div>
+
+        <div class="code-block">
+            <h3>Kubernetes: Deploying a Python App with Kubernetes</h3>
+            <pre>
+# kubernetes-deployment.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: python-app
+  template:
+    metadata:
+      labels:
+        app: python-app
+    spec:
+      containers:
+      - name: python-app
+        image: my-python-app:latest
+        ports:
+        - containerPort: 8000
+            </pre>
+        </div>
+
+        <div class="code-block">
+            <h3>CI/CD with GitHub Actions</h3>
+            <pre>
+# .github/workflows/ci.yml
+
+name: Python CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run tests
+        run: |
+          pytest
+            </pre>
+        </div>
+
+        <div class="code-block">
+            <h3>Deploying with Ansible</h3>
+            <pre>
+# Ansible playbook example
+
+- name: Deploy Python Application
+  hosts: servers
+  tasks:
+    - name: Update apt cache
+      apt: update_cache=yes
+
+    - name: Install Python and dependencies
+      apt:
+        name:
+          - python3
+          - python3-pip
+      state: present
+
+    - name: Install requirements
+      pip:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - flask
+        - gunicorn
+            </pre>
+        </div>
+
+        <button class="copy-btn" onclick="copyToClipboard('devops-code')">Copy Code</button>
+    </div>
+
+    <!-- Website Security Section -->
+    <div class="section">
+        <h2>5. Website Security Cheat Sheet</h2>
+        <p><strong>Website security</strong> is crucial to protect web applications and user data. Below are some common security measures, techniques, and tools for securing websites:</p>
+
+        <div class="code-block">
+            <h3>Authentication (Login System)</h3>
+            <pre>
+# Django Authentication Example
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login
+
+def login_view(request):
+    username = request.POST['username']
+    password = request.POST['password']
+    
+    user = authenticate(username=username, password=password)
+    if user is not None:
+        login(request, user)
+        return HttpResponse("Login successful")
+    else:
+        return HttpResponse("Invalid credentials")
+            </pre>
+        </div>
+
+        <div class="code-block">
+            <h3>Hashing Passwords with bcrypt</h3>
+            <pre>
+import bcrypt
+
+# Hashing a password
+password = "mysecretpassword"
+hashed = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
+
+# Checking a password
+if bcrypt.checkpw(password.encode('utf-8'), hashed):
+    print("Password is correct")
+else:
+    print("Password is incorrect")
+            </pre>
+        </div>
+
+        <div class="code-block">
+            <h3>SQL Injection Prevention</h3>
+            <pre>
+# Prevent SQL Injection by using parameterized queries
+from django.db import connection
+
+def get_user_by_username(username):
+    with connection.cursor() as cursor:
+        cursor.execute("SELECT * FROM users WHERE username = %s", [username])
+        return cursor.fetchone()
+            </pre>
+        </div>
+
+        <div class="code-block">
+            <h3>Cross-Site Scripting (XSS) Prevention</h3>
+            <pre>
+# Django automatically escapes variables in templates to prevent XSS
+# Example in template:
+# <h1>{{ user_input }}</h1>
+# Django escapes user_input so it won't execute as HTML/JS
+            </pre>
+        </div>
+
+        <div class="code-block">
+            <h3>Cross-Site Request Forgery (CSRF) Prevention</h3>
+            <pre>
+# CSRF Token is included automatically in Django forms
+# Example:
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="username">
+    <button type="submit">Submit</button>
+</form>
+            </pre>
+        </div>
+
+        <div class="code-block">
+            <h3>Secure Cookies</h3>
+            <pre>
+# Set HttpOnly, Secure, and SameSite flags in cookies
+response.set_cookie('sessionid', 'abc123', httponly=True, secure=True, samesite='Strict')
+            </pre>
+        </div>
+
+        <div class="code-block">
+            <h3>Two-Factor Authentication (2FA)</h3>
+            <pre>
+# Example using Django 2FA package
+# Install django-otp and django-two-factor-auth
+pip install django-otp
+pip install django-two-factor-auth
+            </pre>
+        </div>
+
+        <div class="code-block">
+            <h3>Content Security Policy (CSP)</h3>
+            <pre>
+# Example of setting a basic CSP header
+response['Content-Security-Policy'] = "default-src 'self'; script-src 'self';"
+            </pre>
+        </div>
+
+        <button class="copy-btn" onclick="copyToClipboard('security-code')">Copy Code</button>
+    </div>
+
+</div>
+
 </div>
 <br>
 <hr>
@@ -440,5 +906,18 @@ aside {
   <div style="color: tomato;background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;font-size: 17px;">&copy;<a href="madeoftech.net" style="color: mediumorchid;text-decoration: none;"> &hookrightarrow; madeoftech.net </a> | developed by Innocent mwea &trade;</div>
 </footer>
 <script src="/script.js"></script>
+  <script>
+    function copyToClipboard(codeId) {
+        var code = document.getElementById(codeId).innerText;
+        var textarea = document.createElement('textarea');
+        textarea.value = code;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+
+        alert('Code copied to clipboard!');
+    }
+</script>
 </body>
 </html>
