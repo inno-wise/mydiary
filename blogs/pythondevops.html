@@ -291,7 +291,7 @@ aside {
   background-color: #3e8e41;
 }
     /*klfdnndfn*/
-    
+   
         .container {
             width: 80%;
             margin: 2rem auto;
@@ -346,7 +346,8 @@ aside {
 
         .copy-btn:hover {
             background-color: #0056b3;
-        }
+        } 
+  
   </style>
 </head>
 <body>
@@ -388,8 +389,9 @@ aside {
 </div>
 <br>
 <hr>
-  <div class="container">
-    <h1>Python Libraries Cheat Sheet</h1>
+
+<div class="container">
+    <h1>Python Libraries & DevOps Cheat Sheet</h1>
     
     <!-- Scikit-learn AI and ML Section -->
     <div class="section">
@@ -522,8 +524,143 @@ print(C)
         <button class="copy-btn" onclick="copyToClipboard('numpy-code')">Copy Code</button>
     </div>
 
-</div>
+    <!-- Python DevOps Section -->
+    <div class="section">
+        <h2>4. Python DevOps Cheat Sheet</h2>
+        <p><strong>DevOps</strong> is a combination of development and operations practices aimed at automating and improving the software delivery process. Below are some key tools and practices in Python DevOps:</p>
+        
+        <div class="code-block">
+            <h3>Docker: Creating a Dockerfile for a Python Application</h3>
+            <pre>
+# Dockerfile for a Python application
 
+# Use official Python image
+FROM python:3.9-slim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy requirements file and install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the application files
+COPY . .
+
+# Expose port 8000
+EXPOSE 8000
+
+# Command to run the application
+CMD ["python", "app.py"]
+            </pre>
+        </div>
+
+        <div class="code-block">
+            <h3>Running Docker Containers</h3>
+            <pre>
+# Build the Docker image
+docker build -t my-python-app .
+
+# Run the Docker container
+docker run -p 8000:8000 my-python-app
+            </pre>
+        </div>
+
+        <div class="code-block">
+            <h3>Kubernetes: Deploying a Python App with Kubernetes</h3>
+            <pre>
+# kubernetes-deployment.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: python-app
+  template:
+    metadata:
+      labels:
+        app: python-app
+    spec:
+      containers:
+      - name: python-app
+        image: my-python-app:latest
+        ports:
+        - containerPort: 8000
+            </pre>
+        </div>
+
+        <div class="code-block">
+            <h3>CI/CD with GitHub Actions</h3>
+            <pre>
+# .github/workflows/ci.yml
+
+name: Python CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run tests
+        run: |
+          pytest
+            </pre>
+        </div>
+
+        <div class="code-block">
+            <h3>Deploying with Ansible</h3>
+            <pre>
+# Ansible playbook example
+
+- name: Deploy Python Application
+  hosts: servers
+  tasks:
+    - name: Update apt cache
+      apt: update_cache=yes
+
+    - name: Install Python and dependencies
+      apt:
+        name:
+          - python3
+          - python3-pip
+      state: present
+
+    - name: Install requirements
+      pip:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - flask
+        - gunicorn
+            </pre>
+        </div>
+
+        <button class="copy-btn" onclick="copyToClipboard('devops-code')">Copy Code</button>
+    </div>
+
+</div>
 <br>
 <!-- Blog Post HTML Structure -->
 <div class="blog-post">
@@ -634,6 +771,19 @@ print(C)
   <div style="color: tomato;background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;font-size: 17px;">&copy;<a href="madeoftech.net" style="color: mediumorchid;text-decoration: none;"> &hookrightarrow; madeoftech.net </a> | developed by Innocent mwea &trade;</div>
 </footer>
 <script src="/script.js"></script>
+  <script>
+    function copyToClipboard(codeId) {
+        var code = document.getElementById(codeId).innerText;
+        var textarea = document.createElement('textarea');
+        textarea.value = code;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+
+        alert('Code copied to clipboard!');
+    }
+</script>
   <script>
     function copyToClipboard(codeId) {
         var code = document.getElementById(codeId).innerText;
