@@ -6,7 +6,7 @@
   <meta name="keywords" content="Blogs, Cyber Security, DevOps, CompTIA A+, Network+, Linux+">
   <meta name="author" content="Innocent Mwea">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="/img/kali.png">
+    <link rel="icon" type="image/x-icon" href="img/kali.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
   <script src="../../kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <!--  <base href="https://madeoftech.net/" target="_blank">-->
@@ -95,6 +95,53 @@ progress{
   height: 200px;
   object-fit: cover;
 }
+    /*image style*/
+    /* General Image Styling */
+img {
+  display: block;             /* Ensures the image is block-level, removing any unwanted space below it */
+  max-width: 100%;            /* Makes images responsive */
+  height: auto;               /* Maintain aspect ratio */
+  width: 100%;                /* Ensures images are stretched to container width */
+  object-fit: cover;          /* Makes the image cover the area while maintaining its aspect ratio */
+  border-radius: 8px;         /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition effects */
+}
+
+/* Ensuring a fixed size for images (e.g., 300px by 200px) */
+img.fixed-size {
+  width: 300px;               /* Fixed width */
+  height: 200px;              /* Fixed height */
+  object-fit: cover;          /* Adjusts the image within the fixed dimensions */
+}
+
+/* Hover effects */
+img:hover {
+  transform: scale(1.05);       /* Slight zoom on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adding shadow effect */
+}
+
+/* Optional: Adding border and spacing for image containers */
+img {
+  border: 3px solid #ddd;      /* Light border around the image */
+  margin-bottom: 16px;         /* Margin below the image */
+}
+
+/* Example Container styling for responsive images */
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;                   /* Adds space between images */
+  justify-content: center;     /* Centers the images */
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 300px;            /* Max width for each image */
+  height: 200px;               /* Fixed height */
+  margin: 10px;                /* Space around the images */
+  object-fit: cover;           /* Ensures images fit within the specified dimensions */
+}
+
   </style>
 </head>
 <body>
@@ -123,38 +170,38 @@ progress{
   <div class="company-history">
     <h2>My self Taught History</h2>
     <p>Since i had a clean background in the Tech field. I went and boosted my career in a Ec Council, udemy, simplilearn, AWS, MICROSOFT AZURE, DevSecOps, GCP, and cybersecurity. begun my research to become Online successful self taught student. By Gods grace it happened and I gained some of the skills for free and others i had to pay . Now i will share it for free to help other students like me gain the foundation in technology.</p>
-    <img src="/img/mot.png" alt="Innocenty History Image">
+    <img src="img/mot.png" alt="Innocenty History Image">
   </div>
   <br><hr><br>
   <div class="container">
   <div class="row row-cols-1 row-cols-md-3">
     <div class="col">
       <div class="card">
-        <img src="/img/cloud.png" class="card-img-top" alt="...">
+        <img src="img/cloud.png" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Cloud Computing</h5>
           <p class="card-text">Get a clear view on cloud Computing, understand hows, ifs, buts, when and whats.</p>
-          <a href="/pdfs/cloud_computing_tutorial.pdf" class="btn btn-primary btn-block" download>Download</a>
+          <a href="pdfs/cloud_computing_tutorial.pdf" class="btn btn-primary btn-block" download>Download</a>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card">
-        <img src="/img/java.png" class="card-img-top" alt="...">
+        <img src="img/java.png" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Learn Java Programming</h5>
           <p class="card-text">Understand java syntax and master it like a pro to solve real world problems .</p>
-          <a href="/pdfs/LearnJava.pdf" class="btn btn-primary btn-block" download>Download</a>
+          <a href="pdfs/LearnJava.pdf" class="btn btn-primary btn-block" download>Download</a>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card">
-        <img src="/img/bs.jpeg" class="card-img-top" alt="...">
+        <img src="img/bs.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Bash Scripting</h5>
           <p class="card-text">From beginners to advance bash programming. it is a scripting language and can be used for various purposes .</p>
-          <a href="/pdfs/bash-scripting.pdf" class="btn btn-primary btn-block" download>Download</a>
+          <a href="pdfs/bash-scripting.pdf" class="btn btn-primary btn-block" download>Download</a>
         </div>
       </div>
     </div>
@@ -163,31 +210,31 @@ progress{
   <div class="row row-cols-1 row-cols-md-3">
     <div class="col">
       <div class="card">
-        <img src="/img/web.jpeg" class="card-img-top" alt="...">
+        <img src="img/web.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Website Security</h5>
           <p class="card-text">Website security Implementation of Security testing and measures for secure application.</p>
-          <a href="/pdfs/websecurityfordevelopers.pdf" class="btn btn-primary btn-block" download>Download</a>
+          <a href="pdfs/websecurityfordevelopers.pdf" class="btn btn-primary btn-block" download>Download</a>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card">
-        <img src="/img/python.jpeg" class="card-img-top" alt="...">
+        <img src="img/python.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Python Full stack</h5>
           <p class="card-text">Get in touch with this amazing python modules for full stack development</p>
-          <a href="/pdfs/Python-Full-Stack-.pdf" class="btn btn-primary btn-block" download>Download</a>
+          <a href="pdfs/Python-Full-Stack-.pdf" class="btn btn-primary btn-block" download>Download</a>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card">
-        <img src="/img/bash.jpeg" class="card-img-top" alt="...">
+        <img src="img/bash.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Black hat Bash</h5>
           <p class="card-text">Learn the offensive side of Bourn Again Shell {BASH} at your pace</p>
-          <a href="/pdfs/Black Hat Bash.pdf" class="btn btn-primary btn-block" download>Download</a>
+          <a href="pdfs/Black Hat Bash.pdf" class="btn btn-primary btn-block" download>Download</a>
         </div>
       </div>
     </div>
@@ -235,13 +282,13 @@ progress{
   <marquee style="z-index:2;position:absolute;left:8%;top:29%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:369px;" scrollamount="1" direction="down">jackson mentor👊🏾</marquee>
   <marquee style="z-index:2;position:absolute;left:30%;top:17%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:289px;" scrollamount="7" direction="down">self-taught 👊🏾👊🏾</marquee>
   <marquee style="z-index:2;position:absolute;left:46%;top:27%;font-family:Cursive, 'Times New Roman', Times, serif;font-size:14pt;color:#f90;height:78px;" scrollamount="7" direction="down">info@madeoftech.net</marquee>
-  <marquee style="z-index:2;position:absolute;left:16%;top:17%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:56px;" scrollamount="5" direction="down">innocentwise@madeoftech.net</marquee>
+  <marquee style="z-index:2;position:absolute;left:16%;top:17%;font-family:Cursive;font-size:14pt;color:orange;height:56px;" scrollamount="5" direction="down">innocentwise@madeoftech.net</marquee>
   <marquee style="z-index:2;position:absolute;left:30%;top:46%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:194px;" scrollamount="2" direction="down">madeoftech.net...</marquee>
-  <marquee style="z-index:2;position:absolute;left:2%;top:10%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:251px;" scrollamount="6" direction="down">self taught</marquee>
+  <marquee style="z-index:2;position:absolute;left:2%;top:10%;font-family:Cursive;font-size:14pt;color:red;height:251px;" scrollamount="6" direction="down">self taught</marquee>
   <marquee style="z-index:2;position:absolute;left:48%;top:24%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:154px;" direction="down">">Pentesting...</marquee>
   <marquee style="z-index:2;position:absolute;left:41%;top:22%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:82px;" direction="down">Sripting and Automation</marquee>
   <marquee style="z-index:2;position:absolute;left:46%;top:2%;font-family:Cursive;font-size:14pt;color:Fuchsia;height:70px;" scrollamount="3" direction="down">...DevOps...</marquee>
-  <marquee style="z-index:2;position:absolute;left:42%;top:15%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:334px;" direction="down">Web Security</marquee>
+  <marquee style="z-index:2;position:absolute;left:42%;top:15%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:334px;" direction="down"> <img src="img/mot.png" alt="Innocenty History Image"></marquee>
   <marquee style="z-index:2;position:absolute;left:40%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:167px;" scrollamount="7" direction="down">Computer Networking</marquee>
   <marquee style="z-index:2;position:absolute;left:45%;top:18%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:420px;" scrollamount="7" direction="down">Automation</marquee>
   <marquee style="z-index:2;position:absolute;left:22%;top:26%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:12px;" scrollamount="7" direction="down">Scripting</marquee>
