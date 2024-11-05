@@ -291,6 +291,54 @@ aside {
 .contact-form button[type="submit"]:hover {
   background-color: #3e8e41;
 }
+
+    /*image style */
+    /* General Image Styling */
+img {
+  display: block;             /* Ensures the image is block-level, removing any unwanted space below it */
+  max-width: 100%;            /* Makes images responsive */
+  height: auto;               /* Maintain aspect ratio */
+  width: 100%;                /* Ensures images are stretched to container width */
+  object-fit: cover;          /* Makes the image cover the area while maintaining its aspect ratio */
+  border-radius: 8px;         /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition effects */
+}
+
+/* Ensuring a fixed size for images (e.g., 300px by 200px) */
+img.fixed-size {
+  width: 300px;               /* Fixed width */
+  height: 200px;              /* Fixed height */
+  object-fit: cover;          /* Adjusts the image within the fixed dimensions */
+}
+
+/* Hover effects */
+img:hover {
+  transform: scale(1.05);       /* Slight zoom on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adding shadow effect */
+}
+
+/* Optional: Adding border and spacing for image containers */
+img {
+  border: 3px solid #ddd;      /* Light border around the image */
+  margin-bottom: 16px;         /* Margin below the image */
+}
+
+/* Example Container styling for responsive images */
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;                   /* Adds space between images */
+  justify-content: center;     /* Centers the images */
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 300px;            /* Max width for each image */
+  height: 200px;               /* Fixed height */
+  margin: 10px;                /* Space around the images */
+  object-fit: cover;           /* Ensures images fit within the specified dimensions */
+}
+
   </style>
 </head>
 <body>
@@ -343,7 +391,7 @@ aside {
   <div class="row row-cols-1 row-cols-md-3">
     <div class="col">
       <div class="card">
-        <img src="/img/dp.jpeg" class="card-img-top" alt="...">
+        <img src="img/dp.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Matlab</h5>
           <p class="card-text">Get skills and concepts in matlab. Matlab is also a programming language get to know it better and solve your future problems using this tool.</p>
