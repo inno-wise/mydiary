@@ -290,6 +290,63 @@ aside {
 .contact-form button[type="submit"]:hover {
   background-color: #3e8e41;
 }
+    /*klfdnndfn*/
+    
+        .container {
+            width: 80%;
+            margin: 2rem auto;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .code-block {
+            background-color: #2e2e2e;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .code-block h3 {
+            color: #eee;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        .copy-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .copy-btn:hover {
+            background-color: #0056b3;
+        }
   </style>
 </head>
 <body>
@@ -331,10 +388,146 @@ aside {
 </div>
 <br>
 <hr>
+  <div class="container">
+    <h1>Python Libraries Cheat Sheet</h1>
+    
+    <!-- Scikit-learn AI and ML Section -->
+    <div class="section">
+        <h2>1. AI and Machine Learning (scikit-learn)</h2>
+        <p><strong>Scikit-learn</strong> is a machine learning library that provides simple and efficient tools for data mining and data analysis. Below are some common operations:</p>
+        
+        <div class="code-block">
+            <h3>Importing scikit-learn libraries</h3>
+            <pre>
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
+            </pre>
+        </div>
+
+        <div class="code-block">
+            <h3>Basic Machine Learning Example (Random Forest)</h3>
+            <pre>
+# Example: Random Forest Classifier
+
+# Load dataset (e.g., Iris dataset)
+from sklearn.datasets import load_iris
+data = load_iris()
+X = data.data
+y = data.target
+
+# Split dataset into train and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Create and train the Random Forest Classifier
+model = RandomForestClassifier(n_estimators=100)
+model.fit(X_train, y_train)
+
+# Predict and calculate accuracy
+y_pred = model.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Accuracy: {accuracy * 100:.2f}%")
+            </pre>
+        </div>
+        
+        <button class="copy-btn" onclick="copyToClipboard('ai-ml-code')">Copy Code</button>
+    </div>
+
+    <!-- Django Section -->
+    <div class="section">
+        <h2>2. Django Web Framework</h2>
+        <p><strong>Django</strong> is a high-level Python web framework that allows you to build secure and scalable web applications quickly.</p>
+        
+        <div class="code-block">
+            <h3>Basic Django Project Setup</h3>
+            <pre>
+# Install Django
+pip install django
+
+# Create a new project
+django-admin startproject myproject
+
+# Create a new app within the project
+cd myproject
+python manage.py startapp myapp
+
+# Running the development server
+python manage.py runserver
+            </pre>
+        </div>
+
+        <div class="code-block">
+            <h3>Basic Django View</h3>
+            <pre>
+# In views.py
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("Hello, Django!")
+            </pre>
+        </div>
+
+        <div class="code-block">
+            <h3>Adding URL to urls.py</h3>
+            <pre>
+# In urls.py
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home, name='home'),
+]
+            </pre>
+        </div>
+
+        <button class="copy-btn" onclick="copyToClipboard('django-code')">Copy Code</button>
+    </div>
+
+    <!-- NumPy Section -->
+    <div class="section">
+        <h2>3. NumPy (Numerical Computing)</h2>
+        <p><strong>NumPy</strong> is a powerful numerical computing library used for array manipulation, mathematical operations, and scientific computing.</p>
+        
+        <div class="code-block">
+            <h3>Creating and Manipulating Arrays</h3>
+            <pre>
+import numpy as np
+
+# Create an array
+arr = np.array([1, 2, 3, 4, 5])
+
+# Perform basic operations
+print(arr + 5)   # Array addition
+print(arr * 2)   # Array multiplication
+
+# Reshape an array
+arr_reshaped = arr.reshape(1, 5)
+print(arr_reshaped)
+            </pre>
+        </div>
+
+        <div class="code-block">
+            <h3>Matrix Operations</h3>
+            <pre>
+# Create two matrices
+A = np.array([[1, 2], [3, 4]])
+B = np.array([[5, 6], [7, 8]])
+
+# Matrix multiplication (dot product)
+C = np.dot(A, B)
+print(C)
+            </pre>
+        </div>
+
+        <button class="copy-btn" onclick="copyToClipboard('numpy-code')">Copy Code</button>
+    </div>
+
+</div>
+
 <br>
 <!-- Blog Post HTML Structure -->
 <div class="blog-post">
-  <h2>My Diary Blog</h2>
+  <h2>Get My Diary Blog</h2>
   <p>Share your thoughts..</p>
   <div class="interaction-buttons">
     <button class="btn btn-sm btn-primary like-btn">Like <span class="like-count">0</span></button>
@@ -378,7 +571,7 @@ aside {
   </form>
 </div>
 
-<!-- Review Form HTML Structure -->
+<!-- Review Form HTML Structure 
 <div class="review-form">
   <h3>Leave a Review</h3>
   <form>
@@ -407,7 +600,7 @@ aside {
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>
-
+-->
 <!-- Share Dialog HTML Structure -->
 <div class="share-dialog">
   <h3>Share This Post</h3>
@@ -441,5 +634,18 @@ aside {
   <div style="color: tomato;background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;font-size: 17px;">&copy;<a href="madeoftech.net" style="color: mediumorchid;text-decoration: none;"> &hookrightarrow; madeoftech.net </a> | developed by Innocent mwea &trade;</div>
 </footer>
 <script src="/script.js"></script>
+  <script>
+    function copyToClipboard(codeId) {
+        var code = document.getElementById(codeId).innerText;
+        var textarea = document.createElement('textarea');
+        textarea.value = code;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+
+        alert('Code copied to clipboard!');
+    }
+</script>
 </body>
 </html>
