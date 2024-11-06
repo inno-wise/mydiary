@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="My Online Blog App">
-  <meta name="keywords" content="Blogs, Cyber Security, DevOps, CompTIA A+, Network+, Linux+">
+  <meta name="keywords" content="Python, DevOps, CI/CD, Jenkins, Terraform, Kubernetes">
   <meta name="author" content="Innocent Mwea">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="img/kali.png">
@@ -23,9 +23,9 @@
 
     <nav class="bg-gray-800 text-white">
       <div class="container mx-auto flex space-x-8 py-4">
-        <a href="index.html" class="text-lg font-medium hover:text-gold transition">Articles</a>
-        <a href="blogs.html" class="text-lg font-medium hover:text-gold transition">Blogs</a>
-        <a href="about.html" class="text-lg font-medium hover:text-gold transition">About</a>
+        <a href="./index.html" class="text-lg font-medium hover:text-gold transition">Articles</a>
+        <a href="./blogs.html" class="text-lg font-medium hover:text-gold transition">Blogs</a>
+        <a href="./about.html" class="text-lg font-medium hover:text-gold transition">About</a>
       </div>
     </nav>
   </header>
@@ -109,6 +109,7 @@ print(arr_reshaped)
         <h2 class="text-3xl font-semibold text-gray-900 mb-4">4. Python DevOps Cheat Sheet</h2>
         <p class="text-lg text-gray-600 mb-6">DevOps is a combination of development and operations practices aimed at automating and improving the software delivery process. Below are some key tools and practices in Python DevOps:</p>
 
+        <!-- Docker Section -->
         <div class="bg-gray-800 text-white p-6 rounded-lg shadow-md mb-6">
           <h3 class="font-semibold text-lg">Docker: Creating a Dockerfile for a Python Application</h3>
           <pre class="whitespace-pre-wrap overflow-x-auto">
@@ -137,25 +138,63 @@ CMD ["python", "app.py"]
 
         <button class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-3 rounded-full hover:scale-105 transform transition-all">Copy Code</button>
       </div>
+
+      <!-- CI/CD with Python -->
+      <div class="section mb-12">
+        <h2 class="text-3xl font-semibold text-gray-900 mb-4">5. CI/CD with Python</h2>
+        <p class="text-lg text-gray-600 mb-6">Continuous Integration and Continuous Deployment (CI/CD) are essential DevOps practices for automating the software delivery pipeline. Below is an example of setting up a CI/CD pipeline using Python with GitHub Actions.</p>
+
+        <div class="bg-gray-800 text-white p-6 rounded-lg shadow-md mb-6">
+          <h3 class="font-semibold text-lg">Setting Up GitHub Actions</h3>
+          <pre class="whitespace-pre-wrap overflow-x-auto">
+name: Python CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run tests
+        run: |
+          pytest
+          </pre>
+        </div>
+
+        <button class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-3 rounded-full hover:scale-105 transform transition-all">Copy Code</button>
+      </div>
+
+      <!-- DevOps Tools -->
+      <div class="section mb-12">
+        <h2 class="text-3xl font-semibold text-gray-900 mb-4">6. Key DevOps Tools</h2>
+        <p class="text-lg text-gray-600 mb-6">DevOps practices often involve a variety of tools for automating infrastructure, monitoring, and deployment. Below are some of the most commonly used tools in DevOps:</p>
+
+        <ul class="list-disc pl-6">
+          <li><strong>Jenkins:</strong> A powerful automation server used to build, test, and deploy applications.</li>
+          <li><strong>Terraform:</strong> Infrastructure as code (IaC) tool for managing and provisioning cloud resources.</li>
+          <li><strong>Kubernetes:</strong> A platform for managing containerized applications and services at scale.</li>
+          <li><strong>Ansible:</strong> A configuration management tool used to automate tasks such as server provisioning and application deployment.</li>
+        </ul>
+      </div>
     </div>
   </div>
 
-  <!-- Footer Section -->
+  <!-- Footer -->
   <footer class="bg-gray-900 text-white py-6">
     <div class="container mx-auto text-center">
-      <p class="text-lg font-medium">© 2024 madeoftech | All rights reserved</p>
+      <p class="text-sm">© 2024 madeoftech. All rights reserved.</p>
     </div>
   </footer>
-
-  <style>
-    /* Custom class for elegant golden color */
-    .text-gold {
-      color: #DAA520;
-    }
-    .font-playfair {
-      font-family: 'Playfair Display', serif;
-    }
-  </style>
 </body>
 
 </html>
