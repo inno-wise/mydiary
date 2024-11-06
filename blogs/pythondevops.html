@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="img/kali.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap">
-  <script src="../../kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <title>madeoftech</title>
 </head>
@@ -18,7 +18,7 @@
   <!-- Header Section -->
   <header class="bg-gray-900 text-white">
     <div class="container mx-auto px-6 py-8">
-      <h1 class="text-4xl font-playfair font-bold tracking-wide text-gold">madeoftech</h1>
+      <h1 class="text-4xl font-playfair-display font-bold tracking-wide" style="color: #FFD700;">madeoftech</h1>
     </div>
 
     <nav class="bg-gray-800 text-white">
@@ -33,7 +33,7 @@
   <!-- Main Content -->
   <div class="container mx-auto px-6 py-12">
     <div class="bg-white p-8 rounded-lg shadow-lg">
-      <h1 class="text-4xl font-playfair font-bold text-gray-900 mb-8">Python Libraries & DevOps Cheat Sheet</h1>
+      <h1 class="text-4xl font-playfair-display font-bold text-gray-900 mb-8">Python Libraries & DevOps Cheat Sheet</h1>
 
       <!-- Scikit-learn Section -->
       <div class="section mb-12">
@@ -52,147 +52,11 @@ from sklearn.metrics import accuracy_score
         <button class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-3 rounded-full hover:scale-105 transform transition-all">Copy Code</button>
       </div>
 
-      <!-- Django Section -->
-      <div class="section mb-12">
-        <h2 class="text-3xl font-semibold text-gray-900 mb-4">2. Django Web Framework</h2>
-        <p class="text-lg text-gray-600 mb-6">Django is a high-level Python web framework that allows you to build secure and scalable web applications quickly.</p>
-
-        <div class="bg-gray-800 text-white p-6 rounded-lg shadow-md mb-6">
-          <h3 class="font-semibold text-lg">Basic Django Project Setup</h3>
-          <pre class="whitespace-pre-wrap overflow-x-auto">
-# Install Django
-pip install django
-
-# Create a new project
-django-admin startproject myproject
-
-# Create a new app within the project
-cd myproject
-python manage.py startapp myapp
-
-# Running the development server
-python manage.py runserver
-          </pre>
-        </div>
-
-        <button class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-3 rounded-full hover:scale-105 transform transition-all">Copy Code</button>
-      </div>
-
-      <!-- NumPy Section -->
-      <div class="section mb-12">
-        <h2 class="text-3xl font-semibold text-gray-900 mb-4">3. NumPy (Numerical Computing)</h2>
-        <p class="text-lg text-gray-600 mb-6">NumPy is a powerful numerical computing library used for array manipulation, mathematical operations, and scientific computing.</p>
-
-        <div class="bg-gray-800 text-white p-6 rounded-lg shadow-md mb-6">
-          <h3 class="font-semibold text-lg">Creating and Manipulating Arrays</h3>
-          <pre class="whitespace-pre-wrap overflow-x-auto">
-import numpy as np
-
-# Create an array
-arr = np.array([1, 2, 3, 4, 5])
-
-# Perform basic operations
-print(arr + 5)   # Array addition
-print(arr * 2)   # Array multiplication
-
-# Reshape an array
-arr_reshaped = arr.reshape(1, 5)
-print(arr_reshaped)
-          </pre>
-        </div>
-
-        <button class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-3 rounded-full hover:scale-105 transform transition-all">Copy Code</button>
-      </div>
-
-      <!-- Python DevOps Section -->
-      <div class="section mb-12">
-        <h2 class="text-3xl font-semibold text-gray-900 mb-4">4. Python DevOps Cheat Sheet</h2>
-        <p class="text-lg text-gray-600 mb-6">DevOps is a combination of development and operations practices aimed at automating and improving the software delivery process. Below are some key tools and practices in Python DevOps:</p>
-
-        <!-- Docker Section -->
-        <div class="bg-gray-800 text-white p-6 rounded-lg shadow-md mb-6">
-          <h3 class="font-semibold text-lg">Docker: Creating a Dockerfile for a Python Application</h3>
-          <pre class="whitespace-pre-wrap overflow-x-auto">
-# Dockerfile for a Python application
-
-# Use official Python image
-FROM python:3.9-slim
-
-# Set the working directory inside the container
-WORKDIR /app
-
-# Copy requirements file and install dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy the application files
-COPY . .
-
-# Expose port 8000
-EXPOSE 8000
-
-# Command to run the application
-CMD ["python", "app.py"]
-          </pre>
-        </div>
-
-        <button class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-3 rounded-full hover:scale-105 transform transition-all">Copy Code</button>
-      </div>
-
-      <!-- CI/CD with Python -->
-      <div class="section mb-12">
-        <h2 class="text-3xl font-semibold text-gray-900 mb-4">5. CI/CD with Python</h2>
-        <p class="text-lg text-gray-600 mb-6">Continuous Integration and Continuous Deployment (CI/CD) are essential DevOps practices for automating the software delivery pipeline. Below is an example of setting up a CI/CD pipeline using Python with GitHub Actions.</p>
-
-        <div class="bg-gray-800 text-white p-6 rounded-lg shadow-md mb-6">
-          <h3 class="font-semibold text-lg">Setting Up GitHub Actions</h3>
-          <pre class="whitespace-pre-wrap overflow-x-auto">
-name: Python CI
-
-on: [push]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-      - name: Run tests
-        run: |
-          pytest
-          </pre>
-        </div>
-
-        <button class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-3 rounded-full hover:scale-105 transform transition-all">Copy Code</button>
-      </div>
-
-      <!-- DevOps Tools -->
-      <div class="section mb-12">
-        <h2 class="text-3xl font-semibold text-gray-900 mb-4">6. Key DevOps Tools</h2>
-        <p class="text-lg text-gray-600 mb-6">DevOps practices often involve a variety of tools for automating infrastructure, monitoring, and deployment. Below are some of the most commonly used tools in DevOps:</p>
-
-        <ul class="list-disc pl-6">
-          <li><strong>Jenkins:</strong> A powerful automation server used to build, test, and deploy applications.</li>
-          <li><strong>Terraform:</strong> Infrastructure as code (IaC) tool for managing and provisioning cloud resources.</li>
-          <li><strong>Kubernetes:</strong> A platform for managing containerized applications and services at scale.</li>
-          <li><strong>Ansible:</strong> A configuration management tool used to automate tasks such as server provisioning and application deployment.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
       <!-- Pagination Section -->
-      <div class="center my-12">
+      <div class="text-center my-12">
         <div class="pagination flex justify-center space-x-4">
           <a href="#" class="text-gray-600 hover:text-gold text-xl">&laquo;</a>
-          <a href="linux.html" class="active text-blue-600 font-semibold text-xl">commands line interface</a>
+          <a href="linux.html" class="text-blue-600 font-semibold text-xl">commands line interface</a>
           <a href="comptia.html" class="text-gray-600 hover:text-gold text-xl">CompTIA ...</a>
           <a href="blackhat.html" class="text-gray-600 hover:text-gold text-xl">python black hat</a>
           <a href="websecurity.html" class="text-gray-600 hover:text-gold text-xl">web Security</a>
@@ -204,6 +68,7 @@ jobs:
       </div>
     </div>
   </div>
+
   <!-- Footer -->
   <footer class="bg-gray-900 text-white py-6">
     <div class="container mx-auto text-center">
