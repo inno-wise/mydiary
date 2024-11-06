@@ -6,308 +6,114 @@
   <meta name="keywords" content="Blogs, Cyber Security, DevOps, CompTIA A+, Network+, Linux+">
   <meta name="author" content="Innocent Mwea">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="img/kali.png">
+  <link rel="icon" type="image/x-icon" href="img/kali.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
   <script src="../../kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<!--  <base href="https://madeoftech.net/" target="_blank">-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="mstyles.css">
-    <link rel="stylesheet" href="mdb-ui-kit/css/mdb.min.css">
-  <title>about innocent mwea</title>
-  <style>
-  /*all*/
-  body{
-    font-family: Verdana, sans-serif;
-  font-size: 16px;
-  }
-  footer{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-  }
-  
- .header h1{
-   text-shadow: 5px 8px 8px tomato;
-   text-align: center;
-   font-size: 18vw;
-   font-family: "Sofia", sans-serif;
- }
-  
-  }
-  /*header*/
-  .header {
-    text-align: center;
-    padding: 15px;
-    background-color: blanchedalmond;
-  }
-  
-  .topnav{
-    background-color: tomato;
-    overflow: hidden;
-  }
-  
-  .topnav a {
-  float: left;
-  display: block;
-  color: lemonchiffon;
-  text-align: center;
-  padding: 7px 8px;
-  text-decoration: none;
-  font: normal bolder 20px/20px Georgia, serif;
-}
-}
-
-/* Change color on hover */
-.topnav a:hover {
-  background-color: tomato;
-  height: 70vw;
-  color: black;
-}
-.hero-section {
-  background-image: url('hero-image.jpg');
-  background-size: cover;
-  height: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-}
-
-.company-history {
-  padding: 10px 0;
-}
-
-.mission-values {
-  padding: 10px 0;
-  background-color: #f7f7f7;
-}
-
-.call-to-action {
-  padding: 10px 0;
-  background-color: #333;
-  color: #fff;
-}
-progress{
-  border: 2px dotted tomato;
-  width: 100%;
-  color: teal;
-}
-.card-img-top {
-  height: 200px;
-  object-fit: cover;
-}
-    /*image style*/
-    /* General Image Styling */
-img {
-  display: block;             /* Ensures the image is block-level, removing any unwanted space below it */
-  max-width: 100%;            /* Makes images responsive */
-  height: auto;               /* Maintain aspect ratio */
-  width: 100%;                /* Ensures images are stretched to container width */
-  object-fit: cover;          /* Makes the image cover the area while maintaining its aspect ratio */
-  border-radius: 8px;         /* Rounded corners */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition effects */
-}
-
-/* Ensuring a fixed size for images (e.g., 300px by 200px) */
-img.fixed-size {
-  width: 300px;               /* Fixed width */
-  height: 200px;              /* Fixed height */
-  object-fit: cover;          /* Adjusts the image within the fixed dimensions */
-}
-
-/* Hover effects */
-img:hover {
-  transform: scale(1.05);       /* Slight zoom on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adding shadow effect */
-}
-
-/* Optional: Adding border and spacing for image containers */
-img {
-  border: 3px solid #ddd;      /* Light border around the image */
-  margin-bottom: 16px;         /* Margin below the image */
-}
-
-/* Example Container styling for responsive images */
-.image-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;                   /* Adds space between images */
-  justify-content: center;     /* Centers the images */
-}
-
-.image-container img {
-  width: 100%;
-  max-width: 300px;            /* Max width for each image */
-  height: 200px;               /* Fixed height */
-  margin: 10px;                /* Space around the images */
-  object-fit: cover;           /* Ensures images fit within the specified dimensions */
-}
-
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="mdb-ui-kit/css/mdb.min.css">
+  <title>About Innocent Mwea</title>
 </head>
-<body>
+<body class="bg-gray-50">
+
+  <!-- Header Section -->
   <header>
-<div class="header">
-  <h1 class="title">&mcy;ade&ofr;ftech</h1>
-</div>
-
-<div class="topnav">
-  <a href="index.html">articles</a>
-  <a href="blogs.html">Blogs</a>
-  <a href="about.html">About</a>
-</div>
+    <div class="header py-8 bg-indigo-600 text-white text-center rounded-b-lg shadow-lg">
+      <h1 class="title text-5xl font-bold tracking-wide">MadeOfTech</h1>
+      <p class="text-xl mt-2">Inspiring the Next Generation of Technologists</p>
+    </div>
+    <nav class="topnav flex justify-center bg-gray-800 py-3">
+      <a href="index.html" class="text-white mx-4 hover:text-indigo-400">Articles</a>
+      <a href="blogs.html" class="text-white mx-4 hover:text-indigo-400">Blogs</a>
+      <a href="about.html" class="text-white mx-4 hover:text-indigo-400">About</a>
+    </nav>
   </header>
-  
- <div>
-   <!-- About Page Container -->
-<div class="container-fluid about-page">
-  <!-- Hero Section -->
-  <div class="hero-section">
-    <h1 class="display-4">My Story</h1>
-    <p class="lead">Learn more about my journey and mission.</p>
-  </div>
-  
-  <!-- Company History Section -->
-  <div class="company-history">
-    <h2>My self Taught History</h2>
-    <p>Since i had a clean background in the Tech field. I went and boosted my career in a Ec Council, udemy, simplilearn, AWS, MICROSOFT AZURE, DevSecOps, GCP, and cybersecurity. begun my research to become Online successful self taught student. By Gods grace it happened and I gained some of the skills for free and others i had to pay . Now i will share it for free to help other students like me gain the foundation in technology.</p>
-    <img src="img/mot.png" alt="Innocenty History Image">
-  </div>
-  <br><hr><br>
-  <div class="container">
-  <div class="row row-cols-1 row-cols-md-3">
-    <div class="col">
-      <div class="card">
-        <img src="img/cloud.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Cloud Computing</h5>
-          <p class="card-text">Get a clear view on cloud Computing, understand hows, ifs, buts, when and whats.</p>
-          <a href="pdfs/cloud_computing_tutorial.pdf" class="btn btn-primary btn-block" download>Download</a>
+
+  <!-- About Page Content -->
+  <div class="container mx-auto px-6 py-12">
+    <!-- Hero Section -->
+    <section class="hero-section text-center py-16 bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 text-white rounded-lg shadow-lg">
+      <h1 class="text-5xl font-semibold">My Story</h1>
+      <p class="text-xl mt-4">Learn more about my journey and mission.</p>
+    </section>
+
+    <!-- Company History Section -->
+    <section class="company-history py-12">
+      <h2 class="text-3xl font-bold text-center text-indigo-600">My Self-Taught Journey</h2>
+      <p class="text-lg text-gray-800 mt-4 text-center max-w-3xl mx-auto">As a self-taught tech enthusiast, I built my career in cyber security, DevOps, and cloud computing through platforms like EC-Council, Udemy, AWS, and more. I’ve made it my mission to share knowledge with others, helping them start and grow in the tech field.</p>
+      <div class="text-center mt-8">
+        <img src="img/mot.png" alt="Innocent's History" class="w-full rounded-lg shadow-md max-w-2xl mx-auto">
+      </div>
+    </section>
+
+    <!-- Downloadable Resources Section -->
+    <section class="resources mt-12">
+      <h2 class="text-3xl font-semibold text-center text-indigo-600">Resources to Help You Learn</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-6">
+        <div class="card bg-white shadow-xl rounded-lg overflow-hidden transition-all hover:scale-105 transform">
+          <img src="img/cloud.png" class="card-img-top rounded-t-xl" alt="Cloud Computing">
+          <div class="card-body p-6">
+            <h5 class="text-xl font-semibold text-gray-800">Cloud Computing</h5>
+            <p class="text-gray-600 mt-2">Get started with cloud technologies through in-depth resources.</p>
+            <a href="pdfs/cloud_computing_tutorial.pdf" class="block mt-4 text-center bg-blue-600 text-white rounded-lg px-6 py-2 transition-all hover:bg-blue-700" download>Download</a>
+          </div>
+        </div>
+        <div class="card bg-white shadow-xl rounded-lg overflow-hidden transition-all hover:scale-105 transform">
+          <img src="img/java.png" class="card-img-top rounded-t-xl" alt="Java Programming">
+          <div class="card-body p-6">
+            <h5 class="text-xl font-semibold text-gray-800">Java Programming</h5>
+            <p class="text-gray-600 mt-2">Master Java with beginner-friendly tutorials and resources.</p>
+            <a href="pdfs/LearnJava.pdf" class="block mt-4 text-center bg-green-600 text-white rounded-lg px-6 py-2 transition-all hover:bg-green-700" download>Download</a>
+          </div>
+        </div>
+        <div class="card bg-white shadow-xl rounded-lg overflow-hidden transition-all hover:scale-105 transform">
+          <img src="img/bs.jpeg" class="card-img-top rounded-t-xl" alt="Bash Scripting">
+          <div class="card-body p-6">
+            <h5 class="text-xl font-semibold text-gray-800">Bash Scripting</h5>
+            <p class="text-gray-600 mt-2">Learn how to write and execute Bash scripts to automate your tasks.</p>
+            <a href="pdfs/bash-scripting.pdf" class="block mt-4 text-center bg-purple-600 text-white rounded-lg px-6 py-2 transition-all hover:bg-purple-700" download>Download</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="img/java.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Learn Java Programming</h5>
-          <p class="card-text">Understand java syntax and master it like a pro to solve real world problems .</p>
-          <a href="pdfs/LearnJava.pdf" class="btn btn-primary btn-block" download>Download</a>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="img/bs.jpeg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Bash Scripting</h5>
-          <p class="card-text">From beginners to advance bash programming. it is a scripting language and can be used for various purposes .</p>
-          <a href="pdfs/bash-scripting.pdf" class="btn btn-primary btn-block" download>Download</a>
-        </div>
-      </div>
-    </div>
-    <!-- Add more cards here -->
-    <div class="container">
-  <div class="row row-cols-1 row-cols-md-3">
-    <div class="col">
-      <div class="card">
-        <img src="img/web.jpeg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Website Security</h5>
-          <p class="card-text">Website security Implementation of Security testing and measures for secure application.</p>
-          <a href="pdfs/websecurityfordevelopers.pdf" class="btn btn-primary btn-block" download>Download</a>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="img/python.jpeg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Python Full stack</h5>
-          <p class="card-text">Get in touch with this amazing python modules for full stack development</p>
-          <a href="pdfs/Python-Full-Stack-.pdf" class="btn btn-primary btn-block" download>Download</a>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="img/bash.jpeg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Black hat Bash</h5>
-          <p class="card-text">Learn the offensive side of Bourn Again Shell {BASH} at your pace</p>
-          <a href="pdfs/Black Hat Bash.pdf" class="btn btn-primary btn-block" download>Download</a>
-        </div>
-      </div>
-    </div>
-    <!-- Add more cards here -->
+    </section>
+
+    <!-- Mission and Values Section -->
+    <section class="mission-values py-12 bg-gray-100">
+      <h2 class="text-3xl font-bold text-center text-indigo-600">My Mission and Values</h2>
+      <p class="text-lg text-gray-800 mt-4 text-center">Empowering the youth and helping others build a strong foundation in technology is my core mission.</p>
+      <ul class="list-none space-y-3 mt-6 max-w-2xl mx-auto">
+        <li class="flex items-center text-lg text-gray-700">
+          <i class="fas fa-check-circle text-green-500 mr-3"></i> Knowledge Sharing
+        </li>
+        <li class="flex items-center text-lg text-gray-700">
+          <i class="fas fa-check-circle text-blue-500 mr-3"></i> Mentorship
+        </li>
+        <li class="flex items-center text-lg text-gray-700">
+          <i class="fas fa-check-circle text-orange-500 mr-3"></i> Continuous Growth
+        </li>
+      </ul>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="call-to-action py-12 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white text-center">
+      <h2 class="text-4xl font-semibold">Let’s Connect</h2>
+      <p class="mt-4 text-lg">I’m here to help! If you need guidance or have questions about tech, feel free to reach out.</p>
+      <a href="mailto:innocentwise123@gmail.com" class="mt-6 inline-block px-8 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-all text-xl">Contact Me</a>
+    </section>
   </div>
-</div>
-  </div>
-</div>
-<br><hr><br>
-  
-  <!-- Mission and Values Section -->
-  <div class="mission-values">
-    <progress value="70000000" max="100000000">70 %</progress>
-    <h2>My Mission and Values</h2>
-    <p>My mission is to empower the youths and my fellow brothers.</p>
-    <ul>
-      <li><i class="fas fa-check-circle"></i> Knowledge</li>
-      <li><i class="fas fa-check-circle"></i>Opportunity</li>
-      <li><i class="fas fa-check-circle"></i> Grow</li>
-    </ul>
-  </div>
-  
-  
-  <!-- Call to Action Section -->
-  <div class="call-to-action">
-    <h2>Get in Touch</h2>
-    <p>If you have any further doubts about your self learning path. worry no more because i have also spared physical labs for people like you to kill all the fera you have.</p>
-    <button class="btn btn-primary"><a href="mailto: innocentwise123@gmail.com" style="color: tomato; text-decoration: none;">Holla me anytime</a></button>
-  </div>
-</div>
-<br>
-<hr>
-<br>
 
-<div class="example-display" style="position:relative;height:600px;">
+  <!-- Example Display with Marquee -->
+  <section class="example-display relative mt-12" style="height:600px;">
+    <marquee style="position:absolute;left:20%;top:50%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:100px;" scrollamount="3" direction="down">Innocent Mwea</marquee>
+    <marquee style="position:absolute;left:5%;top:35%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:50%;" scrollamount="4" direction="down">Tech Innovator</marquee>
+    <marquee style="position:absolute;left:10%;top:15%;font-family:Cursive;font-size:14pt;color:lime;height:350px;" scrollamount="5" direction="down">Self-Taught</marquee>
+  </section>
 
-  <marquee style="z-index:2;position:absolute;left:18%;top:47%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:100px;" scrollamount="3" direction="down">Innocent mwea</marquee>
-
-  <marquee style="z-index:2;position:absolute;left:1%;top:39%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:50%;" scrollamount="7" direction="down">Paul Engineer</marquee>
-
-  <marquee style="z-index:2;position:absolute;left:11%;top:7%;font-family:Cursive;font-size:14pt;color:lime;height:302px;" scrollamount="4" direction="down">madeoftech.net</marquee>
-
-  <marquee style="z-index:2;position:absolute;left:25%;top:33%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:435px;" scrollamount="3" direction="down">smolly young</marquee>
-  <marquee style="z-index:2;position:absolute;left:15%;top:13%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:432px;" scrollamount="2" direction="down">Self taught💪💪💪</marque>
-  <marquee style="z-index:2;position:absolute;left:8%;top:29%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:369px;" scrollamount="1" direction="down">jackson mentor👊🏾</marquee>
-  <marquee style="z-index:2;position:absolute;left:30%;top:17%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:289px;" scrollamount="7" direction="down">self-taught 👊🏾👊🏾</marquee>
-  <marquee style="z-index:2;position:absolute;left:46%;top:27%;font-family:Cursive, 'Times New Roman', Times, serif;font-size:14pt;color:#f90;height:78px;" scrollamount="7" direction="down">info@madeoftech.net</marquee>
-  <marquee style="z-index:2;position:absolute;left:16%;top:17%;font-family:Cursive;font-size:14pt;color:orange;height:56px;" scrollamount="5" direction="down">innocentwise@madeoftech.net</marquee>
-  <marquee style="z-index:2;position:absolute;left:30%;top:46%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:194px;" scrollamount="2" direction="down">madeoftech.net...</marquee>
-  <marquee style="z-index:2;position:absolute;left:2%;top:10%;font-family:Cursive;font-size:14pt;color:red;height:251px;" scrollamount="6" direction="down">self taught</marquee>
-  <marquee style="z-index:2;position:absolute;left:48%;top:24%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:154px;" direction="down">">Pentesting...</marquee>
-  <marquee style="z-index:2;position:absolute;left:41%;top:22%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:82px;" direction="down">Sripting and Automation</marquee>
-  <marquee style="z-index:2;position:absolute;left:46%;top:2%;font-family:Cursive;font-size:14pt;color:Fuchsia;height:70px;" scrollamount="3" direction="down">...DevOps...</marquee>
-  <marquee style="z-index:2;position:absolute;left:42%;top:15%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:334px;" direction="down"> <img src="img/mot.png" alt="Innocenty History Image"></marquee>
-  <marquee style="z-index:2;position:absolute;left:40%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:167px;" scrollamount="7" direction="down">Computer Networking</marquee>
-  <marquee style="z-index:2;position:absolute;left:45%;top:18%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:420px;" scrollamount="7" direction="down">Automation</marquee>
-  <marquee style="z-index:2;position:absolute;left:22%;top:26%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:12px;" scrollamount="7" direction="down">Scripting</marquee>
-  <marquee style="z-index:2;position:absolute;left:49%;top:4%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:366px;" scrollamount="2" direction="down">DevSecOps</marquee>
-  <marquee style="z-index:2;position:absolute;left:26%;top:32%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:358px;" scrollamount="1" direction="down">Rust Programming</marquee>
-  <marquee style="z-index:2;position:absolute;left:3%;top:14%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:130px;" scrollamount="3" direction="down">CLI Programming</marquee>
- </div>
- <br>
- <hr>
- 
- <span style="color: tomato; font: normal bold 17px Georgia serif"><p><u>Innocent Mwea</u></p><img src="/img/mot.png" alt="image of network devices" style="width:50%;border-radius:50px;object-fit:cover";>
- </div>
-<footer>
-  <div style="color: tomato;background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;font-size: 17px;">&copy;<a href="madeoftech.net" style="color: mediumorchid;text-decoration: none;"> &hookrightarrow; madeoftech.net </a> | developed by Innocent mwea &trade;</div>
-</footer>
-<script src="/script.js">
-  import { Animation } from 'mdb-ui-kit';
-
-Animation.initMDB();
-</script>
+  <!-- Footer Section -->
+  <footer class="bg-gray-800 text-white text-center py-6">
+    <div class="text-lg font-medium">
+      &copy; <a href="madeoftech.net" class="text-indigo-400 hover:text-indigo-500">madeoftech.net</a> | developed by Innocent Mwea &trade;
+    </div>
+  </footer>
 </body>
 </html>
