@@ -107,189 +107,7 @@ aside {
   background-color: blanchedalmond;
 }
 /*blog*/
-/* Blog Post CSS */
-.blog-post {
-  margin-bottom: 20px;
-}
 
-.interaction-buttons {
-  margin-top: 20px;
-}
-
-.like-btn, .comment-btn, .share-btn {
-  margin-right: 10px;
-}
-
-.rating {
-  margin-top: 10px;
-}
-
-.rating-label {
-  margin-right: 10px;
-}
-
-.fa-star {
-  color: #ccc;
-  cursor: pointer;
-}
-
-.fa-star.active {
-  color: #ffd700;
-}
-
-/* Comment Form CSS */
-.comment-form {
-  margin-top: 20px;
-}
-
-.comment-form h3 {
-  margin-bottom: 10px;
-}
-
-.comment-form form {
-  margin-bottom: 20px;
-}
-
-.comment-form .form-group {
-  margin-bottom: 15px;
-}
-
-.comment-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.comment-form input, .comment-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-}
-
-.comment-form button[type="submit"] {
-  background-color: #4CAF50;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.comment-form button[type="submit"]:hover {
-  background-color: #3e8e41;
-}
-
-/* Review Form CSS */
-.review-form {
-  margin-top: 20px;
-}
-
-.review-form h3 {
-  margin-bottom: 10px;
-}
-
-.review-form form {
-  margin-bottom: 20px;
-}
-
-.review-form .form-group {
-  margin-bottom: 15px;
-}
-
-.review-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.review-form input, .review-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-}
-
-.review-form button[type="submit"] {
-  background-color: #4CAF50;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.review-form button[type="submit"]:hover {
-  background-color: #3e8e41;
-}
-
-/* Share Dialog CSS */
-.share-dialog {
-  margin-top: 20px;
-}
-
-.share-dialog h3 {
-  margin-bottom: 10px;
-}
-
-.share-dialog ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.share-dialog li {
-  margin-bottom: 10px;
-}
-
-.share-dialog a {
-  text-decoration: none;
-  color: #337ab7;
-}
-
-.share-dialog a:hover {
-  color: #23527c;
-}
-
-/* Contact Form CSS */
-.contact-form {
-  margin-top: 20px;
-}
-
-.contact-form h3 {
-  margin-bottom: 10px;
-}
-
-.contact-form form {
-  margin-bottom: 20px;
-}
-
-.contact-form .form-group {
-  margin-bottom: 15px;
-}
-
-.contact-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.contact-form input, .contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-}
-
-.contact-form button[type="submit"] {
-  background-color: #4CAF50;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.contact-form button[type="submit"]:hover {
-  background-color: #3e8e41;
-}
     /*klfdnndfn*/
    
         .container {
@@ -659,6 +477,227 @@ jobs:
 
         <button class="copy-btn" onclick="copyToClipboard('devops-code')">Copy Code</button>
     </div>
+<!--additions -->
+  <div class="container mx-auto p-6 bg-white rounded-lg shadow-lg">
+
+    <!-- Header -->
+    <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Python Libraries & DevOps Cheat Sheet</h1>
+    
+    <!-- Scikit-learn AI and ML Section -->
+    <div class="section mb-12">
+        <h2 class="text-3xl font-semibold text-gray-700">1. AI and Machine Learning (scikit-learn)</h2>
+        <p class="text-lg text-gray-600 mt-4 mb-6">Scikit-learn is a machine learning library that provides simple and efficient tools for data mining and data analysis. Below are some common operations:</p>
+        
+        <div class="bg-gray-800 text-white p-6 rounded-md shadow-md mb-6" id="ai-ml-code">
+            <h3 class="text-xl font-semibold">Importing scikit-learn libraries</h3>
+            <pre class="whitespace-pre-wrap overflow-x-auto">
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
+            </pre>
+        </div>
+        <button onclick="copyCode('ai-ml-code')" class="copy-btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition mt-2">Copy Me</button>
+        
+        <div class="bg-gray-800 text-white p-6 rounded-md shadow-md mb-6" id="ai-ml-example">
+            <h3 class="text-xl font-semibold">Basic Machine Learning Example (Random Forest)</h3>
+            <pre class="whitespace-pre-wrap overflow-x-auto">
+# Example: Random Forest Classifier
+
+# Load dataset (e.g., Iris dataset)
+from sklearn.datasets import load_iris
+data = load_iris()
+X = data.data
+y = data.target
+
+# Split dataset into train and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Create and train the Random Forest Classifier
+model = RandomForestClassifier(n_estimators=100)
+model.fit(X_train, y_train)
+
+# Predict and calculate accuracy
+y_pred = model.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Accuracy: {accuracy * 100:.2f}%")
+            </pre>
+        </div>
+        <button onclick="copyCode('ai-ml-example')" class="copy-btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition mt-2">Copy Me</button>
+    </div>
+
+    <!-- Django Section -->
+    <div class="section mb-12">
+        <h2 class="text-3xl font-semibold text-gray-700">2. Django Web Framework</h2>
+        <p class="text-lg text-gray-600 mt-4 mb-6">Django is a high-level Python web framework that allows you to build secure and scalable web applications quickly.</p>
+        
+        <div class="bg-gray-800 text-white p-6 rounded-md shadow-md mb-6" id="django-setup">
+            <h3 class="text-xl font-semibold">Basic Django Project Setup</h3>
+            <pre class="whitespace-pre-wrap overflow-x-auto">
+# Install Django
+pip install django
+
+# Create a new project
+django-admin startproject myproject
+
+# Create a new app within the project
+cd myproject
+python manage.py startapp myapp
+
+# Running the development server
+python manage.py runserver
+            </pre>
+        </div>
+        <button onclick="copyCode('django-setup')" class="copy-btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition mt-2">Copy Me</button>
+
+        <div class="bg-gray-800 text-white p-6 rounded-md shadow-md mb-6" id="django-view">
+            <h3 class="text-xl font-semibold">Basic Django View</h3>
+            <pre class="whitespace-pre-wrap overflow-x-auto">
+# In views.py
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("Hello, Django!")
+            </pre>
+        </div>
+        <button onclick="copyCode('django-view')" class="copy-btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition mt-2">Copy Me</button>
+    </div>
+
+    <!-- NumPy Section -->
+    <div class="section mb-12">
+        <h2 class="text-3xl font-semibold text-gray-700">3. NumPy (Numerical Computing)</h2>
+        <p class="text-lg text-gray-600 mt-4 mb-6">NumPy is a powerful numerical computing library used for array manipulation, mathematical operations, and scientific computing.</p>
+        
+        <div class="bg-gray-800 text-white p-6 rounded-md shadow-md mb-6" id="numpy-array">
+            <h3 class="text-xl font-semibold">Creating and Manipulating Arrays</h3>
+            <pre class="whitespace-pre-wrap overflow-x-auto">
+import numpy as np
+
+# Create an array
+arr = np.array([1, 2, 3, 4, 5])
+
+# Perform basic operations
+print(arr + 5)   # Array addition
+print(arr * 2)   # Array multiplication
+
+# Reshape an array
+arr_reshaped = arr.reshape(1, 5)
+print(arr_reshaped)
+            </pre>
+        </div>
+        <button onclick="copyCode('numpy-array')" class="copy-btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition mt-2">Copy Me</button>
+
+        <div class="bg-gray-800 text-white p-6 rounded-md shadow-md mb-6" id="numpy-matrix">
+            <h3 class="text-xl font-semibold">Matrix Operations</h3>
+            <pre class="whitespace-pre-wrap overflow-x-auto">
+# Create two matrices
+A = np.array([[1, 2], [3, 4]])
+B = np.array([[5, 6], [7, 8]])
+
+# Matrix multiplication (dot product)
+C = np.dot(A, B)
+print(C)
+            </pre>
+        </div>
+        <button onclick="copyCode('numpy-matrix')" class="copy-btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition mt-2">Copy Me</button>
+    </div>
+
+    <!-- Python DevOps Section -->
+    <div class="section mb-12">
+        <h2 class="text-3xl font-semibold text-gray-700">4. Python DevOps Cheat Sheet</h2>
+        <p class="text-lg text-gray-600 mt-4 mb-6">DevOps is a combination of development and operations practices aimed at automating and improving the software delivery process. Below are some key tools and practices in Python DevOps:</p>
+        
+        <div class="bg-gray-800 text-white p-6 rounded-md shadow-md mb-6" id="dockerfile">
+            <h3 class="text-xl font-semibold">Docker: Creating a Dockerfile for a Python Application</h3>
+            <pre class="whitespace-pre-wrap overflow-x-auto">
+# Dockerfile for a Python application
+
+# Use official Python image
+FROM python:3.9-slim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy requirements file and install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the application files
+COPY . .
+
+# Expose port 8000
+EXPOSE 8000
+
+# Command to run the application
+CMD ["python", "app.py"]
+            </pre>
+        </div>
+        <button onclick="copyCode('dockerfile')" class="copy-btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition mt-2">Copy Me</button>
+
+        <div class="bg-gray-800 text-white p-6 rounded-md shadow-md mb-6" id="k8s-deployment">
+            <h3 class="text-xl font-semibold">Kubernetes: Deploying a Python App with Kubernetes</h3>
+            <pre class="whitespace-pre-wrap overflow-x-auto">
+# kubernetes-deployment.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: python-app
+  template:
+    metadata:
+      labels:
+        app: python-app
+    spec:
+      containers:
+      - name: python-app
+        image: my-python-app:latest
+        ports:
+        - containerPort: 8000
+            </pre>
+        </div>
+        <button onclick="copyCode('k8s-deployment')" class="copy-btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition mt-2">Copy Me</button>
+
+        <div class="bg-gray-800 text-white p-6 rounded-md shadow-md mb-6" id="github-actions">
+            <h3 class="text-xl font-semibold">GitHub Actions: CI/CD Workflow</h3>
+            <pre class="whitespace-pre-wrap overflow-x-auto">
+# .github/workflows/python-ci.yml
+
+name: Python CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run tests
+      run: |
+        pytest
+            </pre>
+        </div>
+        <button onclick="copyCode('github-actions')" class="copy-btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition mt-2">Copy Me</button>
+    </div>
+</div>
+
 
 </div>
 <br>
@@ -709,35 +748,7 @@ jobs:
 </div>
 
 <!-- Review Form HTML Structure 
-<div class="review-form">
-  <h3>Leave a Review</h3>
-  <form>
-    <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-    </div>
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-    <div class="form-group">
-      <label for="review">Review:</label>
-      <textarea id="review" name="review" required></textarea>
-    </div>
-    <div class="form-group">
-      <label for="rating">Rating:</label>
-      <select id="rating" name="rating" required>
-        <option value="1">1/5</option>
-        <option value="2">2/5</option>
-        <option value="3">3/5</option>
-        <option value="4">4/5</option>
-        <option value="5">5/5</option>
-      </select>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-</div>
--->
+
 <!-- Share Dialog HTML Structure -->
 <div class="share-dialog">
   <h3>Share This Post</h3>
@@ -797,5 +808,17 @@ jobs:
         alert('Code copied to clipboard!');
     }
 </script>
+  <script>
+    function copyCode(id) {
+        var codeBlock = document.getElementById(id).querySelector('pre');
+        var range = document.createRange();
+        range.selectNode(codeBlock);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        document.execCommand('copy');
+        alert('Code copied to clipboard!');
+    }
+</script>
+
 </body>
 </html>
