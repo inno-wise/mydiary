@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -8,371 +8,127 @@
   <meta name="author" content="Innocent Mwea">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="img/bs.jpeg">
-  <link rel="stylesheet" href="materialize/css/materialize.min.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-      <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <title>Innocent Mwea</title>
   
-<!--  <base href="https://madeoftech.net/" target="_blank">-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="./style.css">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="mstyles.css">
-  <title>innocent mwea</title>
-  <style>
-  /*all*/
-  body{
-    font-family: Verdana, sans-serif;
-  font-size: 16px;
-  }
-  footer{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-  }
-  
- .header h1{
-   text-shadow: 5px 8px 8px tomato;
-   text-align: center;
-   font-size: 24px;
-   font-family: "Sofia", sans-serif;
- }
-  
-  }
-  /*header*/
-  .header {
-    text-align: center;
-    padding: 5px;
-    background-color: blanchedalmond;
-  }
-  
-  .topnav{
-    background-color: tomato;
-    overflow: hidden;
-  }
-  
-  .topnav a {
-  float: left;
-  display: block;
-  color: lemonchiffon;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font: normal bolder 20px/20px Georgia, serif;
-}
-}
-.card-img-top {
-  height: 200px;
-  object-fit: cover;
-}
-/* Change color on hover */
-.topnav a:hover {
-  background-color: tomato;
-  height: 10vw;
-  color: black;
-}
-    /*aside style*/
-aside {
-  width: 30%;
-  background-color: lightgray;
-  font-style: italic;
-  float: right;
-  padding-left: 15px;
-  margin-left: 15px;
-}
-/*section 2*/
-.grid-container{
-  display: grid;
-  justify-content: start;
-  grid-template-columns: 50px, 50px, 50px;
-}
-
-div.gallery {
-border: 3px solid lemonchiffon;
-}
-div.gallery:hover{
-    border: 1px solid #777;
-}
-div.gallery img{
-  width: 100%;
-  height: auto;
-}
-div.desc{
-  padding: 15px;
-  text-align: center;
-}
-.grid-container{
-  box-sizing: border-box;
-}
-.responsive{
-  padding: 0 6px;
-  float: left;
-  width: 24.9999%;
-}
-@media only screen (max-width:700px) {
-  .responsive{
-    width: 49.99999%;
-    margin: 6px 0;
-  }
-}
-@media only screen (max-width:500px) {
-  .responsive{
-    width: 100%;
-  }
-}
-.clearfix:after{
-  content: " ";
-  display: table;
-  clear: both;
-}
-
-/*center */
-.flex-container{
-  display: flex;
-  flex-wrap: nowrap;
-  background-color: lemonchiffon;
-}
-.flex-container > div{
-  width:100%;
-  text-align: center;
-  line-height: 74px;
-  font-size: 30px;
-  background-color: lemonchiffon;
-  padding: 10px;
-}
-.flex{
-  background-image: url(/img/mot.png);
-  background-position: fixed;
-  border: 3px solid tomato;
-  height: 75%;
-  padding: 15px;
-  width: 50%;
-  transition: width 3s;
-}
-.flex .imga{
-  height: 50px;
-  width:50px;
-  border-radius: 25px;
-}
-.flex:hover{
-  width: 100%;
-  height: 80%;
-}
-
-    /*img style */
-    /* General Image Styling */
-img {
-  display: block;             /* Ensures the image is block-level, removing any unwanted space below it */
-  max-width: 100%;            /* Makes images responsive */
-  height: 300px;               /* Maintain aspect ratio */
-  width: 100%;                /* Ensures images are stretched to container width */
-  object-fit: cover;          /* Makes the image cover the area while maintaining its aspect ratio */
-  border-radius: 8px;         /* Rounded corners */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition effects */
-}
-
-/* Ensuring a fixed size for images (e.g., 300px by 200px) */
-img.fixed-size {
-  width: 300px;               /* Fixed width */
-  height: 200px;              /* Fixed height */
-  object-fit: cover;          /* Adjusts the image within the fixed dimensions */
-}
-
-/* Hover effects */
-img:hover {
-  transform: scale(1.05);       /* Slight zoom on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adding shadow effect */
-}
-
-/* Optional: Adding border and spacing for image containers */
-img {
-  border: 3px solid #ddd;      /* Light border around the image */
-  margin-bottom: 16px;         /* Margin below the image */
-}
-
-/* Example Container styling for responsive images */
-.image-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;                   /* Adds space between images */
-  justify-content: center;     /* Centers the images */
-}
-
-.image-container img {
-  width: 100%;
-  max-width: 300px;            /* Max width for each image */
-  height: 200px;               /* Fixed height */
-  margin: 10px;                /* Space around the images */
-  object-fit: cover;           /* Ensures images fit within the specified dimensions */
-}
-
-  </style>
 </head>
-<body>
-  <header>
-<div class="header">
-  <h1 class="title">&mcy;ade&ofr;ftech</h1>
-  <br>
-</div>
- </header>
-<div class="topnav">
-  <a href="index.html">articles</a>
-  <a href="blogs.html">Blogs</a>
-  <a href="about.html">About</a>
-  <a href="#">👽</a>
-</div>
-    
-  <hr>
-  <!--hallo-->
-    <!-- Image cards will go here -->
-    <div class="container">
-        <div class="row">
-            <!-- Image card 1 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="img/bs.jpeg" class="card-img-top img-fluid" alt="Image 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Bash script </h5>
-                        <p class="card-text">Bash is a programming language like others. it is used for automation and scripting.learn at your own pace and become a star</p>
-                        <a href="blogs/blackhat.html" class="btn btn-primary">learn Bash</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Image card 2 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="img/web.jpeg" class="card-img-top img-fluid" alt="Image 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Website security</h5>
-                        <p class="card-text">Learn how to develop your website with security measures from scratch </p>
-                        <a href="blogs/websecurity.html" class="btn btn-primary">Learn Website Security</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Image card 3 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="img/java.png" class="card-img-top img-fluid" alt="Image 3">
-                    <div class="card-body">
-                        <h5 class="card-title">DATABASE SECURITY</h5>
-                        <p class="card-text">Learn how to prevent your database from attacks like; sql injection, code injection and many more.</p>
-                        <a href="blogs/database.html" class="btn btn-primary">Hope In</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+<body class="bg-gray-50 font-sans text-gray-900">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-indigo-600 via-indigo-500 to-indigo-400 text-white text-center py-12 shadow-xl">
+    <h1 class="text-5xl font-extrabold tracking-widest">madeoftech</h1>
+    <p class="text-lg mt-2">Tech, Security, and Innovation</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="bg-gradient-to-r from-indigo-700 to-indigo-800 text-white">
+    <div class="max-w-screen-xl mx-auto px-4 py-4 flex justify-between">
+      <a href="index.html" class="hover:text-indigo-300 text-xl">Articles</a>
+      <a href="blogs.html" class="hover:text-indigo-300 text-xl">Blogs</a>
+      <a href="about.html" class="hover:text-indigo-300 text-xl">About</a>
+      <a href="#" class="hover:text-indigo-300 text-xl">👽</a>
     </div>
-        <!-- Image cards will go here -->
-    <div class="container">
-        <div class="row">
-            <!-- Image card 1 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="img/python.jpeg" class="card-img-top img-fluid" alt="Image 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Learn The Complete python programming </h5>
-                        <p class="card-text">Learn how to use this Beautiful Simple syntax language with unlimited power in Tech field</p>
-                        <a href="blogs.html" class="btn btn-primary">Proceed</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Image card 2 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="img/prof.jpeg" class="card-img-top img-fluid" alt="Image 2">
-                    <div class="card-body">
-                        <h5 class="card-title">RUST PROGRAMMING</h5>
-                        <p class="card-text">Programming in Rust is a good choice of all. Rust is Fast compared to C programming language. Rust is Better Than C beacuse of the Amaizing Error handling and Garbage colection</p>
-                        <a href="blogs.html" class="btn btn-primary">Learn Rust</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Image card 3 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="img/mot.png" class="card-img-top img-fluid" alt="Image 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Computer Networking</h5>
-                        <p class="card-text">Learn how computers communicate, learn the Protocols used, learn the Operating System Interconnection(OSI)models.</p>
-                        <a href="blogs/comptia.html" class="btn btn-primary">Hope In</a>
-                    </div>
-                </div>
-            </div>
+  </nav>
+
+  <hr class="border-t-2 border-indigo-600">
+
+  <!-- Image Cards -->
+  <div class="container mx-auto py-8 px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Image card 1 -->
+      <div class="card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transform transition duration-300 hover:scale-105">
+        <img src="img/bs.jpeg" class="w-full h-48 object-cover" alt="Bash Script">
+        <div class="p-6">
+          <h5 class="text-2xl font-semibold text-indigo-800">Bash Script</h5>
+          <p class="text-gray-600 mt-2">Learn automation and scripting with Bash. Unlock the power of terminal.</p>
+          <a href="blogs/blackhat.html" class="mt-4 inline-block bg-indigo-600 text-white py-2 px-6 rounded-full hover:bg-indigo-700 transition duration-200">Learn Bash</a>
         </div>
+      </div>
+
+      <!-- Image card 2 -->
+      <div class="card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transform transition duration-300 hover:scale-105">
+        <img src="img/web.jpeg" class="w-full h-48 object-cover" alt="Website Security">
+        <div class="p-6">
+          <h5 class="text-2xl font-semibold text-indigo-800">Website Security</h5>
+          <p class="text-gray-600 mt-2">Learn how to develop secure websites from scratch. Make your site hacker-proof.</p>
+          <a href="blogs/websecurity.html" class="mt-4 inline-block bg-indigo-600 text-white py-2 px-6 rounded-full hover:bg-indigo-700 transition duration-200">Learn Website Security</a>
+        </div>
+      </div>
+
+      <!-- Image card 3 -->
+      <div class="card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transform transition duration-300 hover:scale-105">
+        <img src="img/java.png" class="w-full h-48 object-cover" alt="Database Security">
+        <div class="p-6">
+          <h5 class="text-2xl font-semibold text-indigo-800">Database Security</h5>
+          <p class="text-gray-600 mt-2">Protect your databases with secure coding practices and prevent SQL injections.</p>
+          <a href="blogs/database.html" class="mt-4 inline-block bg-indigo-600 text-white py-2 px-6 rounded-full hover:bg-indigo-700 transition duration-200">Hope In</a>
+        </div>
+      </div>
     </div>
-    
-<center>
-  <div class="flex-container">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>  
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>  
-  <div>7</div>
-  <div>8</div>
-</div>
-<br>
-<div class="flex">
-  <div>
-    <img class="imga" src="img/mot.png" alt="madeoftech image">
-  </div>
-</div>
-</center>
-<hr>
-<section class="grid-container">
-  <div>
-    <h2>The Tomorrow's Foundation</h2>
-<h4>basic to advance Fundamentals you need</h4>
-      <div class="desc">Rada ni Clean siku Zote kwa Tech kwanza in Future Hii Knowledge ni Paramount sana Wakenya wenzangu</div>
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href=" ">
-      <img src="img/prof.jpeg" alt="Cinque Terre" width="100%" height="100%">
-    </a>
   </div>
 
-</div>
-  </div>
-  <div>
-</section>
+  <!-- More Image Cards -->
+  <div class="container mx-auto py-8 px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Image card 4 -->
+      <div class="card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transform transition duration-300 hover:scale-105">
+        <img src="img/python.jpeg" class="w-full h-48 object-cover" alt="Learn Python">
+        <div class="p-6">
+          <h5 class="text-2xl font-semibold text-indigo-800">Learn Python Programming</h5>
+          <p class="text-gray-600 mt-2">The most versatile programming language. Learn Python for AI, Data Science, Web Development, and more.</p>
+          <a href="blogs.html" class="mt-4 inline-block bg-indigo-600 text-white py-2 px-6 rounded-full hover:bg-indigo-700 transition duration-200">Proceed</a>
+        </div>
+      </div>
 
-  <div class="example-display" style="position:relative;height:600px;">
-  
-    <marquee style="z-index:2;position:absolute;left:18%;top:47%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:100px;" scrollamount="3" direction="down">Innocent mwea</marquee>
-  
-    <marquee style="z-index:2;position:absolute;left:1%;top:39%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:50%;" scrollamount="7" direction="down">icycode</marquee>
-  
-    <marquee style="z-index:2;position:absolute;left:11%;top:7%;font-family:Cursive;font-size:14pt;color:lime;height:302px;" scrollamount="4" direction="down">madeoftech.net</marquee>
-  
-    <marquee style="z-index:2;position:absolute;left:25%;top:33%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:435px;" scrollamount="3" direction="down">innocenty kingpin</marquee>
-    <marquee style="z-index:2;position:absolute;left:15%;top:13%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:432px;" scrollamount="2" direction="down">Self taught💪💪💪</marque>
-    <marquee style="z-index:2;position:absolute;left:18%;top:29%;font-family:Cursive;font-size:14pt;color:orange;height:369px;" scrollamount="1" direction="down">jackson mentor👊🏾</marquee>
-    <marquee style="z-index:2;position:absolute;left:30%;top:17%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:289px;" scrollamount="7" direction="down">self-taught 👊🏾👊🏾</marquee>
-    <marquee style="z-index:2;position:absolute;left:46%;top:27%;font-family:Cursive, 'Times New Roman', Times, serif;font-size:14pt;color:#f90;height:78px;" scrollamount="7" direction="down">info@madeoftech.net</marquee>
-    <marquee style="z-index:2;position:absolute;left:16%;top:17%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:56px;" scrollamount="5" direction="down">innocentwise@madeoftech.net</marquee>
-    <marquee style="z-index:2;position:absolute;left:30%;top:46%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:194px;" scrollamount="2" direction="down">madeoftech.net...</marquee>
-    <marquee style="z-index:2;position:absolute;left:2%;top:10%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:251px;" scrollamount="6" direction="down">self taught</marquee>
-    <marquee style="z-index:2;position:absolute;left:48%;top:24%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:154px;" direction="down">">Pentesting...</marquee>
-    <marquee style="z-index:2;position:absolute;left:41%;top:22%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:82px;" direction="down">Sripting and Automation</marquee>
-    <marquee style="z-index:2;position:absolute;left:46%;top:2%;font-family:Cursive;font-size:14pt;color:Fuchsia;height:70px;" scrollamount="3" direction="down">...DevOps...</marquee>
-    <marquee style="z-index:2;position:absolute;left:42%;top:15%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:334px;" direction="down">Web Security</marquee>
-    <marquee style="z-index:2;position:absolute;left:40%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:167px;" scrollamount="7" direction="down">Computer Networking</marquee>
-    <marquee style="z-index:2;position:absolute;left:45%;top:18%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:420px;" scrollamount="7" direction="down">Automation</marquee>
-    <marquee style="z-index:2;position:absolute;left:22%;top:26%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:12px;" scrollamount="7" direction="down">Scripting</marquee>
-    <marquee style="z-index:2;position:absolute;left:49%;top:4%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:366px;" scrollamount="2" direction="down">DevSecOps</marquee>
-    <marquee style="z-index:2;position:absolute;left:26%;top:32%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:358px;" scrollamount="1" direction="down">Rust Programming</marquee>
-    <marquee style="z-index:2;position:absolute;left:3%;top:14%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:130px;" scrollamount="3" direction="down">CLI Programming</marquee>
-   </div>
-<footer>
-<!--  <div style="color: tomato;background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;font-size: 17px;">&copy;<a href="madeoftech.net" style="color: mediumorchid;text-decoration: none;"> &hookrightarrow; madeoftech.net </a> | developed by Innocent mwea &trade;</div>
--->
-  <div style="color: tomato;background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;font-size: 17px;">&copy;<a href="madeoftech.net" style="color: mediumorchid;text-decoration: none;"> &hookrightarrow; madeoftech.net </a> | developed by Innocent mwea &trade;</div>
-  <br>
-</footer>
-    <!-- Bootstrap JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="../../kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="./script.js"></script>
+      <!-- Image card 5 -->
+      <div class="card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transform transition duration-300 hover:scale-105">
+        <img src="img/prof.jpeg" class="w-full h-48 object-cover" alt="Rust Programming">
+        <div class="p-6">
+          <h5 class="text-2xl font-semibold text-indigo-800">Rust Programming</h5>
+          <p class="text-gray-600 mt-2">Rust offers memory safety and performance. Learn why it’s replacing C in many applications.</p>
+          <a href="blogs.html" class="mt-4 inline-block bg-indigo-600 text-white py-2 px-6 rounded-full hover:bg-indigo-700 transition duration-200">Learn Rust</a>
+        </div>
+      </div>
+
+      <!-- Image card 6 -->
+      <div class="card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transform transition duration-300 hover:scale-105">
+        <img src="img/mot.png" class="w-full h-48 object-cover" alt="Computer Networking">
+        <div class="p-6">
+          <h5 class="text-2xl font-semibold text-indigo-800">Computer Networking</h5>
+          <p class="text-gray-600 mt-2">Explore the world of computer networking, including protocols, architecture, and troubleshooting.</p>
+          <a href="blogs/comptia.html" class="mt-4 inline-block bg-indigo-600 text-white py-2 px-6 rounded-full hover:bg-indigo-700 transition duration-200">Hope In</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flexbox Section -->
+  <center>
+    <div class="flex justify-center gap-4 mb-8">
+      <div class="bg-indigo-600 text-white px-6 py-4 rounded-full text-xl shadow-md hover:bg-indigo-700 transition duration-200">1</div>
+      <div class="bg-indigo-600 text-white px-6 py-4 rounded-full text-xl shadow-md hover:bg-indigo-700 transition duration-200">2</div>
+      <div class="bg-indigo-600 text-white px-6 py-4 rounded-full text-xl shadow-md hover:bg-indigo-700 transition duration-200">3</div>
+      <div class="bg-indigo-600 text-white px-6 py-4 rounded-full text-xl shadow-md hover:bg-indigo-700 transition duration-200">4</div>
+      <div class="bg-indigo-600 text-white px-6 py-4 rounded-full text-xl shadow-md hover:bg-indigo-700 transition duration-200">5</div>
+      <div class="bg-indigo-600 text-white px-6 py-4 rounded-full text-xl shadow-md hover:bg-indigo-700 transition duration-200">6</div>
+      <div class="bg-indigo-600 text-white px-6 py-4 rounded-full text-xl shadow-md hover:bg-indigo-700 transition duration-200">7</div>
+      <div class="bg-indigo-600 text-white px-6 py-4 rounded-full text-xl shadow-md hover:bg-indigo-700 transition duration-200">8</div>
+      <div class="bg-indigo-600 text-white px-6 py-4 rounded-full text-xl shadow-md hover:bg-indigo-700 transition duration-200">9</div>
+    </div>
+  </center>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="max-w-screen-xl mx-auto text-center">
+      <p>&copy; 2024 Innocent Mwea</p>
+    </div>
+  </footer>
+
 </body>
+
 </html>
