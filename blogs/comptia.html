@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -7,372 +7,131 @@
   <meta name="keywords" content="Blogs, Cyber Security, DevOps, CompTIA A+, Network+, Linux+">
   <meta name="author" content="Innocent Mwea">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="img/kali.png">
+  <link rel="icon" type="image/x-icon" href="img/kali.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
   <script src="../../kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<!--  <base href="https://madeoftech.net/" target="_blank">-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="mstyles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <title>madeoftech</title>
   <style>
-  /*all*/
-  body{
-    font-family: Verdana, sans-serif;
-  font-size: 16px;
-  }
-  footer{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-  }
-  
- .header h1{
-   text-shadow: 5px 8px 8px tomato;
-   text-align: center;
-   font-size: 18vw;
-   font-family: "Sofia", sans-serif;
- }
-  
-  }
-  /*header*/
-  .header {
-    text-align: center;
-    padding: 20px;
-    background-color: blanchedalmond;
-  }
-  
-  .topnav{
-    background-color: tomato;
-    overflow: hidden;
-  }
-  
-  .topnav a {
-  float: left;
-  display: block;
-  color: lemonchiffon;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font: normal bolder 20px/20px Georgia, serif;
-}
-}
+    /* Custom color for Python and DevOps */
+    .python-bg {
+      background-color: #306998; /* Python blue */
+    }
 
-/* Change color on hover */
-.topnav a:hover {
-  background-color: tomato;
-  height: 10vw;
-  color: black;
-}
-    /*aside style*/
-aside {
-  width: 30%;
-  background-color: lightgray;
-  font-style: italic;
-  float: right;
-  padding-left: 15px;
-  margin-left: 15px;
-}
-/*section 2*/
-.grid-container{
-  display: grid;
-  justify-content: start;
-  grid-template-columns: 50px, 50px, 50px;
-}
-/*newspp*/
-#newspaper{
-  column-gap: 3;
-  color: orangered;
-}
-/*paggination*/
-.center{
-  align-items: center;
-}
-.pagimation{
-  display: inline-block;
-}
-.pagination a{
-  border: 1px solid tomato;
-  margin: 0 4px;
-  color: black;
-  float: left;
-  padding: 8 16px;
-  text-decoration: none;
-  transition: background-color .3s;
-}
-.pagination a.active{
-  background-color: teal;
-  color: white;
-  border: 1px solid tomato;
-}
-.pagination a:hover:not(.active){
-  background-color: blanchedalmond;
-}
-/* Blog Post CSS */
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 1em;
-        }
-        header h1 {
-            margin: 0;
-        }
-        nav {
-            background-color: #333;
-            color: white;
-            padding: 0.5em;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        section {
-            padding: 20px;
-            margin: 10px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #4CAF50;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        code {
-            display: block;
-            background-color: #f5f5f5;
-            padding: 10px;
-            border-radius: 5px;
-            font-family: "Courier New", monospace;
-            margin: 10px 0;
-        }
-        .copy-button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 5px 10px;
-            margin-top: 5px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .copy-button:hover {
-            background-color: #45a049;
-        }
-        iframe {
-            width: 100%;
-            height: 600px;
-            border: none;
-            margin-top: 15px;
-        }
+    .devops-bg {
+      background-color: #E34F26; /* DevOps orange */
+    }
   </style>
 </head>
-<body>
-  <header>
-<div class="header">
-  <h1 class="title">&mcy;ade&ofr;ftech</h1>
-</div>
 
-<div class="topnav">
-  <a href="index.html">articles</a>
-  <a href="blogs.html">Blogs</a>
-  <a href="about.html">About</a>
-</div>
+<body class="font-sans bg-gray-100 text-gray-900">
+  <header class="bg-gray-800 p-4">
+    <div class="text-center">
+      <h1 class="text-white text-4xl">MadeOfTech</h1>
+    </div>
   </header>
-  <br>
-  <br>
-  <!--pagination-->
-  <h2>Diary blogs</h2>
 
-<div class="center">
-  <div class="pagination">
-  <a href="#">&laquo;</a>
-  <a href="linux.html" >commands line interface</a>
-  <a href="comptia.html" class="active">CompTIA ...</a>
-  <a href="blackhat.html">python black hat</a>
-  <a href="websecurity.html">web Security</a>
-  <a href="database.html">Database security</a>
-  <a href="pythondevops.html">python for DevOps</a>
-  <a href="newspaper.html">newspaper</a>
-  <a href="#">&raquo;</a>
-  </div>
-</div>
-<br>
-<hr>
-<br>
-<header>
-    <h1>Technical Courses and Certifications</h1>
-    <p>Explore a wide range of technical courses and certifications including CompTIA, CCNA, PowerShell, and more!</p>
-</header>
+  <nav class="bg-gray-700 text-white text-center py-4">
+    <div class="space-x-8">
+      <a href="index.html" class="hover:text-gray-300">Articles</a>
+      <a href="blogs.html" class="hover:text-gray-300">Blogs</a>
+      <a href="about.html" class="hover:text-gray-300">About</a>
+    </div>
+  </nav>
 
-<nav>
-    <ul>
-        <li><a href="#CompTIA A+">CompTIA A+</a></li>
-        <li><a href="#CompTIA Network+">CompTIA Network+</a></li>
-        <li><a href="#CompTIA Linux+">CompTIA Linux+</a></li>
-        <li><a href="#PowerShell">PowerShell</a></li>
-        <li><a href="#CCNA">CCNA</a></li>
-        <li><a href="#Batch Files">Batch Files</a></li>
-        <li><a href="#Ansible Automation">Ansible Automation</a></li>
-        <li><a href="#CompTIA Cloud+">CompTIA Cloud+</a></li>
-        <li><a href="#Linux for Ethical Hackers">Linux for Ethical Hackers</a></li>
-        <li><a href="#bonuses">Bonuses</a></li>
-    </ul>
-</nav>
+  <main class="container mx-auto p-6">
+    <h2 class="text-2xl font-semibold my-4">Diary Blogs</h2>
 
-<hr>
+    <!-- Pagination -->
+    <div class="flex justify-center space-x-4 my-4">
+      <a href="#" class="text-lg hover:text-gray-500">&laquo;</a>
+      <a href="linux.html" class="text-lg hover:text-gray-500">Commands Line Interface</a>
+      <a href="comptia.html" class="text-lg hover:text-gray-500 active">CompTIA ...</a>
+      <a href="blackhat.html" class="text-lg hover:text-gray-500">Python Black Hat</a>
+      <a href="websecurity.html" class="text-lg hover:text-gray-500">Web Security</a>
+      <a href="database.html" class="text-lg hover:text-gray-500">Database Security</a>
+      <a href="pythondevops.html" class="text-lg hover:text-gray-500">Python for DevOps</a>
+      <a href="newspaper.html" class="text-lg hover:text-gray-500">Newspaper</a>
+      <a href="#" class="text-lg hover:text-gray-500">&raquo;</a>
+    </div>
 
-<section id="compTIA A+" class="container">
-    <h2>CompTIA A+</h2>
-    <p>CompTIA A+ is a foundational certification in IT that covers topics like hardware, networking, and troubleshooting. It is the starting point for IT professionals looking to enter the field.</p>
-    <code id="comptiaAplusCode">CompTIA A+ is a foundational certification in IT that covers topics like hardware, networking, and troubleshooting.</code>
-    <button class="copy-button" onclick="copyToClipboard('comptiaAplusCode')">Copy</button>
+    <hr class="my-6 border-t border-gray-300">
 
-    <!-- Embedding a Free PDF -->
-    <iframe src="https://example.com/comptia-a-plus-pdf" title="CompTIA A+ PDF"></iframe>
-</section>
+    <header>
+      <h1 class="text-3xl font-bold mb-4">Technical Courses and Certifications</h1>
+      <p class="text-lg">Explore a wide range of technical courses and certifications including CompTIA, CCNA, PowerShell, and more!</p>
+    </header>
 
-<section id="compTIA Network+" class="container">
-    <h2>CompTIA Network+</h2>
-    <p>CompTIA Network+ is a certification focusing on networking concepts, installation, configuration, and troubleshooting. It’s essential for network professionals.</p>
-    <code id="comptiaNetworkCode">CompTIA Network+ is a certification focusing on networking concepts, installation, configuration, and troubleshooting.</code>
-    <button class="copy-button" onclick="copyToClipboard('comptiaNetworkCode')">Copy</button>
+    <nav>
+      <ul class="space-y-4">
+        <li><a href="#CompTIA A+" class="text-blue-600 hover:text-blue-700">CompTIA A+</a></li>
+        <li><a href="#CompTIA Network+" class="text-blue-600 hover:text-blue-700">CompTIA Network+</a></li>
+        <li><a href="#CompTIA Linux+" class="text-blue-600 hover:text-blue-700">CompTIA Linux+</a></li>
+        <li><a href="#PowerShell" class="text-blue-600 hover:text-blue-700">PowerShell</a></li>
+        <li><a href="#CCNA" class="text-blue-600 hover:text-blue-700">CCNA</a></li>
+        <li><a href="#Batch Files" class="text-blue-600 hover:text-blue-700">Batch Files</a></li>
+        <li><a href="#Ansible Automation" class="text-blue-600 hover:text-blue-700">Ansible Automation</a></li>
+        <li><a href="#CompTIA Cloud+" class="text-blue-600 hover:text-blue-700">CompTIA Cloud+</a></li>
+        <li><a href="#Linux for Ethical Hackers" class="text-blue-600 hover:text-blue-700">Linux for Ethical Hackers</a></li>
+        <li><a href="#bonuses" class="text-blue-600 hover:text-blue-700">Bonuses</a></li>
+      </ul>
+    </nav>
 
-    <!-- Embedding a Free PDF -->
-    <iframe src="https://example.com/comptia-network-plus-pdf" title="CompTIA Network+ PDF"></iframe>
-</section>
+    <hr class="my-6 border-t border-gray-300">
 
-<section id="compTIA Linux+" class="container">
-    <h2>CompTIA Linux+</h2>
-    <p>Understand the Linux operating system and how to use it professionally. This includes managing Linux environments and troubleshooting system issues.</p>
-    <code id="comptiaLinuxText">Understand the Linux operating system and how to use it professionally, managing environments and troubleshooting system issues.</code>
-    <button class="copy-button" onclick="copyToClipboard('comptiaLinuxText')">Copy</button>
+    <!-- Content Sections -->
+    <section id="compTIA A+" class="container py-6">
+      <h2 class="text-2xl font-bold mb-4">CompTIA A+</h2>
+      <p class="text-lg mb-4">CompTIA A+ is a foundational certification in IT that covers topics like hardware, networking, and troubleshooting. It is the starting point for IT professionals looking to enter the field.</p>
+      <code class="bg-gray-200 p-2 rounded">CompTIA A+ is a foundational certification in IT that covers topics like hardware, networking, and troubleshooting.</code>
+      <button class="mt-2 py-2 px-4 bg-blue-600 text-white rounded hover:bg-blue-700" onclick="copyToClipboard('comptiaAplusCode')">Copy</button>
 
-    <!-- Embedding a Free PDF -->
-    <iframe src="https://example.com/comptia-linux-plus-pdf" title="CompTIA Linux+ PDF"></iframe>
-</section>
+      <iframe src="https://example.com/comptia-a-plus-pdf" title="CompTIA A+ PDF" class="mt-4 w-full h-64"></iframe>
+    </section>
 
-<section id="PowerShell" class="container">
-    <h2>Windows PowerShell Commands</h2>
-    <p>Windows PowerShell is a task automation and configuration management framework consisting of a command-line shell and scripting language. It’s essential for Windows system administrators.</p>
-    <code id="powershellCode">Get-Process    # Retrieves a list of running processes on the system</code>
-    <button class="copy-button" onclick="copyToClipboard('powershellCode')">Copy</button>
+    <section id="compTIA Network+" class="container py-6">
+      <h2 class="text-2xl font-bold mb-4">CompTIA Network+</h2>
+      <p class="text-lg mb-4">CompTIA Network+ is a certification focusing on networking concepts, installation, configuration, and troubleshooting. It’s essential for network professionals.</p>
+      <code class="bg-gray-200 p-2 rounded">CompTIA Network+ is a certification focusing on networking concepts, installation, configuration, and troubleshooting.</code>
+      <button class="mt-2 py-2 px-4 bg-blue-600 text-white rounded hover:bg-blue-700" onclick="copyToClipboard('comptiaNetworkCode')">Copy</button>
 
-    <!-- Embedding a Free PDF -->
-    <iframe src="https://example.com/powershell-pdf" title="PowerShell PDF"></iframe>
-</section>
+      <iframe src="https://example.com/comptia-network-plus-pdf" title="CompTIA Network+ PDF" class="mt-4 w-full h-64"></iframe>
+    </section>
 
-<section id="CCNA" class="container">
-    <h2>Cisco Certified Network Associate (CCNA)</h2>
-    <p>CCNA certification helps you develop the foundational skills necessary for networking, including IP addressing, routing, and switching. This certification is essential for aspiring network engineers.</p>
-    <button class="copy-button" onclick="copyToClipboard('ccnaText')">Copy</button>
+    <section id="compTIA Linux+" class="container py-6">
+      <h2 class="text-2xl font-bold mb-4">CompTIA Linux+</h2>
+      <p class="text-lg mb-4">Understand the Linux operating system and how to use it professionally. This includes managing Linux environments and troubleshooting system issues.</p>
+      <code class="bg-gray-200 p-2 rounded">Understand the Linux operating system and how to use it professionally, managing environments and troubleshooting system issues.</code>
+      <button class="mt-2 py-2 px-4 bg-blue-600 text-white rounded hover:bg-blue-700" onclick="copyToClipboard('comptiaLinuxText')">Copy</button>
 
-    <!-- Embedding a Free PDF -->
-    <iframe src="https://example.com/ccna-pdf" title="CCNA PDF"></iframe>
-</section>
+      <iframe src="https://example.com/comptia-linux-plus-pdf" title="CompTIA Linux+ PDF" class="mt-4 w-full h-64"></iframe>
+    </section>
 
-<section id="Batch Files" class="container">
-    <h2>Windows CMD Batch Files</h2>
-    <p>Batch files are scripts used for automating tasks in Windows, such as managing file operations and system configurations through the command line.</p>
-    <code id="batchFileCode">@echo off  # A basic Batch file command to disable the echo of commands</code>
-    <button class="copy-button" onclick="copyToClipboard('batchFileCode')">Copy</button>
+    <!-- More Sections Go Here -->
 
-    <!-- Embedding a Free PDF -->
-    <iframe src="https://example.com/batch-files-pdf" title="Batch Files PDF"></iframe>
-</section>
+    <div class="my-6 text-center">
+      <button class="py-2 px-4 bg-orange-600 text-white rounded hover:bg-orange-700">Share This Post</button>
+    </div>
+  </main>
 
-<section id="Ansible Automation" class="container">
-    <h2>Ansible Automation</h2>
-    <p>Ansible is an open-source automation tool used to automate cloud provisioning, configuration management, and application deployment.</p>
-    <button class="copy-button" onclick="copyToClipboard('ansibleText')">Copy</button>
+  <footer class="bg-gray-800 text-white py-4 text-center">
+    <div class="text-sm">
+      &copy; <a href="madeoftech.net" class="text-mediumorchid hover:text-mediumorchid">madeoftech.net</a> | Developed by Innocent Mwea
+    </div>
+  </footer>
 
-    <!-- Embedding a Free PDF -->
-    <iframe src="https://example.com/ansible-pdf" title="Ansible PDF"></iframe>
-</section>
-
-<section id="compTIA Cloud+" class="container">
-    <h2>CompTIA Cloud+</h2>
-    <p>CompTIA Cloud+ focuses on cloud computing concepts, including infrastructure, security, and service management in cloud environments.</p>
-    <button class="copy-button" onclick="copyToClipboard('cloudPlusText')">Copy</button>
-
-    <!-- Embedding a Free PDF -->
-    <iframe src="https://example.com/cloud-plus-pdf" title="CompTIA Cloud+ PDF"></iframe>
-</section>
-
-<section id="Linux for Ethical Hackers" class="container">
-    <h2>Linux for Ethical Hackers</h2>
-    <p>This course teaches you how to use Linux as a platform for ethical hacking, focusing on penetration testing and system security.</p>
-    <button class="copy-button" onclick="copyToClipboard('ethicalHackersText')">Copy</button>
-
-    <!-- Embedding a Free PDF -->
-    <iframe src="https://example.com/linux-ethical-hacking-pdf" title="Linux for Ethical Hackers PDF"></iframe>
-</section>
-
-<section id="bonuses" class="container">
-    <h2>My Bonus</h2>
-    <p>Learn bonus skills related to IT certifications, including networking, security, and advanced systems administration techniques.</p>
-    <button class="copy-button" onclick="copyToClipboard('bonusText')">Copy</button>
-
-    <!-- Embedding a Free PDF -->
-    <iframe src="https://example.com/bonus-pdf" title="Bonus PDF"></iframe>
-</section>
-
-<br>
-<!-- Blog Post HTML Structure -->
-
-  <div class="comments">
-    <!-- comments will be displayed here -->
-  </div>
-  <div class="reviews">
-    <!-- reviews will be displayed here -->
-  </div>
-</div>
-
-<!-- Comment Form HTML Structure -->
-
-<!-- Review Form HTML Structure -->
-
-<!-- Share Dialog HTML Structure -->
-<div class="share-dialog">
-  <h3>Share This Post</h3>
-  <ul>
-    <li><a href="#" class="facebook-share">Facebook</a></li>
-    <li><a href="#" class="twitter-share">Twitter</a></li>
-    <li><a href="#" class="linkedin-share">LinkedIn</a></li>
-  </ul>
-</div>
-
-<!-- Contact Form HTML Structure -->
-
-<footer>
-  <div style="color: tomato;background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;font-size: 17px;">&copy;<a href="madeoftech.net" style="color: mediumorchid;text-decoration: none;"> &hookrightarrow; madeoftech.net </a> | developed by Innocent mwea &trade;</div>
-</footer>
-<script src="/script.js"></script>
   <script>
     function copyToClipboard(id) {
-        const textToCopy = document.getElementById(id).textContent;
-        const textArea = document.createElement('textarea');
-        textArea.value = textToCopy;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-        alert('Text copied to clipboard!');
+      const textToCopy = document.getElementById(id).textContent;
+      const textArea = document.createElement('textarea');
+      textArea.value = textToCopy;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      alert('Text copied to clipboard!');
     }
-</script>
+  </script>
 </body>
+
 </html>
