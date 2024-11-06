@@ -290,6 +290,108 @@ aside {
 .contact-form button[type="submit"]:hover {
   background-color: #3e8e41;
 }
+    /*mmmhm*/
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #f4f4f9;
+    text-align: center;
+    padding: 1.5em 0;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 0.3em;
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.8;
+}
+
+main {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1em;
+}
+
+.cheat-sheet {
+    margin-bottom: 2em;
+}
+
+.cheat-sheet h2 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    color: #444;
+}
+
+.command {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    margin-bottom: 1em;
+    position: relative;
+}
+
+.command h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 0.3em;
+}
+
+.command code {
+    display: block;
+    background-color: #f4f4f4;
+    padding: 0.5em;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #c0392b;
+    margin-bottom: 0.5em;
+}
+
+.command p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+button {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+    color: #f4f4f9;
+    font-size: 0.9em;
+}
+
   </style>
 </head>
 <body>
@@ -346,6 +448,115 @@ Python is widely recognized for its <b>simplicity and versility</b>, and it has 
 </div>
 <br>
 <hr>
+  <div>
+    <header>
+        <h1>Python Grey Hat Hacking Cheat Sheet</h1>
+        <p>Intermediate to Advanced Techniques</p>
+    </header>
+
+    <main>
+        <!-- Basic Commands -->
+        <section class="cheat-sheet">
+            <h2>Basic Commands</h2>
+
+            <div class="command">
+                <h3>Import Libraries</h3>
+                <code id="code1">import os, sys, socket</code>
+                <button onclick="copyToClipboard('code1')">Copy</button>
+                <p>Common libraries for accessing system commands, network operations, and more.</p>
+            </div>
+
+            <div class="command">
+                <h3>Creating a Socket</h3>
+                <code id="code2">sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</code>
+                <button onclick="copyToClipboard('code2')">Copy</button>
+                <p>Initialize a socket for network communication.</p>
+            </div>
+        </section>
+
+        <!-- Web Scraping -->
+        <section class="cheat-sheet">
+            <h2>Web Scraping</h2>
+
+            <div class="command">
+                <h3>Using Requests</h3>
+                <code id="code3">import requests<br>response = requests.get("https://example.com")</code>
+                <button onclick="copyToClipboard('code3')">Copy</button>
+                <p>Fetch HTML from a URL for parsing and analysis.</p>
+            </div>
+
+            <div class="command">
+                <h3>Using BeautifulSoup</h3>
+                <code id="code4">from bs4 import BeautifulSoup<br>soup = BeautifulSoup(response.text, 'html.parser')</code>
+                <button onclick="copyToClipboard('code4')">Copy</button>
+                <p>Parse HTML content for targeted data extraction.</p>
+            </div>
+        </section>
+
+        <!-- Network Scanning -->
+        <section class="cheat-sheet">
+            <h2>Network Scanning</h2>
+
+            <div class="command">
+                <h3>Using Scapy</h3>
+                <code id="code5">from scapy.all import sr1, IP, ICMP<br>packet = sr1(IP(dst="target_ip")/ICMP())</code>
+                <button onclick="copyToClipboard('code5')">Copy</button>
+                <p>Send an ICMP packet to a target IP and receive a response.</p>
+            </div>
+        </section>
+
+        <!-- Encryption -->
+        <section class="cheat-sheet">
+            <h2>Encryption</h2>
+
+            <div class="command">
+                <h3>Using PyCryptodome for AES Encryption</h3>
+                <code id="code6">from Crypto.Cipher import AES<br>cipher = AES.new(key, AES.MODE_EAX)</code>
+                <button onclick="copyToClipboard('code6')">Copy</button>
+                <p>Encrypt data with AES using the PyCryptodome library.</p>
+            </div>
+        </section>
+
+        <!-- Threading and Parallelism -->
+        <section class="cheat-sheet">
+            <h2>Threading and Parallelism</h2>
+
+            <div class="command">
+                <h3>Using Threading for Multiple Connections</h3>
+                <code id="code7">from threading import Thread<br>t = Thread(target=my_function, args=(arg,))<br>t.start()</code>
+                <button onclick="copyToClipboard('code7')">Copy</button>
+                <p>Execute multiple tasks in parallel using threads.</p>
+            </div>
+        </section>
+
+        <!-- SQL Injection Detection -->
+        <section class="cheat-sheet">
+            <h2>SQL Injection Detection</h2>
+
+            <div class="command">
+                <h3>Using SQLMap Library</h3>
+                <code id="code8">import sqlmap<br>sqlmap.scan(url="http://target.com")</code>
+                <button onclick="copyToClipboard('code8')">Copy</button>
+                <p>Automate SQL injection detection using the SQLMap library.</p>
+            </div>
+        </section>
+
+        <!-- API Exploitation -->
+        <section class="cheat-sheet">
+            <h2>API Exploitation</h2>
+
+            <div class="command">
+                <h3>Sending a POST Request</h3>
+                <code id="code9">data = {"username": "admin", "password": "password"}<br>response = requests.post("http://api.target.com/login", json=data)</code>
+                <button onclick="copyToClipboard('code9')">Copy</button>
+                <p>Test API endpoints for vulnerabilities by sending requests.</p>
+            </div>
+        </section>
+    </main>
+        <footer class="footer">
+        <p>For educational purposes only. Always practice ethical hacking.</p>
+    </footer>
+  </div>
 <br>
 <!-- Blog Post HTML Structure -->
   <div class="comments">
@@ -397,27 +608,21 @@ Python is widely recognized for its <b>simplicity and versility</b>, and it has 
 </div>
 
 <!-- Contact Form HTML Structure -->
-<div class="contact-form">
-  <h3>Contact Me</h3>
-  <form>
-    <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-    </div>
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-    <div class="form-group">
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Send</button>
-  </form>
-</div>
+
 <footer>
   <div style="color: tomato;background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;font-size: 17px;">&copy;<a href="madeoftech.net" style="color: mediumorchid;text-decoration: none;"> &hookrightarrow; madeoftech.net </a> | developed by Innocent mwea &trade;</div>
 </footer>
-<script src="/script.js"></script>
+   <script defer src="script.js"></script>
+<script src="/script.js">
+  function copyToClipboard(id) {
+    const codeElement = document.getElementById(id);
+    navigator.clipboard.writeText(codeElement.innerText).then(() => {
+        alert("Code copied to clipboard!");
+    }).catch(err => {
+        console.error("Error copying text: ", err);
+    });
+}
+
+</script>
 </body>
 </html>
