@@ -1,439 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="My Online Blog App">
+  <meta name="description" content="website security">
   <meta name="keywords" content="Blogs, Cyber Security, DevOps, CompTIA A+, Network+, Linux+">
   <meta name="author" content="Innocent Mwea">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="img/kali.png">
+  <link rel="icon" type="image/x-icon" href="img/kali.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
   <script src="../../kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<!--  <base href="https://madeoftech.net/" target="_blank">-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="mstyles.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <title>madeoftech</title>
   <style>
-  /*all*/
-  body{
-    font-family: Verdana, sans-serif;
-  font-size: 16px;
-  }
-  footer{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-  }
-  
- .header h1{
-   text-shadow: 5px 8px 8px tomato;
-   text-align: center;
-   font-size: 18vw;
-   font-family: "Sofia", sans-serif;
- }
-  
-  }
-  /*header*/
-  .header {
-    text-align: center;
-    padding: 20px;
-    background-color: blanchedalmond;
-  }
-  
-  .topnav{
-    background-color: tomato;
-    overflow: hidden;
-  }
-  
-  .topnav a {
-  float: left;
-  display: block;
-  color: lemonchiffon;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font: normal bolder 20px/20px Georgia, serif;
-}
-}
+    /* Custom color for Python and DevOps */
+    .python-bg {
+      background-color: #306998; /* Python blue */
+    }
 
-/* Change color on hover */
-.topnav a:hover {
-  background-color: tomato;
-  height: 10vw;
-  color: black;
-}
-    /*aside style*/
-aside {
-  width: 30%;
-  background-color: lightgray;
-  font-style: italic;
-  float: right;
-  padding-left: 15px;
-  margin-left: 15px;
-}
-/*section 2*/
-.grid-container{
-  display: grid;
-  justify-content: start;
-  grid-template-columns: 50px, 50px, 50px;
-}
-/*newspp*/
-#newspaper{
-  column-gap: 3;
-  color: orangered;
-}
-/*paggination*/
-.center{
-  align-items: center;
-}
-.pagimation{
-  display: inline-block;
-}
-.pagination a{
-  border: 1px solid tomato;
-  margin: 0 4px;
-  color: black;
-  float: left;
-  padding: 8 16px;
-  text-decoration: none;
-  transition: background-color .3s;
-}
-.pagination a.active{
-  background-color: teal;
-  color: white;
-  border: 1px solid tomato;
-}
-.pagination a:hover:not(.active){
-  background-color: blanchedalmond;
-}
-/*blog*/
-/* Blog Post CSS */
-.blog-post {
-  margin-bottom: 20px;
-}
-
-.interaction-buttons {
-  margin-top: 20px;
-}
-
-.like-btn, .comment-btn, .share-btn {
-  margin-right: 10px;
-}
-
-.rating {
-  margin-top: 10px;
-}
-
-.rating-label {
-  margin-right: 10px;
-}
-
-.fa-star {
-  color: #ccc;
-  cursor: pointer;
-}
-
-.fa-star.active {
-  color: #ffd700;
-}
-
-/* Comment Form CSS */
-.comment-form {
-  margin-top: 20px;
-}
-
-.comment-form h3 {
-  margin-bottom: 10px;
-}
-
-.comment-form form {
-  margin-bottom: 20px;
-}
-
-.comment-form .form-group {
-  margin-bottom: 15px;
-}
-
-.comment-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.comment-form input, .comment-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-}
-
-.comment-form button[type="submit"] {
-  background-color: #4CAF50;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.comment-form button[type="submit"]:hover {
-  background-color: #3e8e41;
-}
-
-/* Review Form CSS */
-.review-form {
-  margin-top: 20px;
-}
-
-.review-form h3 {
-  margin-bottom: 10px;
-}
-
-.review-form form {
-  margin-bottom: 20px;
-}
-
-.review-form .form-group {
-  margin-bottom: 15px;
-}
-
-.review-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.review-form input, .review-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-}
-
-.review-form button[type="submit"] {
-  background-color: #4CAF50;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.review-form button[type="submit"]:hover {
-  background-color: #3e8e41;
-}
-
-/* Share Dialog CSS */
-.share-dialog {
-  margin-top: 20px;
-}
-
-.share-dialog h3 {
-  margin-bottom: 10px;
-}
-
-.share-dialog ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.share-dialog li {
-  margin-bottom: 10px;
-}
-
-.share-dialog a {
-  text-decoration: none;
-  color: #337ab7;
-}
-
-.share-dialog a:hover {
-  color: #23527c;
-}
-
-/* Contact Form CSS */
-.contact-form {
-  margin-top: 20px;
-}
-
-.contact-form h3 {
-  margin-bottom: 10px;
-}
-
-.contact-form form {
-  margin-bottom: 20px;
-}
-
-.contact-form .form-group {
-  margin-bottom: 15px;
-}
-
-.contact-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.contact-form input, .contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-}
-
-.contact-form button[type="submit"] {
-  background-color: #4CAF50;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.contact-form button[type="submit"]:hover {
-  background-color: #3e8e41;
-}
-
-    /*jkbjkk*/
-    
-        .container {
-            width: 80%;
-            margin: 2rem auto;
-        }
-
-        h1, h2 {
-            text-align: center;
-            color: #333;
-        }
-
-        .section {
-            margin-bottom: 2rem;
-            padding: 1rem;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .code-block {
-            background-color: #2e2e2e;
-            color: white;
-            padding: 15px;
-            border-radius: 8px;
-            font-size: 16px;
-            overflow-x: auto;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-        }
-
-        .code-block h3 {
-            color: orange;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin: 10px 0;
-        }
-
-        .copy-btn {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .copy-btn:hover {
-            background-color: #0056b3;
-        }
+    .devops-bg {
+      background-color: #E34F26; /* DevOps orange */
+    }
   </style>
 </head>
-<body>
+
+<body class="font-sans bg-gray-100 text-gray-900">
   <header>
-<div class="header">
-  <h1 class="title">&mcy;ade&ofr;ftech</h1>
-</div>
+    <div class="bg-gray-800 p-4">
+      <h1 class="text-white text-4xl text-center">MadeOfTech</h1>
+    </div>
 
-<div class="topnav">
-  <a href="index.html">articles</a>
-  <a href="blogs.html">Blogs</a>
-  <a href="about.html">About</a>
-</div>
+    <div class="bg-gray-700 text-white text-center py-4">
+      <nav class="space-x-8">
+        <a href="./index.html" class="hover:text-gray-300">Articles</a>
+        <a href="./blogs.html" class="hover:text-gray-300">Blogs</a>
+        <a href="./about.html" class="hover:text-gray-300">About</a>
+      </nav>
+    </div>
   </header>
-  <br>
-  <br>
-  <!--pagination-->
-  <h2>Dairy blogs</h2>
 
-<div class="center">
-  <div class="pagination">
-  <a href="#">&laquo;</a>
-  <a href="linux.html">commands line interface</a>
-  <a href="comptia.html">CompTIA ...</a>
-  <a href="blackhat.html">python black hat</a>
-  <a href="websecurity.html" class="active">web Security</a>
-  <a href="database.html">Database security</a>
-  <a href="pythondevops.html">python for DevOps</a>
-  <a href="newspaper.html">newspaper</a>
-  <a href="#">&raquo;</a>
-  </div>
-</div>
-<br>
-<hr>
-<br>
-<div>
-  <h1>Website security you must know</h1>
-  <p>This cheat sheet now covers Website Security best practices, including user authentication, password hashing, preventing common vulnerabilities like XSS, CSRF, and SQL injection, as well as advanced security techniques like two-factor authentication (2FA) and Content Security Policies (CSP).</p>
- <div>
-   <h3>Explanation of Website Security Section:</h3>
-<b>Authentication:</b>
-<ol>
-Example code on how to implement user authentication in Django.
-<li>Password Hashing:</li>
+  <main class="container mx-auto p-6">
+    <h2 class="text-2xl font-semibold my-4">Dairy blogs</h2>
 
-Use bcrypt to securely hash and verify user passwords.
-<li>SQL Injection Prevention:</li>
+    <!-- Pagination -->
+    <div class="flex justify-center space-x-4 my-4">
+      <a href="#" class="text-lg hover:text-gray-500">&laquo;</a>
+      <a href="linux.html" class="text-lg hover:text-gray-500">Commands Line Interface</a>
+      <a href="comptia.html" class="text-lg hover:text-gray-500">CompTIA ...</a>
+      <a href="blackhat.html" class="text-lg hover:text-gray-500">Python Black Hat</a>
+      <a href="websecurity.html" class="text-lg font-bold text-blue-600">Web Security</a>
+      <a href="database.html" class="text-lg hover:text-gray-500">Database Security</a>
+      <a href="pythondevops.html" class="text-lg hover:text-gray-500">Python for DevOps</a>
+      <a href="newspaper.html" class="text-lg hover:text-gray-500">Newspaper</a>
+      <a href="#" class="text-lg hover:text-gray-500">&raquo;</a>
+    </div>
 
-Use parameterized queries in Django to prevent SQL injection.
-<li>Cross-Site Scripting (XSS):</li>
+    <hr class="my-6 border-t border-gray-300">
 
-Django automatically escapes variables in templates to prevent XSS vulnerabilities.
-<li>Cross-Site Request Forgery (CSRF):</li>
+    <div>
+      <h1 class="text-3xl font-bold mb-4">Website Security You Must Know</h1>
+      <p class="text-lg mb-4">This cheat sheet covers Website Security best practices, including user authentication, password hashing, preventing common vulnerabilities like XSS, CSRF, and SQL injection, as well as advanced security techniques like two-factor authentication (2FA) and Content Security Policies (CSP).</p>
 
-Django's built-in protection against CSRF with the {% csrf_token %} template tag.
-<li>Secure Cookies:</li>
+      <h3 class="text-xl font-semibold mb-2">Explanation of Website Security Section:</h3>
+      <ol class="list-decimal pl-8 space-y-2">
+        <li><strong>Password Hashing:</strong> Use bcrypt to securely hash and verify user passwords.</li>
+        <li><strong>SQL Injection Prevention:</strong> Use parameterized queries in Django to prevent SQL injection.</li>
+        <li><strong>Cross-Site Scripting (XSS):</strong> Django automatically escapes variables in templates to prevent XSS vulnerabilities.</li>
+        <li><strong>Cross-Site Request Forgery (CSRF):</strong> Django's built-in protection against CSRF with the {% csrf_token %} template tag.</li>
+        <li><strong>Secure Cookies:</strong> Example of how to securely set cookies in your Django application (e.g., using HttpOnly, Secure, and SameSite flags).</li>
+        <li><strong>Two-Factor Authentication (2FA):</strong> Example of integrating two-factor authentication into a Django app using the django-otp and django-two-factor-auth packages.</li>
+        <li><strong>Content Security Policy (CSP):</strong> Example of setting a basic CSP header to protect your site from XSS and other content-related attacks.</li>
+      </ol>
+    </div>
 
-Example of how to securely set cookies in your Django application (e.g., using HttpOnly, Secure, and SameSite flags).
-<li>Two-Factor Authentication (2FA):</li>
+    <div class="my-8">
+      <h1 class="text-3xl font-bold mb-4">Python Libraries, DevOps & Website Security Cheat Sheet</h1>
 
-Example of integrating two-factor authentication into a Django app using the django-otp and django-two-factor-auth packages.
-<li>Content Security Policy (CSP):</li>
-
-Example of setting a basic CSP header to protect your site from XSS and other content-related attacks.
-  </ol>
- </div>
-  <div class="container">
-    <h1>Python Libraries, DevOps & Website Security Cheat Sheet</h1>
-    
-    <!-- Scikit-learn AI and ML Section -->
-    <div class="section">
-        <h2>1. AI and Machine Learning (scikit-learn)</h2>
-        <p><strong>Scikit-learn</strong> is a machine learning library that provides simple and efficient tools for data mining and data analysis. Below are some common operations:</p>
+      <!-- Scikit-learn AI and ML Section -->
+      <div class="bg-python-bg text-white p-6 rounded-lg shadow-lg mb-8">
+        <h2 class="text-2xl font-semibold">1. AI and Machine Learning (scikit-learn)</h2>
+        <p class="text-lg mb-4"><strong>Scikit-learn</strong> is a machine learning library that provides simple and efficient tools for data mining and data analysis. Below are some common operations:</p>
         
-        <div class="code-block">
-            <h3>Importing scikit-learn libraries</h3>
-            <pre>
+        <div class="bg-gray-50 p-4 rounded-md mb-4">
+          <h3 class="text-xl font-semibold mb-2">Importing scikit-learn libraries</h3>
+          <pre class="bg-gray-200 p-4 rounded-md">
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
-            </pre>
+          </pre>
         </div>
 
-        <div class="code-block">
-            <h3>Basic Machine Learning Example (Random Forest)</h3>
-            <pre>
+        <div class="bg-gray-50 p-4 rounded-md mb-4">
+          <h3 class="text-xl font-semibold mb-2">Basic Machine Learning Example (Random Forest)</h3>
+          <pre class="bg-gray-200 p-4 rounded-md">
 # Example: Random Forest Classifier
 
 # Load dataset (e.g., Iris dataset)
@@ -453,20 +112,20 @@ model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Accuracy: {accuracy * 100:.2f}%")
-            </pre>
+          </pre>
         </div>
-        
-        <button class="copy-btn" onclick="copyToClipboard('ai-ml-code')">Copy Code</button>
-    </div>
 
-    <!-- Django Section -->
-    <div class="section">
-        <h2>2. Django Web Framework</h2>
-        <p><strong>Django</strong> is a high-level Python web framework that allows you to build secure and scalable web applications quickly.</p>
+        <button class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700" onclick="copyToClipboard('ai-ml-code')">Copy Code</button>
+      </div>
+
+      <!-- Django Section -->
+      <div class="bg-devops-bg text-white p-6 rounded-lg shadow-lg mb-8">
+        <h2 class="text-2xl font-semibold">2. Django Web Framework</h2>
+        <p class="text-lg mb-4"><strong>Django</strong> is a high-level Python web framework that allows you to build secure and scalable web applications quickly.</p>
         
-        <div class="code-block">
-            <h3>Basic Django Project Setup</h3>
-            <pre>
+        <div class="bg-gray-50 p-4 rounded-md mb-4">
+          <h3 class="text-xl font-semibold mb-2">Basic Django Project Setup</h3>
+          <pre class="bg-gray-200 p-4 rounded-md">
 # Install Django
 pip install django
 
@@ -479,23 +138,23 @@ python manage.py startapp myapp
 
 # Running the development server
 python manage.py runserver
-            </pre>
+          </pre>
         </div>
 
-        <div class="code-block">
-            <h3>Basic Django View</h3>
-            <pre>
+        <div class="bg-gray-50 p-4 rounded-md mb-4">
+          <h3 class="text-xl font-semibold mb-2">Basic Django View</h3>
+          <pre class="bg-gray-200 p-4 rounded-md">
 # In views.py
 from django.http import HttpResponse
 
 def home(request):
     return HttpResponse("Hello, Django!")
-            </pre>
+          </pre>
         </div>
 
-        <div class="code-block">
-            <h3>Adding URL to urls.py</h3>
-            <pre>
+        <div class="bg-gray-50 p-4 rounded-md mb-4">
+          <h3 class="text-xl font-semibold mb-2">Adding URL to urls.py</h3>
+          <pre class="bg-gray-200 p-4 rounded-md">
 # In urls.py
 from django.urls import path
 from . import views
@@ -503,423 +162,33 @@ from . import views
 urlpatterns = [
     path('', views.home, name='home'),
 ]
-            </pre>
+          </pre>
         </div>
 
-        <button class="copy-btn" onclick="copyToClipboard('django-code')">Copy Code</button>
+        <button class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700" onclick="copyToClipboard('django-code')">Copy Code</button>
+      </div>
+
     </div>
+  </main>
 
-    <!-- NumPy Section -->
-    <div class="section">
-        <h2>3. NumPy (Numerical Computing)</h2>
-        <p><strong>NumPy</strong> is a powerful numerical computing library used for array manipulation, mathematical operations, and scientific computing.</p>
-        
-        <div class="code-block">
-            <h3>Creating and Manipulating Arrays</h3>
-            <pre>
-import numpy as np
-
-# Create an array
-arr = np.array([1, 2, 3, 4, 5])
-
-# Perform basic operations
-print(arr + 5)   # Array addition
-print(arr * 2)   # Array multiplication
-
-# Reshape an array
-arr_reshaped = arr.reshape(1, 5)
-print(arr_reshaped)
-            </pre>
-        </div>
-
-        <div class="code-block">
-            <h3>Matrix Operations</h3>
-            <pre>
-# Create two matrices
-A = np.array([[1, 2], [3, 4]])
-B = np.array([[5, 6], [7, 8]])
-
-# Matrix multiplication (dot product)
-C = np.dot(A, B)
-print(C)
-            </pre>
-        </div>
-
-        <button class="copy-btn" onclick="copyToClipboard('numpy-code')">Copy Code</button>
+  <footer class="bg-gray-800 text-white py-4">
+    <div class="text-center">
+      <p>© 2024 InnoTech. All Rights Reserved.</p>
     </div>
+  </footer>
 
-    <!-- Python DevOps Section -->
-    <div class="section">
-        <h2>4. Python DevOps Cheat Sheet</h2>
-        <p><strong>DevOps</strong> is a combination of development and operations practices aimed at automating and improving the software delivery process. Below are some key tools and practices in Python DevOps:</p>
-        
-        <div class="code-block">
-            <h3>Docker: Creating a Dockerfile for a Python Application</h3>
-            <pre>
-# Dockerfile for a Python application
-
-# Use official Python image
-FROM python:3.9-slim
-
-# Set the working directory inside the container
-WORKDIR /app
-
-# Copy requirements file and install dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy the application files
-COPY . .
-
-# Expose port 8000
-EXPOSE 8000
-
-# Command to run the application
-CMD ["python", "app.py"]
-            </pre>
-        </div>
-
-        <div class="code-block">
-            <h3>Running Docker Containers</h3>
-            <pre>
-# Build the Docker image
-docker build -t my-python-app .
-
-# Run the Docker container
-docker run -p 8000:8000 my-python-app
-            </pre>
-        </div>
-
-        <div class="code-block">
-            <h3>Kubernetes: Deploying a Python App with Kubernetes</h3>
-            <pre>
-# kubernetes-deployment.yaml
-
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: python-app
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: python-app
-  template:
-    metadata:
-      labels:
-        app: python-app
-    spec:
-      containers:
-      - name: python-app
-        image: my-python-app:latest
-        ports:
-        - containerPort: 8000
-            </pre>
-        </div>
-
-        <div class="code-block">
-            <h3>CI/CD with GitHub Actions</h3>
-            <pre>
-# .github/workflows/ci.yml
-
-name: Python CI
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.9'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Run tests
-        run: |
-          pytest
-            </pre>
-        </div>
-
-        <div class="code-block">
-            <h3>Deploying with Ansible</h3>
-            <pre>
-# Ansible playbook example
-
-- name: Deploy Python Application
-  hosts: servers
-  tasks:
-    - name: Update apt cache
-      apt: update_cache=yes
-
-    - name: Install Python and dependencies
-      apt:
-        name:
-          - python3
-          - python3-pip
-      state: present
-
-    - name: Install requirements
-      pip:
-        name: "{{ item }}"
-        state: present
-      with_items:
-        - flask
-        - gunicorn
-            </pre>
-        </div>
-
-        <button class="copy-btn" onclick="copyToClipboard('devops-code')">Copy Code</button>
-    </div>
-
-    <!-- Website Security Section -->
-    <div class="section">
-        <h2>5. Website Security Cheat Sheet</h2>
-        <p><strong>Website security</strong> is crucial to protect web applications and user data. Below are some common security measures, techniques, and tools for securing websites:</p>
-
-        <div class="code-block">
-            <h3>Authentication (Login System)</h3>
-            <pre>
-# Django Authentication Example
-from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login
-
-def login_view(request):
-    username = request.POST['username']
-    password = request.POST['password']
-    
-    user = authenticate(username=username, password=password)
-    if user is not None:
-        login(request, user)
-        return HttpResponse("Login successful")
-    else:
-        return HttpResponse("Invalid credentials")
-            </pre>
-        </div>
-
-        <div class="code-block">
-            <h3>Hashing Passwords with bcrypt</h3>
-            <pre>
-import bcrypt
-
-# Hashing a password
-password = "mysecretpassword"
-hashed = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
-
-# Checking a password
-if bcrypt.checkpw(password.encode('utf-8'), hashed):
-    print("Password is correct")
-else:
-    print("Password is incorrect")
-            </pre>
-        </div>
-
-        <div class="code-block">
-            <h3>SQL Injection Prevention</h3>
-            <pre>
-# Prevent SQL Injection by using parameterized queries
-from django.db import connection
-
-def get_user_by_username(username):
-    with connection.cursor() as cursor:
-        cursor.execute("SELECT * FROM users WHERE username = %s", [username])
-        return cursor.fetchone()
-            </pre>
-        </div>
-
-        <div class="code-block">
-            <h3>Cross-Site Scripting (XSS) Prevention</h3>
-            <pre>
-# Django automatically escapes variables in templates to prevent XSS
-# Example in template:
-# <h1>{{ user_input }}</h1>
-# Django escapes user_input so it won't execute as HTML/JS
-            </pre>
-        </div>
-
-        <div class="code-block">
-            <h3>Cross-Site Request Forgery (CSRF) Prevention</h3>
-            <pre>
-# CSRF Token is included automatically in Django forms
-# Example:
-<form method="post">
-    {% csrf_token %}
-    <input type="text" name="username">
-    <button type="submit">Submit</button>
-</form>
-            </pre>
-        </div>
-
-        <div class="code-block">
-            <h3>Secure Cookies</h3>
-            <pre>
-# Set HttpOnly, Secure, and SameSite flags in cookies
-response.set_cookie('sessionid', 'abc123', httponly=True, secure=True, samesite='Strict')
-            </pre>
-        </div>
-
-        <div class="code-block">
-            <h3>Two-Factor Authentication (2FA)</h3>
-            <pre>
-# Example using Django 2FA package
-# Install django-otp and django-two-factor-auth
-pip install django-otp
-pip install django-two-factor-auth
-            </pre>
-        </div>
-
-        <div class="code-block">
-            <h3>Content Security Policy (CSP)</h3>
-            <pre>
-# Example of setting a basic CSP header
-response['Content-Security-Policy'] = "default-src 'self'; script-src 'self';"
-            </pre>
-        </div>
-
-        <button class="copy-btn" onclick="copyToClipboard('security-code')">Copy Code</button>
-    </div>
-
-</div>
-
-</div>
-<br>
-<hr>
-<br>
-<!-- Blog Post HTML Structure 
-<div class="blog-post">
-  <h2>My Diary Blog</h2>
-  <p>Share your thoughts..</p>
-  <div class="interaction-buttons">
-    <button class="btn btn-sm btn-primary like-btn">Like <span class="like-count">0</span></button>
-    <button class="btn btn-sm btn-secondary comment-btn">Comment <span class="comment-count">0</span></button>
-    <button class="btn btn-sm btn-success share-btn">Share</button>
-    <div class="rating">
-      <span class="rating-label">Rate:</span>
-      <i class="fas fa-star" data-rating="1"></i>
-      <i class="fas fa-star" data-rating="2"></i>
-      <i class="fas fa-star" data-rating="3"></i>
-      <i class="fas fa-star" data-rating="4"></i>
-      <i class="fas fa-star" data-rating="5"></i>
-      <span class="rating-count">0/5</span>
-    </div>
-  </div>
-   -->
-  <div class="comments">
-    <!-- comments will be displayed here -->
- 
-  </div> 
-  <div class="reviews">
-    <!-- reviews will be displayed here -->
-  </div>
-</div>
-
-<!-- Comment Form HTML Structure -->
-<div class="comment-form">
-  <h3>Leave a Comment</h3>
-  <form>
-    <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-    </div>
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-    <div class="form-group">
-      <label for="comment">Comment:</label>
-      <textarea id="comment" name="comment" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-</div>
-
-<!-- Review Form HTML Structure -->
-<div class="review-form">
-  <h3>Leave a Review</h3>
-  <form>
-    <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-    </div>
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-    <div class="form-group">
-      <label for="review">Review:</label>
-      <textarea id="review" name="review" required></textarea>
-    </div>
-    <div class="form-group">
-      <label for="rating">Rating:</label>
-      <select id="rating" name="rating" required>
-        <option value="1">1/5</option>
-        <option value="2">2/5</option>
-        <option value="3">3/5</option>
-        <option value="4">4/5</option>
-        <option value="5">5/5</option>
-      </select>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-</div>
-
-<!-- Share Dialog HTML Structure -->
-<div class="share-dialog">
-  <h3>Share This Post</h3>
-  <ul>
-    <li><a href="#" class="facebook-share">Facebook</a></li>
-    <li><a href="#" class="twitter-share">Twitter</a></li>
-    <li><a href="#" class="linkedin-share">LinkedIn</a></li>
-  </ul>
-</div>
-
-<!-- Contact Form HTML Structure -->
-<div class="contact-form">
-  <h3>Contact Me</h3>
-  <form>
-    <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-    </div>
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-    <div class="form-group">
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Send</button>
-  </form>
-</div>
-<footer>
-  <div style="color: tomato;background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;font-size: 17px;">&copy;<a href="madeoftech.net" style="color: mediumorchid;text-decoration: none;"> &hookrightarrow; madeoftech.net </a> | developed by Innocent mwea &trade;</div>
-</footer>
-<script src="/script.js"></script>
   <script>
-    function copyToClipboard(codeId) {
-        var code = document.getElementById(codeId).innerText;
-        var textarea = document.createElement('textarea');
-        textarea.value = code;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textarea);
-
-        alert('Code copied to clipboard!');
+    function copyToClipboard(id) {
+      var code = document.getElementById(id).innerText;
+      var textArea = document.createElement('textarea');
+      textArea.value = code;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      alert("Code copied to clipboard!");
     }
-</script>
+  </script>
 </body>
+
 </html>
