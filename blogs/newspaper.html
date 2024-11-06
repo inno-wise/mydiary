@@ -3,15 +3,15 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="My Online Blog App">
-  <meta name="keywords" content="Blogs, Cyber Security, DevOps, CompTIA A+, Network+, Linux+">
+  <meta name="description" content="Website Security Best Practices">
+  <meta name="keywords" content="Website Security, Cyber Security, Authentication, Encryption, CSRF, XSS, SQL Injection">
   <meta name="author" content="Innocent Mwea">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="img/kali.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-  <script src="../../kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <title>madeoftech</title>
+  <title>Website Security Best Practices - MadeOfTech</title>
   <style>
     /* Custom color for Python and DevOps */
     .python-bg {
@@ -40,7 +40,7 @@
   </header>
 
   <main class="container mx-auto p-6">
-    <h2 class="text-2xl font-semibold my-4">Diary Blogs</h2>
+    <h2 class="text-2xl font-semibold my-4">Website Security Best Practices</h2>
 
     <!-- Pagination -->
     <div class="flex justify-center space-x-4 my-4">
@@ -48,23 +48,24 @@
       <a href="linux.html" class="text-lg hover:text-gray-500">Commands Line Interface</a>
       <a href="comptia.html" class="text-lg hover:text-gray-500">CompTIA ...</a>
       <a href="blackhat.html" class="text-lg hover:text-gray-500">Python Black Hat</a>
-      <a href="websecurity.html" class="text-lg hover:text-gray-500">Web Security</a>
+      <a href="websecurity.html" class="text-lg font-bold text-blue-600">Website Security</a>
       <a href="database.html" class="text-lg hover:text-gray-500">Database Security</a>
       <a href="pythondevops.html" class="text-lg hover:text-gray-500">Python for DevOps</a>
-      <a href="newspaper.html" class="text-lg font-bold text-blue-600">Newspaper</a>
+      <a href="newspaper.html" class="text-lg hover:text-gray-500">Newspaper</a>
       <a href="#" class="text-lg hover:text-gray-500">&raquo;</a>
     </div>
 
     <hr class="my-6 border-t border-gray-300">
 
     <section>
-      <h1 class="text-3xl font-bold mb-4">Welcome to the Amazing Zone of News and Knowledge</h1>
+      <h1 class="text-3xl font-bold mb-4">Website Security Best Practices</h1>
+      <p>Learn how to protect your website against the most common security threats like SQL injection, Cross-Site Scripting (XSS), and Cross-Site Request Forgery (CSRF). This section includes best practices for securing web applications, encrypting data, and using secure authentication mechanisms.</p>
     </section>
 
     <!-- Blog Post HTML Structure -->
     <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
-      <h2 class="text-2xl font-semibold">My Diary Blogs</h2>
-      <p>Share your thoughts..</p>
+      <h2 class="text-2xl font-semibold">Website Security Best Practices</h2>
+      <p>Learn the latest practices for securing websites from common vulnerabilities.</p>
       <div class="flex space-x-4 mt-4">
         <button class="btn btn-sm btn-primary like-btn bg-blue-600 text-white py-2 px-4 rounded">Like <span class="like-count">0</span></button>
         <button class="btn btn-sm btn-secondary comment-btn bg-gray-500 text-white py-2 px-4 rounded">Comment <span class="comment-count">0</span></button>
@@ -96,36 +97,6 @@
         <div class="mb-4">
           <label for="comment" class="block text-lg">Comment:</label>
           <textarea id="comment" name="comment" class="w-full p-2 border border-gray-300 rounded" required></textarea>
-        </div>
-        <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Submit</button>
-      </form>
-    </div>
-
-    <!-- Review Form -->
-    <div class="bg-gray-100 p-6 rounded-lg shadow-lg mb-8">
-      <h3 class="text-xl font-semibold mb-4">Leave a Review</h3>
-      <form>
-        <div class="mb-4">
-          <label for="name" class="block text-lg">Name:</label>
-          <input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded" required>
-        </div>
-        <div class="mb-4">
-          <label for="email" class="block text-lg">Email:</label>
-          <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded" required>
-        </div>
-        <div class="mb-4">
-          <label for="review" class="block text-lg">Review:</label>
-          <textarea id="review" name="review" class="w-full p-2 border border-gray-300 rounded" required></textarea>
-        </div>
-        <div class="mb-4">
-          <label for="rating" class="block text-lg">Rating:</label>
-          <select id="rating" name="rating" class="w-full p-2 border border-gray-300 rounded" required>
-            <option value="1">1/5</option>
-            <option value="2">2/5</option>
-            <option value="3">3/5</option>
-            <option value="4">4/5</option>
-            <option value="5">5/5</option>
-          </select>
         </div>
         <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Submit</button>
       </form>
