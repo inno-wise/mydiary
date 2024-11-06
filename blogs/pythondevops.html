@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -7,497 +7,59 @@
   <meta name="keywords" content="Blogs, Cyber Security, DevOps, CompTIA A+, Network+, Linux+">
   <meta name="author" content="Innocent Mwea">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="img/kali.png">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <link rel="icon" type="image/x-icon" href="img/kali.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap">
   <script src="../../kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<!--  <base href="https://madeoftech.net/" target="_blank">-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="mstyles.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <title>madeoftech</title>
-  <style>
-  /*all*/
-  body{
-    font-family: Verdana, sans-serif;
-  font-size: 16px;
-  }
-  footer{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-  }
-  
- .header h1{
-   text-shadow: 5px 8px 8px tomato;
-   text-align: center;
-   font-size: 18vw;
-   font-family: "Sofia", sans-serif;
- }
-  
-  }
-  /*header*/
-  .header {
-    text-align: center;
-    padding: 20px;
-    background-color: blanchedalmond;
-  }
-  
-  .topnav{
-    background-color: tomato;
-    overflow: hidden;
-  }
-  
-  .topnav a {
-  float: left;
-  display: block;
-  color: lemonchiffon;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font: normal bolder 20px/20px Georgia, serif;
-}
-}
-
-/* Change color on hover */
-.topnav a:hover {
-  background-color: tomato;
-  height: 10vw;
-  color: black;
-}
-    /*aside style*/
-aside {
-  width: 30%;
-  background-color: lightgray;
-  font-style: italic;
-  float: right;
-  padding-left: 15px;
-  margin-left: 15px;
-}
-/*section 2*/
-.grid-container{
-  display: grid;
-  justify-content: start;
-  grid-template-columns: 50px, 50px, 50px;
-}
-/*newspp*/
-#newspaper{
-  column-gap: 3;
-  color: orangered;
-}
-/*paggination*/
-.center{
-  align-items: center;
-}
-.pagimation{
-  display: inline-block;
-}
-.pagination a{
-  border: 1px solid tomato;
-  margin: 0 4px;
-  color: black;
-  float: left;
-  padding: 8 16px;
-  text-decoration: none;
-  transition: background-color .3s;
-}
-.pagination a.active{
-  background-color: teal;
-  color: white;
-  border: 1px solid tomato;
-}
-.pagination a:hover:not(.active){
-  background-color: blanchedalmond;
-}
-/*blog*/
-/* General Styles 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f7fa;
-    margin: 0;
-    padding: 0;
-    color: #333;
-}
-*/
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    font-size: 2.5em;
-    color: #333;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-h2 {
-    font-size: 2em;
-    color: #555;
-    margin-top: 30px;
-}
-
-h3 {
-    font-size: 1.2em;
-    color: #444;
-    margin-top: 20px;
-}
-
-p {
-    font-size: 1em;
-    line-height: 1.6;
-    color: #666;
-}
-
-/* Code Block Styles */
-.code-block {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    padding: 15px;
-    margin: 20px 0;
-    border-radius: 5px;
-    font-family: 'Courier New', monospace;
-    font-size: 1em;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-}
-
-button.copy-btn {
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    margin-top: 10px;
-}
-
-button.copy-btn:hover {
-    background-color: #2980b9;
-}
-
-/* Section Styles */
-.section {
-    margin-bottom: 40px;
-}
-
-.section button {
-    display: inline-block;
-}
-
-/* Blog Post Styles */
-.blog-post {
-    background-color: #fff;
-    padding: 30px;
-    margin-top: 40px;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-.blog-post h2 {
-    font-size: 2em;
-    color: #333;
-}
-
-.interaction-buttons {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.interaction-buttons button {
-    padding: 8px 15px;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-}
-
-.like-btn {
-    background-color: #e74c3c;
-    color: white;
-}
-
-.comment-btn {
-    background-color: #95a5a6;
-    color: white;
-}
-
-.share-btn {
-    background-color: #2ecc71;
-    color: white;
-}
-
-.rating {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    margin-top: 15px;
-}
-
-.rating-label {
-    font-size: 1.1em;
-    color: #555;
-}
-
-.fas.fa-star {
-    color: #f1c40f;
-    font-size: 1.2em;
-}
-
-.rating-count {
-    font-size: 1.1em;
-    color: #555;
-}
-
-.comments,
-.reviews {
-    margin-top: 30px;
-}
-
-/* Form Styles */
-.comment-form,
-.contact-form {
-    background-color: #fff;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.comment-form h3,
-.contact-form h3 {
-    font-size: 1.8em;
-    color: #333;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-label {
-    font-size: 1em;
-    color: #555;
-    display: block;
-    margin-bottom: 5px;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-    color: #333;
-}
-
-textarea {
-    min-height: 100px;
-    resize: vertical;
-}
-
-button.btn {
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-button.btn:hover {
-    background-color: #2980b9;
-}
-
-/* Share Dialog */
-.share-dialog {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
-}
-
-.share-dialog h3 {
-    font-size: 1.8em;
-    color: #333;
-}
-
-.share-dialog ul {
-    list-style: none;
-    padding: 0;
-}
-
-.share-dialog ul li {
-    margin: 10px 0;
-}
-
-.share-dialog a {
-    font-size: 1.2em;
-    text-decoration: none;
-    color: #3498db;
-}
-
-.share-dialog a:hover {
-    color: #2980b9;
-}
-
-    /*klfdnndfn
-   
-        .container {
-            width: 80%;
-            margin: 2rem auto;
-        }
-
-        h1, h2 {
-            text-align: center;
-            color: #333;
-        }
-
-        .section {
-            margin-bottom: 2rem;
-            padding: 1rem;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .code-block {
-            background-color: #2e2e2e;
-            color: white;
-            padding: 15px;
-            border-radius: 8px;
-            font-size: 16px;
-            overflow-x: auto;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-        }
-
-        .code-block h3 {
-            color: #eee;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin: 10px 0;
-        }
-
-        .copy-btn {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .copy-btn:hover {
-            background-color: #0056b3;
-        } 
-  */
-  </style>
 </head>
-<body>
-  <header>
-<div class="header">
-  <h1 class="title">&mcy;ade&ofr;ftech</h1>
-</div>
 
-<div class="topnav">
-  <a href="index.html">articles</a>
-  <a href="blogs.html">Blogs</a>
-  <a href="about.html">About</a>
-</div>
+<body class="font-sans bg-gray-100 text-gray-800">
+  <!-- Header Section -->
+  <header class="bg-gray-900 text-white">
+    <div class="container mx-auto px-6 py-8">
+      <h1 class="text-4xl font-playfair font-bold tracking-wide text-gold">madeoftech</h1>
+    </div>
+
+    <nav class="bg-gray-800 text-white">
+      <div class="container mx-auto flex space-x-8 py-4">
+        <a href="index.html" class="text-lg font-medium hover:text-gold transition">Articles</a>
+        <a href="blogs.html" class="text-lg font-medium hover:text-gold transition">Blogs</a>
+        <a href="about.html" class="text-lg font-medium hover:text-gold transition">About</a>
+      </div>
+    </nav>
   </header>
-  <br>
-  <br>
-  <!--pagination-->
-  <h2>Diary blogs</h2>
 
-<div class="center">
-  <div class="pagination">
-  <a href="#">&laquo;</a>
-  <a href="linux.html" >commands line interface</a>
-  <a href="comptia.html">CompTIA ...</a>
-  <a href="blackhat.html">python black hat</a>
-  <a href="websecurity.html">web Security</a>
-  <a href="database.html">Database security</a>
-  <a href="pythondevops.html" class="active">python for DevOps</a>
-  <a href="newspaper.html">newspaper</a>
-  <a href="#">&raquo;</a>
-  </div>
-</div>
-<br>
-<br>
-<hr>
-<br>
-<div>
-  <h1>Foundation lessons for all devops beginers and advanced</h1>
-</div>
-<br>
-<hr>
+  <!-- Main Content -->
+  <div class="container mx-auto px-6 py-12">
+    <div class="bg-white p-8 rounded-lg shadow-lg">
+      <h1 class="text-4xl font-playfair font-bold text-gray-900 mb-8">Python Libraries & DevOps Cheat Sheet</h1>
 
-<div class="container">
-    <h1>Python Libraries & DevOps Cheat Sheet</h1>
-    
-    <!-- Scikit-learn AI and ML Section -->
-    <div class="section">
-        <h2>1. AI and Machine Learning (scikit-learn)</h2>
-        <p><strong>Scikit-learn</strong> is a machine learning library that provides simple and efficient tools for data mining and data analysis. Below are some common operations:</p>
+      <!-- Scikit-learn Section -->
+      <div class="section mb-12">
+        <h2 class="text-3xl font-semibold text-gray-900 mb-4">1. AI and Machine Learning (scikit-learn)</h2>
+        <p class="text-lg text-gray-600 mb-6">Scikit-learn is a powerful library for machine learning. Below are some common operations:</p>
         
-        <div class="code-block">
-            <h3>Importing scikit-learn libraries</h3>
-            <pre>
+        <div class="bg-gray-800 text-white p-6 rounded-lg shadow-md mb-6">
+          <h3 class="font-semibold text-lg">Importing scikit-learn libraries</h3>
+          <pre class="whitespace-pre-wrap overflow-x-auto">
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
-            </pre>
+          </pre>
         </div>
 
-        <div class="code-block">
-            <h3>Basic Machine Learning Example (Random Forest)</h3>
-            <pre>
-# Example: Random Forest Classifier
+        <button class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-3 rounded-full hover:scale-105 transform transition-all">Copy Code</button>
+      </div>
 
-# Load dataset (e.g., Iris dataset)
-from sklearn.datasets import load_iris
-data = load_iris()
-X = data.data
-y = data.target
+      <!-- Django Section -->
+      <div class="section mb-12">
+        <h2 class="text-3xl font-semibold text-gray-900 mb-4">2. Django Web Framework</h2>
+        <p class="text-lg text-gray-600 mb-6">Django is a high-level Python web framework that allows you to build secure and scalable web applications quickly.</p>
 
-# Split dataset into train and test sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-
-# Create and train the Random Forest Classifier
-model = RandomForestClassifier(n_estimators=100)
-model.fit(X_train, y_train)
-
-# Predict and calculate accuracy
-y_pred = model.predict(X_test)
-accuracy = accuracy_score(y_test, y_pred)
-print(f"Accuracy: {accuracy * 100:.2f}%")
-            </pre>
-        </div>
-        
-        <button class="copy-btn" onclick="copyToClipboard('ai-ml-code')">Copy Code</button>
-    </div>
-
-    <!-- Django Section -->
-    <div class="section">
-        <h2>2. Django Web Framework</h2>
-        <p><strong>Django</strong> is a high-level Python web framework that allows you to build secure and scalable web applications quickly.</p>
-        
-        <div class="code-block">
-            <h3>Basic Django Project Setup</h3>
-            <pre>
+        <div class="bg-gray-800 text-white p-6 rounded-lg shadow-md mb-6">
+          <h3 class="font-semibold text-lg">Basic Django Project Setup</h3>
+          <pre class="whitespace-pre-wrap overflow-x-auto">
 # Install Django
 pip install django
 
@@ -510,44 +72,20 @@ python manage.py startapp myapp
 
 # Running the development server
 python manage.py runserver
-            </pre>
+          </pre>
         </div>
 
-        <div class="code-block">
-            <h3>Basic Django View</h3>
-            <pre>
-# In views.py
-from django.http import HttpResponse
+        <button class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-3 rounded-full hover:scale-105 transform transition-all">Copy Code</button>
+      </div>
 
-def home(request):
-    return HttpResponse("Hello, Django!")
-            </pre>
-        </div>
+      <!-- NumPy Section -->
+      <div class="section mb-12">
+        <h2 class="text-3xl font-semibold text-gray-900 mb-4">3. NumPy (Numerical Computing)</h2>
+        <p class="text-lg text-gray-600 mb-6">NumPy is a powerful numerical computing library used for array manipulation, mathematical operations, and scientific computing.</p>
 
-        <div class="code-block">
-            <h3>Adding URL to urls.py</h3>
-            <pre>
-# In urls.py
-from django.urls import path
-from . import views
-
-urlpatterns = [
-    path('', views.home, name='home'),
-]
-            </pre>
-        </div>
-
-        <button class="copy-btn" onclick="copyToClipboard('django-code')">Copy Code</button>
-    </div>
-
-    <!-- NumPy Section -->
-    <div class="section">
-        <h2>3. NumPy (Numerical Computing)</h2>
-        <p><strong>NumPy</strong> is a powerful numerical computing library used for array manipulation, mathematical operations, and scientific computing.</p>
-        
-        <div class="code-block">
-            <h3>Creating and Manipulating Arrays</h3>
-            <pre>
+        <div class="bg-gray-800 text-white p-6 rounded-lg shadow-md mb-6">
+          <h3 class="font-semibold text-lg">Creating and Manipulating Arrays</h3>
+          <pre class="whitespace-pre-wrap overflow-x-auto">
 import numpy as np
 
 # Create an array
@@ -560,33 +98,20 @@ print(arr * 2)   # Array multiplication
 # Reshape an array
 arr_reshaped = arr.reshape(1, 5)
 print(arr_reshaped)
-            </pre>
+          </pre>
         </div>
 
-        <div class="code-block">
-            <h3>Matrix Operations</h3>
-            <pre>
-# Create two matrices
-A = np.array([[1, 2], [3, 4]])
-B = np.array([[5, 6], [7, 8]])
+        <button class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-3 rounded-full hover:scale-105 transform transition-all">Copy Code</button>
+      </div>
 
-# Matrix multiplication (dot product)
-C = np.dot(A, B)
-print(C)
-            </pre>
-        </div>
+      <!-- Python DevOps Section -->
+      <div class="section mb-12">
+        <h2 class="text-3xl font-semibold text-gray-900 mb-4">4. Python DevOps Cheat Sheet</h2>
+        <p class="text-lg text-gray-600 mb-6">DevOps is a combination of development and operations practices aimed at automating and improving the software delivery process. Below are some key tools and practices in Python DevOps:</p>
 
-        <button class="copy-btn" onclick="copyToClipboard('numpy-code')">Copy Code</button>
-    </div>
-
-    <!-- Python DevOps Section -->
-    <div class="section">
-        <h2>4. Python DevOps Cheat Sheet</h2>
-        <p><strong>DevOps</strong> is a combination of development and operations practices aimed at automating and improving the software delivery process. Below are some key tools and practices in Python DevOps:</p>
-        
-        <div class="code-block">
-            <h3>Docker: Creating a Dockerfile for a Python Application</h3>
-            <pre>
+        <div class="bg-gray-800 text-white p-6 rounded-lg shadow-md mb-6">
+          <h3 class="font-semibold text-lg">Docker: Creating a Dockerfile for a Python Application</h3>
+          <pre class="whitespace-pre-wrap overflow-x-auto">
 # Dockerfile for a Python application
 
 # Use official Python image
@@ -607,455 +132,30 @@ EXPOSE 8000
 
 # Command to run the application
 CMD ["python", "app.py"]
-            </pre>
+          </pre>
         </div>
 
-        <div class="code-block">
-            <h3>Running Docker Containers</h3>
-            <pre>
-# Build the Docker image
-docker build -t my-python-app .
-
-# Run the Docker container
-docker run -p 8000:8000 my-python-app
-            </pre>
-        </div>
-
-        <div class="code-block">
-            <h3>Kubernetes: Deploying a Python App with Kubernetes</h3>
-            <pre>
-# kubernetes-deployment.yaml
-
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: python-app
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: python-app
-  template:
-    metadata:
-      labels:
-        app: python-app
-    spec:
-      containers:
-      - name: python-app
-        image: my-python-app:latest
-        ports:
-        - containerPort: 8000
-            </pre>
-        </div>
-
-        <div class="code-block">
-            <h3>CI/CD with GitHub Actions</h3>
-            <pre>
-# .github/workflows/ci.yml
-
-name: Python CI
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.9'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Run tests
-        run: |
-          pytest
-            </pre>
-        </div>
-
-        <div class="code-block">
-            <h3>Deploying with Ansible</h3>
-            <pre>
-# Ansible playbook example
-
-- name: Deploy Python Application
-  hosts: servers
-  tasks:
-    - name: Update apt cache
-      apt: update_cache=yes
-
-    - name: Install Python and dependencies
-      apt:
-        name:
-          - python3
-          - python3-pip
-      state: present
-
-    - name: Install requirements
-      pip:
-        name: "{{ item }}"
-        state: present
-      with_items:
-        - flask
-        - gunicorn
-            </pre>
-        </div>
-
-        <button class="copy-btn" onclick="copyToClipboard('devops-code')">Copy Code</button>
-    </div>
-<!--additions -->
-  <div class="container mx-auto p-6 bg-white rounded-lg shadow-lg">
-
-    <!-- Header -->
-    <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Python Libraries & DevOps Cheat Sheet</h1>
-    
-    <!-- Scikit-learn AI and ML Section -->
-    <div class="section mb-12">
-        <h2 class="text-3xl font-semibold text-gray-700">1. AI and Machine Learning (scikit-learn)</h2>
-        <p class="text-lg text-gray-600 mt-4 mb-6">Scikit-learn is a machine learning library that provides simple and efficient tools for data mining and data analysis. Below are some common operations:</p>
-        
-        <div class="bg-gray-800 text-white p-6 rounded-md shadow-md mb-6" id="ai-ml-code">
-            <h3 class="text-xl font-semibold">Importing scikit-learn libraries</h3>
-            <pre class="whitespace-pre-wrap overflow-x-auto">
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score
-            </pre>
-        </div>
-        <button onclick="copyCode('ai-ml-code')" class="copy-btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition mt-2">Copy Me</button>
-        
-        <div class="bg-gray-800 text-white p-6 rounded-md shadow-md mb-6" id="ai-ml-example">
-            <h3 class="text-xl font-semibold">Basic Machine Learning Example (Random Forest)</h3>
-            <pre class="whitespace-pre-wrap overflow-x-auto">
-# Example: Random Forest Classifier
-
-# Load dataset (e.g., Iris dataset)
-from sklearn.datasets import load_iris
-data = load_iris()
-X = data.data
-y = data.target
-
-# Split dataset into train and test sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-
-# Create and train the Random Forest Classifier
-model = RandomForestClassifier(n_estimators=100)
-model.fit(X_train, y_train)
-
-# Predict and calculate accuracy
-y_pred = model.predict(X_test)
-accuracy = accuracy_score(y_test, y_pred)
-print(f"Accuracy: {accuracy * 100:.2f}%")
-            </pre>
-        </div>
-        <button onclick="copyCode('ai-ml-example')" class="copy-btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition mt-2">Copy Me</button>
-    </div>
-
-    <!-- Django Section -->
-    <div class="section mb-12">
-        <h2 class="text-3xl font-semibold text-gray-700">2. Django Web Framework</h2>
-        <p class="text-lg text-gray-600 mt-4 mb-6">Django is a high-level Python web framework that allows you to build secure and scalable web applications quickly.</p>
-        
-        <div class="bg-gray-800 text-white p-6 rounded-md shadow-md mb-6" id="django-setup">
-            <h3 class="text-xl font-semibold">Basic Django Project Setup</h3>
-            <pre class="whitespace-pre-wrap overflow-x-auto">
-# Install Django
-pip install django
-
-# Create a new project
-django-admin startproject myproject
-
-# Create a new app within the project
-cd myproject
-python manage.py startapp myapp
-
-# Running the development server
-python manage.py runserver
-            </pre>
-        </div>
-        <button onclick="copyCode('django-setup')" class="copy-btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition mt-2">Copy Me</button>
-
-        <div class="bg-gray-800 text-white p-6 rounded-md shadow-md mb-6" id="django-view">
-            <h3 class="text-xl font-semibold">Basic Django View</h3>
-            <pre class="whitespace-pre-wrap overflow-x-auto">
-# In views.py
-from django.http import HttpResponse
-
-def home(request):
-    return HttpResponse("Hello, Django!")
-            </pre>
-        </div>
-        <button onclick="copyCode('django-view')" class="copy-btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition mt-2">Copy Me</button>
-    </div>
-
-    <!-- NumPy Section -->
-    <div class="section mb-12">
-        <h2 class="text-3xl font-semibold text-gray-700">3. NumPy (Numerical Computing)</h2>
-        <p class="text-lg text-gray-600 mt-4 mb-6">NumPy is a powerful numerical computing library used for array manipulation, mathematical operations, and scientific computing.</p>
-        
-        <div class="bg-gray-800 text-white p-6 rounded-md shadow-md mb-6" id="numpy-array">
-            <h3 class="text-xl font-semibold">Creating and Manipulating Arrays</h3>
-            <pre class="whitespace-pre-wrap overflow-x-auto">
-import numpy as np
-
-# Create an array
-arr = np.array([1, 2, 3, 4, 5])
-
-# Perform basic operations
-print(arr + 5)   # Array addition
-print(arr * 2)   # Array multiplication
-
-# Reshape an array
-arr_reshaped = arr.reshape(1, 5)
-print(arr_reshaped)
-            </pre>
-        </div>
-        <button onclick="copyCode('numpy-array')" class="copy-btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition mt-2">Copy Me</button>
-
-        <div class="bg-gray-800 text-white p-6 rounded-md shadow-md mb-6" id="numpy-matrix">
-            <h3 class="text-xl font-semibold">Matrix Operations</h3>
-            <pre class="whitespace-pre-wrap overflow-x-auto">
-# Create two matrices
-A = np.array([[1, 2], [3, 4]])
-B = np.array([[5, 6], [7, 8]])
-
-# Matrix multiplication (dot product)
-C = np.dot(A, B)
-print(C)
-            </pre>
-        </div>
-        <button onclick="copyCode('numpy-matrix')" class="copy-btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition mt-2">Copy Me</button>
-    </div>
-
-    <!-- Python DevOps Section -->
-    <div class="section mb-12">
-        <h2 class="text-3xl font-semibold text-gray-700">4. Python DevOps Cheat Sheet</h2>
-        <p class="text-lg text-gray-600 mt-4 mb-6">DevOps is a combination of development and operations practices aimed at automating and improving the software delivery process. Below are some key tools and practices in Python DevOps:</p>
-        
-        <div class="bg-gray-800 text-white p-6 rounded-md shadow-md mb-6" id="dockerfile">
-            <h3 class="text-xl font-semibold">Docker: Creating a Dockerfile for a Python Application</h3>
-            <pre class="whitespace-pre-wrap overflow-x-auto">
-# Dockerfile for a Python application
-
-# Use official Python image
-FROM python:3.9-slim
-
-# Set the working directory inside the container
-WORKDIR /app
-
-# Copy requirements file and install dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy the application files
-COPY . .
-
-# Expose port 8000
-EXPOSE 8000
-
-# Command to run the application
-CMD ["python", "app.py"]
-            </pre>
-        </div>
-        <button onclick="copyCode('dockerfile')" class="copy-btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition mt-2">Copy Me</button>
-
-        <div class="bg-gray-800 text-white p-6 rounded-md shadow-md mb-6" id="k8s-deployment">
-            <h3 class="text-xl font-semibold">Kubernetes: Deploying a Python App with Kubernetes</h3>
-            <pre class="whitespace-pre-wrap overflow-x-auto">
-# kubernetes-deployment.yaml
-
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: python-app
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: python-app
-  template:
-    metadata:
-      labels:
-        app: python-app
-    spec:
-      containers:
-      - name: python-app
-        image: my-python-app:latest
-        ports:
-        - containerPort: 8000
-            </pre>
-        </div>
-        <button onclick="copyCode('k8s-deployment')" class="copy-btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition mt-2">Copy Me</button>
-
-        <div class="bg-gray-800 text-white p-6 rounded-md shadow-md mb-6" id="github-actions">
-            <h3 class="text-xl font-semibold">GitHub Actions: CI/CD Workflow</h3>
-            <pre class="whitespace-pre-wrap overflow-x-auto">
-# .github/workflows/python-ci.yml
-
-name: Python CI
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.9'
-
-    - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
-
-    - name: Run tests
-      run: |
-        pytest
-            </pre>
-        </div>
-        <button onclick="copyCode('github-actions')" class="copy-btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition mt-2">Copy Me</button>
-    </div>
-</div>
-
-
-</div>
-<br>
-<!-- Blog Post HTML Structure -->
-<div class="blog-post">
-  <h2>Get My Diary Blog</h2>
-  <p>Share your thoughts..</p>
-  <div class="interaction-buttons">
-    <button class="btn btn-sm btn-primary like-btn">Like <span class="like-count">0</span></button>
-    <button class="btn btn-sm btn-secondary comment-btn">Comment <span class="comment-count">0</span></button>
-    <button class="btn btn-sm btn-success share-btn">Share</button>
-    <div class="rating">
-      <span class="rating-label">Rate:</span>
-      <i class="fas fa-star" data-rating="1"></i>
-      <i class="fas fa-star" data-rating="2"></i>
-      <i class="fas fa-star" data-rating="3"></i>
-      <i class="fas fa-star" data-rating="4"></i>
-      <i class="fas fa-star" data-rating="5"></i>
-      <span class="rating-count">0/5</span>
+        <button class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-3 rounded-full hover:scale-105 transform transition-all">Copy Code</button>
+      </div>
     </div>
   </div>
-  <div class="comments">
-    <!-- comments will be displayed here -->
-  </div>
-  <div class="reviews">
-    <!-- reviews will be displayed here -->
-  </div>
-</div>
 
-<!-- Comment Form HTML Structure -->
-<div class="comment-form">
-  <h3>Leave a Comment</h3>
-  <form>
-    <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+  <!-- Footer Section -->
+  <footer class="bg-gray-900 text-white py-6">
+    <div class="container mx-auto text-center">
+      <p class="text-lg font-medium">© 2024 madeoftech | All rights reserved</p>
     </div>
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-    <div class="form-group">
-      <label for="comment">Comment:</label>
-      <textarea id="comment" name="comment" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-</div>
+  </footer>
 
-<!-- Review Form HTML Structure 
-
-<!-- Share Dialog HTML Structure -->
-<div class="share-dialog">
-  <h3>Share This Post</h3>
-  <ul>
-    <li><a href="#" class="facebook-share">Facebook</a></li>
-    <li><a href="#" class="twitter-share">Twitter</a></li>
-    <li><a href="#" class="linkedin-share">LinkedIn</a></li>
-  </ul>
-</div>
-
-<!-- Contact Form HTML Structure -->
-<div class="contact-form">
-  <h3>Contact Me</h3>
-  <form>
-    <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-    </div>
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-    <div class="form-group">
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Send</button>
-  </form>
-</div>
-<footer>
-  <div style="color: tomato;background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;font-size: 17px;">&copy;<a href="madeoftech.net" style="color: mediumorchid;text-decoration: none;"> &hookrightarrow; madeoftech.net </a> | developed by Innocent mwea &trade;</div>
-</footer>
-<script src="/script.js"></script>
-  <script>
-    function copyToClipboard(codeId) {
-        var code = document.getElementById(codeId).innerText;
-        var textarea = document.createElement('textarea');
-        textarea.value = code;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textarea);
-
-        alert('Code copied to clipboard!');
+  <style>
+    /* Custom class for elegant golden color */
+    .text-gold {
+      color: #DAA520;
     }
-</script>
-  <script>
-    function copyToClipboard(codeId) {
-        var code = document.getElementById(codeId).innerText;
-        var textarea = document.createElement('textarea');
-        textarea.value = code;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textarea);
-
-        alert('Code copied to clipboard!');
+    .font-playfair {
+      font-family: 'Playfair Display', serif;
     }
-</script>
-  <script>
-    function copyCode(id) {
-        var codeBlock = document.getElementById(id).querySelector('pre');
-        var range = document.createRange();
-        range.selectNode(codeBlock);
-        window.getSelection().removeAllRanges();
-        window.getSelection().addRange(range);
-        document.execCommand('copy');
-        alert('Code copied to clipboard!');
-    }
-</script>
-
+  </style>
 </body>
+
 </html>
