@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -7,671 +7,157 @@
   <meta name="keywords" content="Blogs, Cyber Security, DevOps, CompTIA A+, Network+, Linux+">
   <meta name="author" content="Innocent Mwea">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="img/kali.png">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
- 
-<!--  <base href="https://madeoftech.net/" target="_blank">-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-  <link rel="stylesheet" href="mstyles.css">
-  <title>blogs</title>
+  <link rel="icon" type="image/x-icon" href="img/kali.png">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Blogs</title>
   <style>
-  /*all*/
-  body{
-    font-family: Verdana, sans-serif;
-  font-size: 16px;
-  }
-  footer{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-  }
-  
- .header h1{
-   text-shadow: 5px 8px 8px tomato;
-   text-align: center;
-   font-size: 18vw;
-   font-family: "Sofia", sans-serif;
- }
-  
-  }
-  /*header*/
-  .header {
-    text-align: center;
-    padding: 20px;
-    background-color: blanchedalmond;
-  }
-  
-  .topnav{
-    background-color: tomato;
-    overflow: hidden;
-  }
-  
-  .topnav a {
-  float: left;
-  display: block;
-  color: lemonchiffon;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font: normal bolder 20px/20px Georgia, serif;
-}
-}
-
-/* Change color on hover */
-.topnav a:hover {
-  background-color: tomato;
-  height: 10vw;
-  color: black;
-}
-    /*aside style*/
-aside {
-  width: 30%;
-  background-color: lightgray;
-  font-style: italic;
-  float: right;
-  padding-left: 15px;
-  margin-left: 15px;
-}
-/*section 2*/
-.grid-container{
-  display: grid;
-  justify-content: start;
-  grid-template-columns: 50px, 50px, 50px;
-}
-/*newspp*/
-#newspaper{
-  column-gap: 3;
-  color: orangered;
-}
-/*paggination*/
-.center{
-  align-items: center;
-}
-.pagimation{
-  display: inline-block;
-}
-.pagination a{
-  border: 1px solid tomato;
-  margin: 0 4px;
-  color: black;
-  float: left;
-  padding: 8 16px;
-  text-decoration: none;
-  transition: background-color .3s;
-}
-.pagination a.active{
-  background-color: teal;
-  color: white;
-  border: 1px solid tomato;
-}
-.pagination a:hover:not(.active){
-  background-color: blanchedalmond;
-}
-
-/*blog*/
-/* Blog Post CSS */
-.blog-post {
-  margin-bottom: 20px;
-}
-
-.interaction-buttons {
-  margin-top: 20px;
-}
-
-.like-btn, .comment-btn, .share-btn {
-  margin-right: 10px;
-}
-
-.rating {
-  margin-top: 10px;
-}
-
-.rating-label {
-  margin-right: 10px;
-}
-
-.fa-star {
-  color: #ccc;
-  cursor: pointer;
-}
-
-.fa-star.active {
-  color: #ffd700;
-}
-
-/* Comment Form CSS */
-.comment-form {
-  margin-top: 20px;
-}
-
-.comment-form h3 {
-  margin-bottom: 10px;
-}
-
-.comment-form form {
-  margin-bottom: 20px;
-}
-
-.comment-form .form-group {
-  margin-bottom: 15px;
-}
-
-.comment-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.comment-form input, .comment-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-}
-
-.comment-form button[type="submit"] {
-  background-color: #4CAF50;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.comment-form button[type="submit"]:hover {
-  background-color: #3e8e41;
-}
-
-/* Review Form CSS */
-.review-form {
-  margin-top: 20px;
-}
-
-.review-form h3 {
-  margin-bottom: 10px;
-}
-
-.review-form form {
-  margin-bottom: 20px;
-}
-
-.review-form .form-group {
-  margin-bottom: 15px;
-}
-
-.review-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.review-form input, .review-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-}
-
-.review-form button[type="submit"] {
-  background-color: #4CAF50;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.review-form button[type="submit"]:hover {
-  background-color: #3e8e41;
-}
-
-/* Share Dialog CSS */
-.share-dialog {
-  margin-top: 20px;
-}
-
-.share-dialog h3 {
-  margin-bottom: 10px;
-}
-
-.share-dialog ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.share-dialog li {
-  margin-bottom: 10px;
-}
-
-.share-dialog a {
-  text-decoration: none;
-  color: #337ab7;
-}
-
-.share-dialog a:hover {
-  color: #23527c;
-}
-
-/* Contact Form CSS */
-.contact-form {
-  margin-top: 20px;
-}
-
-.contact-form h3 {
-  margin-bottom: 10px;
-}
-
-.contact-form form {
-  margin-bottom: 20px;
-}
-
-.contact-form .form-group {
-  margin-bottom: 15px;
-}
-
-.contact-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.contact-form input, .contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-}
-
-.contact-form button[type="submit"] {
-  background-color: #4CAF50;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.contact-form button[type="submit"]:hover {
-  background-color: #3e8e41;
-}
-
-    /*image style */
-    /* General Image Styling */
-img {
-  display: block;             /* Ensures the image is block-level, removing any unwanted space below it */
-  max-width: 100%;            /* Makes images responsive */
-  height: auto;               /* Maintain aspect ratio */
-  width: 100%;                /* Ensures images are stretched to container width */
-  object-fit: cover;          /* Makes the image cover the area while maintaining its aspect ratio */
-  border-radius: 8px;         /* Rounded corners */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition effects */
-}
-
-/* Ensuring a fixed size for images (e.g., 300px by 200px) */
-img.fixed-size {
-  width: 300px;               /* Fixed width */
-  height: 200px;              /* Fixed height */
-  object-fit: cover;          /* Adjusts the image within the fixed dimensions */
-}
-
-/* Hover effects */
-img:hover {
-  transform: scale(1.05);       /* Slight zoom on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adding shadow effect */
-}
-
-/* Optional: Adding border and spacing for image containers */
-img {
-  border: 3px solid #ddd;      /* Light border around the image */
-  margin-bottom: 16px;         /* Margin below the image */
-}
-
-/* Example Container styling for responsive images */
-.image-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;                   /* Adds space between images */
-  justify-content: center;     /* Centers the images */
-}
-
-.image-container img {
-  width: 100%;
-  max-width: 300px;            /* Max width for each image */
-  height: 200px;               /* Fixed height */
-  margin: 10px;                /* Space around the images */
-  object-fit: cover;           /* Ensures images fit within the specified dimensions */
-}
-
+    /* Custom Tailwind theme colors */
+    :root {
+      --primary-color: #4CAF50; /* Green */
+      --secondary-color: #2C3E50; /* Dark Blue */
+      --accent-color: #FFC107; /* Amber */
+      --background-color: #F7F7F7; /* Light Gray */
+    }
   </style>
 </head>
-<body>
-  <header>
-<div class="header">
-  <h1 class="title">&mcy;ade&ofr;ftech</h1>
-</div>
 
-<div class="topnav">
-  <a href="index.html">articles</a>
-  <a href="blogs.html">Blogs</a>
-  <a href="about.html">About</a>
-</div>
+<body class="bg-background-color text-gray-900">
+
+  <!-- Header Section -->
+  <header class="bg-secondary-color text-white py-5">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h1 class="text-4xl font-semibold tracking-wider">madeoftech</h1>
+      <nav>
+        <ul class="flex space-x-8">
+          <li><a href="index.html" class="text-lg hover:text-accent-color">Articles</a></li>
+          <li><a href="blogs.html" class="text-lg hover:text-accent-color">Blogs</a></li>
+          <li><a href="about.html" class="text-lg hover:text-accent-color">About</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <br>
-  <br>
-  <!--pagination-->
-  <h2>Diary Blog</h2>
 
-<div class="center">
-  <div class="pagination">
-  <a href="#" class="active">&laquo;</a>
-  <a href="blogs/linux.html">linux/shell commands</a>
-  <a href="blogs/comptia.html">CompTIA ...</a>
-  <a href="blogs/blackhat.html">python black hat</a>
-  <a href="blogs/websecurity.html">web Security</a>
-  <a href="blogs/database.html">Database security</a>
-  <a href="blogs/pythondevops.html">python for DevOps</a>
-  <a href="blogs/newspaper.html">newspaper</a>
-  <a href="#">&raquo;</a>
-  </div>
-</div>
-<br>
-<br>
-  <!--fonts-->
- <i class="fas fa-heart"></i>
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-12">
 
-<!--news -->
-<hr>
-<br>
-<br>
-<div id="#newspaper">
-  </span>
-<p>
-  Im a self taught Software Engineer, Devops Engineer and Cybersecurity Specialist, i decided to share what i gained for free to help those like me who are finding it hard to get into technology and understand its concepts
-</p> 
-</div>
-<br><hr><br>
-<div class="container">
-  <div class="row row-cols-1 row-cols-md-3">
-    <div class="col">
-      <div class="card">
-        <img src="img/dp.jpeg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Matlab</h5>
-          <p class="card-text">Get skills and concepts in matlab. Matlab is also a programming language get to know it better and solve your future problems using this tool.</p>
-          <a href="#" class="btn btn-primary">Go Getit</a>
+    <!-- Pagination Section -->
+    <section>
+      <h2 class="text-4xl font-bold mb-8 text-secondary-color">Diary Blog</h2>
+      <div class="flex justify-center mb-8">
+        <div class="pagination flex space-x-4">
+          <a href="#" class="px-4 py-2 border border-gray-300 rounded-lg bg-background-color hover:bg-gray-200">&laquo;</a>
+          <a href="blogs/linux.html" class="px-4 py-2 border border-gray-300 rounded-lg bg-background-color hover:bg-gray-200">Linux/Shell Commands</a>
+          <a href="blogs/comptia.html" class="px-4 py-2 border border-gray-300 rounded-lg bg-background-color hover:bg-gray-200">CompTIA</a>
+          <a href="blogs/blackhat.html" class="px-4 py-2 border border-gray-300 rounded-lg bg-background-color hover:bg-gray-200">Python Black Hat</a>
+          <a href="blogs/websecurity.html" class="px-4 py-2 border border-gray-300 rounded-lg bg-background-color hover:bg-gray-200">Web Security</a>
+          <a href="blogs/database.html" class="px-4 py-2 border border-gray-300 rounded-lg bg-background-color hover:bg-gray-200">Database Security</a>
+          <a href="blogs/pythondevops.html" class="px-4 py-2 border border-gray-300 rounded-lg bg-background-color hover:bg-gray-200">Python for DevOps</a>
+          <a href="blogs/newspaper.html" class="px-4 py-2 border border-gray-300 rounded-lg bg-background-color hover:bg-gray-200">Newspaper</a>
+          <a href="#" class="px-4 py-2 border border-gray-300 rounded-lg bg-background-color hover:bg-gray-200">&raquo;</a>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="img/python.jpeg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Blackhat Python</h5>
-          <p class="card-text">Understand the scripting and automation side of python security.</p>
-          <a href="#" class="btn btn-primary">Go Getit</a>
+    </section>
+
+    <br><br>
+
+    <!-- About Me Section -->
+    <section id="newspaper">
+      <p class="text-lg text-gray-700 mb-12">
+        I’m a self-taught Software Engineer, DevOps Engineer, and Cybersecurity Specialist. I decided to share my knowledge for free to help those like me who are finding it hard to get into technology and understand its concepts.
+      </p>
+    </section>
+
+    <br><hr><br>
+
+    <!-- Courses Section -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+        <img src="img/dp.jpeg" alt="Matlab" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h5 class="text-xl font-semibold text-gray-800">Matlab</h5>
+          <p class="text-gray-600">Get skills and concepts in Matlab. Matlab is also a programming language. Get to know it better and solve your future problems using this tool.</p>
+          <a href="#" class="inline-block mt-4 px-6 py-2 bg-primary-color text-white font-semibold rounded-lg hover:bg-green-600">Go Get It</a>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="img/kali.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Blackhat Kali</h5>
-          <p class="card-text">Get to Know the Tools and Techniques used in Kali linux and its distributions.</p>
-          <a href="#" class="btn btn-primary">Go Getit</a>
+
+      <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+        <img src="img/python.jpeg" alt="Blackhat Python" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h5 class="text-xl font-semibold text-gray-800">Blackhat Python</h5>
+          <p class="text-gray-600">Understand the scripting and automation side of Python security.</p>
+          <a href="#" class="inline-block mt-4 px-6 py-2 bg-primary-color text-white font-semibold rounded-lg hover:bg-green-600">Go Get It</a>
         </div>
       </div>
-    </div>
-    <!-- Add more cards here -->
-    <div class="container">
-  <div class="row row-cols-1 row-cols-md-3">
-    <div class="col">
-      <div class="card">
-        <img src="img/kali.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Kali Linux</h5>
-          <p class="card-text">Get hands on Kali linux (CLI) Commandline interface.</p>
-          <a href="#" class="btn btn-primary">Go Getit</a>
+
+      <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+        <img src="img/kali.png" alt="Blackhat Kali" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h5 class="text-xl font-semibold text-gray-800">Blackhat Kali</h5>
+          <p class="text-gray-600">Get to know the tools and techniques used in Kali Linux and its distributions.</p>
+          <a href="#" class="inline-block mt-4 px-6 py-2 bg-primary-color text-white font-semibold rounded-lg hover:bg-green-600">Go Get It</a>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="img/java.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Java</h5>
-          <p class="card-text">Get hands on Java for Developement.</p>
-          <a href="#" class="btn btn-primary">Go Getit</a>
+    </section>
+
+    <br><hr><br>
+
+    <!-- Blog Section -->
+    <section class="blog mb-12">
+      <div class="blog-post bg-white rounded-lg shadow-md p-8">
+        <h2 class="text-2xl font-bold mb-4 text-secondary-color">My Diary</h2>
+        <p class="text-lg text-gray-600 mb-6">...</p>
+        <div class="flex space-x-4">
+          <button class="px-6 py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600">Like <span class="like-count">0</span></button>
+          <button class="px-6 py-2 bg-gray-500 text-white font-semibold rounded-lg hover:bg-gray-600">Comment <span class="comment-count">0</span></button>
+          <button class="px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600">Share</button>
+        </div>
+
+        <div class="rating mt-4">
+          <span class="text-gray-700">Rate:</span>
+          <div class="flex space-x-1">
+            <i class="fas fa-star text-yellow-400 cursor-pointer" data-rating="1"></i>
+            <i class="fas fa-star text-yellow-400 cursor-pointer" data-rating="2"></i>
+            <i class="fas fa-star text-yellow-400 cursor-pointer" data-rating="3"></i>
+            <i class="fas fa-star text-yellow-400 cursor-pointer" data-rating="4"></i>
+            <i class="fas fa-star text-yellow-400 cursor-pointer" data-rating="5"></i>
+            <span class="rating-count">0/5</span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="img/python.jpeg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Python Full Stack-</h5>
-          <p class="card-text">Build up your Python codding Skills in 9months to become a full stack python Developer. Remember Python is versalite and wide. Is can perform in Automation, Scripting, Website and software Developement, Data Science, Machine Learning and Artificial inteligence.</p>
-          <a href="#" class="btn btn-primary">Go Getit</a>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form mt-12">
+      <h3 class="text-2xl font-semibold mb-4 text-secondary-color">Contact Me</h3>
+      <form class="space-y-6">
+        <div class="form-group">
+          <label for="name" class="block text-lg font-medium">Name:</label>
+          <input type="text" id="name" name="name" required class="w-full p-4 border border-gray-300 rounded-md" />
         </div>
-      </div>
-    </div>
-    <!-- Add more cards here -->
-    <div class="container">
-  <div class="row row-cols-1 row-cols-md-3">
-    <div class="col">
-      <div class="card">
-        <img src="img/cloud.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Cloud Computing</h5>
-          <p class="card-text">Get to Build up your skills in cloud computing and cloud engineering essentials. By the end you will be able to build your own projects in the cloud and explore it more further to become income generating site.</p>
-          <a href="#" class="btn btn-primary">Go Getit</a>
+        <div class="form-group">
+          <label for="email" class="block text-lg font-medium">Email:</label>
+          <input type="email" id="email" name="email" required class="w-full p-4 border border-gray-300 rounded-md" />
         </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="img/web.jpeg" class="card-img-top" alt="..picture of a website security logo">
-        <div class="card-body">
-          <h5 class="card-title">Web Security</h5>
-          <p class="card-text">Get to understand the full stack concepts of website security you need to run an online business.</p>
-          <a href="#" class="btn btn-primary">Go Getit</a>
+        <div class="form-group">
+          <label for="message" class="block text-lg font-medium">Message:</label>
+          <textarea id="message" name="message" required class="w-full p-4 border border-gray-300 rounded-md"></textarea>
         </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="img/bash.jpeg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Black Hat Bash</h5>
-          <p class="card-text">Get To Understand Bash Scripting like a champ. Requirements are of intermediate experience in Computer knowledge in order to set the ball rolling.</p>
-          <a href="#" class="btn btn-primary">Go Getit</a>
-        </div>
-      </div>
-    </div>
-    <!-- Add more cards here -->
-  </div>
-</div>
-    <!-- Add more cards here -->
-  </div>
-</div>
-  </div>
-</div>
-  </div>
-</div>
-<br><hr><br>
-<section class="blog">
-  <!-- Blog Post HTML Structure -->
-<div class="blog-post">
-  <h2>my diary</h2>
-  <p>...</p>
-  <div class="interaction-buttons">
-    <button class="btn btn-sm btn-primary like-btn">Like <span class="like-count">0</span></button>
-    <button class="btn btn-sm btn-secondary comment-btn">Comment <span class="comment-count">0</span></button>
-    <button class="btn btn-sm btn-success share-btn">Share</button>
-    <div class="rating">
-      <span class="rating-label">Rate:</span>
-      <i class="fas fa-star" data-rating="1"></i>
-      <i class="fas fa-star" data-rating="2"></i>
-      <i class="fas fa-star" data-rating="3"></i>
-      <i class="fas fa-star" data-rating="4"></i>
-      <i class="fas fa-star" data-rating="5"></i>
-      <span class="rating-count">0/5</span>
-    </div>
-  </div>
-  <div class="comments">
-    <!-- comments will be displayed here -->
-  </div>
-  <div class="reviews">
-    <!-- reviews will be displayed here -->
-  </div>
-</div>
+        <button type="submit" class="px-6 py-2 bg-primary-color text-white font-semibold rounded-lg hover:bg-green-600">Submit</button>
+      </form>
+    </section>
 
-<!-- Comment Form HTML Structure -->
-<div class="comment-form">
-  <h3>Leave a Comment</h3>
-  <form>
-    <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-    </div>
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-    <div class="form-group">
-      <label for="comment">Comment:</label>
-      <textarea id="comment" name="comment" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-</div>
+  </main>
 
-<!-- Review Form HTML Structure -->
-<div class="review-form">
-  <h3>Leave a Review</h3>
-  <form>
-    <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+  <!-- Footer -->
+  <footer class="bg-secondary-color text-white py-6 text-center">
+    <div class="text-sm">
+      &copy; <a href="madeoftech.net" class="text-accent-color hover:underline">madeoftech.net</a> | Developed by Innocent Mwea
     </div>
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-    <div class="form-group">
-      <label for="review">Review:</label>
-      <textarea id="review" name="review" required></textarea>
-    </div>
-    <div class="form-group">
-      <label for="rating">Rating:</label>
-      <select id="rating" name="rating" required>
-        <option value="1">1/5</option>
-        <option value="2">2/5</option>
-        <option value="3">3/5</option>
-        <option value="4">4/5</option>
-        <option value="5">5/5</option>
-      </select>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-</div>
+  </footer>
 
-<!-- Share Dialog HTML Structure
-<div class="share-dialog">
-  <h3>Share This Post</h3>
-  <ul>
-    <li><a href="#" class="facebook-share">Facebook</a></li>
-    <li><a href="#" class="twitter-share">Twitter</a></li>
-    <li><a href="#" class="linkedin-share">LinkedIn</a></li>
-  </ul>
-</div>
- -->
-<!-- Contact Form HTML Structure -->
-<div class="contact-form">
-  <h3>Contact Me</h3>
-  <form>
-    <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-    </div>
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-    <div class="form-group">
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Send</button>
-  </form>
-</div>
-</section>
-<br>
-<br>
-<hr>
-<footer>
-  <div style="color: tomato;background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;font-size: 17px;">&copy;<a href="madeoftech.net" style="color: mediumorchid;text-decoration: none;"> &hookrightarrow; madeoftech.net </a> | developed by Innocent mwea &trade;</div>
-</footer>
-<script src="">
-  // Like button functionality
-$('.like-btn').on('click', function() {
-  var likeCount = parseInt($(this).find('.like-count').text());
-  likeCount++;
-  $(this).find('.like-count').text(likeCount);
-});
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-// Comment button functionality
-$('.comment-btn').on('click', function() {
-  $('.comment-form').toggle();
-});
-
-// Share button functionality
-$('.share-btn').on('click', function() {
-  $('.share-dialog').toggle();
-});
-
-// Rating system functionality
-$('.fa-star').on('click', function() {
-  var rating = $(this).data('rating');
-  $(this).addClass('active').siblings().removeClass('active');
-  $(this).parents('.rating').find('.rating-count').text(rating + '/5');
-});
-
-// Comment form submission functionality
-$('.comment-form form').on('submit', function(e) {
-  e.preventDefault();
-  var name = $('#name').val();
-  var email = $('#email').val();
-  var comment = $('#comment').val();
-  // TO DO: implement comment submission logic (e.g., send to server, display comment)
-});
-
-// Review form submission functionality
-$('.review-form form').on('submit', function(e) {
-  e.preventDefault();
-  var name = $('#name').val();
-  var email = $('#email').val();
-  var review = $('#review').val();
-  var rating = $('#rating').val();
-  // TO DO: implement review submission logic (e.g., send to server, display review)
-});
-
-// Share dialog functionality
-$('.share-dialog a').on('click', function(e) {
-  e.preventDefault();
-  var shareUrl = $(this).attr('href');
-  // TO DO: implement share logic (e.g., open share dialog, share on social media)
-});
-
-// Contact form submission functionality
-$('.contact-form form').on('submit', function(e) {
-  e.preventDefault();
-  var name = $('#name').val();
-  var email = $('#email').val();
-  var message = $('#message').val();
-  // TO DO: implement contact form submission logic (e.g., send to server, display message)
-});
-  
-</script>
-<script src="/script.js"></script>
-<script src="../../kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
+
 </html>
