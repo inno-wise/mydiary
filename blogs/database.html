@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -7,390 +7,141 @@
   <meta name="keywords" content="Blogs, Cyber Security, DevOps, CompTIA A+, Network+, Linux+">
   <meta name="author" content="Innocent Mwea">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="img/kali.png">
+  <link rel="icon" type="image/x-icon" href="img/kali.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
   <script src="../../kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<!--  <base href="https://madeoftech.net/" target="_blank">-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="mstyles.css">
-  <title>databases</title>
-  <style>
-  /*all*/
-  body{
-    font-family: Verdana, sans-serif;
-  font-size: 16px;
-  }
-  footer{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-  }
-  
- .header h1{
-   text-shadow: 5px 8px 8px tomato;
-   text-align: center;
-   font-size: 18vw;
-   font-family: "Sofia", sans-serif;
- }
-  
-  }
-  /*header*/
-  .header {
-    text-align: center;
-    padding: 20px;
-    background-color: blanchedalmond;
-  }
-  
-  .topnav{
-    background-color: tomato;
-    overflow: hidden;
-  }
-  
-  .topnav a {
-  float: left;
-  display: block;
-  color: lemonchiffon;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font: normal bolder 20px/20px Georgia, serif;
-}
-}
-
-/* Change color on hover */
-.topnav a:hover {
-  background-color: tomato;
-  height: 10vw;
-  color: black;
-}
-    /*aside style*/
-aside {
-  width: 30%;
-  background-color: lightgray;
-  font-style: italic;
-  float: right;
-  padding-left: 15px;
-  margin-left: 15px;
-}
-/*section 2*/
-.grid-container{
-  display: grid;
-  justify-content: start;
-  grid-template-columns: 50px, 50px, 50px;
-}
-/*newspp*/
-#newspaper{
-  column-gap: 3;
-  color: orangered;
-}
-/*paggination*/
-.center{
-  align-items: center;
-}
-.pagimation{
-  display: inline-block;
-}
-.pagination a{
-  border: 1px solid tomato;
-  margin: 0 4px;
-  color: black;
-  float: left;
-  padding: 8 16px;
-  text-decoration: none;
-  transition: background-color .3s;
-}
-.pagination a.active{
-  background-color: teal;
-  color: white;
-  border: 1px solid tomato;
-}
-.pagination a:hover:not(.active){
-  background-color: blanchedalmond;
-}
-/*blog*/
-    
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 1em;
-        }
-        header h1 {
-            margin: 0;
-        }
-        nav {
-            background-color: #333;
-            color: white;
-            padding: 0.5em;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        section {
-            padding: 20px;
-            margin: 10px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #4CAF50;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        code {
-            display: block;
-            background-color: #f5f5f5;
-            padding: 10px;
-            border-radius: 5px;
-            font-family: "Courier New", monospace;
-            margin: 10px 0;
-        }
-        .copy-button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 5px 10px;
-            margin-top: 5px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .copy-button:hover {
-            background-color: #45a049;
-        }
-    /*dbdb*/
-    
-  </style>
+  <title>Databases</title>
 </head>
-<body>
-  <header>
-<div class="header">
-  <h1 class="title">&mcy;ade&ofr;ftech</h1>
-</div>
 
-<div class="topnav">
-  <a href="index.html">articles</a>
-  <a href="blogs.html">Blogs</a>
-  <a href="about.html">About</a>
-</div>
+<body class="bg-gray-100 text-gray-900">
+
+  <header>
+    <div class="bg-gray-800 p-4">
+      <h1 class="text-4xl text-white font-semibold text-center">&mcy;ade&ofr;ftech</h1>
+    </div>
+
+    <div class="bg-gray-700 p-2">
+      <nav class="flex justify-center space-x-4">
+        <a href="index.html" class="text-white hover:text-indigo-400">Articles</a>
+        <a href="blogs.html" class="text-white hover:text-indigo-400">Blogs</a>
+        <a href="about.html" class="text-white hover:text-indigo-400">About</a>
+      </nav>
+    </div>
   </header>
-  <br>
-  <br>
-  <!--pagination-->
-  <h2>Diary blogs</h2>
 
-<div class="center">
-  <div class="pagination">
-  <a href="#">&laquo;</a>
-  <a href="linux.html" >commands line interface</a>
-  <a href="comptia.html">CompTIA ...</a>
-  <a href="blackhat.html">python black hat</a>
-  <a href="websecurity.html">web Security</a>
-  <a href="database.html" class="active">Database security</a>
-  <a href="pythondevops.html">python for DevOps</a>
-  <a href="newspaper.html">newspaper</a>
-  <a href="#">&raquo;</a>
-  </div>
-</div>
-<br>
-<hr>
-<br>
-<div>
-  <h1>Database security</h1>
-  <header>
-    <h1>All About Databases</h1>
-    <p>Learn about different types of databases, their components, and their uses.</p>
-</header>
+  <main class="container mx-auto mt-8">
+    <!-- Pagination -->
+    <h2 class="text-2xl font-semibold mb-4">Diary Blogs</h2>
+    <div class="flex justify-center mb-6">
+      <div class="flex space-x-2">
+        <a href="#" class="px-3 py-2 text-gray-700 hover:bg-gray-300 rounded">&laquo;</a>
+        <a href="linux.html" class="px-3 py-2 text-gray-700 hover:bg-gray-300 rounded">Commands Line Interface</a>
+        <a href="comptia.html" class="px-3 py-2 text-gray-700 hover:bg-gray-300 rounded">CompTIA ...</a>
+        <a href="blackhat.html" class="px-3 py-2 text-gray-700 hover:bg-gray-300 rounded">Python Black Hat</a>
+        <a href="websecurity.html" class="px-3 py-2 text-gray-700 hover:bg-gray-300 rounded">Web Security</a>
+        <a href="database.html" class="px-3 py-2 bg-indigo-500 text-white rounded">Database Security</a>
+        <a href="pythondevops.html" class="px-3 py-2 text-gray-700 hover:bg-gray-300 rounded">Python for DevOps</a>
+        <a href="newspaper.html" class="px-3 py-2 text-gray-700 hover:bg-gray-300 rounded">Newspaper</a>
+        <a href="#" class="px-3 py-2 text-gray-700 hover:bg-gray-300 rounded">&raquo;</a>
+      </div>
+    </div>
 
-<nav>
-    <a href="#introduction">Introduction</a>
-    <a href="#types">Types of Databases</a>
-    <a href="#components">Database Components</a>
-    <a href="#uses">Uses of Databases</a>
-    <a href="#commands">SQL Commands</a>
-    <a href="#advanced">Advanced Database Concepts</a>
-</nav>
+    <hr class="my-8">
 
-<section id="introduction" class="container">
-    <h2>Introduction to Databases</h2>
-    <p>A <strong>database</strong> is an organized collection of data that can be easily accessed, managed, and updated. Databases are crucial in storing information in applications, websites, and services that require efficient data retrieval and manipulation. They help in structuring, storing, and maintaining large amounts of data in a way that is easily accessible to users or software applications.</p>
-</section>
+    <section>
+      <h1 class="text-3xl font-bold text-center mb-4">Database Security</h1>
+      <header class="text-center mb-6">
+        <h2 class="text-2xl font-medium">All About Databases</h2>
+        <p class="text-gray-700">Learn about different types of databases, their components, and their uses.</p>
+      </header>
 
-<section id="types" class="container">
-    <h2>Types of Databases</h2>
-    <h3>1. Relational Databases (RDBMS)</h3>
-    <p>Relational databases use a table-based structure with rows and columns. Each table represents a different entity, and the relationships between them are established through keys (primary and foreign keys). Common examples include MySQL, PostgreSQL, and Oracle Database.</p>
+      <nav class="mb-6">
+        <ul class="flex justify-center space-x-6">
+          <li><a href="#introduction" class="text-indigo-500 hover:text-indigo-700">Introduction</a></li>
+          <li><a href="#types" class="text-indigo-500 hover:text-indigo-700">Types of Databases</a></li>
+          <li><a href="#components" class="text-indigo-500 hover:text-indigo-700">Database Components</a></li>
+          <li><a href="#uses" class="text-indigo-500 hover:text-indigo-700">Uses of Databases</a></li>
+          <li><a href="#commands" class="text-indigo-500 hover:text-indigo-700">SQL Commands</a></li>
+          <li><a href="#advanced" class="text-indigo-500 hover:text-indigo-700">Advanced Database Concepts</a></li>
+        </ul>
+      </nav>
 
-    <h3>2. NoSQL Databases</h3>
-    <p>NoSQL databases are designed to handle unstructured or semi-structured data, typically for large-scale or high-velocity applications. They do not require fixed schemas like relational databases and are often used in big data applications. Examples include MongoDB, CouchDB, and Cassandra.</p>
+      <!-- Introduction Section -->
+      <section id="introduction" class="bg-white p-6 rounded-lg shadow-md mb-8">
+        <h2 class="text-2xl font-semibold mb-4">Introduction to Databases</h2>
+        <p>A <strong>database</strong> is an organized collection of data that can be easily accessed, managed, and updated. Databases are crucial in storing information in applications, websites, and services that require efficient data retrieval and manipulation...</p>
+      </section>
 
-    <h3>3. Object-Oriented Databases</h3>
-    <p>Object-oriented databases store data as objects, similar to how data is represented in object-oriented programming languages. They are used in applications that require complex data models. Examples include db4o and ObjectDB.</p>
+      <!-- Types of Databases Section -->
+      <section id="types" class="bg-white p-6 rounded-lg shadow-md mb-8">
+        <h2 class="text-2xl font-semibold mb-4">Types of Databases</h2>
+        <h3 class="font-semibold">1. Relational Databases (RDBMS)</h3>
+        <p>Relational databases use a table-based structure with rows and columns. Examples include MySQL, PostgreSQL, and Oracle...</p>
+        <h3 class="font-semibold mt-4">2. NoSQL Databases</h3>
+        <p>NoSQL databases handle unstructured data and do not require fixed schemas...</p>
+        <!-- Add more types as necessary -->
+      </section>
 
-    <h3>4. Hierarchical Databases</h3>
-    <p>In a hierarchical database, data is organized in a tree-like structure with parent-child relationships. It is mainly used in applications that require quick access to hierarchical data. An example is IBM's Information Management System (IMS).</p>
+      <!-- Database Components Section -->
+      <section id="components" class="bg-white p-6 rounded-lg shadow-md mb-8">
+        <h2 class="text-2xl font-semibold mb-4">Components of a Database</h2>
+        <h3 class="font-semibold">1. Database Engine</h3>
+        <p>The database engine is responsible for accessing, managing, and storing data...</p>
+        <h3 class="font-semibold mt-4">2. Database Schema</h3>
+        <p>The schema defines the structure of the database...</p>
+        <!-- More components as necessary -->
+      </section>
 
-    <h3>5. Graph Databases</h3>
-    <p>Graph databases are used to store data that is represented as nodes (entities) and edges (relationships). They are suitable for applications that require complex relationship analysis, such as social networks or recommendation engines. Examples include Neo4j and Amazon Neptune.</p>
-</section>
+      <!-- Uses of Databases Section -->
+      <section id="uses" class="bg-white p-6 rounded-lg shadow-md mb-8">
+        <h2 class="text-2xl font-semibold mb-4">Uses of Databases</h2>
+        <h3 class="font-semibold">1. Business Applications</h3>
+        <p>Databases store customer data, sales information, and financial records...</p>
+        <h3 class="font-semibold mt-4">2. Websites and Web Applications</h3>
+        <p>Databases are essential for CMS, e-commerce, and social networks...</p>
+        <!-- More uses as necessary -->
+      </section>
 
-<section id="components" class="container">
-    <h2>Components of a Database</h2>
-    <h3>1. Database Engine</h3>
-    <p>The database engine is the core component responsible for accessing, managing, and storing data. It ensures the proper execution of queries and maintains data integrity.</p>
+      <!-- SQL Commands Section -->
+      <section id="commands" class="bg-white p-6 rounded-lg shadow-md mb-8">
+        <h2 class="text-2xl font-semibold mb-4">SQL Commands</h2>
+        <p>SQL is the language used for interacting with relational databases. Below are some common SQL commands:</p>
+        <h3 class="font-semibold mt-4">1. SELECT</h3>
+        <pre class="bg-gray-100 p-4 rounded"><code>SELECT * FROM employees;</code></pre>
+        <button class="bg-blue-500 text-white py-2 px-4 rounded mt-2">Copy</button>
+        <!-- More SQL commands as necessary -->
+      </section>
 
-    <h3>2. Database Schema</h3>
-    <p>The schema defines the structure of the database, including tables, fields, and relationships. It serves as the blueprint that dictates how data is organized and accessed.</p>
+      <!-- Advanced Database Concepts Section -->
+      <section id="advanced" class="bg-white p-6 rounded-lg shadow-md mb-8">
+        <h2 class="text-2xl font-semibold mb-4">Advanced Database Concepts</h2>
+        <h3 class="font-semibold">1. Database Normalization</h3>
+        <p>Normalization is the process of organizing data to reduce redundancy...</p>
+        <!-- More advanced topics as necessary -->
+      </section>
+    </section>
+  </main>
 
-    <h3>3. Query Language</h3>
-    <p>A query language is used to interact with the database. SQL (Structured Query Language) is the most common query language for relational databases, while NoSQL databases may use their own query mechanisms.</p>
+  <footer class="bg-gray-800 p-4 mt-8">
+    <div class="text-white text-center">
+      &copy;<a href="madeoftech.net" class="text-indigo-400 hover:text-indigo-600"> &hookrightarrow; madeoftech.net </a> | Developed by Innocent Mwea &trade;
+    </div>
+  </footer>
 
-    <h3>4. Data</h3>
-    <p>Data is the core content of the database. It consists of values that are stored within tables, fields, or nodes, depending on the type of database being used.</p>
-
-    <h3>5. Indexes</h3>
-    <p>Indexes are used to speed up the retrieval of data. By creating a fast-access structure, they allow databases to search and filter data efficiently.</p>
-</section>
-
-<section id="uses" class="container">
-    <h2>Uses of Databases</h2>
-    <h3>1. Business Applications</h3>
-    <p>Databases are used to store customer data, sales information, and financial records. Businesses rely on databases for inventory management, order processing, and customer relationship management (CRM) systems.</p>
-
-    <h3>2. Websites and Web Applications</h3>
-    <p>Databases are essential for content management systems (CMS), e-commerce sites, and social networks. They store user data, posts, transactions, and other critical website data.</p>
-
-    <h3>3. Scientific Research</h3>
-    <p>Scientists and researchers use databases to store large datasets from experiments, studies, and surveys. These databases help organize and analyze data efficiently for discoveries and conclusions.</p>
-
-    <h3>4. Healthcare</h3>
-    <p>In healthcare, databases store patient records, medical history, diagnoses, and treatment plans. This data is crucial for doctors, hospitals, and clinics to provide effective care.</p>
-
-    <h3>5. Government Systems</h3>
-    <p>Governments rely on databases for a variety of tasks, including managing tax records, census data, and social security numbers, as well as for crime and public safety data.</p>
-</section>
-
-  <section id="commands" class="container">
-    <h2>SQL Commands</h2>
-    <p>SQL (Structured Query Language) is the most commonly used language for interacting with relational databases. Below are some examples of basic, intermediate, and advanced SQL commands:</p>
-
-    <h3>Basic SQL Commands</h3>
-    <p>These commands are essential for retrieving, inserting, and modifying data.</p>
-    <h4>1. SELECT</h4>
-    <code id="selectCommand">SELECT * FROM employees;</code>
-    <button class="copy-button" onclick="copyToClipboard('selectCommand')">Copy</button>
-
-    <h4>2. INSERT</h4>
-    <code id="insertCommand">INSERT INTO employees (name, age, position) VALUES ('John Doe', 30, 'Developer');</code>
-    <button class="copy-button" onclick="copyToClipboard('insertCommand')">Copy</button>
-
-    <h4>3. UPDATE</h4>
-    <code id="updateCommand">UPDATE employees SET position = 'Senior Developer' WHERE id = 1;</code>
-    <button class="copy-button" onclick="copyToClipboard('updateCommand')">Copy</button>
-
-    <h4>4. DELETE</h4>
-    <code id="deleteCommand">DELETE FROM employees WHERE id = 1;</code>
-    <button class="copy-button" onclick="copyToClipboard('deleteCommand')">Copy</button>
-
-    <h3>Intermediate SQL Commands</h3>
-    <h4>1. INNER JOIN</h4>
-    <code id="innerJoinCommand">SELECT employees.name, departments.department_name FROM employees INNER JOIN departments ON employees.department_id = departments.id;</code>
-    <button class="copy-button" onclick="copyToClipboard('innerJoinCommand')">Copy</button>
-
-    <h4>2. GROUP BY</h4>
-    <code id="groupByCommand">SELECT department_id, COUNT(*) FROM employees GROUP BY department_id;</code>
-    <button class="copy-button" onclick="copyToClipboard('groupByCommand')">Copy</button>
-
-    <h4>3. HAVING</h4>
-    <code id="havingCommand">SELECT department_id, COUNT(*) FROM employees GROUP BY department_id HAVING COUNT(*) > 10;</code>
-    <button class="copy-button" onclick="copyToClipboard('havingCommand')">Copy</button>
-
-    <h3>Advanced SQL Commands</h3>
-    <h4>1. Subquery</h4>
-    <code id="subqueryCommand">SELECT name FROM employees WHERE department_id = (SELECT id FROM departments WHERE department_name = 'Sales');</code>
-    <button class="copy-button" onclick="copyToClipboard('subqueryCommand')">Copy</button>
-
-    <h4>2. CREATE TABLE</h4>
-    <code id="createTableCommand">CREATE TABLE employees (id INT PRIMARY KEY, name VARCHAR(50), age INT, position VARCHAR(50));</code>
-    <button class="copy-button" onclick="copyToClipboard('createTableCommand')">Copy</button>
-
-    <h4>3. ALTER TABLE</h4>
-    <code id="alterTableCommand">ALTER TABLE employees ADD COLUMN salary DECIMAL(10, 2);</code>
-    <button class="copy-button" onclick="copyToClipboard('alterTableCommand')">Copy</button>
-</section>
-
-<section id="advanced" class="container">
-    <h2>Advanced Database Concepts</h2>
-    <h3>1. Database Normalization</h3>
-    <p>Normalization is the process of organizing the data in a database to reduce redundancy and improve data integrity. There are several normal forms (1NF, 2NF, 3NF, etc.), each with its own set of rules for organizing data into tables.</p>
-
-    <h3>2. Indexes</h3>
-    <p>Indexes are special lookup tables that speed up the retrieval of data from a database. They work similarly to indexes in books, allowing for faster searches by reducing the amount of data that needs to be scanned.</p>
-
-    <h3>3. Transaction Management</h3>
-    <p>Transactions in databases allow multiple operations to be executed as a single unit of work. A transaction is a sequence of SQL operations that are executed together, and they ensure data consistency using properties known as ACID (Atomicity, Consistency, Isolation, Durability).</p>
-</section>
-</div>
-<br>
-<hr>
-<br>
-<!-- Blog Post HTML Structure -->
-
-    <!-- comments will be displayed here -->
-  </div>
-  <div class="reviews">
-    <!-- reviews will be displayed here -->
-  </div>
-</div>
-
-<!-- Comment Form HTML Structure -->
-
-<!-- Review Form HTML Structure -->
-
-
-<!-- Share Dialog HTML Structure -->
-<div class="share-dialog">
-  <h3>Share This Post</h3>
-  <ul>
-    <li><a href="#" class="facebook-share">Facebook</a></li>
-    <li><a href="#" class="twitter-share">Twitter</a></li>
-    <li><a href="#" class="linkedin-share">LinkedIn</a></li>
-  </ul>
-</div>
-
-<!-- Contact Form HTML Structure -->
-
-<footer>
-  <div style="color: tomato;background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;font-size: 17px;">&copy;<a href="madeoftech.net" style="color: mediumorchid;text-decoration: none;"> &hookrightarrow; madeoftech.net </a> | developed by Innocent mwea &trade;</div>
-</footer>
-<script src="/script.js"></script>
   <script>
     function copyToClipboard(id) {
-        const commandText = document.getElementById(id).textContent;
-        const textArea = document.createElement('textarea');
-        textArea.value = commandText;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-        alert('SQL Command copied to clipboard!');
+      const commandText = document.getElementById(id).textContent;
+      const textArea = document.createElement('textarea');
+      textArea.value = commandText;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      alert('SQL Command copied to clipboard!');
     }
-</script>
+  </script>
 </body>
+
 </html>
