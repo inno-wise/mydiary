@@ -6,17 +6,47 @@
   <meta name="keywords" content="Blogs, Cyber Security, DevOps, CompTIA A+, Network+, Linux+">
   <meta name="author" content="Innocent Mwea">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="About Innocent Mwea">
+  <meta property="og:description" content="Learn about Innocent Mwea, a self-taught tech innovator specializing in cyber security, DevOps, and cloud computing.">
+  <meta property="og:image" content="img/mot.png">
+  <meta property="og:url" content="https://yourwebsite.com/about">
+
   <link rel="icon" type="image/x-icon" href="img/kali.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
   <script src="../../kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="mdb-ui-kit/css/mdb.min.css">
   <title>About Innocent Mwea</title>
-</head>
-<body class="bg-gray-50">
 
-  <!-- Header Section -->
+  <!-- Inline CSS for Animation -->
+  <style>
+    .scrolling-text {
+      position: absolute;
+      font-family: cursive;
+      font-size: 14pt;
+      color: #ffcc00;
+      white-space: nowrap;
+      animation: scroll 10s linear infinite;
+    }
+
+    .scrolling-text:nth-child(2) {
+      color: lime;
+      top: 15%;
+    }
+
+    .scrolling-text:nth-child(3) {
+      color: #ffcc00;
+      top: 35%;
+    }
+
+    @keyframes scroll {
+      0% { left: 100%; }
+      100% { left: -100%; }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50">
   <header>
     <div class="header py-8 bg-indigo-600 text-white text-center rounded-b-lg shadow-lg">
       <h1 class="title text-5xl font-bold tracking-wide">MadeOfTech</h1>
@@ -29,91 +59,34 @@
     </nav>
   </header>
 
-  <!-- About Page Content -->
   <div class="container mx-auto px-6 py-12">
-    <!-- Hero Section -->
     <section class="hero-section text-center py-16 bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 text-white rounded-lg shadow-lg">
       <h1 class="text-5xl font-semibold">My Story</h1>
       <p class="text-xl mt-4">Learn more about my journey and mission.</p>
     </section>
 
-    <!-- Company History Section -->
     <section class="company-history py-12">
       <h2 class="text-3xl font-bold text-center text-indigo-600">My Self-Taught Journey</h2>
-      <p class="text-lg text-gray-800 mt-4 text-center max-w-3xl mx-auto">As a self-taught tech enthusiast, I built my career in cyber security, DevOps, and cloud computing through platforms like EC-Council, Udemy, AWS, and more. I’ve made it my mission to share knowledge with others, helping them start and grow in the tech field.</p>
+      <p class="text-lg text-gray-800 mt-4 text-center max-w-3xl mx-auto">
+        As a self-taught tech enthusiast, I built my career in cyber security, DevOps, and cloud computing through platforms like EC-Council, Udemy, AWS, and more. I’ve made it my mission to share knowledge with others, helping them start and grow in the tech field.
+      </p>
       <div class="text-center mt-8">
         <img src="img/mot.png" alt="Innocent's History" class="w-full rounded-lg shadow-md max-w-2xl mx-auto">
       </div>
     </section>
 
-    <!-- Downloadable Resources Section -->
-    <section class="resources mt-12">
-      <h2 class="text-3xl font-semibold text-center text-indigo-600">Resources to Help You Learn</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-6">
-        <div class="card bg-white shadow-xl rounded-lg overflow-hidden transition-all hover:scale-105 transform">
-          <img src="img/cloud.png" class="card-img-top rounded-t-xl" alt="Cloud Computing">
-          <div class="card-body p-6">
-            <h5 class="text-xl font-semibold text-gray-800">Cloud Computing</h5>
-            <p class="text-gray-600 mt-2">Get started with cloud technologies through in-depth resources.</p>
-            <a href="pdfs/cloud_computing_tutorial.pdf" class="block mt-4 text-center bg-blue-600 text-white rounded-lg px-6 py-2 transition-all hover:bg-blue-700" download>Download</a>
-          </div>
-        </div>
-        <div class="card bg-white shadow-xl rounded-lg overflow-hidden transition-all hover:scale-105 transform">
-          <img src="img/java.png" class="card-img-top rounded-t-xl" alt="Java Programming">
-          <div class="card-body p-6">
-            <h5 class="text-xl font-semibold text-gray-800">Java Programming</h5>
-            <p class="text-gray-600 mt-2">Master Java with beginner-friendly tutorials and resources.</p>
-            <a href="pdfs/LearnJava.pdf" class="block mt-4 text-center bg-green-600 text-white rounded-lg px-6 py-2 transition-all hover:bg-green-700" download>Download</a>
-          </div>
-        </div>
-        <div class="card bg-white shadow-xl rounded-lg overflow-hidden transition-all hover:scale-105 transform">
-          <img src="img/bs.jpeg" class="card-img-top rounded-t-xl" alt="Bash Scripting">
-          <div class="card-body p-6">
-            <h5 class="text-xl font-semibold text-gray-800">Bash Scripting</h5>
-            <p class="text-gray-600 mt-2">Learn how to write and execute Bash scripts to automate your tasks.</p>
-            <a href="pdfs/bash-scripting.pdf" class="block mt-4 text-center bg-purple-600 text-white rounded-lg px-6 py-2 transition-all hover:bg-purple-700" download>Download</a>
-          </div>
-        </div>
+    <!-- Example Display with CSS Animation -->
+    <section class="example-display relative mt-12" style="height:600px;">
+      <div class="scrolling-text" style="top: 50%;">Innocent Mwea</div>
+      <div class="scrolling-text" style="top: 35%;">Tech Innovator</div>
+      <div class="scrolling-text" style="top: 15%;">Self-Taught</div>
+    </section>
+
+    <footer class="bg-gray-800 text-white text-center py-6">
+      <div class="text-lg font-medium">
+        &copy; <a href="madeoftech.net" class="text-indigo-400 hover:text-indigo-500">madeoftech.net</a> | developed by Innocent Mwea &trade;
       </div>
-    </section>
-
-    <!-- Mission and Values Section -->
-    <section class="mission-values py-12 bg-gray-100">
-      <h2 class="text-3xl font-bold text-center text-indigo-600">My Mission and Values</h2>
-      <p class="text-lg text-gray-800 mt-4 text-center">Empowering the youth and helping others build a strong foundation in technology is my core mission.</p>
-      <ul class="list-none space-y-3 mt-6 max-w-2xl mx-auto">
-        <li class="flex items-center text-lg text-gray-700">
-          <i class="fas fa-check-circle text-green-500 mr-3"></i> Knowledge Sharing
-        </li>
-        <li class="flex items-center text-lg text-gray-700">
-          <i class="fas fa-check-circle text-blue-500 mr-3"></i> Mentorship
-        </li>
-        <li class="flex items-center text-lg text-gray-700">
-          <i class="fas fa-check-circle text-orange-500 mr-3"></i> Continuous Growth
-        </li>
-      </ul>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section class="call-to-action py-12 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white text-center">
-      <h2 class="text-4xl font-semibold">Let’s Connect</h2>
-      <p class="mt-4 text-lg">I’m here to help! If you need guidance or have questions about tech, feel free to reach out.</p>
-      <a href="mailto:innocentwise123@gmail.com" class="mt-6 inline-block px-8 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-all text-xl">Contact Me</a>
-    </section>
+    </footer>
   </div>
-
-  <!-- Example Display with Marquee -->
-  <section class="example-display relative mt-12" style="height:600px;">
-    <marquee style="position:absolute;left:20%;top:50%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:100px;" scrollamount="3" direction="down">Innocent Mwea</marquee>
-    <marquee style="position:absolute;left:5%;top:35%;font-family:Cursive;font-size:14pt;color:#ffcc00;height:50%;" scrollamount="4" direction="down">Tech Innovator</marquee>
-    <marquee style="position:absolute;left:10%;top:15%;font-family:Cursive;font-size:14pt;color:lime;height:350px;" scrollamount="5" direction="down">Self-Taught</marquee>
-  </section>
-
-  <!-- Footer Section -->
-  <footer class="bg-gray-800 text-white text-center py-6">
-    <div class="text-lg font-medium">
-      &copy; <a href="madeoftech.net" class="text-indigo-400 hover:text-indigo-500">madeoftech.net</a> | developed by Innocent Mwea &trade;
-    </div>
-  </footer>
 </body>
 </html>
