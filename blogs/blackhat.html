@@ -378,7 +378,21 @@ button:hover {
     color: #f4f4f9;
     font-size: 0.9em;
 }
-
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #25d366;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .whatsapp-btn img {
+            width: 24px;
+            margin-right: 8px;
+        }
   </style>
 </head>
 <body>
@@ -691,7 +705,7 @@ packet_injection("192.168.1.2")
 
 </div>
 <!-- all-->
-        <div class="section">
+        <div class="sector" style="color: black">
         <h2>Essential Hacking Tools</h2>
         <p>Here are some widely used tools for penetration testing, network analysis, and vulnerability exploitation:</p>
         
@@ -707,7 +721,6 @@ packet_injection("192.168.1.2")
 
     <div class="cheat-sheet">
         <h2>Example: Using Nmap for Network Scanning</h2>
-        <p>Here is an example of how to use Nmap for scanning open ports and detecting services on a remote host.</p>
         <div class="command" id="code14">
             <pre>
               <code id="code14">
@@ -716,12 +729,12 @@ nmap -sS -p 1-65535 -T4 target_ip
               </code>
             </pre>
             <button onclick="copyToClipboard('code14')">Copy</button>
+          <p>Here is an example of how to use Nmap for scanning open ports and detecting services on a remote host.</p>
         </div>
     </div>
 
     <div class="cheat-sheet">
         <h2>Example: Using Wireshark for Packet Sniffing</h2>
-        <p>Wireshark is a tool used to capture and inspect network packets. While it is a GUI-based tool, you can use it to analyze network traffic and detect vulnerabilities in a network.</p>
         <div class="command" id="code15">
             <pre>
               <code id="code15">
@@ -729,13 +742,13 @@ nmap -sS -p 1-65535 -T4 target_ip
 wireshark -k -Y "http.request" -i eth0
               </code>
             </pre>
+                     <p>Wireshark is a tool used to capture and inspect network packets. While it is a GUI-based tool, you can use it to analyze network traffic and detect vulnerabilities in a network.</p>
             <button onclick="copyToClipboard('code15')">Copy</button>
         </div>
     </div>
 
     <div class="cheat-sheet">
         <h2>Example: Using Burp Suite for Intercepting HTTP Requests</h2>
-        <p>Burp Suite allows for intercepting and manipulating HTTP/S requests between your browser and the target application. You can modify requests and responses, brute force login forms, and more.</p>
         <div class="command" id="code16">
             <pre>
               <code id="code16">
@@ -743,6 +756,7 @@ wireshark -k -Y "http.request" -i eth0
 java -jar burpsuite_pro_vX.X.X.jar
               </code>
             </pre>
+                  <p>Burp Suite allows for intercepting and manipulating HTTP/S requests between your browser and the target application. You can modify requests and responses, brute force login forms, and more.</p>
             <button onclick="copyToClipboard('code16')">Copy</button>
         </div>
     </div>
@@ -772,6 +786,10 @@ java -jar burpsuite_pro_vX.X.X.jar
     <li><a href="#" class="facebook-share">Facebook</a></li>
     <li><a href="#" class="twitter-share">Twitter</a></li>
     <li><a href="#" class="linkedin-share">LinkedIn</a></li>
+    <li>      <a href="https://wa.me/+254702250123" target="_blank" class="whatsapp-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/WhatsApp.svg/1024px-WhatsApp.svg.png" alt="WhatsApp logo">
+        Chat on WhatsApp
+    </a></li>
   </ul>
 </div>
 
