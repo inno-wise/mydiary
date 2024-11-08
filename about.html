@@ -18,20 +18,7 @@
   <title>About Innocent Mwea</title>
 
   <style>
-    .scrolling-text {
-      position: absolute;
-      font-family: "Sofia", cursive;
-      font-size: 16pt;
-      color: #ffcc00;
-      white-space: nowrap;
-      animation: scroll 12s linear infinite;
-    }
-
-    @keyframes scroll {
-      0% { left: 100%; }
-      100% { left: -100%; }
-    }
-
+    /* Dark mode */
     .bg-dark {
       background-color: #1f2937;
     }
@@ -73,10 +60,30 @@
       font-size: 1.125rem;
       color: #cbd5e0;
     }
+
+    /* Light mode */
+    .light-theme .bg-light {
+      background-color: #f8fafc;
+    }
+
+    .light-theme .text-light {
+      color: #333;
+    }
+
+    .light-theme .btn-light {
+      background-color: #e2e8f0;
+      border: 1px solid #cbd5e0;
+      color: #333;
+    }
+
+    .light-theme .btn-light:hover {
+      background-color: #cbd5e0;
+      border: 1px solid #a0aec0;
+    }
   </style>
 </head>
 
-<body class="bg-gray-900 text-gray-100">
+<body class="bg-gray-900 text-gray-100 dark-theme">
   <header class="bg-indigo-700 py-10 shadow-lg text-center">
     <h1 class="text-5xl font-bold text-white">MadeOfTech</h1>
     <p class="text-lg mt-2 text-gray-200">Inspiring the Next Generation of Technologists</p>
@@ -89,6 +96,13 @@
       <a href="about.html" class="text-gray-200 hover:text-indigo-400">About</a>
     </div>
   </nav>
+
+  <!-- Theme Toggle Button -->
+  <div class="flex justify-end p-4">
+    <button id="theme-toggle" class="btn-dark py-2 px-4 rounded">
+      <i id="theme-icon" class="fas fa-moon"></i> Switch Theme
+    </button>
+  </div>
 
   <main class="container mx-auto px-6 py-12">
     <!-- Hero Section -->
@@ -173,13 +187,6 @@
     <section class="mt-12 text-center">
       <img src="img/mot.png" alt="Innocent's Journey" class="w-full rounded-lg shadow-md max-w-2xl mx-auto">
     </section>
-
-    <!-- Scrolling Text Animation -->
-    <section class="relative mt-16" style="height: 200px;">
-      <div class="scrolling-text" style="top: 20%;">Innocent Mwea</div>
-      <div class="scrolling-text" style="top: 40%; color: lime;">Tech Innovator</div>
-      <div class="scrolling-text" style="top: 60%;">Self-Taught</div>
-    </section>
   </main>
 
   <footer class="bg-gray-800 text-white text-center py-6 mt-12">
@@ -189,7 +196,6 @@
   </footer>
 
   <script>
-    // Text-to-Speech functionality
     let speechSynthesisInstance = null;
     
     function speakText() {
@@ -222,6 +228,22 @@
       star.addEventListener('click', () => {
         alert('Thank you for rating!');
       });
+    });
+
+    // Theme Toggle Button
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
+    themeToggleButton.addEventListener('click', () => {
+      body.classList.toggle('dark-theme');
+      body.classList.toggle('light-theme');
+
+      // Toggle icon
+      const themeIcon = document.getElementById('theme-icon');
+      if (body.classList.contains('dark-theme')) {
+        themeIcon.classList.replace('fa-sun', 'fa-moon');
+      } else {
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
+      }
     });
   </script>
 </body>
