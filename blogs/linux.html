@@ -144,7 +144,156 @@
     </p>
     <!-- Additional content here... -->
   </section>
+  <section id="cmd">
+    <h1 class="text-2xl font-semibold">Bash</h1>
+    <!-- bash content -->
+      <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-white text-center mb-6">Bash Command Cheat Sheet</h1>
 
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+
+      <!-- Basic Bash Commands Section -->
+      <h2 class="text-2xl text-indigo-400 mb-4">Basic Bash Commands</h2>
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">echo</h3>
+        <p class="text-gray-200 mb-2">Displays a line of text or a variable's value.</p>
+        <div class="code-block">
+          <pre id="echo">
+echo "Hello, World!" # Output text
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('echo')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">ls</h3>
+        <p class="text-gray-200 mb-2">Lists files and directories in the current directory.</p>
+        <div class="code-block">
+          <pre id="ls">
+ls # List files and directories
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('ls')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">cd</h3>
+        <p class="text-gray-200 mb-2">Changes the current directory.</p>
+        <div class="code-block">
+          <pre id="cd">
+cd /path/to/directory # Change to the specified directory
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('cd')" class="copy-btn">Copy</button>
+      </div>
+
+      <!-- Advanced Bash Commands Section -->
+      <h2 class="text-2xl text-indigo-400 mb-4 mt-12">Advanced Bash Commands</h2>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">grep</h3>
+        <p class="text-gray-200 mb-2">Searches for a specified pattern in a file or input.</p>
+        <div class="code-block">
+          <pre id="grep">
+grep "pattern" file.txt # Search for pattern in file.txt
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('grep')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">find</h3>
+        <p class="text-gray-200 mb-2">Finds files and directories in a specified location.</p>
+        <div class="code-block">
+          <pre id="find">
+find /path/to/search -name "filename" # Find file by name
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('find')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">top</h3>
+        <p class="text-gray-200 mb-2">Displays real-time system information, including processes and resource usage.</p>
+        <div class="code-block">
+          <pre id="top">
+top # Display real-time process stats
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('top')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">chmod</h3>
+        <p class="text-gray-200 mb-2">Changes the file permissions for a file or directory.</p>
+        <div class="code-block">
+          <pre id="chmod">
+chmod 755 file.txt # Set read/write/execute permissions for owner, and read/execute for others
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('chmod')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">kill</h3>
+        <p class="text-gray-200 mb-2">Kills a process by its PID (process ID).</p>
+        <div class="code-block">
+          <pre id="kill">
+kill <pid> # Terminate a process by its PID
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('kill')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">tar</h3>
+        <p class="text-gray-200 mb-2">Archives and extracts files from tarballs.</p>
+        <div class="code-block">
+          <pre id="tar">
+tar -cvf archive.tar files/ # Create a tarball
+tar -xvf archive.tar # Extract a tarball
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('tar')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">df</h3>
+        <p class="text-gray-200 mb-2">Displays disk space usage for file systems.</p>
+        <div class="code-block">
+          <pre id="df">
+df -h # Display disk usage in a human-readable format
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('df')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">ps</h3>
+        <p class="text-gray-200 mb-2">Displays information about the current running processes.</p>
+        <div class="code-block">
+          <pre id="ps">
+ps aux # List all running processes
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('ps')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">history</h3>
+        <p class="text-gray-200 mb-2">Displays the history of commands executed in the terminal.</p>
+        <div class="code-block">
+          <pre id="history">
+history # Show the command history
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('history')" class="copy-btn">Copy</button>
+      </div>
+
+    </div>
+
+  </div>
+  </section>
   <br>
   <hr>
   <br>
@@ -529,6 +678,154 @@ df -h # Display disk space in human-readable format
   <section id="cmd">
     <h1 class="text-2xl font-semibold">MATLAB</h1>
     <!-- matlab content -->
+      <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-white text-center mb-6">MATLAB Command Cheat Sheet</h1>
+
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+
+      <!-- Basic MATLAB Commands Section -->
+      <h2 class="text-2xl text-indigo-400 mb-4">Basic MATLAB Commands</h2>
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">disp</h3>
+        <p class="text-gray-200 mb-2">Displays a message or variable in the Command Window.</p>
+        <div class="code-block">
+          <pre id="disp">
+disp('Hello, MATLAB') % Outputs 'Hello, MATLAB' in the command window
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('disp')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">length</h3>
+        <p class="text-gray-200 mb-2">Returns the number of elements in an array or matrix.</p>
+        <div class="code-block">
+          <pre id="length">
+len = length([1, 2, 3, 4, 5]) % Returns 5
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('length')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">input</h3>
+        <p class="text-gray-200 mb-2">Prompts the user for input in the command window.</p>
+        <div class="code-block">
+          <pre id="input">
+name = input('Enter your name: ', 's') % Takes string input from user
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('input')" class="copy-btn">Copy</button>
+      </div>
+
+      <!-- Advanced MATLAB Commands Section -->
+      <h2 class="text-2xl text-indigo-400 mb-4 mt-12">Advanced MATLAB Commands</h2>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Matrix Multiplication</h3>
+        <p class="text-gray-200 mb-2">Performs matrix multiplication. Use '*' for standard multiplication.</p>
+        <div class="code-block">
+          <pre id="matrix_mult">
+A = [1, 2; 3, 4];
+B = [5, 6; 7, 8];
+C = A * B; % Matrix multiplication
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('matrix_mult')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Anonymous Function</h3>
+        <p class="text-gray-200 mb-2">Defines a function without the need for a separate file.</p>
+        <div class="code-block">
+          <pre id="anon_func">
+f = @(x) x^2 + 2*x + 1; % Anonymous function for a quadratic equation
+result = f(3); % Evaluate at x = 3, returns 16
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('anon_func')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">for Loop</h3>
+        <p class="text-gray-200 mb-2">Executes a block of code multiple times using a specified range.</p>
+        <div class="code-block">
+          <pre id="for_loop">
+for i = 1:5
+    disp(['Iteration: ', num2str(i)])
+end % Loops through values 1 to 5
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('for_loop')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">plot</h3>
+        <p class="text-gray-200 mb-2">Creates a 2D plot of data points.</p>
+        <div class="code-block">
+          <pre id="plot">
+x = 0:0.1:10;
+y = sin(x);
+plot(x, y) % Plots the sine wave
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('plot')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">function Definition</h3>
+        <p class="text-gray-200 mb-2">Defines a reusable function in MATLAB.</p>
+        <div class="code-block">
+          <pre id="function_def">
+function result = square(x)
+    result = x^2;
+end % Defines a function to square a number
+result = square(4); % Returns 16
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('function_def')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">load</h3>
+        <p class="text-gray-200 mb-2">Loads data from a .mat file into the workspace.</p>
+        <div class="code-block">
+          <pre id="load">
+load('datafile.mat') % Loads variables from the file 'datafile.mat'
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('load')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">save</h3>
+        <p class="text-gray-200 mb-2">Saves workspace variables to a .mat file.</p>
+        <div class="code-block">
+          <pre id="save">
+save('output.mat', 'A', 'B') % Saves variables A and B to 'output.mat'
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('save')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">error Handling (try-catch)</h3>
+        <p class="text-gray-200 mb-2">Handles errors that occur during the execution of code.</p>
+        <div class="code-block">
+          <pre id="try_catch">
+try
+    result = 10 / 0; % Deliberate error (division by zero)
+catch
+    disp('An error occurred during execution');
+end
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('try_catch')" class="copy-btn">Copy</button>
+      </div>
+
+    </div>
+
+  </div>
   </section>
     </section>
    <br>
@@ -538,16 +835,181 @@ df -h # Display disk space in human-readable format
   <section id="cmd">
     <h1 class="text-2xl font-semibold">Python</h1>
     <!-- python content -->
+      <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-white text-center mb-6">Python Command Cheat Sheet</h1>
+
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+
+      <!-- Basic Python Commands Section -->
+      <h2 class="text-2xl text-indigo-400 mb-4">Basic Python Commands</h2>
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Print</h3>
+        <p class="text-gray-200 mb-2">Prints a message or variable to the console.</p>
+        <div class="code-block">
+          <pre id="print">
+print("Hello, World!") # Output a message to the console
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('print')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">len</h3>
+        <p class="text-gray-200 mb-2">Returns the length of an object (string, list, etc.).</p>
+        <div class="code-block">
+          <pre id="len">
+len("Hello") # Returns 5
+len([1, 2, 3]) # Returns 3
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('len')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">input</h3>
+        <p class="text-gray-200 mb-2">Accepts user input from the console.</p>
+        <div class="code-block">
+          <pre id="input">
+name = input("Enter your name: ") # Get user input and store it in 'name'
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('input')" class="copy-btn">Copy</button>
+      </div>
+
+      <!-- Advanced Python Commands Section -->
+      <h2 class="text-2xl text-indigo-400 mb-4 mt-12">Advanced Python Commands</h2>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">List Comprehension</h3>
+        <p class="text-gray-200 mb-2">A concise way to create lists based on existing lists or other iterables.</p>
+        <div class="code-block">
+          <pre id="list_comp">
+squared = [x**2 for x in range(5)] # Returns [0, 1, 4, 9, 16]
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('list_comp')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Lambda Function</h3>
+        <p class="text-gray-200 mb-2">A small anonymous function defined with the lambda keyword.</p>
+        <div class="code-block">
+          <pre id="lambda">
+multiply = lambda x, y: x * y # Multiplies two numbers
+result = multiply(3, 4) # Returns 12
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('lambda')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Map</h3>
+        <p class="text-gray-200 mb-2">Applies a function to all items in an iterable (e.g., list or tuple).</p>
+        <div class="code-block">
+          <pre id="map">
+numbers = [1, 2, 3, 4]
+squared_numbers = map(lambda x: x**2, numbers) # Applies the lambda function to each element
+print(list(squared_numbers)) # Output: [1, 4, 9, 16]
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('map')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Filter</h3>
+        <p class="text-gray-200 mb-2">Filters elements from an iterable based on a function.</p>
+        <div class="code-block">
+          <pre id="filter">
+numbers = [1, 2, 3, 4, 5]
+even_numbers = filter(lambda x: x % 2 == 0, numbers) # Filters even numbers
+print(list(even_numbers)) # Output: [2, 4]
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('filter')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Try-Except</h3>
+        <p class="text-gray-200 mb-2">Used to handle exceptions (errors) in Python.</p>
+        <div class="code-block">
+          <pre id="try_except">
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero!") # Handle division by zero error
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('try_except')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Decorators</h3>
+        <p class="text-gray-200 mb-2">A function that wraps another function to modify its behavior.</p>
+        <div class="code-block">
+          <pre id="decorators">
+def decorator(func):
+    def wrapper():
+        print("Before function call")
+        func()
+        print("After function call")
+    return wrapper
+
+@decorator
+def greet():
+    print("Hello!")
+
+greet() # Output: Before function call
+        #         Hello!
+        #         After function call
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('decorators')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Class Definition</h3>
+        <p class="text-gray-200 mb-2">Defines a class with attributes and methods in Python.</p>
+        <div class="code-block">
+          <pre id="class_def">
+class Dog:
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+
+    def bark(self):
+        print(f"{self.name} says woof!")
+
+my_dog = Dog("Buddy", "Golden Retriever")
+my_dog.bark() # Output: Buddy says woof!
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('class_def')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">File I/O</h3>
+        <p class="text-gray-200 mb-2">Read from and write to files in Python.</p>
+        <div class="code-block">
+          <pre id="file_io">
+with open("file.txt", "w") as f:
+    f.write("Hello, Python!")
+with open("file.txt", "r") as f:
+    print(f.read()) # Output: Hello, Python!
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('file_io')" class="copy-btn">Copy</button>
+      </div>
+
+    </div>
+
+  </div>
   </section>
     </section>
    <br>
   <hr>
   <br>
 
-  <section id="cmd">
-    <h1 class="text-2xl font-semibold">Bash</h1>
-    <!-- bash content -->
-  </section>
+
   
   
   <br>
