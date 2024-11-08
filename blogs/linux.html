@@ -1158,8 +1158,397 @@ df -h # Display disk space in human-readable format
       </div>
 
     </div>
+<!-- nmap -->
+  <section id='nmap'>
+    <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-white text-center mb-6">Nmap Command Cheat Sheet</h1>
+
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+
+      <!-- Basic Nmap Commands Section -->
+      <h2 class="text-2xl text-indigo-400 mb-4">Basic Nmap Commands</h2>
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Scan a Single Host</h3>
+        <p class="text-gray-200 mb-2">Scans a single IP address or hostname.</p>
+        <div class="code-block">
+          <pre id="scan_single_host">
+nmap 192.168.1.1  # Scan a single host
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('scan_single_host')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Scan a Range of IPs</h3>
+        <p class="text-gray-200 mb-2">Scan a range of IP addresses.</p>
+        <div class="code-block">
+          <pre id="scan_range">
+nmap 192.168.1.1-50  # Scan a range of IPs from 192.168.1.1 to 192.168.1.50
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('scan_range')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Scan a Subnet</h3>
+        <p class="text-gray-200 mb-2">Scan an entire subnet using CIDR notation.</p>
+        <div class="code-block">
+          <pre id="scan_subnet">
+nmap 192.168.1.0/24  # Scan all hosts in the 192.168.1.0 subnet
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('scan_subnet')" class="copy-btn">Copy</button>
+      </div>
+
+      <!-- Advanced Nmap Commands Section -->
+      <h2 class="text-2xl text-indigo-400 mb-4 mt-12">Advanced Nmap Commands</h2>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Service Version Detection</h3>
+        <p class="text-gray-200 mb-2">Detect service versions running on open ports.</p>
+        <div class="code-block">
+          <pre id="version_detection">
+nmap -sV 192.168.1.1  # Detect service versions for open ports on the target
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('version_detection')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Operating System Detection</h3>
+        <p class="text-gray-200 mb-2">Detect the operating system of the target host.</p>
+        <div class="code-block">
+          <pre id="os_detection">
+nmap -O 192.168.1.1  # Detect the OS of the target host
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('os_detection')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Aggressive Scan</h3>
+        <p class="text-gray-200 mb-2">Perform an aggressive scan that includes version, OS, and script scanning.</p>
+        <div class="code-block">
+          <pre id="aggressive_scan">
+nmap -A 192.168.1.1  # Perform an aggressive scan with OS and version detection
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('aggressive_scan')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">TCP SYN Scan</h3>
+        <p class="text-gray-200 mb-2">Perform a TCP SYN scan (stealth scan) to check for open ports.</p>
+        <div class="code-block">
+          <pre id="syn_scan">
+nmap -sS 192.168.1.1  # Perform a TCP SYN scan (stealth scan)
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('syn_scan')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">UDP Scan</h3>
+        <p class="text-gray-200 mb-2">Scan for open UDP ports on a target.</p>
+        <div class="code-block">
+          <pre id="udp_scan">
+nmap -sU 192.168.1.1  # Scan for open UDP ports on the target
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('udp_scan')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Scan Specific Ports</h3>
+        <p class="text-gray-200 mb-2">Scan specific ports on the target.</p>
+        <div class="code-block">
+          <pre id="specific_ports">
+nmap -p 22,80,443 192.168.1.1  # Scan ports 22, 80, and 443 on the target
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('specific_ports')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Scan Using a Script</h3>
+        <p class="text-gray-200 mb-2">Use Nmap's scripting engine to run specific scripts on a target.</p>
+        <div class="code-block">
+          <pre id="nmap_script">
+nmap --script=http-enum 192.168.1.1  # Run the http-enum script to enumerate web server info
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('nmap_script')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Save Scan Results to a File</h3>
+        <p class="text-gray-200 mb-2">Save the results of your scan to a file (XML, JSON, or plain text).</p>
+        <div class="code-block">
+          <pre id="save_results">
+nmap -oN scan_results.txt 192.168.1.1  # Save the results to a plain text file
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('save_results')" class="copy-btn">Copy</button>
+      </div>
+
+    </div>
 
   </div>
+
+  </div>
+  </section>
+  </section>
+  <!-- wireshark -->
+  <section id='wireshark'>
+      <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-white text-center mb-6">Wireshark Command Cheat Sheet</h1>
+
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+
+      <!-- Basic Wireshark Commands Section -->
+      <h2 class="text-2xl text-indigo-400 mb-4">Basic Wireshark Commands</h2>
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Start Wireshark in Capture Mode</h3>
+        <p class="text-gray-200 mb-2">Start Wireshark to capture live packets on the default interface.</p>
+        <div class="code-block">
+          <pre id="start_capture">
+wireshark  # Start Wireshark in capture mode
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('start_capture')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Capture Packets on Specific Interface</h3>
+        <p class="text-gray-200 mb-2">Start capturing on a specific network interface.</p>
+        <div class="code-block">
+          <pre id="specific_interface">
+wireshark -i eth0  # Capture packets on eth0 interface
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('specific_interface')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Capture Packets with a Filter</h3>
+        <p class="text-gray-200 mb-2">Capture packets with a specific filter (e.g., TCP traffic on port 80).</p>
+        <div class="code-block">
+          <pre id="capture_filter">
+wireshark -f "tcp port 80"  # Capture only TCP packets on port 80
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('capture_filter')" class="copy-btn">Copy</button>
+      </div>
+
+      <!-- Advanced Wireshark Commands Section -->
+      <h2 class="text-2xl text-indigo-400 mb-4 mt-12">Advanced Wireshark Commands</h2>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Capture and Save Packets</h3>
+        <p class="text-gray-200 mb-2">Capture packets and save them to a file for later analysis.</p>
+        <div class="code-block">
+          <pre id="capture_save">
+wireshark -i eth0 -w capture_file.pcap  # Capture on eth0 and save to capture_file.pcap
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('capture_save')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Read a Saved Capture File</h3>
+        <p class="text-gray-200 mb-2">Open and analyze a saved capture file.</p>
+        <div class="code-block">
+          <pre id="read_capture">
+wireshark capture_file.pcap  # Open a previously saved capture file
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('read_capture')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Capture Packets with a Display Filter</h3>
+        <p class="text-gray-200 mb-2">Capture packets and apply a display filter to limit what is shown (e.g., filter by IP).</p>
+        <div class="code-block">
+          <pre id="display_filter">
+wireshark -Y "ip.addr == 192.168.1.1"  # Filter packets by IP address (192.168.1.1)
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('display_filter')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Analyze Traffic with Statistics</h3>
+        <p class="text-gray-200 mb-2">Use built-in statistics to analyze network traffic.</p>
+        <div class="code-block">
+          <pre id="traffic_stats">
+wireshark -z io,stat,0  # Display I/O graph statistics
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('traffic_stats')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Use a Custom Capture Filter</h3>
+        <p class="text-gray-200 mb-2">Set up a custom filter to capture specific types of packets.</p>
+        <div class="code-block">
+          <pre id="custom_capture_filter">
+wireshark -f "src net 192.168.1.0/24 and dst port 443"  # Capture packets from 192.168.1.0/24 to port 443
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('custom_capture_filter')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Export Packets to CSV</h3>
+        <p class="text-gray-200 mb-2">Export captured packets to a CSV file.</p>
+        <div class="code-block">
+          <pre id="export_csv">
+tshark -r capture_file.pcap -T fields -e frame.number -e ip.src -e ip.dst -e ip.proto -e tcp.port > packets.csv  # Export packet details to CSV
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('export_csv')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Save Only Specific Packet Types</h3>
+        <p class="text-gray-200 mb-2">Capture and save specific packet types (e.g., only HTTP packets).</p>
+        <div class="code-block">
+          <pre id="save_http_packets">
+wireshark -i eth0 -f "tcp port 80" -w http_capture.pcap  # Save only HTTP packets to http_capture.pcap
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('save_http_packets')" class="copy-btn">Copy</button>
+      </div>
+
+    </div>
+
+  </div>
+<section id='sqlmap'>
+  
+  <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-white text-center mb-6">SQLmap Command Cheat Sheet</h1>
+
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+
+      <!-- Basic SQLmap Commands Section -->
+      <h2 class="text-2xl text-indigo-400 mb-4">Basic SQLmap Commands</h2>
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Run SQLmap on a URL</h3>
+        <p class="text-gray-200 mb-2">Run SQLmap on a URL to detect SQL injection vulnerabilities.</p>
+        <div class="code-block">
+          <pre id="run_sqlmap">
+sqlmap -u "http://example.com/vulnerable.php?id=1"  # Run SQLmap on the provided URL
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('run_sqlmap')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Use GET Method for Requests</h3>
+        <p class="text-gray-200 mb-2">Use the GET method instead of POST to send the request.</p>
+        <div class="code-block">
+          <pre id="use_get_method">
+sqlmap -u "http://example.com/vulnerable.php?id=1" --method=GET  # Use GET method for the request
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('use_get_method')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Enumerate Database Users</h3>
+        <p class="text-gray-200 mb-2">Enumerate the database users using SQLmap.</p>
+        <div class="code-block">
+          <pre id="enum_users">
+sqlmap -u "http://example.com/vulnerable.php?id=1" --users  # Enumerate database users
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('enum_users')" class="copy-btn">Copy</button>
+      </div>
+
+      <!-- Advanced SQLmap Commands Section -->
+      <h2 class="text-2xl text-indigo-400 mb-4 mt-12">Advanced SQLmap Commands</h2>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Use a Custom HTTP Header</h3>
+        <p class="text-gray-200 mb-2">Use custom HTTP headers for the request (e.g., user-agent, referer).</p>
+        <div class="code-block">
+          <pre id="custom_header">
+sqlmap -u "http://example.com/vulnerable.php?id=1" --headers="User-Agent: Mozilla/5.0"  # Use custom HTTP headers
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('custom_header')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Dump Database Tables</h3>
+        <p class="text-gray-200 mb-2">Dump all tables from the database using SQLmap.</p>
+        <div class="code-block">
+          <pre id="dump_tables">
+sqlmap -u "http://example.com/vulnerable.php?id=1" --dump  # Dump all tables from the database
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('dump_tables')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Force Specific Injection Technique</h3>
+        <p class="text-gray-200 mb-2">Force SQLmap to use a specific injection technique (e.g., UNION-based).</p>
+        <div class="code-block">
+          <pre id="force_technique">
+sqlmap -u "http://example.com/vulnerable.php?id=1" --technique=U  # Force UNION-based injection
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('force_technique')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Perform a Blind SQL Injection Test</h3>
+        <p class="text-gray-200 mb-2">Perform a blind SQL injection test to identify vulnerabilities.</p>
+        <div class="code-block">
+          <pre id="blind_injection">
+sqlmap -u "http://example.com/vulnerable.php?id=1" --technique=B  # Perform blind SQL injection test
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('blind_injection')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Specify the Database Type</h3>
+        <p class="text-gray-200 mb-2">Specify the database management system (DBMS) type (e.g., MySQL, PostgreSQL).</p>
+        <div class="code-block">
+          <pre id="db_type">
+sqlmap -u "http://example.com/vulnerable.php?id=1" --dbms=MySQL  # Specify MySQL as the DBMS
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('db_type')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Enumerate Database Schema</h3>
+        <p class="text-gray-200 mb-2">Enumerate the database schema (tables, columns, etc.) using SQLmap.</p>
+        <div class="code-block">
+          <pre id="enum_schema">
+sqlmap -u "http://example.com/vulnerable.php?id=1" --schema  # Enumerate the database schema
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('enum_schema')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">SQLmap with Proxy for Traffic Interception</h3>
+        <p class="text-gray-200 mb-2">Route traffic through a proxy (e.g., Burp Suite) for interception.</p>
+        <div class="code-block">
+          <pre id="proxy">
+sqlmap -u "http://example.com/vulnerable.php?id=1" --proxy="http://127.0.0.1:8080"  # Use proxy for traffic interception
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('proxy')" class="copy-btn">Copy</button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
   </section>
     <footer class="bg-gray-800 p-4 mt-8">
     <div class="text-white text-center">
