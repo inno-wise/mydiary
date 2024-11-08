@@ -6,7 +6,6 @@
   <meta name="keywords" content="Blogs, Cyber Security, DevOps, CompTIA A+, Network+, Linux+">
   <meta name="author" content="Innocent Mwea">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="About Innocent Mwea">
   <meta property="og:description" content="Learn about Innocent Mwea, a self-taught tech innovator specializing in cyber security, DevOps, and cloud computing.">
   <meta property="og:image" content="img/mot.png">
@@ -18,75 +17,106 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
   <title>About Innocent Mwea</title>
 
-  <!-- Inline CSS for Animation -->
   <style>
     .scrolling-text {
       position: absolute;
-      font-family: cursive;
-      font-size: 14pt;
+      font-family: "Sofia", cursive;
+      font-size: 16pt;
       color: #ffcc00;
       white-space: nowrap;
-      animation: scroll 10s linear infinite;
+      animation: scroll 12s linear infinite;
     }
-
-    .scrolling-text:nth-child(2) {
-      color: lime;
-      top: 15%;
-    }
-
-    .scrolling-text:nth-child(3) {
-      color: #ffcc00;
-      top: 35%;
-    }
-
     @keyframes scroll {
       0% { left: 100%; }
       100% { left: -100%; }
     }
+    .like-button, .subscribe-button, .rating-star, .tts-button {
+      transition: transform 0.2s ease;
+    }
+    .like-button:hover, .subscribe-button:hover, .rating-star:hover, .tts-button:hover {
+      transform: scale(1.1);
+    }
   </style>
 </head>
 
-<body class="bg-gray-50">
-  <header>
-    <div class="header py-8 bg-indigo-600 text-white text-center rounded-b-lg shadow-lg">
-      <h1 class="title text-5xl font-bold tracking-wide">MadeOfTech</h1>
-      <p class="text-xl mt-2">Inspiring the Next Generation of Technologists</p>
-    </div>
-    <nav class="topnav flex justify-center bg-gray-800 py-3">
-      <a href="index.html" class="text-white mx-4 hover:text-indigo-400">Articles</a>
-      <a href="blogs.html" class="text-white mx-4 hover:text-indigo-400">Blogs</a>
-      <a href="about.html" class="text-white mx-4 hover:text-indigo-400">About</a>
-    </nav>
+<body class="bg-gray-900 text-gray-100">
+  <header class="bg-indigo-700 py-10 shadow-lg text-center">
+    <h1 class="text-5xl font-bold">MadeOfTech</h1>
+    <p class="text-lg mt-2">Inspiring the Next Generation of Technologists</p>
   </header>
 
-  <div class="container mx-auto px-6 py-12">
-    <section class="hero-section text-center py-16 bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 text-white rounded-lg shadow-lg">
-      <h1 class="text-5xl font-semibold">My Story</h1>
-      <p class="text-xl mt-4">Learn more about my journey and mission.</p>
+  <nav class="bg-gray-800 py-3">
+    <div class="flex justify-center space-x-6">
+      <a href="index.html" class="text-gray-200 hover:text-indigo-400">Articles</a>
+      <a href="blogs.html" class="text-gray-200 hover:text-indigo-400">Blogs</a>
+      <a href="about.html" class="text-gray-200 hover:text-indigo-400">About</a>
+    </div>
+  </nav>
+
+  <main class="container mx-auto px-6 py-12">
+    <section class="bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 rounded-lg shadow-lg p-12 text-center">
+      <h2 class="text-4xl font-bold">My Story</h2>
+      <p class="text-lg mt-4">Discover my journey and mission in the world of tech.</p>
     </section>
 
-    <section class="company-history py-12">
-      <h2 class="text-3xl font-bold text-center text-indigo-600">My Self-Taught Journey</h2>
-      <p class="text-lg text-gray-800 mt-4 text-center max-w-3xl mx-auto">
+    <section class="mt-16 text-center">
+      <h3 class="text-3xl font-semibold text-indigo-500">My Self-Taught Journey</h3>
+      <p id="about-text" class="text-lg text-gray-200 mt-4 max-w-3xl mx-auto">
         As a self-taught tech enthusiast, I built my career in cyber security, DevOps, and cloud computing through platforms like EC-Council, Udemy, AWS, and more. I’ve made it my mission to share knowledge with others, helping them start and grow in the tech field.
       </p>
-      <div class="text-center mt-8">
-        <img src="img/mot.png" alt="Innocent's History" class="w-full rounded-lg shadow-md max-w-2xl mx-auto">
+      <div class="flex justify-center mt-4 space-x-6">
+        <!-- Like Button -->
+        <button class="like-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <i class="fas fa-thumbs-up"></i> Like
+        </button>
+
+        <!-- Subscribe Button -->
+        <button class="subscribe-button bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+          <i class="fas fa-bell"></i> Subscribe
+        </button>
       </div>
+
+      <!-- Rating Feature -->
+      <div class="flex justify-center mt-8 text-yellow-400">
+        <span class="rating-star text-2xl hover:text-yellow-500 cursor-pointer">&#9733;</span>
+        <span class="rating-star text-2xl hover:text-yellow-500 cursor-pointer">&#9733;</span>
+        <span class="rating-star text-2xl hover:text-yellow-500 cursor-pointer">&#9733;</span>
+        <span class="rating-star text-2xl hover:text-yellow-500 cursor-pointer">&#9733;</span>
+        <span class="rating-star text-2xl hover:text-yellow-500 cursor-pointer">&#9733;</span>
+      </div>
+
+      <!-- Text-to-Speech Button -->
+      <button onclick="speakText()" class="tts-button bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded mt-6">
+        <i class="fas fa-volume-up"></i> Read About Me
+      </button>
     </section>
 
-    <!-- Example Display with CSS Animation -->
-    <section class="example-display relative mt-12" style="height:600px;">
-      <div class="scrolling-text" style="top: 50%;">Innocent Mwea</div>
-      <div class="scrolling-text" style="top: 35%;">Tech Innovator</div>
-      <div class="scrolling-text" style="top: 15%;">Self-Taught</div>
+    <section class="mt-12 text-center">
+      <img src="img/mot.png" alt="Innocent's Journey" class="w-full rounded-lg shadow-md max-w-2xl mx-auto">
     </section>
 
-    <footer class="bg-gray-800 text-white text-center py-6">
-      <div class="text-lg font-medium">
-        &copy; <a href="madeoftech.net" class="text-indigo-400 hover:text-indigo-500">madeoftech.net</a> | developed by Innocent Mwea &trade;
-      </div>
-    </footer>
-  </div>
+    <!-- Scrolling Text Animation -->
+    <section class="relative mt-16" style="height: 200px;">
+      <div class="scrolling-text" style="top: 20%;">Innocent Mwea</div>
+      <div class="scrolling-text" style="top: 40%; color: lime;">Tech Innovator</div>
+      <div class="scrolling-text" style="top: 60%;">Self-Taught</div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-gray-200 text-center py-6">
+    <p>&copy; <a href="https://madeoftech.net" class="text-indigo-400 hover:text-indigo-500">madeoftech.net</a> | developed by Innocent Mwea &trade;</p>
+  </footer>
+
+  <script>
+    function speakText() {
+      const text = document.getElementById("about-text").textContent;
+      const speech = new SpeechSynthesisUtterance(text);
+      speech.pitch = 1;
+      speech.rate = 1;
+      speech.volume = 1;
+      speech.lang = 'en-US';
+      window.speechSynthesis.speak(speech);
+    }
+  </script>
 </body>
 </html>
