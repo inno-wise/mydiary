@@ -30,11 +30,16 @@
       0% { left: 100%; }
       100% { left: -100%; }
     }
-    .like-button, .subscribe-button, .rating-star, .tts-button {
+    .like-button, .subscribe-button, .rating-star, .tts-button, .stop-tts-button {
       transition: transform 0.2s ease;
     }
-    .like-button:hover, .subscribe-button:hover, .rating-star:hover, .tts-button:hover {
+    .like-button:hover, .subscribe-button:hover, .rating-star:hover, .tts-button:hover, .stop-tts-button:hover {
       transform: scale(1.1);
+    }
+    .tts-buttons-container {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
     }
   </style>
 </head>
@@ -85,10 +90,15 @@
         <span class="rating-star text-2xl hover:text-yellow-500 cursor-pointer">&#9733;</span>
       </div>
 
-      <!-- Text-to-Speech Button -->
-      <button onclick="speakText()" class="tts-button bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded mt-6">
-        <i class="fas fa-volume-up"></i> Read About Me
-      </button>
+      <!-- Text-to-Speech and Stop Button -->
+      <div class="tts-buttons-container mt-6">
+        <button onclick="speakText()" class="tts-button bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">
+          <i class="fas fa-volume-up"></i> Read About Me
+        </button>
+        <button onclick="stopTextToSpeech()" class="stop-tts-button bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+          <i class="fas fa-stop"></i> Stop Reading
+        </button>
+      </div>
     </section>
 
     <section class="mt-12 text-center">
@@ -108,14 +118,24 @@
   </footer>
 
   <script>
+    let speechSynthesisInstance = null;
+
+    // Start Text-to-Speech
     function speakText() {
       const text = document.getElementById("about-text").textContent;
-      const speech = new SpeechSynthesisUtterance(text);
-      speech.pitch = 1;
-      speech.rate = 1;
-      speech.volume = 1;
-      speech.lang = 'en-US';
-      window.speechSynthesis.speak(speech);
+      speechSynthesisInstance = new SpeechSynthesisUtterance(text);
+      speechSynthesisInstance.pitch = 1;
+      speechSynthesisInstance.rate = 1;
+      speechSynthesisInstance.volume = 1;
+      speechSynthesisInstance.lang = 'en-US';
+      window.speechSynthesis.speak(speechSynthesisInstance);
+    }
+
+    // Stop Text-to-Speech
+    function stopTextToSpeech() {
+      if (speechSynthesisInstance) {
+        window.speechSynthesis.cancel();
+      }
     }
   </script>
 </body>
