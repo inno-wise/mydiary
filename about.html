@@ -26,28 +26,60 @@
       white-space: nowrap;
       animation: scroll 12s linear infinite;
     }
+
     @keyframes scroll {
       0% { left: 100%; }
       100% { left: -100%; }
     }
-    .like-button, .subscribe-button, .rating-star, .tts-button, .stop-tts-button {
+
+    .bg-dark {
+      background-color: #1f2937;
+    }
+
+    .text-dark {
+      color: #e5e7eb;
+    }
+
+    .btn-dark {
+      background-color: #374151;
+      border: 1px solid #4b5563;
+      color: #e5e7eb;
+    }
+
+    .btn-dark:hover {
+      background-color: #4b5563;
+      border: 1px solid #6b7280;
+    }
+
+    .card {
+      background-color: #2d3748;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
       transition: transform 0.2s ease;
     }
-    .like-button:hover, .subscribe-button:hover, .rating-star:hover, .tts-button:hover, .stop-tts-button:hover {
-      transform: scale(1.1);
+
+    .card:hover {
+      transform: translateY(-10px);
     }
-    .tts-buttons-container {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
+
+    .card-title {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    .card-content {
+      font-size: 1.125rem;
+      color: #cbd5e0;
     }
   </style>
 </head>
 
 <body class="bg-gray-900 text-gray-100">
   <header class="bg-indigo-700 py-10 shadow-lg text-center">
-    <h1 class="text-5xl font-bold">MadeOfTech</h1>
-    <p class="text-lg mt-2">Inspiring the Next Generation of Technologists</p>
+    <h1 class="text-5xl font-bold text-white">MadeOfTech</h1>
+    <p class="text-lg mt-2 text-gray-200">Inspiring the Next Generation of Technologists</p>
   </header>
 
   <nav class="bg-gray-800 py-3">
@@ -59,24 +91,26 @@
   </nav>
 
   <main class="container mx-auto px-6 py-12">
+    <!-- Hero Section -->
     <section class="bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 rounded-lg shadow-lg p-12 text-center">
-      <h2 class="text-4xl font-bold">My Story</h2>
-      <p class="text-lg mt-4">Discover my journey and mission in the world of tech.</p>
+      <h2 class="text-4xl font-bold text-white">My Story</h2>
+      <p class="text-lg mt-4 text-gray-100">Discover my journey and mission in the world of tech.</p>
     </section>
 
-    <section class="mt-16 text-center">
+    <!-- About Text -->
+    <section class="mt-16 text-center text-gray-100">
       <h3 class="text-3xl font-semibold text-indigo-500">My Self-Taught Journey</h3>
-      <p id="about-text" class="text-lg text-gray-200 mt-4 max-w-3xl mx-auto">
+      <p id="about-text" class="text-lg mt-4 max-w-3xl mx-auto">
         As a self-taught tech enthusiast, I built my career in cyber security, DevOps, and cloud computing through platforms like EC-Council, Udemy, AWS, and more. I’ve made it my mission to share knowledge with others, helping them start and grow in the tech field.
       </p>
+
+      <!-- Like and Subscribe Buttons -->
       <div class="flex justify-center mt-4 space-x-6">
-        <!-- Like Button -->
-        <button class="like-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <button class="like-button btn-dark py-2 px-4 rounded">
           <i class="fas fa-thumbs-up"></i> Like
         </button>
 
-        <!-- Subscribe Button -->
-        <button class="subscribe-button bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+        <button class="subscribe-button btn-dark py-2 px-4 rounded">
           <i class="fas fa-bell"></i> Subscribe
         </button>
       </div>
@@ -92,15 +126,50 @@
 
       <!-- Text-to-Speech and Stop Button -->
       <div class="tts-buttons-container mt-6">
-        <button onclick="speakText()" class="tts-button bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">
+        <button onclick="speakText()" class="tts-button btn-dark py-2 px-4 rounded">
           <i class="fas fa-volume-up"></i> Read About Me
         </button>
-        <button onclick="stopTextToSpeech()" class="stop-tts-button bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+        <button onclick="stopTextToSpeech()" class="stop-tts-button btn-dark py-2 px-4 rounded">
           <i class="fas fa-stop"></i> Stop Reading
         </button>
       </div>
     </section>
 
+    <!-- Cards Section -->
+    <section class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="card">
+        <h4 class="card-title">Cyber Security</h4>
+        <p class="card-content">Exploring the best practices for protecting networks, devices, and data in a constantly evolving landscape.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <h4 class="card-title">DevOps</h4>
+        <p class="card-content">Learn how DevOps practices improve collaboration between development and operations teams for faster deployments.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <h4 class="card-title">Cloud Computing</h4>
+        <p class="card-content">Discover how cloud technologies revolutionize the way businesses scale, operate, and innovate in the digital age.</p>
+      </div>
+      <!-- Card 4 -->
+      <div class="card">
+        <h4 class="card-title">CompTIA A+</h4>
+        <p class="card-content">Building foundational IT skills with the CompTIA A+ certification, focusing on hardware, software, and troubleshooting.</p>
+      </div>
+      <!-- Card 5 -->
+      <div class="card">
+        <h4 class="card-title">Network+</h4>
+        <p class="card-content">Master the fundamentals of networking, from protocols to network configurations, to ensure smooth and secure connections.</p>
+      </div>
+      <!-- Card 6 -->
+      <div class="card">
+        <h4 class="card-title">Linux+</h4>
+        <p class="card-content">An in-depth look at Linux system administration, command-line tools, and open-source software for modern infrastructure management.</p>
+      </div>
+    </section>
+
+    <!-- Profile Image -->
     <section class="mt-12 text-center">
       <img src="img/mot.png" alt="Innocent's Journey" class="w-full rounded-lg shadow-md max-w-2xl mx-auto">
     </section>
@@ -113,30 +182,47 @@
     </section>
   </main>
 
-  <footer class="bg-gray-800 text-gray-200 text-center py-6">
-    <p>&copy; <a href="https://madeoftech.net" class="text-indigo-400 hover:text-indigo-500">madeoftech.net</a> | developed by Innocent Mwea &trade;</p>
+  <footer class="bg-gray-800 text-white text-center py-6 mt-12">
+    <div class="text-lg font-medium">
+      &copy; <a href="madeoftech.net" class="text-indigo-400 hover:text-indigo-500">madeoftech.net</a> | developed by Innocent Mwea &trade;
+    </div>
   </footer>
 
   <script>
+    // Text-to-Speech functionality
     let speechSynthesisInstance = null;
-
-    // Start Text-to-Speech
+    
     function speakText() {
-      const text = document.getElementById("about-text").textContent;
+      const text = document.getElementById("about-text").innerText;
       speechSynthesisInstance = new SpeechSynthesisUtterance(text);
-      speechSynthesisInstance.pitch = 1;
-      speechSynthesisInstance.rate = 1;
-      speechSynthesisInstance.volume = 1;
-      speechSynthesisInstance.lang = 'en-US';
-      window.speechSynthesis.speak(speechSynthesisInstance);
+      speechSynthesis.speak(speechSynthesisInstance);
     }
 
-    // Stop Text-to-Speech
     function stopTextToSpeech() {
       if (speechSynthesisInstance) {
-        window.speechSynthesis.cancel();
+        speechSynthesis.cancel();
       }
     }
+
+    // Like Button Event Listener
+    const likeButton = document.querySelector('.like-button');
+    likeButton.addEventListener('click', () => {
+      alert('You liked this page!');
+    });
+
+    // Subscribe Button Event Listener
+    const subscribeButton = document.querySelector('.subscribe-button');
+    subscribeButton.addEventListener('click', () => {
+      alert('You subscribed to my content!');
+    });
+
+    // Rating System
+    const stars = document.querySelectorAll('.rating-star');
+    stars.forEach(star => {
+      star.addEventListener('click', () => {
+        alert('Thank you for rating!');
+      });
+    });
   </script>
 </body>
 </html>
