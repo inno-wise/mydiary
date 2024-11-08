@@ -10,10 +10,9 @@
   <meta property="og:description" content="Learn about Innocent Mwea, a self-taught tech innovator specializing in cyber security, DevOps, and cloud computing.">
   <meta property="og:image" content="img/mot.png">
   <meta property="og:url" content="https://yourwebsite.com/about">
-
   <link rel="icon" type="image/x-icon" href="img/kali.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-  <script src="../../kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
   <title>About Innocent Mwea</title>
 
@@ -185,23 +184,27 @@
 
     <!-- Profile Image -->
     <section class="mt-12 text-center">
-      <img src="img/mot.png" alt="Innocent's Journey" class="w-full rounded-lg shadow-md max-w-2xl mx-auto">
+      <img src="img/mot.png" alt="Innocent Mwea" class="rounded-full mx-auto" style="width: 200px; height: 200px;">
     </section>
   </main>
 
-  <footer class="bg-gray-800 text-white text-center py-6 mt-12">
-    <div class="text-lg font-medium">
-      &copy; <a href="madeoftech.net" class="text-indigo-400 hover:text-indigo-500">madeoftech.net</a> | developed by Innocent Mwea &trade;
+  <footer class="bg-gray-800 py-8 mt-16">
+    <div class="text-center text-gray-200">
+      <p>&copy; 2024 MadeOfTech. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
     let speechSynthesisInstance = null;
-    
+
     function speakText() {
       const text = document.getElementById("about-text").innerText;
-      speechSynthesisInstance = new SpeechSynthesisUtterance(text);
-      speechSynthesis.speak(speechSynthesisInstance);
+      if ('speechSynthesis' in window) {
+        speechSynthesisInstance = new SpeechSynthesisUtterance(text);
+        speechSynthesis.speak(speechSynthesisInstance);
+      } else {
+        alert("Sorry, your browser does not support speech synthesis.");
+      }
     }
 
     function stopTextToSpeech() {
