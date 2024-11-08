@@ -12,6 +12,35 @@
   <script src="../../kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <title>madeoftech</title>
   <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    /* Styling for the code block */
+    .code-block {
+      background-color: #2d3748;
+      color: #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      font-size: 1rem;
+      overflow-x: auto;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .copy-btn {
+      background-color: #4A90E2;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 0.375rem;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.2s;
+    }
+    .copy-btn:hover {
+      background-color: #357ABD;
+    }
+    .command-container {
+      margin-bottom: 2rem;
+    }
+       /* Styling for the code block */
+      
+  </style>
 </head>
 
 <body class="font-sans bg-gray-100">
@@ -124,6 +153,107 @@
   <section id="powershell">
     <h1 class="text-2xl font-semibold">Windows PowerShell</h1>
     <!-- PowerShell content -->
+      <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-white text-center mb-6">PowerShell Cheat Sheet</h1>
+
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+
+      <!-- Basic PowerShell Commands Section -->
+      <h2 class="text-2xl text-indigo-400 mb-4">Basic PowerShell Commands</h2>
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Get-Help</h3>
+        <p class="text-gray-200 mb-2">Shows help for a command.</p>
+        <div class="code-block">
+          <pre id="get-help">
+Get-Help <command> # Shows help for a command
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('get-help')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Get-Command</h3>
+        <p class="text-gray-200 mb-2">Find a command by name.</p>
+        <div class="code-block">
+          <pre id="get-command">
+Get-Command <command> # Find a command by name
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('get-command')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Get-Process</h3>
+        <p class="text-gray-200 mb-2">Lists running processes on the system.</p>
+        <div class="code-block">
+          <pre id="get-process">
+Get-Process # Lists running processes on the system
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('get-process')" class="copy-btn">Copy</button>
+      </div>
+
+      <!-- Advanced PowerShell Commands Section -->
+      <h2 class="text-2xl text-indigo-400 mb-4 mt-12">Advanced PowerShell Commands</h2>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Get-EventLog</h3>
+        <p class="text-gray-200 mb-2">Get events from the event log. Useful for checking system events and issues.</p>
+        <div class="code-block">
+          <pre id="get-eventlog">
+Get-EventLog -LogName Application -Newest 10 # Get the 10 most recent application logs
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('get-eventlog')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Set-ExecutionPolicy</h3>
+        <p class="text-gray-200 mb-2">Change the script execution policy on your machine. Useful for allowing or restricting script execution.</p>
+        <div class="code-block">
+          <pre id="set-executionpolicy">
+Set-ExecutionPolicy RemoteSigned # Allows running scripts created locally, but blocks unsigned scripts from the internet
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('set-executionpolicy')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Get-ItemProperty</h3>
+        <p class="text-gray-200 mb-2">Gets the properties of a specified item, such as registry entries or file properties.</p>
+        <div class="code-block">
+          <pre id="get-itemproperty">
+Get-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer" # Get properties from the registry
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('get-itemproperty')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Get-WmiObject</h3>
+        <p class="text-gray-200 mb-2">Get management information from local or remote machines, such as hardware information or system configurations.</p>
+        <div class="code-block">
+          <pre id="get-wmiobject">
+Get-WmiObject -Class Win32_OperatingSystem # Get OS information
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('get-wmiobject')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">Invoke-Command</h3>
+        <p class="text-gray-200 mb-2">Run commands on remote computers, useful for remote administration.</p>
+        <div class="code-block">
+          <pre id="invoke-command">
+Invoke-Command -ScriptBlock { Get-Process } -ComputerName Server01 # Run Get-Process on a remote server
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('invoke-command')" class="copy-btn">Copy</button>
+      </div>
+
+    </div>
+
+  </div>
   </section>
 
   <br>
@@ -133,7 +263,458 @@
   <section id="cmd">
     <h1 class="text-2xl font-semibold">Windows CMD</h1>
     <!-- CMD content -->
-  </section>
+      <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-white text-center mb-6">Windows CMD Cheat Sheet</h1>
 
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+
+      <!-- Basic CMD Commands Section -->
+      <h2 class="text-2xl text-indigo-400 mb-4">Basic CMD Commands</h2>
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">dir</h3>
+        <p class="text-gray-200 mb-2">Lists all files and directories in the current directory.</p>
+        <div class="code-block">
+          <pre id="dir">
+dir
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('dir')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">cd</h3>
+        <p class="text-gray-200 mb-2">Changes the current directory.</p>
+        <div class="code-block">
+          <pre id="cd">
+cd <directory> # Navigate to a directory
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('cd')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">cls</h3>
+        <p class="text-gray-200 mb-2">Clears the screen in the command prompt.</p>
+        <div class="code-block">
+          <pre id="cls">
+cls
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('cls')" class="copy-btn">Copy</button>
+      </div>
+
+      <!-- Advanced CMD Commands Section -->
+      <h2 class="text-2xl text-indigo-400 mb-4 mt-12">Advanced CMD Commands</h2>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">ping</h3>
+        <p class="text-gray-200 mb-2">Sends network packets to a specific host to test connectivity.</p>
+        <div class="code-block">
+          <pre id="ping">
+ping <hostname> # Ping a host to test network connectivity
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('ping')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">ipconfig</h3>
+        <p class="text-gray-200 mb-2">Displays network adapter configuration details like IP address and subnet mask.</p>
+        <div class="code-block">
+          <pre id="ipconfig">
+ipconfig /all # Display detailed network configuration
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('ipconfig')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">tasklist</h3>
+        <p class="text-gray-200 mb-2">Lists all running processes on your machine.</p>
+        <div class="code-block">
+          <pre id="tasklist">
+tasklist # List all running processes
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('tasklist')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">taskkill</h3>
+        <p class="text-gray-200 mb-2">Kills or terminates a running process by name or PID (Process ID).</p>
+        <div class="code-block">
+          <pre id="taskkill">
+taskkill /PID <pid> # Kill a process by its PID
+taskkill /IM <processname> # Kill a process by its name
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('taskkill')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">netstat</h3>
+        <p class="text-gray-200 mb-2">Displays active network connections and listening ports on your computer.</p>
+        <div class="code-block">
+          <pre id="netstat">
+netstat -ano # Show active connections and their associated PIDs
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('netstat')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">shutdown</h3>
+        <p class="text-gray-200 mb-2">Shuts down or restarts the system with a specified timeout and options.</p>
+        <div class="code-block">
+          <pre id="shutdown">
+shutdown /s /t 30 # Shut down the system after a 30-second delay
+shutdown /r /t 0  # Restart the system immediately
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('shutdown')" class="copy-btn">Copy</button>
+      </div>
+
+    </div>
+
+  </div>
+  </section>
+  
+  <br>
+  <hr>
+  <br>
+
+  <section id="cmd">
+    <h1 class="text-2xl font-semibold">linux CLI</h1>
+    <!-- linux content -->
+      <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-white text-center mb-6">Linux Command Cheat Sheet</h1>
+
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+
+      <!-- Basic Linux Commands Section -->
+      <h2 class="text-2xl text-indigo-400 mb-4">Basic Linux Commands</h2>
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">ls</h3>
+        <p class="text-gray-200 mb-2">Lists files and directories in the current directory.</p>
+        <div class="code-block">
+          <pre id="ls">
+ls
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('ls')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">cd</h3>
+        <p class="text-gray-200 mb-2">Changes the current directory.</p>
+        <div class="code-block">
+          <pre id="cd">
+cd <directory> # Navigate to a directory
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('cd')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">pwd</h3>
+        <p class="text-gray-200 mb-2">Prints the current working directory.</p>
+        <div class="code-block">
+          <pre id="pwd">
+pwd
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('pwd')" class="copy-btn">Copy</button>
+      </div>
+
+      <!-- Advanced Linux Commands Section -->
+      <h2 class="text-2xl text-indigo-400 mb-4 mt-12">Advanced Linux Commands</h2>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">grep</h3>
+        <p class="text-gray-200 mb-2">Searches for a specific pattern in a file or output.</p>
+        <div class="code-block">
+          <pre id="grep">
+grep "pattern" <file> # Search for pattern in file
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('grep')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">find</h3>
+        <p class="text-gray-200 mb-2">Finds files and directories in a directory hierarchy.</p>
+        <div class="code-block">
+          <pre id="find">
+find <path> -name <filename> # Find a file by name
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('find')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">top</h3>
+        <p class="text-gray-200 mb-2">Displays real-time system information, including CPU usage and memory consumption.</p>
+        <div class="code-block">
+          <pre id="top">
+top # Display system usage
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('top')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">chmod</h3>
+        <p class="text-gray-200 mb-2">Changes the permissions of a file or directory.</p>
+        <div class="code-block">
+          <pre id="chmod">
+chmod 755 <file> # Give read, write, and execute permissions to the owner and read-execute to others
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('chmod')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">ps</h3>
+        <p class="text-gray-200 mb-2">Shows a list of running processes.</p>
+        <div class="code-block">
+          <pre id="ps">
+ps aux # List all processes running on the system
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('ps')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">kill</h3>
+        <p class="text-gray-200 mb-2">Terminates a running process by its PID.</p>
+        <div class="code-block">
+          <pre id="kill">
+kill <pid> # Kill a process by its PID
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('kill')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">tar</h3>
+        <p class="text-gray-200 mb-2">Used to archive multiple files and directories into a single file (tarball).</p>
+        <div class="code-block">
+          <pre id="tar">
+tar -cvf <archive_name>.tar <file1> <file2> # Create a tarball
+tar -xvf <archive_name>.tar # Extract tarball
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('tar')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">df</h3>
+        <p class="text-gray-200 mb-2">Displays information about disk space usage on the file system.</p>
+        <div class="code-block">
+          <pre id="df">
+df -h # Display disk space in human-readable format
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('df')" class="copy-btn">Copy</button>
+      </div>
+
+    </div>
+
+  </div>
+  </section>
+   <br>
+  <hr>
+  <br>
+
+  <section id="cmd">
+    <h1 class="text-2xl font-semibold">MATLAB</h1>
+    <!-- matlab content -->
+  </section>
+    </section>
+   <br>
+  <hr>
+  <br>
+
+  <section id="cmd">
+    <h1 class="text-2xl font-semibold">Python</h1>
+    <!-- python content -->
+  </section>
+    </section>
+   <br>
+  <hr>
+  <br>
+
+  <section id="cmd">
+    <h1 class="text-2xl font-semibold">Bash</h1>
+    <!-- bash content -->
+  </section>
+  
+  
+  <br>
+  <hr>
+  <br>
+
+  <section id="cmd">
+    <h1 class="text-2xl font-semibold">UNIX/MACINTOSH CLI</h1>
+    <!-- unix content -->
+      <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-white text-center mb-6">Unix/Linux Command Cheat Sheet</h1>
+
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+
+      <!-- Basic Unix/Linux Commands Section -->
+      <h2 class="text-2xl text-indigo-400 mb-4">Basic Unix/Linux Commands</h2>
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">ls</h3>
+        <p class="text-gray-200 mb-2">Lists files and directories in the current directory.</p>
+        <div class="code-block">
+          <pre id="ls">
+ls
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('ls')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">cd</h3>
+        <p class="text-gray-200 mb-2">Changes the current directory.</p>
+        <div class="code-block">
+          <pre id="cd">
+cd <directory> # Navigate to a directory
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('cd')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">pwd</h3>
+        <p class="text-gray-200 mb-2">Prints the current working directory.</p>
+        <div class="code-block">
+          <pre id="pwd">
+pwd
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('pwd')" class="copy-btn">Copy</button>
+      </div>
+
+      <!-- Advanced Unix/Linux Commands Section -->
+      <h2 class="text-2xl text-indigo-400 mb-4 mt-12">Advanced Unix/Linux Commands</h2>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">grep</h3>
+        <p class="text-gray-200 mb-2">Searches for a specific pattern in a file or output.</p>
+        <div class="code-block">
+          <pre id="grep">
+grep "pattern" <file> # Search for pattern in file
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('grep')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">find</h3>
+        <p class="text-gray-200 mb-2">Finds files and directories in a directory hierarchy.</p>
+        <div class="code-block">
+          <pre id="find">
+find <path> -name <filename> # Find a file by name
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('find')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">top</h3>
+        <p class="text-gray-200 mb-2">Displays real-time system information, including CPU usage and memory consumption.</p>
+        <div class="code-block">
+          <pre id="top">
+top # Display system usage
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('top')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">chmod</h3>
+        <p class="text-gray-200 mb-2">Changes the permissions of a file or directory.</p>
+        <div class="code-block">
+          <pre id="chmod">
+chmod 755 <file> # Give read, write, and execute permissions to the owner and read-execute to others
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('chmod')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">ps</h3>
+        <p class="text-gray-200 mb-2">Shows a list of running processes.</p>
+        <div class="code-block">
+          <pre id="ps">
+ps aux # List all processes running on the system
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('ps')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">kill</h3>
+        <p class="text-gray-200 mb-2">Terminates a running process by its PID.</p>
+        <div class="code-block">
+          <pre id="kill">
+kill <pid> # Kill a process by its PID
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('kill')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">tar</h3>
+        <p class="text-gray-200 mb-2">Used to archive multiple files and directories into a single file (tarball).</p>
+        <div class="code-block">
+          <pre id="tar">
+tar -cvf <archive_name>.tar <file1> <file2> # Create a tarball
+tar -xvf <archive_name>.tar # Extract tarball
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('tar')" class="copy-btn">Copy</button>
+      </div>
+
+      <div class="command-container">
+        <h3 class="text-xl text-indigo-300">df</h3>
+        <p class="text-gray-200 mb-2">Displays information about disk space usage on the file system.</p>
+        <div class="code-block">
+          <pre id="df">
+df -h # Display disk space in human-readable format
+          </pre>
+        </div>
+        <button onclick="copyToClipboard('df')" class="copy-btn">Copy</button>
+      </div>
+
+    </div>
+
+  </div>
+  </section>
+  
+  <script>
+    // Copy to clipboard function
+    function copyToClipboard(commandId) {
+      const codeText = document.getElementById(commandId).innerText;
+      navigator.clipboard.writeText(codeText).then(() => {
+        alert('Copied to clipboard!');
+      }).catch(err => {
+        alert('Error copying text: ' + err);
+      });
+    }
+  </script>
+    <script>
+    // Copy to clipboard function
+    function copyToClipboard(commandId) {
+      const codeText = document.getElementById(commandId).innerText;
+      navigator.clipboard.writeText(codeText).then(() => {
+        alert('Copied to clipboard!');
+      }).catch(err => {
+        alert('Error copying text: ' + err);
+      });
+    }
+  </script>
 </body>
 </html>
