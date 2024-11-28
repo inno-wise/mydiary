@@ -1,20 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="description" content="My Online Blog App">
-  <meta name="keywords" content="Blogs, Cyber Security, DevOps, CompTIA A+, Network+, Linux+">
-  <meta name="author" content="Innocent Mwea">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="img/bs.jpeg">
-  <title>Innocent Mwea</title>
-  
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="mstyles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexagon Particles Animation</title>
+    
     <!-- Font Awesome CDN for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
@@ -60,7 +50,42 @@
             }
         }
 
-        /* Button Styles */
+        /* Image Cards */
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 16px;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            color: #FF6347; /* Tomato color */
+            margin-bottom: 8px;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #ddd;
+            margin-bottom: 16px;
+        }
+
         .btn {
             background-color: #ff6347;
             color: white;
@@ -118,71 +143,99 @@
         .content:hover::after {
             opacity: 1;
         }
-      
-  </style>
+
+        /* Flexbox Section */
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 40px;
+        }
+
+        .flex-item {
+            background-color: #FF6347;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .flex-item:hover {
+            background-color: #FF4500;
+        }
+    </style>
 </head>
+<body>
+    <!-- Hexagon Particles Section -->
+    <div id="particles-container"></div>
 
-<!-- Add Font Awesome link -->
-<head>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-</head>
-
-<!-- Image Cards Section 2 -->
-<div class="container mx-auto py-8 px-4">
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-    <!-- Card 4 -->
-    <div class="card rounded-lg overflow-hidden shadow-lg transform transition duration-300">
-      <img src="img/python.jpeg" class="w-full h-48 object-cover" alt="Learn Python">
-      <div class="p-6">
-        <h5 class="text-2xl font-semibold text-tomato-400">Learn Python Programming <i class="fas fa-python"></i></h5>
-        <p class="text-gray-400 mt-2">The most versatile programming language. Learn Python for AI, Data Science, Web Development, and more.</p>
-        <a href="blogs.html" class="mt-4 inline-block bg-tomato-500 text-white py-2 px-6 rounded-full hover:bg-tomato-600 transition duration-200">Proceed <i class="fas fa-arrow-right"></i></a>
-      </div>
+    <!-- Content Section with Font Awesome Icon -->
+    <div class="container">
+        <h1>Welcome to the Hexagon Particles Animation</h1>
+        <div class="content">
+            <p>Hover to see the before and after effect!</p>
+        </div>
+        <a href="https://example.com" class="btn">
+            Explore <i class="fas fa-arrow-right"></i>
+        </a>
     </div>
 
-    <!-- Card 5 -->
-    <div class="card rounded-lg overflow-hidden shadow-lg transform transition duration-300">
-      <img src="img/prof.jpeg" class="w-full h-48 object-cover" alt="Rust Programming">
-      <div class="p-6">
-        <h5 class="text-2xl font-semibold text-tomato-400">Rust Programming <i class="fas fa-cogs"></i></h5>
-        <p class="text-gray-400 mt-2">Rust offers memory safety and performance. Learn why it’s replacing C in many applications.</p>
-        <a href="blogs.html" class="mt-4 inline-block bg-tomato-500 text-white py-2 px-6 rounded-full hover:bg-tomato-600 transition duration-200">Learn Rust <i class="fas fa-book-open"></i></a>
-      </div>
+    <!-- Image Cards Section -->
+    <div class="container py-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="img/python.jpeg" alt="Learn Python">
+                <div class="card-body">
+                    <h5 class="card-title">Learn Python Programming</h5>
+                    <p class="card-text">The most versatile programming language. Learn Python for AI, Data Science, Web Development, and more.</p>
+                    <a href="blogs.html" class="btn">Proceed</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="img/prof.jpeg" alt="Rust Programming">
+                <div class="card-body">
+                    <h5 class="card-title">Rust Programming</h5>
+                    <p class="card-text">Rust offers memory safety and performance. Learn why it’s replacing C in many applications.</p>
+                    <a href="blogs.html" class="btn">Learn Rust</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="img/mot.png" alt="Computer Networking">
+                <div class="card-body">
+                    <h5 class="card-title">Computer Networking</h5>
+                    <p class="card-text">Explore the world of computer networking, including protocols, architecture, and troubleshooting.</p>
+                    <a href="blogs/comptia.html" class="btn">Hope In</a>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Card 6 -->
-    <div class="card rounded-lg overflow-hidden shadow-lg transform transition duration-300">
-      <img src="img/mot.png" class="w-full h-48 object-cover" alt="Computer Networking">
-      <div class="p-6">
-        <h5 class="text-2xl font-semibold text-tomato-400">Computer Networking <i class="fas fa-network-wired"></i></h5>
-        <p class="text-gray-400 mt-2">Explore the world of computer networking, including protocols, architecture, and troubleshooting.</p>
-        <a href="blogs/comptia.html" class="mt-4 inline-block bg-tomato-500 text-white py-2 px-6 rounded-full hover:bg-tomato-600 transition duration-200">Hope In <i class="fas fa-arrow-right"></i></a>
-      </div>
+    <!-- Flexbox Section -->
+    <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+        <div class="flex-item">7</div>
+        <div class="flex-item">8</div>
+        <div class="flex-item">9</div>
     </div>
-  </div>
-</div>
 
-<!-- Flexbox Section -->
-<center>
-  <div class="flex justify-center gap-4 mb-8">
-    <div class="bg-tomato-500 text-white px-6 py-4 rounded-full text-xl shadow-md hover:bg-tomato-600 transition duration-200">1 <i class="fas fa-circle"></i></div>
-    <div class="bg-tomato-500 text-white px-6 py-4 rounded-full text-xl shadow-md hover:bg-tomato-600 transition duration-200">2 <i class="fas fa-circle"></i></div>
-    <div class="bg-tomato-500 text-white px-6 py-4 rounded-full text-xl shadow-md hover:bg-tomato-600 transition duration-200">3 <i class="fas fa-circle"></i></div>
-    <div class="bg-tomato-500 text-white px-6 py-4 rounded-full text-xl shadow-md hover:bg-tomato-600 transition duration-200">4 <i class="fas fa-circle"></i></div>
-    <div class="bg-tomato-500 text-white px-6 py-4 rounded-full text-xl shadow-md hover:bg-tomato-600 transition duration-200">5 <i class="fas fa-circle"></i></div>
-    <div class="bg-tomato-500 text-white px-6 py-4 rounded-full text-xl shadow-md hover:bg-tomato-600 transition duration-200">6 <i class="fas fa-circle"></i></div>
-    <div class="bg-tomato-500 text-white px-6 py-4 rounded-full text-xl shadow-md hover:bg-tomato-600 transition duration-200">7 <i class="fas fa-circle"></i></div>
-    <div class="bg-tomato-500 text-white px-6 py-4 rounded-full text-xl shadow-md hover:bg-tomato-600 transition duration-200">8 <i class="fas fa-circle"></i></div>
-    <div class="bg-tomato-500 text-white px-6 py-4 rounded-full text-xl shadow-md hover:bg-tomato-600 transition duration-200">9 <i class="fas fa-circle"></i></div>
-  </div>
-</center>
-
-<!-- Footer -->
-<footer class="bg-gray-800 text-white py-8 mt-12">
-  <div class="max-w-screen-xl mx-auto text-center">
-    <p>&copy; 2024 Innocent Mwea <i class="fas fa-heart"></i></p>
-  </div>
-</footer>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="max-w-screen-xl mx-auto text-center">
+            <p>&copy; 2024 Innocent Mwea</p>
+        </div>
+    </footer>
 
     <!-- Vanilla JavaScript for Hexagon Particles Animation -->
     <script>
@@ -211,5 +264,4 @@
         });
     </script>
 </body>
-
 </html>
