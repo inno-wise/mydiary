@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Networking Blog</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  <style>
+  /* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #ff6347; /* Tomato color */
+    position: relative;
+    overflow-x: hidden;
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(255, 99, 71, 0.8);
+    border-bottom: 5px solid #c72c24;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* Blog Post Section */
+.blog-post {
+    background-color: rgba(255, 99, 71, 0.7);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #c72c24;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.blog-post:hover {
+    transform: scale(1.05);
+}
+
+/* Blog Post Title */
+.blog-post h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Blog Post List */
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(255, 99, 71, 0.8);
+    border-top: 5px solid #c72c24;
+}
+
+footer p {
+    font-size: 1.2rem;
+}
+
+/* Pseudo-Element for Before and After */
+.blog-post::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 99, 71, 0.5);
+    border-radius: 10px;
+    z-index: -1;
+    transform: scale(0);
+    transition: transform 0.3s;
+}
+
+.blog-post:hover::before {
+    transform: scale(1);
+}
+
+.blog-post::after {
+    content: 'New Post';
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    background-color: #c72c24;
+    color: #fff;
+    padding: 5px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.blog-post:hover::after {
+    opacity: 1;
+}
+  </style>  
+</head>
+<body>
+    <div id="particles-js"></div>
+    <header>
+        <h1><i class="fas fa-network-wired"></i> Networking 101</h1>
+        <p>Understanding the basics of networking and how it connects the digital world.</p>
+    </header>
+    
+    <section class="blog-post">
+        <h2><i class="fas fa-laptop-code"></i> What is Networking?</h2>
+        <p>Networking refers to the process of connecting computers and devices together to share resources and data.</p>
+    </section>
+
+    <section class="blog-post">
+        <h2><i class="fas fa-cogs"></i> Components of a Network</h2>
+        <ul>
+            <li><i class="fas fa-server"></i> Servers</li>
+            <li><i class="fas fa-desktop"></i> Clients</li>
+            <li><i class="fas fa-router"></i> Routers</li>
+            <li><i class="fas fa-plug"></i> Cables</li>
+        </ul>
+    </section>
+
+  
+  <section class="blog-post">
+    <h2><i class="fas fa-info-circle"></i> Introduction to Networking</h2>
+    <p>Networking refers to the practice of connecting computers, servers, and other devices to share data, resources, and services across various distances. It's essential in the digital age, enabling communication between millions of devices worldwide.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-cogs"></i> Components of a Network</h2>
+    <ul>
+        <li><i class="fas fa-server"></i> <strong>Servers:</strong> Centralized systems that provide resources and services.</li>
+        <li><i class="fas fa-desktop"></i> <strong>Clients:</strong> Devices that request services or resources from servers.</li>
+        <li><i class="fas fa-router"></i> <strong>Routers:</strong> Devices that route traffic between different networks.</li>
+        <li><i class="fas fa-switch"></i> <strong>Switches:</strong> Devices that connect devices within the same network segment and direct traffic.</li>
+        <li><i class="fas fa-plug"></i> <strong>Cables:</strong> Physical media through which data is transmitted.</li>
+    </ul>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-layers"></i> The OSI Model</h2>
+    <p>The OSI (Open Systems Interconnection) model defines seven layers that describe how data is transferred between different devices in a network:</p>
+    <ul>
+        <li><strong>Layer 1 - Physical:</strong> Deals with the physical connection between devices.</li>
+        <li><strong>Layer 2 - Data Link:</strong> Handles error detection and correction from the physical layer.</li>
+        <li><strong>Layer 3 - Network:</strong> Responsible for routing and logical addressing (e.g., IP addresses).</li>
+        <li><strong>Layer 4 - Transport:</strong> Ensures reliable data transfer and error correction (e.g., TCP/UDP).</li>
+        <li><strong>Layer 5 - Session:</strong> Manages sessions or connections between applications.</li>
+        <li><strong>Layer 6 - Presentation:</strong> Translates data formats (e.g., encryption, compression).</li>
+        <li><strong>Layer 7 - Application:</strong> Provides network services to end-users (e.g., HTTP, FTP).</li>
+    </ul>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-cogs"></i> IP Addressing</h2>
+    <p>An IP (Internet Protocol) address is a unique identifier assigned to every device on a network. It ensures that devices can find and communicate with each other over the internet or a local network.</p>
+    <ul>
+        <li><strong>IPv4:</strong> Uses 32-bit addresses (e.g., 192.168.0.1) and is the most commonly used format.</li>
+        <li><strong>IPv6:</strong> Uses 128-bit addresses (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334) to accommodate the growing number of devices on the internet.</li>
+    </ul>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-random"></i> Subnetting</h2>
+    <p>Subnetting is the process of dividing a larger network into smaller, more manageable sub-networks (subnets). It improves network performance, security, and simplifies IP address management.</p>
+    <p>By using subnet masks, administrators can allocate a portion of the available IP address space to specific subnets.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-undo"></i> Reverse Subnetting</h2>
+    <p>Reverse subnetting involves determining the subnet or network address from a given IP address and subnet mask. This helps in identifying which subnet an IP address belongs to within a network, and is crucial for network management and routing.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-cloud"></i> DNS (Domain Name System)</h2>
+    <p>The Domain Name System (DNS) translates human-readable domain names like "www.example.com" into IP addresses that computers can understand. It acts as the phonebook for the internet.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-shield-alt"></i> Network Security</h2>
+    <p>Network security involves measures to protect the integrity, confidentiality, and accessibility of data and resources in a network. Common practices include firewalls, encryption, and intrusion detection systems.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-clipboard-check"></i> TCP/IP Protocol Suite</h2>
+    <p>The TCP/IP protocol suite is the set of communication protocols used for the internet. It consists of four layers: Link, Internet, Transport, and Application.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-exchange-alt"></i> Routing</h2>
+    <p>Routing is the process of determining the path that data takes to travel from one device to another. Routers use routing tables to make decisions about the best route for data packets.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-arrow-right"></i> NAT (Network Address Translation)</h2>
+    <p>NAT is a technique used in networking to translate private IP addresses to a public IP address for routing traffic to and from the internet. It allows multiple devices in a local network to share a single public IP address.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-desktop"></i> LAN (Local Area Network)</h2>
+    <p>A LAN is a network that connects devices within a limited geographic area, such as a home, office, or school. It typically uses wired or wireless connections to provide fast communication and resource sharing.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-globe"></i> WAN (Wide Area Network)</h2>
+    <p>A WAN is a network that spans a large geographical area, often a country or continent. The internet is the largest example of a WAN, enabling devices worldwide to communicate.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-users"></i> Peer-to-Peer Networks</h2>
+    <p>In a peer-to-peer (P2P) network, all devices are equal and can act as both clients and servers. Files and resources are shared directly between devices without the need for a central server.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-briefcase"></i> VPN (Virtual Private Network)</h2>
+    <p>A VPN creates a secure, encrypted connection over a less secure network, such as the internet. It allows remote users to securely connect to a private network as if they were physically present.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-sync-alt"></i> Load Balancing</h2>
+    <p>Load balancing distributes network traffic across multiple servers to ensure no single server is overwhelmed. It improves performance and availability of applications and websites.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-exclamation-triangle"></i> Network Troubleshooting</h2>
+    <p>Network troubleshooting involves diagnosing and resolving issues within a network. Tools like ping, traceroute, and ipconfig are commonly used to identify problems with connectivity and performance.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-cogs"></i> DHCP (Dynamic Host Configuration Protocol)</h2>
+    <p>DHCP is a network management protocol used to assign IP addresses to devices on a network automatically. It simplifies the process of configuring network settings for multiple devices.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-cogs"></i> VLAN (Virtual Local Area Network)</h2>
+    <p>A VLAN is a logical grouping of devices in a network that are configured to communicate as if they were on the same physical network, even if they are spread across different locations.</p>
+</section>
+
+<!-- New 30 Additional Topics -->
+
+<section class="blog-post">
+    <h2><i class="fas fa-globe"></i> IPv6 Transition</h2>
+    <p>IPv6 transition refers to the process of migrating from the older IPv4 addressing system to IPv6. With IPv4 addresses running out, IPv6 provides an expanded address space and improved features for modern networking.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-wifi"></i> Wireless Networks</h2>
+    <p>Wireless networks use radio waves to transmit data over the air, allowing devices to connect to the internet and each other without the need for physical cables. Common wireless standards include Wi-Fi
+      
+      <p>Common wireless standards include Wi-Fi (IEEE 802.11), Bluetooth, and Zigbee. Wireless networks offer flexibility but may be more vulnerable to interference and security risks compared to wired networks.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-key"></i> WPA/WPA2 Security</h2>
+    <p>WPA (Wi-Fi Protected Access) and WPA2 are security protocols designed to secure wireless networks. WPA2, the more secure of the two, uses AES encryption and is widely recommended for securing Wi-Fi connections.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-broadcast-tower"></i> Wi-Fi Hotspots</h2>
+    <p>Wi-Fi hotspots are locations where the internet is made available over a wireless local area network (WLAN). These hotspots are often public, such as in cafes, airports, or libraries, and provide easy internet access to mobile devices.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-server"></i> Data Centers</h2>
+    <p>A data center is a physical facility used to house computer systems and associated components, such as telecommunications and storage systems. They are vital for running cloud services and hosting large-scale applications.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-cloud-download-alt"></i> Cloud Computing</h2>
+    <p>Cloud computing is the delivery of computing services like servers, storage, databases, networking, software, and more over the internet, or "the cloud." It offers on-demand availability, scalability, and cost-efficiency.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-laptop-code"></i> Edge Computing</h2>
+    <p>Edge computing refers to processing data closer to where it is generated, such as on IoT devices, rather than relying solely on a centralized cloud server. This reduces latency and bandwidth use, enabling faster data analysis.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-headphones-alt"></i> VoIP (Voice over IP)</h2>
+    <p>VoIP technology allows voice communication and multimedia sessions over the internet, bypassing traditional phone lines. Popular applications include Skype, WhatsApp, and Zoom, which have revolutionized voice and video calling.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-radiation"></i> EMI (Electromagnetic Interference)</h2>
+    <p>EMI refers to the disruption of electronic devices caused by electromagnetic radiation from other electronic equipment. In networking, EMI can cause signal degradation, leading to slower speeds or data loss over cables.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-shield-alt"></i> Firewalls</h2>
+    <p>A firewall is a network security system that monitors and controls incoming and outgoing network traffic. It can be implemented in hardware or software and is essential for protecting a network from unauthorized access.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-signal"></i> Network Congestion</h2>
+    <p>Network congestion occurs when too much data is transmitted over a network, leading to delays, packet loss, and decreased performance. It can be managed by optimizing routing, traffic management, and bandwidth allocation.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-recycle"></i> Green Networking</h2>
+    <p>Green networking focuses on reducing the environmental impact of networking technologies. This includes using energy-efficient equipment, optimizing network traffic, and leveraging virtualization to reduce hardware requirements.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-tachometer-alt"></i> QoS (Quality of Service)</h2>
+    <p>QoS is a networking feature that prioritizes specific types of traffic to ensure that important applications, like voice and video, maintain high performance even under heavy network load.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-laptop"></i> Network Interface Cards (NIC)</h2>
+    <p>A Network Interface Card (NIC) is a hardware component that allows computers to connect to a network. NICs can be wired (Ethernet) or wireless (Wi-Fi) and are essential for network communication.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-wrench"></i> Network Configuration</h2>
+    <p>Network configuration refers to the setup of networking devices and software. This includes configuring routers, switches, firewalls, and servers to work together to ensure smooth communication within a network.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-database"></i> Database Networking</h2>
+    <p>Database networking involves connecting databases over a network to allow multiple users or applications to access, modify, and store data. Techniques like replication and clustering ensure data availability and performance.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-network-wired"></i> Network Topologies</h2>
+    <p>Network topology refers to the physical or logical arrangement of devices in a network. Common topologies include star, bus, ring, mesh, and hybrid, each with its own advantages and disadvantages for different use cases.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-code-branch"></i> SDN (Software-Defined Networking)</h2>
+    <p>SDN is a network architecture that separates the control plane from the data plane, allowing for more flexible and programmable network management. SDN facilitates dynamic adjustments to network behavior and improved scalability.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-chalkboard-teacher"></i> Network Monitoring</h2>
+    <p>Network monitoring involves tracking the performance, security, and health of a network. Tools like Wireshark, Nagios, and SolarWinds help administrators detect bottlenecks, security threats, and optimize performance.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-lock"></i> Encryption</h2>
+    <p>Encryption is the process of converting data into a secure format that can only be read by authorized parties. In networking, encryption ensures the confidentiality of data transmitted over public networks, protecting it from eavesdropping.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-rocket"></i> 5G Networks</h2>
+    <p>5G is the fifth generation of mobile network technology, offering faster speeds, lower latency, and more reliable connections. It will enable new technologies like IoT, autonomous vehicles, and enhanced mobile broadband services.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-lock"></i> SSL/TLS</h2>
+    <p>SSL (Secure Sockets Layer) and TLS (Transport Layer Security) are cryptographic protocols designed to secure communication over a computer network. They are commonly used to protect data transmitted via HTTPS and ensure privacy and data integrity.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-search"></i> DNS Spoofing</h2>
+    <p>DNS spoofing is a type of cyber attack where false DNS data is injected into the cache of a DNS resolver, leading to users being directed to malicious websites. It is a form of man-in-the-middle attack and can be mitigated using DNSSEC.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-cogs"></i> Network Automation</h2>
+    <p>Network automation uses software and scripts to automate repetitive tasks such as configuration, monitoring, and troubleshooting. This improves efficiency, reduces human error, and accelerates network deployment and scaling.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-file-invoice-dollar"></i> Billing Systems in Networking</h2>
+    <p>Billing systems in networking track usage and generate invoices for services provided. These systems are essential for service providers to manage customer accounts, usage, and revenue, especially in ISPs, hosting services, and cloud computing.</p>
+</section>
+
+<section class="blog-post">
+    <h2><i class="fas fa-wifi"></i> Wireless Site Survey</h2>
+    <p>A wireless site survey involves assessing the physical location and environment to determine the optimal placement of wireless access points (APs). It ensures coverage, capacit
